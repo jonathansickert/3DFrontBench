@@ -28,7 +28,7 @@ def extract_hyperism_scene_boundary_boxes(scene_dir: str) -> tuple[np.array, np.
         raise ValueError("Scene does not exist.")
 
     with h5py.File(
-        scene_dir / "_detail/mesh/metadata_semantic_instance_bounding_box_object_aligned_2d_orientations.hdf5"
+        scene_dir / "_detail/mesh/metadata_semantic_instance_bounding_box_object_aligned_2d_extents.hdf5"
     ) as f:
         extents = np.array(f["dataset"])
 
