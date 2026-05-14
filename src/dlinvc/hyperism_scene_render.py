@@ -4,6 +4,9 @@ This module provides utilities to extract scene geometry and camera parameters f
 Hypersim datasets and render them to images using PyRender.
 """
 
+import shutil
+import urllib.request
+import zipfile
 from pathlib import Path
 
 import h5py
@@ -12,6 +15,53 @@ import pandas as pd
 import pyrender
 import trimesh
 from PIL import Image
+
+
+def download_and_extract_hyperism_scene(url: str, download_dir: str) -> None:
+    """Download a Hypersim scene zip, extract it, and keep only essential directories.
+    Keeps scene/_detail and scene/images/scene_cam_00_final_preview
+
+    Args:
+        url: URL to the scene zip file.
+        download_dir: Directory to download and extract the scene to.
+    """
+    download_dir = Path(download_dir)
+    download_dir.mkdir(parents=True, exist_ok=True)
+
+    scene_name = url.split("/")[-1].replace(".zip", "")
+
+    if (download_dir / scene_name).is_dir():
+        print(f"Scene {scene_name} already exists. Skipping...")
+        return
+
+    zip_path = download_dir / f"{scene_name}.zip"
+    print(f"Downloading {scene_name}...")
+    urllib.request.urlretrieve(url, zip_path)
+
+    print(f"Extracting {scene_name}...")
+    with zipfile.ZipFile(zip_path, "r") as zip_ref:
+        zip_ref.extractall(download_dir)
+
+    zip_path.unlink()
+
+    # Keep only scene/_detail and scene/images/scene_cam_00_final_preview for space reasons
+    scene_dir = download_dir / scene_name
+    images_dir = scene_dir / "images"
+    for item in images_dir.iterdir():
+        if not item.name == "scene_cam_00_final_preview":
+            shutil.rmtree(item)
+
+def download_hyperism_cam_metadata(download_dir: str) -> None:
+    """Download Hypersim camera metadata CSV file.
+
+    Args:
+        download_dir: Directory to download the metadata file to.
+    """
+    download_dir = Path(download_dir)
+    download_dir.mkdir(parents=True, exist_ok=True)
+
+    url = "https://raw.githubusercontent.com/apple/ml-hypersim/main/contrib/mikeroberts3000/metadata_camera_parameters.csv"
+    urllib.request.urlretrieve(url, download_dir / "metadata_camera_parameters.csv")
 
 
 def extract_hyperism_scene_boundary_boxes(scene_dir: str) -> tuple[np.array, np.array, np.array]:
