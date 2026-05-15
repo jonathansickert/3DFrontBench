@@ -51,6 +51,7 @@ def download_and_extract_hyperism_scene(url: str, download_dir: str) -> None:
         if not item.name == "scene_cam_00_final_preview":
             shutil.rmtree(item)
 
+
 def download_hyperism_cam_metadata(download_dir: str) -> None:
     """Download Hypersim camera metadata CSV file.
 
@@ -92,6 +93,19 @@ def extract_hyperism_scene_boundary_boxes(scene_dir: str) -> tuple[np.array, np.
     ) as f:
         positions = np.array(f["dataset"])
 
+    def is_valid_row(arr):
+        if arr.ndim == 1:
+            return np.isfinite(arr)
+        else:
+            arr_2d = arr.reshape(arr.shape[0], -1)
+            return np.isfinite(arr_2d).all(axis=1)
+
+    valid_mask = is_valid_row(extents) & is_valid_row(orientations) & is_valid_row(positions)
+
+    extents = extents[valid_mask]
+    orientations = orientations[valid_mask]
+    positions = positions[valid_mask]
+
     return extents, orientations, positions
 
 
@@ -114,10 +128,10 @@ def extract_hyperism_scene_camera_params(
         raise ValueError("Scene does not exist.")
 
     # camera extrinsics
-    with h5py.File("../hyperism/ai_001_001/_detail/cam_00/camera_keyframe_orientations.hdf5", "r") as f:
+    with h5py.File(scene_dir / "_detail/cam_00/camera_keyframe_orientations.hdf5", "r") as f:
         camera_orientations = np.array(f["dataset"])
 
-    with h5py.File("../hyperism/ai_001_001/_detail/cam_00/camera_keyframe_positions.hdf5", "r") as f:
+    with h5py.File(scene_dir / "_detail/cam_00/camera_keyframe_positions.hdf5", "r") as f:
         camera_positions = np.array(f["dataset"])
 
     camera_position_world = camera_positions[frame_id]
@@ -130,7 +144,7 @@ def extract_hyperism_scene_camera_params(
     # camera intrinsics
     # from https://github.com/apple/ml-hypersim/blob/main/contrib/mikeroberts3000/jupyter/02_rendering_hypersim_meshes_with_pytorch3d.ipynb
     camera_metadata = pd.read_csv(hyperism_cam_metadata_file, index_col="scene_name")
-    df_ = camera_metadata.loc["ai_001_001"]
+    df_ = camera_metadata.loc[scene_dir.name]
 
     width_pixels = int(df_["settings_output_img_width"])
     height_pixels = int(df_["settings_output_img_height"])
@@ -154,6 +168,7 @@ def render_scene(
     width_pixels: int,
     height_pixels: int,
     render_save_path: str,
+    scene_save_path: str,
 ) -> tuple[trimesh.Scene, Image.Image]:
     """Render bounding boxes in a scene and save the image.
 
@@ -203,11 +218,13 @@ def render_scene(
     render = Image.fromarray(color)
     render.save(save_path)
 
+    tm_scene.export(scene_save_path)
+
     return tm_scene, render
 
 
 def hyperism_scene_render(
-    scene_dir: str, frame_id: int, hyperism_cam_metadata_file: str, render_save_path: str
+    scene_dir: str, frame_id: int, hyperism_cam_metadata_file: str, output_dir: str
 ) -> tuple[trimesh.Scene, Image.Image]:
     """Render a Hypersim scene with bounding boxes for a specific frame.
 
@@ -225,6 +242,13 @@ def hyperism_scene_render(
         scene_dir=scene_dir, frame_id=frame_id, hyperism_cam_metadata_file=hyperism_cam_metadata_file
     )
 
+    output_dir = Path(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    scene_name = Path(scene_dir).name
+    render_save_path = output_dir / f"{scene_name}.png"
+    scene_save_path = output_dir / f"{scene_name}.glb"
+
     scene, render = render_scene(
         extents=extents,
         orientations=orientations,
@@ -233,7 +257,8 @@ def hyperism_scene_render(
         fov_y=fov_y,
         width_pixels=width_pixels,
         height_pixels=height_pixels,
-        render_save_path=render_save_path,
+        render_save_path=str(render_save_path),
+        scene_save_path=str(scene_save_path),
     )
 
     return scene, render
