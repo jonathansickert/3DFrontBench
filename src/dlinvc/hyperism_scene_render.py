@@ -51,6 +51,7 @@ def download_and_extract_hyperism_scene(url: str, download_dir: str) -> None:
         if not item.name == "scene_cam_00_final_preview":
             shutil.rmtree(item)
 
+
 def download_hyperism_cam_metadata(download_dir: str) -> None:
     """Download Hypersim camera metadata CSV file.
 

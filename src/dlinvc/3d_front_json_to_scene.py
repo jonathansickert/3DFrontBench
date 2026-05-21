@@ -7,8 +7,8 @@ import trimesh.transformations as tf
 from PIL import Image
 
 FRONT_PATH = Path("/home/jonathansickert/git/DLinVC/3D-FRONT/3D-FRONT")
-FUTURE_PATH=Path("/home/jonathansickert/git/DLinVC/3D-FRONT/3D-FUTURE")
-TEXTURE_PATH=Path("/home/jonathansickert/git/DLinVC/3D-FRONT/3D-FRONT-texture")
+FUTURE_PATH = Path("/home/jonathansickert/git/DLinVC/3D-FRONT/3D-FUTURE")
+TEXTURE_PATH = Path("/home/jonathansickert/git/DLinVC/3D-FRONT/3D-FRONT-texture")
 
 
 def make_transform(pos: list, rot: list, scale: list) -> np.ndarray:
@@ -35,10 +35,9 @@ class FurnitureMesh(BaseModel):
         mesh = trimesh.load(FUTURE_PATH / self.jid / "raw_model.obj")
         mesh.apply_transform(make_transform(pos=self.pos, rot=self.rot, scale=self.scale))
         return mesh
-    
+
     def get_name(self) -> str:
         return f"{self.label}_{self.jid}"
-
 
 
 class LayoutMesh(BaseModel):
@@ -71,25 +70,22 @@ class LayoutMesh(BaseModel):
                 uv_h = np.c_[uv, np.ones(len(uv))]
                 uv = (uv_h @ m.T)[:, :2]
 
-            mesh.visual = trimesh.visual.texture.TextureVisuals(
-                uv=uv,
-                image=Image.open(material_path / "texture.png")
-            )
+            mesh.visual = trimesh.visual.texture.TextureVisuals(uv=uv, image=Image.open(material_path / "texture.png"))
 
         else:
             color = np.array(self.color)
             mesh.visual.vertex_colors = np.tile(color, (len(mesh.vertices), 1))
 
         return mesh
-    
+
     def get_name(self) -> str:
         return f"{self.type}_{self.uid}"
-    
+
 
 def load_furniture_objects_for_room(scene_json: dict, room: dict) -> list[FurnitureMesh]:
     furniture_by_uid = {f["uid"]: f for f in scene_json["furniture"]}
     furniture_children = [c for c in room["children"] if "furniture" in c["instanceid"]]
-    
+
     furnitures = []
     for obj in furniture_children:
         furniture = furniture_by_uid.get(obj["ref"])
@@ -110,12 +106,7 @@ def load_furniture_objects_for_room(scene_json: dict, room: dict) -> list[Furnit
             print("no label")
 
         f = FurnitureMesh(
-            uid=furniture["uid"],
-            jid=jid,
-            label=label,
-            pos=obj["pos"],
-            rot=obj["rot"],
-            scale=obj["scale"]
+            uid=furniture["uid"], jid=jid, label=label, pos=obj["pos"], rot=obj["rot"], scale=obj["scale"]
         )
 
         furnitures.append(f)
@@ -128,7 +119,7 @@ def load_mesh_objects_for_room(scene_json: dict, room: dict) -> list[LayoutMesh]
     material_by_uid = {m["uid"]: m for m in scene_json["material"]}
 
     mesh_children = [c for c in room["children"] if "mesh" in c["instanceid"]]
-    
+
     meshes = []
     for obj in mesh_children:
         mesh = mesh_by_uid.get(obj["ref"])
@@ -139,8 +130,8 @@ def load_mesh_objects_for_room(scene_json: dict, room: dict) -> list[LayoutMesh]
         if not mesh.get("valid", True):
             continue
 
-        material = material_by_uid[mesh["material"]]     
-    
+        material = material_by_uid[mesh["material"]]
+
         m = LayoutMesh(
             uid=mesh["uid"],
             type=mesh["type"],
@@ -156,7 +147,7 @@ def load_mesh_objects_for_room(scene_json: dict, room: dict) -> list[LayoutMesh]
             normal_uv_transform=material["normalUVTransform"],
             uv_transform=material.get("UVTransform"),
         )
-       
+
         meshes.append(m)
 
     return meshes
@@ -190,4 +181,3 @@ if __name__ == "__main__":
     room = scene_json["scene"]["room"][3]
     scene = build_room_scene(scene_json, room)
     scene.export(f"{room['instanceid']}.glb")
-
