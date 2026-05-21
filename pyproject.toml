@@ -15,7 +15,6 @@ dependencies = [
     "scipy (>=1.17.1,<2.0.0)",
     "pandas (>=3.0.3,<4.0.0)",
     "huggingface-hub (>=1.14.0,<2.0.0)",
-    "blenderproc (>=2.8.0,<3.0.0)",
     "ipykernel (>=7.2.0,<8.0.0)",
 ]
 
