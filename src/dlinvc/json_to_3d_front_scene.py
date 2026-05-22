@@ -4,7 +4,7 @@ from pathlib import Path
 from pydantic import BaseModel
 import numpy as np
 import trimesh.transformations as tf
-from PIL import Image
+import argparse
 
 FRONT_PATH = Path("/home/jonathansickert/git/DLinVC/3D-FRONT/3D-FRONT")
 FUTURE_PATH = Path("/home/jonathansickert/git/DLinVC/3D-FRONT/3D-FUTURE")
@@ -31,9 +31,13 @@ class FurnitureMesh(BaseModel):
     rot: list[float]
     scale: list[float]
 
-    def to_mesh(self) -> trimesh.Trimesh:
+    def to_mesh(self, bounding_box: bool = True) -> trimesh.Trimesh:
         mesh = trimesh.load(FUTURE_PATH / self.jid / "raw_model.obj")
         mesh.apply_transform(make_transform(pos=self.pos, rot=self.rot, scale=self.scale))
+
+        if bounding_box:
+            mesh = mesh.bounding_primitive
+        
         return mesh
 
     def get_name(self) -> str:
@@ -51,9 +55,9 @@ class LayoutMesh(BaseModel):
     material_uid: str
     material_jid: str
     color: list[float]
-    seam_width: float
     use_color: bool
-    normal_uv_transform: list[float]
+    normal_uv_transform: list[float] | None = None
+    seam_width: float | None = None
     uv_transform: list[float] | None = None
 
     def to_mesh(self) -> trimesh.Trimesh:
@@ -62,19 +66,19 @@ class LayoutMesh(BaseModel):
         mesh = trimesh.Trimesh(verts, faces)
         mesh.fix_normals()
 
-        material_path = Path(TEXTURE_PATH) / self.material_jid
-        if (not self.use_color) and material_path.exists():
-            uv = np.array(self.uv, dtype=np.float32).reshape(-1, 2)
-            if self.uv_transform is not None:
-                m = np.array(self.uv_transform).reshape(3, 3)
-                uv_h = np.c_[uv, np.ones(len(uv))]
-                uv = (uv_h @ m.T)[:, :2]
+        # material_path = Path(TEXTURE_PATH) / self.material_jid
+        # if (not self.use_color) and material_path.exists():
+        #     uv = np.array(self.uv, dtype=np.float32).reshape(-1, 2)
+        #     if self.uv_transform is not None:
+        #         m = np.array(self.uv_transform).reshape(3, 3)
+        #         uv_h = np.c_[uv, np.ones(len(uv))]
+        #         uv = (uv_h @ m.T)[:, :2]
 
-            mesh.visual = trimesh.visual.texture.TextureVisuals(uv=uv, image=Image.open(material_path / "texture.png"))
+        #     mesh.visual = trimesh.visual.texture.TextureVisuals(uv=uv, image=Image.open(material_path / "texture.png"))
 
-        else:
-            color = np.array(self.color)
-            mesh.visual.vertex_colors = np.tile(color, (len(mesh.vertices), 1))
+        # else:
+        color = np.array(self.color)
+        mesh.visual.vertex_colors = np.tile(color, (len(mesh.vertices), 1))
 
         return mesh
 
@@ -103,6 +107,7 @@ def load_furniture_objects_for_room(scene_json: dict, room: dict) -> list[Furnit
 
         label = furniture.get("title") or furniture.get("category")
         if label is None:
+            print(obj)
             print("no label")
 
         f = FurnitureMesh(
@@ -142,9 +147,9 @@ def load_mesh_objects_for_room(scene_json: dict, room: dict) -> list[LayoutMesh]
             material_uid=material["uid"],
             material_jid=material["jid"],
             color=material["color"],
-            seam_width=material["seamWidth"],
-            use_color=material["useColor"],
-            normal_uv_transform=material["normalUVTransform"],
+            seam_width=material.get("seamWidth"),
+            use_color=material.get("useColor", True),
+            normal_uv_transform=material.get("normalUVTransform"),
             uv_transform=material.get("UVTransform"),
         )
 
@@ -153,12 +158,13 @@ def load_mesh_objects_for_room(scene_json: dict, room: dict) -> list[LayoutMesh]
     return meshes
 
 
-def build_room_scene(scene_json: dict, room: dict) -> trimesh.Scene:
+def build_room_scene(scene_json: dict, room: dict, bounding_box: bool) -> trimesh.Scene:
     meshes = load_mesh_objects_for_room(scene_json, room)
     furnitures = load_furniture_objects_for_room(scene_json, room)
 
     if len(furnitures) == 0:
         print("Room does not have any furniture objects")
+        return None
 
     scene = trimesh.Scene()
     for mesh in meshes:
@@ -167,17 +173,48 @@ def build_room_scene(scene_json: dict, room: dict) -> trimesh.Scene:
         scene.add_geometry(m, node_name=node_name)
 
     for mesh in furnitures:
-        m = mesh.to_mesh()
+        m = mesh.to_mesh(bounding_box=bounding_box)
         node_name = mesh.get_name()
         scene.add_geometry(m, node_name=node_name)
 
     return scene
 
+def print_room_ids(scene_json: dict):
+    rooms = scene_json["scene"]["room"]
+    for i, room in enumerate(rooms):
+        print(f"{i}: {room['instanceid']}")
+
+
 
 if __name__ == "__main__":
-    with open(FRONT_PATH / "0a42232a-b3a7-4b6e-a28c-cfbc1a9ad9a5.json") as f:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--print_rooms", action="store_true")
+    parser.add_argument("scene_json", type=str)
+    parser.add_argument("room_idx", nargs="?", type=int, default=None)
+    args = parser.parse_args()
+
+    with open(args.scene_json) as f:
         scene_json = json.load(f)
 
-    room = scene_json["scene"]["room"][3]
-    scene = build_room_scene(scene_json, room)
-    scene.export(f"{room['instanceid']}.glb")
+    if args.print_rooms:
+        print_room_ids(scene_json=scene_json)
+        
+        if args.room_idx is None:
+            exit()
+
+    if args.room_idx is None:
+        parser.error("Room index required. Use --print_rooms to get the available rooms.")
+
+    room = scene_json["scene"]["room"][args.room_idx]
+
+    scene_normal =  build_room_scene(scene_json=scene_json, room=room, bounding_box=False)
+    if scene_normal is not None:
+        scene_normal.export(f"./dataset/{room['instanceid']}.glb")
+
+    scene_bbox = build_room_scene(scene_json=scene_json, room=room, bounding_box=False)
+    if scene_bbox is not None:
+        scene_bbox.export(f"./dataset/{room['instanceid']}_bbox.glb")
+
+
+
+    
