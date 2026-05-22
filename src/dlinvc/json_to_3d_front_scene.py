@@ -31,7 +31,7 @@ class FurnitureMesh(BaseModel):
     rot: list[float]
     scale: list[float]
 
-    def to_mesh(self, bounding_box: bool = True) -> trimesh.Trimesh:
+    def to_mesh(self, bounding_box: bool = False) -> trimesh.Trimesh:
         mesh = trimesh.load(FUTURE_PATH / self.jid / "raw_model.obj")
         mesh.apply_transform(make_transform(pos=self.pos, rot=self.rot, scale=self.scale))
 
@@ -211,7 +211,7 @@ if __name__ == "__main__":
     if scene_normal is not None:
         scene_normal.export(f"./dataset/{room['instanceid']}.glb")
 
-    scene_bbox = build_room_scene(scene_json=scene_json, room=room, bounding_box=False)
+    scene_bbox = build_room_scene(scene_json=scene_json, room=room, bounding_box=True)
     if scene_bbox is not None:
         scene_bbox.export(f"./dataset/{room['instanceid']}_bbox.glb")
 
