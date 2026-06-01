@@ -1,6 +1,8 @@
 import bpy
 import json
 import numpy as np
+import os
+from pathlib import Path
 
 
 def extract_intrinsics(cam, render):
@@ -92,7 +94,16 @@ def main():
         "zfar" : zfar,
     }
 
-    with open("/Users/jonathansickert/git/DLinVC/assets/camera_params_livingroom.json", "w") as file:
+    props = bpy.context.window_manager.operator_properties_last("IMPORT_SCENE_OT_gltf")
+    if props and props.filepath:
+        glb_path = props.filepath
+    else:
+        raise RuntimeError("No .glb file path found.")
+
+    stem = Path(glb_path).stem
+    out_path = f"{stem}_camera.json"
+
+    with open(Path("/Users/jonathansickert/git/DLinVC/dataset") / out_path, "w") as file:
         json.dump(params, file, indent=2)
 
 
