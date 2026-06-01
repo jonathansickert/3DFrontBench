@@ -1,0 +1,228 @@
+{
+  "scene_id": "2eeb434c-855e-4298-a8d5-29b1ca838608",
+  "room_id": "MasterBedroom-5966",
+  "scene_name": "2eeb434c-855e-4298-a8d5-29b1ca838608_MasterBedroom-5966.glb",
+  "scene_name_bbox": "2eeb434c-855e-4298-a8d5-29b1ca838608_MasterBedroom-5966_bbox.glb",
+  "furniture": [
+    {
+      "name": "bed/king-size bed_27c28ae1-d885-4018-81a3-f3c033cd8f47",
+      "uid": "61469/model",
+      "jid": "27c28ae1-d885-4018-81a3-f3c033cd8f47",
+      "label": "bed/king-size bed",
+      "pos": [
+        3.855355420421793,
+        0.0,
+        3.5232456542003225
+      ],
+      "rot": [
+        0.0,
+        -0.70711,
+        0.0,
+        0.70711
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "table/night table_3664dd1d-7fd1-49b2-b5d4-8b9c613c1fcd",
+      "uid": "61470/model",
+      "jid": "3664dd1d-7fd1-49b2-b5d4-8b9c613c1fcd",
+      "label": "table/night table",
+      "pos": [
+        4.581876170289573,
+        0.0,
+        2.3861372337048965
+      ],
+      "rot": [
+        0.0,
+        -0.70711,
+        0.0,
+        0.70711
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "table/night table_3664dd1d-7fd1-49b2-b5d4-8b9c613c1fcd",
+      "uid": "61470/model",
+      "jid": "3664dd1d-7fd1-49b2-b5d4-8b9c613c1fcd",
+      "label": "table/night table",
+      "pos": [
+        4.698283342384764,
+        0.0,
+        4.805141681634876
+      ],
+      "rot": [
+        0.0,
+        -0.70711,
+        0.0,
+        0.70711
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "lighting/pendant light_f7a9e634-d3af-4d90-beb4-c97da4d82ee4",
+      "uid": "61472/model",
+      "jid": "f7a9e634-d3af-4d90-beb4-c97da4d82ee4",
+      "label": "lighting/pendant light",
+      "pos": [
+        4.439647769300673,
+        1.7400780615234375,
+        2.7506555640326606
+      ],
+      "rot": [
+        0.0,
+        -0.70711,
+        0.0,
+        0.70711
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "lighting/pendant light_f7a9e634-d3af-4d90-beb4-c97da4d82ee4",
+      "uid": "61472/model",
+      "jid": "f7a9e634-d3af-4d90-beb4-c97da4d82ee4",
+      "label": "lighting/pendant light",
+      "pos": [
+        4.438428880411784,
+        1.7400780615234375,
+        4.66522
+      ],
+      "rot": [
+        0.0,
+        -0.70711,
+        0.0,
+        0.70711
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "table/table_e274da8d-d814-43e6-bb8d-d5f6bfd950fb",
+      "uid": "61476/model",
+      "jid": "e274da8d-d814-43e6-bb8d-d5f6bfd950fb",
+      "label": "table/table",
+      "pos": [
+        4.316448704844104,
+        0.0,
+        5.4630960589222415
+      ],
+      "rot": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "storage unit/armoire - L shaped_146cea9c-0e87-4c90-8526-e5f7e5340530",
+      "uid": "61481/model",
+      "jid": "146cea9c-0e87-4c90-8526-e5f7e5340530",
+      "label": "storage unit/armoire - L shaped",
+      "pos": [
+        2.7212429424605857,
+        0.0,
+        5.147645926490261
+      ],
+      "rot": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "lighting/ceiling light_6c7ba746-fa09-4a7b-8d0f-129b2abd8bea",
+      "uid": "62272/model",
+      "jid": "6c7ba746-fa09-4a7b-8d0f-129b2abd8bea",
+      "label": "lighting/ceiling light",
+      "pos": [
+        3.51092,
+        2.32602601852417,
+        3.61086
+      ],
+      "rot": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "lighting/ceiling light_6c7ba746-fa09-4a7b-8d0f-129b2abd8bea",
+      "uid": "62273/model",
+      "jid": "6c7ba746-fa09-4a7b-8d0f-129b2abd8bea",
+      "label": "lighting/ceiling light",
+      "pos": [
+        2.4951,
+        2.326027015686035,
+        1.53066
+      ],
+      "rot": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "storage unit/armoire - L shaped_146cea9c-0e87-4c90-8526-e5f7e5340530",
+      "uid": "62983/model",
+      "jid": "146cea9c-0e87-4c90-8526-e5f7e5340530",
+      "label": "storage unit/armoire - L shaped",
+      "pos": [
+        1.6937033333333333,
+        0.0,
+        0.1329766611395941
+      ],
+      "rot": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ]
+}

@@ -26,10 +26,10 @@ def make_transform(pos: list, rot: list, scale: list) -> np.ndarray:
 class FurnitureMesh(BaseModel):
     uid: str
     jid: str
-    label: str
     pos: list[float]
     rot: list[float]
     scale: list[float]
+    label: str | None
 
     def to_mesh(self, bounding_box: bool = False) -> trimesh.Trimesh:
         mesh = trimesh.load(FUTURE_PATH / self.jid / "raw_model.obj")
@@ -106,9 +106,6 @@ def load_furniture_objects_for_room(scene_json: dict, room: dict) -> list[Furnit
             continue
 
         label = furniture.get("title") or furniture.get("category")
-        if label is None:
-            print(obj)
-            print("no label")
 
         f = FurnitureMesh(
             uid=furniture["uid"], jid=jid, label=label, pos=obj["pos"], rot=obj["rot"], scale=obj["scale"]
@@ -172,18 +169,35 @@ def build_room_scene(scene_json: dict, room: dict, bounding_box: bool) -> trimes
         node_name = mesh.get_name()
         scene.add_geometry(m, node_name=node_name)
 
+
+    furniture_list = []
+
+    is_valid = True
+
     for mesh in furnitures:
         m = mesh.to_mesh(bounding_box=bounding_box)
         node_name = mesh.get_name()
         scene.add_geometry(m, node_name=node_name)
 
-    return scene
+        if mesh.label is None:
+            is_valid = False
+
+        furniture_list.append({
+            "name" : mesh.get_name(),
+            "uid" : mesh.uid,
+            "jid" : mesh.jid,
+            "label" : mesh.label,
+            "pos" : mesh.pos,
+            "rot" : mesh.rot,
+            "scale" : mesh.scale,
+        })
+
+    return scene, len(furnitures), furniture_list, is_valid
 
 def print_room_ids(scene_json: dict):
     rooms = scene_json["scene"]["room"]
     for i, room in enumerate(rooms):
         print(f"{i}: {room['instanceid']}")
-
 
 
 if __name__ == "__main__":
