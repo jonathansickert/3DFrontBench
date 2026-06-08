@@ -37,7 +37,7 @@ class FurnitureMesh(BaseModel):
 
         if bounding_box:
             mesh = mesh.bounding_primitive
-        
+
         return mesh
 
     def get_name(self) -> str:
@@ -169,7 +169,6 @@ def build_room_scene(scene_json: dict, room: dict, bounding_box: bool) -> trimes
         node_name = mesh.get_name()
         scene.add_geometry(m, node_name=node_name)
 
-
     furniture_list = []
 
     is_valid = True
@@ -182,17 +181,20 @@ def build_room_scene(scene_json: dict, room: dict, bounding_box: bool) -> trimes
         if mesh.label is None:
             is_valid = False
 
-        furniture_list.append({
-            "name" : mesh.get_name(),
-            "uid" : mesh.uid,
-            "jid" : mesh.jid,
-            "label" : mesh.label,
-            "pos" : mesh.pos,
-            "rot" : mesh.rot,
-            "scale" : mesh.scale,
-        })
+        furniture_list.append(
+            {
+                "name": mesh.get_name(),
+                "uid": mesh.uid,
+                "jid": mesh.jid,
+                "label": mesh.label,
+                "pos": mesh.pos,
+                "rot": mesh.rot,
+                "scale": mesh.scale,
+            }
+        )
 
     return scene, len(furnitures), furniture_list, is_valid
+
 
 def print_room_ids(scene_json: dict):
     rooms = scene_json["scene"]["room"]
@@ -212,7 +214,7 @@ if __name__ == "__main__":
 
     if args.print_rooms:
         print_room_ids(scene_json=scene_json)
-        
+
         if args.room_idx is None:
             exit()
 
@@ -221,14 +223,10 @@ if __name__ == "__main__":
 
     room = scene_json["scene"]["room"][args.room_idx]
 
-    scene_normal =  build_room_scene(scene_json=scene_json, room=room, bounding_box=False)
+    scene_normal = build_room_scene(scene_json=scene_json, room=room, bounding_box=False)
     if scene_normal is not None:
         scene_normal.export(f"./dataset/{room['instanceid']}.glb")
 
     scene_bbox = build_room_scene(scene_json=scene_json, room=room, bounding_box=True)
     if scene_bbox is not None:
         scene_bbox.export(f"./dataset/{room['instanceid']}_bbox.glb")
-
-
-
-    

@@ -29,14 +29,12 @@ def extract_intrinsics(cam, render):
     else:
         fy = (f_mm / sensor_height_h_mm) * height
         fx = fy
-    
+
     cx = width / 2 + cam.data.shift_x * width
     cy = height / 2 - cam.data.shift_y * height
 
-    K = [[fx, 0, cx],
-         [0, fy, cy],
-         [0, 0, 1]]
-    
+    K = [[fx, 0, cx], [0, fy, cy], [0, 0, 1]]
+
     return {
         "fx": fx,
         "fy": fy,
@@ -45,19 +43,18 @@ def extract_intrinsics(cam, render):
         "width": width,
         "height": height,
         "aspect_ratio": aspect_ratio,
-        "K": K
+        "K": K,
     }
+
 
 def extract_extrinsics(cam):
     c2w_blender = np.array(cam.matrix_world)
-    flip_yz = np.array([[1, 0, 0, 0],
-                        [0, -1, 0, 0],
-                        [0, 0, -1, 0],
-                        [0, 0, 0, 1]])
-    
+    flip_yz = np.array([[1, 0, 0, 0], [0, -1, 0, 0], [0, 0, -1, 0], [0, 0, 0, 1]])
+
     c2w_opencv = c2w_blender @ flip_yz
-    
+
     return c2w_blender, c2w_opencv
+
 
 def main():
     scene = bpy.context.scene
@@ -66,32 +63,28 @@ def main():
 
     intrinsics = extract_intrinsics(cam, render)
     c2w_blender, c2w_opencv = extract_extrinsics(cam)
-    
+
     znear = cam.data.clip_start
     zfar = cam.data.clip_end
 
     params = {
-        "camera_name" : cam.name,
-        "camera_type" : cam.data.type,
-
-        "width" : intrinsics["width"],
-        "height" : intrinsics["height"],
-
+        "camera_name": cam.name,
+        "camera_type": cam.data.type,
+        "width": intrinsics["width"],
+        "height": intrinsics["height"],
         # intrinsics
-        "fx" : intrinsics["fx"],
-        "fy" : intrinsics["fy"],
-        "cx" : intrinsics["cx"],
-        "cy" : intrinsics["cy"],
-        "aspect_ratio" : intrinsics["aspect_ratio"],
-        "K" : intrinsics["K"],
-
+        "fx": intrinsics["fx"],
+        "fy": intrinsics["fy"],
+        "cx": intrinsics["cx"],
+        "cy": intrinsics["cy"],
+        "aspect_ratio": intrinsics["aspect_ratio"],
+        "K": intrinsics["K"],
         # extrinsics
-        "c2w_blender" : c2w_blender.tolist(),
-        "c2w_opencv" : c2w_opencv.tolist(),
-        
+        "c2w_blender": c2w_blender.tolist(),
+        "c2w_opencv": c2w_opencv.tolist(),
         # clip
         "znear": znear,
-        "zfar" : zfar,
+        "zfar": zfar,
     }
 
     props = bpy.context.window_manager.operator_properties_last("IMPORT_SCENE_OT_gltf")

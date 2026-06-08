@@ -27,13 +27,13 @@ def generate_dataset(samples: int = 30):
 
                 scene.export(f"dataset/{scene_id}_{room_id}.glb")
                 scene_bbox.export(f"dataset/{scene_id}_{room_id}_bbox.glb")
-                
+
                 metadata = {
-                    "scene_id" : scene_id,
-                    "room_id" : room_id,
-                    "scene_name" : f"{scene_id}_{room_id}.glb",
-                    "scene_name_bbox" : f"{scene_id}_{room_id}_bbox.glb",
-                    "furniture" : furniture_list
+                    "scene_id": scene_id,
+                    "room_id": room_id,
+                    "scene_name": f"{scene_id}_{room_id}.glb",
+                    "scene_name_bbox": f"{scene_id}_{room_id}_bbox.glb",
+                    "furniture": furniture_list,
                 }
 
                 with open(f"dataset/{scene_id}_{room_id}_metadata.json", "w") as f:
