@@ -57,7 +57,7 @@ class IndoorSceneDataset:
             scene = load_scene(scene_path)
             bbox = load_scene(bbox_path)
 
-            cam, c2w, width, height = get_camera(self.dataset_path / f"{scene_name.stem}_camera.json")
+            cam, c2w, width, height = get_camera(self.dataset_path / f"{scene_name[:-4]}_camera.json")
 
             scene = {
                 "scene": scene,
@@ -69,6 +69,8 @@ class IndoorSceneDataset:
                 "height": height,
             }
             self.scenes.append(scene)
+
+        print(f"Loaded '{len(self.scenes)}' scenes.")
 
     def __len__(self):
         return len(self.scenes)
