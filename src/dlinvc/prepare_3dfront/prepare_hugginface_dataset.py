@@ -20,6 +20,7 @@ Output structure: Each scene gets a dedicated directory containing:
 - depth.png: Rendered depth map
 """
 
+import os
 from pathlib import Path
 import json
 import shutil
@@ -27,6 +28,7 @@ from PIL import Image
 import pyrender
 import trimesh
 import numpy as np
+from huggingface_hub import HfApi
 
 
 def load_scene(scene_path: Path):
@@ -125,3 +127,8 @@ if __name__ == "__main__":
         Image.fromarray(norm_depth(depth)).save(subdir / "depth.png")
         Image.fromarray(color_bbox).save(subdir / "color_bbox.png")
         Image.fromarray(norm_depth(depth_bbox)).save(subdir / "depth_bbox.png")
+
+    api = HfApi(token=os.getenv("HF_TOKEN"))
+    api.upload_large_folder(
+        folder_path="./dataset_huggingface", repo_id="JonathanSickert/3DFront-eval", repo_type="dataset"
+    )
