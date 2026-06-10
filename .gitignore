@@ -224,3 +224,4 @@ hyperism/
 3D-FRONT/
 3D-FRONT-SCENES/
 .DS_Store
+dataset_huggingface/
