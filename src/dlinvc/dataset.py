@@ -1,9 +1,8 @@
 from pathlib import Path
 import json
 
+from PIL import Image
 import trimesh
-import pyrender
-import numpy as np
 
 
 def load_scene(scene_path: Path):
@@ -15,60 +14,45 @@ def load_scene(scene_path: Path):
     return loaded
 
 
-def get_camera(camera_path: Path):
-    with open(camera_path, "r") as f:
-        cam_params = json.load(f)
-
-    cam = pyrender.IntrinsicsCamera(
-        fx=cam_params["fx"],
-        fy=cam_params["fy"],
-        cx=cam_params["cx"],
-        cy=cam_params["cy"],
-        znear=cam_params["znear"],
-        zfar=cam_params["zfar"],
-    )
-
-    # blender uses z-up => convert to y-up for pyrender
-    c2w = np.array(cam_params["c2w_blender"])
-    Rx_neg90 = np.array([[1, 0, 0, 0], [0, 0, 1, 0], [0, -1, 0, 0], [0, 0, 0, 1]])
-
-    c2w_yup = Rx_neg90 @ c2w
-
-    return cam, c2w_yup, cam_params["width"], cam_params["height"]
-
-
-class IndoorSceneDataset:
+class Eval3DFrontDataset:
     def __init__(self, dataset_path: str):
         self.dataset_path = Path(dataset_path)
 
-        metadata_files = list(self.dataset_path.glob("*_metadata.json"))
         self.scenes = []
+        subdirs = [d for d in self.dataset_path.iterdir() if d.is_dir()]
+        subdirs = [d for d in subdirs if d.name != ".cache"]
 
-        for metadata_file in metadata_files:
-            with open(metadata_file, "r") as f:
-                metadata = json.load(f)
+        for subdir in subdirs:
+            scene_path = subdir / "scene.glb"
+            bbox_path = subdir / "scene_bbox.glb"
+            metadata_path = subdir / "metadata.json"
+            camera_path = subdir / "camera.json"
 
-            scene_name = metadata["scene_name"]
-            bbox_name = metadata["scene_name_bbox"]
-
-            scene_path = self.dataset_path / scene_name
-            bbox_path = self.dataset_path / bbox_name
+            color_path = subdir / "color.png"
+            color_bbox_path = subdir / "color_bbox.png"
+            depth_path = subdir / "depth.png"
+            depth_bbox_path = subdir / "depth_bbox.png"
 
             scene = load_scene(scene_path)
             bbox = load_scene(bbox_path)
 
-            cam, c2w, width, height = get_camera(self.dataset_path / f"{scene_name[:-4]}_camera.json")
+            with open(metadata_path, "r") as f:
+                metadata = json.load(f)
 
-            scene = {
+            with open(camera_path, "r") as f:
+                cam = json.load(f)
+
+            scene_data = {
                 "scene": scene,
                 "bbox": bbox,
                 "metadata": metadata,
                 "camera": cam,
-                "c2w": c2w,
-                "width": width,
-                "height": height,
+                "color": Image.open(color_path),
+                "color_bbox": Image.open(color_bbox_path),
+                "depth": Image.open(depth_path),
+                "depth_bbox": Image.open(depth_bbox_path),
             }
-            self.scenes.append(scene)
+            self.scenes.append(scene_data)
 
         print(f"Loaded '{len(self.scenes)}' scenes.")
 

@@ -28,6 +28,7 @@ import pyrender
 import trimesh
 import numpy as np
 
+
 def load_scene(scene_path: Path):
     loaded = trimesh.load(scene_path, process=False)
     for geom_name, geom in loaded.geometry.items():
@@ -35,6 +36,7 @@ def load_scene(scene_path: Path):
             geom.visual = geom.visual.to_color()
 
     return loaded
+
 
 def norm_depth(depth):
     depth_vis = depth.copy()
@@ -67,6 +69,7 @@ def get_camera(camera_path: Path):
 
     return cam, c2w_yup, cam_params["width"], cam_params["height"]
 
+
 if __name__ == "__main__":
     dataset_path = Path("./dataset")
     huggingface_dataset = Path("./dataset_huggingface")
@@ -85,18 +88,17 @@ if __name__ == "__main__":
 
         shutil.copy(dataset_path / metadata["scene_name"], dst_dir / "scene.glb")
         shutil.copy(dataset_path / metadata["scene_name_bbox"], dst_dir / "scene_bbox.glb")
-        
+
         new_metadata = {
             "scene_id": scene_id,
             "room_name": room_name,
-            "furniture" : metadata["furniture"],
+            "furniture": metadata["furniture"],
         }
 
         with open(dst_dir / "metadata.json", "w") as f:
             json.dump(new_metadata, f, indent=2)
 
         shutil.copy(dataset_path / f"{scene_id}_{room_name}_camera.json", dst_dir / "camera.json")
-
 
     for subdir in huggingface_dataset.iterdir():
         trimesh_scene = load_scene(subdir / "scene.glb")

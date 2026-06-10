@@ -17,6 +17,7 @@ from dlinvc.prepare_3dfront.json_to_3d_front_scene import build_room_scene
 from pathlib import Path
 import json
 
+
 def generate_dataset(samples: int = 30):
     samples_found = 0
     for scene_json_path in Path("3D-FRONT/3D-FRONT").glob("*.json"):
