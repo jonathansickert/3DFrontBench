@@ -23,7 +23,7 @@ class VLMScoreAgent:
 
     def generate_score(
         self,
-        target_image: Image.Imgae,
+        target_image: Image.Image,
         target_image_depth: Image.Image,
         rendering_image: Image.Image,
         rendering_image_depth: Image.Image,

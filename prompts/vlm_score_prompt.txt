@@ -15,5 +15,6 @@ You will rate the geometrical quality of the 3D scene on a scale 1-100 (100 = pe
 4. Object orientation: Evaluate if the object boundary boxes orientation matches the objects in the target image.
 
 ONLY rate the count, placement, scale, and orientation of object boundary boxes.
-DO NOT rate fidelity, or color. In the [reasoning] field, state what information would help you to better rate the scene and a reasoning for every of the four quality measures.
+DO NOT rate fidelity, or color.
+In the [reasoning] field, state what information would help you to better rate the scene and a reasoning for every of the four quality measures.
 
