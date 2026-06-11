@@ -16,16 +16,15 @@ while validating object availability in the 3D-FUTURE furniture library.
 """
 
 import trimesh
-import json
 from pathlib import Path
 from pydantic import BaseModel
 import numpy as np
 from dlinvc.util import make_transform
-import argparse
 
 FRONT_PATH = Path("/home/jonathansickert/git/DLinVC/3D-FRONT/3D-FRONT")
 FUTURE_PATH = Path("/home/jonathansickert/git/DLinVC/3D-FRONT/3D-FUTURE")
 TEXTURE_PATH = Path("/home/jonathansickert/git/DLinVC/3D-FRONT/3D-FRONT-texture")
+
 
 class FurnitureMesh(BaseModel):
     uid: str
@@ -147,19 +146,23 @@ def load_mesh_objects_for_room(scene_json: dict, room: dict) -> list[LayoutMesh]
     return meshes
 
 
-def build_room_scene(scene_json: dict, room: dict, bounding_box: bool) -> trimesh.Scene:
+def build_room_scene(
+    scene_json: dict, room: dict, bounding_box: bool
+) -> tuple[trimesh.Scene, trimesh.Scene, list[dict], bool]:
     meshes = load_mesh_objects_for_room(scene_json, room)
     furnitures = load_furniture_objects_for_room(scene_json, room)
 
     if len(furnitures) == 0:
         print("Room does not have any furniture objects")
-        return None
+        return None, None, [], False
 
     scene = trimesh.Scene()
     for mesh in meshes:
         m = mesh.to_mesh()
         node_name = mesh.get_name()
         scene.add_geometry(m, node_name=node_name)
+
+    scaffold = scene.copy()
 
     furniture_list = []
 
@@ -185,4 +188,4 @@ def build_room_scene(scene_json: dict, room: dict, bounding_box: bool) -> trimes
             }
         )
 
-    return scene, len(furnitures), furniture_list, is_valid
+    return scene, scaffold, furniture_list, is_valid

@@ -16,6 +16,7 @@ dependencies = [
     "pandas (>=3.0.3,<4.0.0)",
     "huggingface-hub (>=1.14.0,<2.0.0)",
     "ipykernel (>=7.2.0,<8.0.0)",
+    "ruff (>=0.15.16,<0.16.0)",
 ]
 
 [tool.poetry]

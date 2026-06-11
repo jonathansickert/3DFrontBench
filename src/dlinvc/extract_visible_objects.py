@@ -18,6 +18,7 @@ import trimesh
 
 from dlinvc.util import blender_c2w_to_opencv, c2w_to_w2c, visible_vertex_mask, load_scene
 
+
 def _match_geometries(scene: trimesh.Scene, metadata: dict) -> list[trimesh.Trimesh]:
     """Match each metadata furniture entry to its world-space geometry.
 
@@ -29,10 +30,7 @@ def _match_geometries(scene: trimesh.Scene, metadata: dict) -> list[trimesh.Trim
 
     Returns a list parallel to metadata["furniture"].
     """
-    geom_centroids = {
-        name: np.asarray(g.vertices, dtype=np.float64).mean(axis=0)
-        for name, g in scene.geometry.items()
-    }
+    geom_centroids = {name: np.asarray(g.vertices, dtype=np.float64).mean(axis=0) for name, g in scene.geometry.items()}
     centroid_arr = np.stack(list(geom_centroids.values()))  # (G, 3)
     geom_names = list(geom_centroids.keys())
 
@@ -71,6 +69,7 @@ def get_visible_objects(
 
     return results
 
+
 def extract_visible_objects(scene_dir: Path) -> list[dict]:
     """Return metadata entries for furniture visible from the camera.
 
@@ -95,18 +94,22 @@ def extract_visible_objects(scene_dir: Path) -> list[dict]:
         label = visible_item["label"]
         mesh = geom.copy()
 
-        visible_objects.append({
-            "name" : name,
-            "label" : label,
-            "mesh" : mesh,
-        })
+        visible_objects.append(
+            {
+                "name": name,
+                "label": label,
+                "mesh": mesh,
+            }
+        )
 
     return visible_objects
 
 
 if __name__ == "__main__":
     visible_objects = extract_visible_objects(
-        Path("/Users/jonathansickert/git/DLinVC/dataset_huggingface/0f661df2-0f41-47a4-830c-7444f4a33a03_LivingDiningRoom-12554")
+        Path(
+            "/Users/jonathansickert/git/DLinVC/dataset_huggingface/0f661df2-0f41-47a4-830c-7444f4a33a03_LivingDiningRoom-12554"
+        )
     )
 
     for visible_object in visible_objects:
