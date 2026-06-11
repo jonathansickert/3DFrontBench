@@ -6,33 +6,10 @@ from the sub-mesh formed by faces whose vertices are all visible.
 """
 
 from dlinvc.dataset import Eval3DFrontDataset
+from dlinvc.util import blender_c2w_to_opencv, c2w_to_w2c, visible_vertex_mask
 
 import numpy as np
 import trimesh
-
-
-def _visible_vertex_mask(
-    vertices: np.ndarray,
-    w2c: np.ndarray,
-    K: np.ndarray,
-    width: int,
-    height: int,
-    znear: float,
-    zfar: float,
-) -> np.ndarray:
-    """Boolean mask: True where a vertex projects inside the camera frame."""
-    ones = np.ones((len(vertices), 1))
-    verts_h = np.hstack([vertices, ones])          # (N, 4)
-    verts_cam = (w2c @ verts_h.T).T                # (N, 4)
-
-    Z = verts_cam[:, 2]
-    # avoid division by zero for vertices behind the camera
-    valid_z = Z > 0
-
-    u = np.where(valid_z, K[0, 0] * verts_cam[:, 0] / np.where(valid_z, Z, 1) + K[0, 2], -1)
-    v = np.where(valid_z, K[1, 1] * verts_cam[:, 1] / np.where(valid_z, Z, 1) + K[1, 2], -1)
-
-    return valid_z & (Z >= znear) & (Z <= zfar) & (u >= 0) & (u < width) & (v >= 0) & (v < height)
 
 
 def sample_visible_pointcloud(
@@ -53,17 +30,10 @@ def sample_visible_pointcloud(
     """
 
     K = np.array(cam["K"], dtype=np.float64)
-    # Blender camera: X right, Y up, -Z forward.
-    # Flip Y and Z to get OpenCV convention (X right, Y down, +Z forward).
     c2w_blender = np.array(cam["c2w_blender"], dtype=np.float64)
-    # c2w_blender lives in Blender's Z-up world, but the GLB mesh is Y-up (Blender rotates
-    # vertices by Rx(-90) on export). Pre-multiply to bring the camera into Y-up world space,
-    # then post-multiply to convert Blender camera axes (Y-up, -Z forward) to OpenCV (Y-down, +Z forward).
-    Rx_neg90 = np.array([[1, 0, 0, 0], [0, 0, 1, 0], [0, -1, 0, 0], [0, 0, 0, 1]], dtype=np.float64)
-    flip_yz = np.diag([1.0, -1.0, -1.0, 1.0])
-    c2w = Rx_neg90 @ c2w_blender @ flip_yz
+    c2w = blender_c2w_to_opencv(c2w_blender)
+    w2c = c2w_to_w2c(c2w)
 
-    w2c = np.linalg.inv(c2w)
     width: int = cam["width"]
     height: int = cam["height"]
     znear: float = cam["znear"]
@@ -71,11 +41,10 @@ def sample_visible_pointcloud(
 
     mesh = mesh.to_geometry()
 
-    vertices = np.asarray(mesh.vertices, dtype=np.float64)   # (V, 3)
-    faces = np.asarray(mesh.faces, dtype=np.int64)            # (F, 3)
+    vertices = np.asarray(mesh.vertices, dtype=np.float64)  # (V, 3)
+    faces = np.asarray(mesh.faces, dtype=np.int64)  # (F, 3)
 
-    visible = _visible_vertex_mask(vertices, w2c, K, width, height, znear, zfar)
-
+    visible = visible_vertex_mask(vertices, w2c, K, width, height, znear, zfar)
     face_visible = visible[faces].all(axis=1)
 
     visible_mesh = trimesh.Trimesh(
@@ -87,6 +56,7 @@ def sample_visible_pointcloud(
     points, _ = trimesh.sample.sample_surface(visible_mesh, n_samples)
     return points.astype(np.float32)
 
+
 if __name__ == "__main__":
     dataset = Eval3DFrontDataset("./dataset_huggingface")
 
@@ -97,4 +67,4 @@ if __name__ == "__main__":
     points = sample_visible_pointcloud(cam, mesh, n_samples=100_000)
     print(points.shape)
 
-    np.savetxt("cloud.xyz", points, fmt="%.6f")
+    np.savetxt("outputs/cloud.xyz", points, fmt="%.6f")

@@ -61,8 +61,6 @@ if __name__ == "__main__":
 
     render = render_pointcloud(points, sample["camera"])
 
-
     out_path = "./outputs/pointcloud_render.png"
     render.save(out_path)
     print(f"saved rendered image to {out_path}")
-

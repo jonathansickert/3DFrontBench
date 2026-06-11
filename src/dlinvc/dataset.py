@@ -43,7 +43,7 @@ class Eval3DFrontDataset:
                 cam = json.load(f)
 
             scene_data = {
-                "scene_id" : subdir.name,
+                "scene_id": subdir.name,
                 "scene": scene,
                 "bbox": bbox,
                 "metadata": metadata,
