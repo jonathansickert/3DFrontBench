@@ -13,8 +13,8 @@ consistent naming conventions: scene_id_room_id.glb, scene_id_room_id_bbox.glb, 
 corresponding metadata JSON files.
 """
 
-from dlinvc.prepare_3dfront.json_to_3d_front_scene import build_room_scene
 from dlinvc.util import render_trimesh_scene, get_pyrender_cam, remove_textures
+from dlinvc.dataset.json_to_3d_front_scene import build_room_scene
 from pathlib import Path
 import json
 from PIL import Image
