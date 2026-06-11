@@ -1,0 +1,358 @@
+{
+  "scene_id": "e44c4ecc-0260-469d-a60d-b71cf1d34029",
+  "room_id": "LivingRoom-15009",
+  "furniture": [
+    {
+      "name": "cabinet/floor-based cabinet_785b5d13-7b3d-51dc-8f20-e58d917f7138",
+      "uid": "26403/model",
+      "jid": "7acf98b8-349b-4b03-86a5-5fda22cf7818",
+      "label": "cabinet/floor-based cabinet",
+      "pos": [
+        3.09711775692706,
+        0.0,
+        -4.25669534367027
+      ],
+      "rot": [
+        0.0,
+        -0.70711,
+        0.0,
+        0.70711
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "lighting/ceiling light_1e8f30d1-fd18-5267-8adf-85f49f4badd9",
+      "uid": "37374/model",
+      "jid": "b4e96b08-b603-4021-8730-13a70cbb10d0",
+      "label": "lighting/ceiling light",
+      "pos": [
+        -0.76705,
+        2.8601430961990357,
+        -0.9431800000000001
+      ],
+      "rot": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "sofa/single seat sofa_e5d13044-99f4-517f-91b6-72566700264e",
+      "uid": "40500/model",
+      "jid": "05929327-fc23-4b20-9741-b94c24c2932a",
+      "label": "sofa/single seat sofa",
+      "pos": [
+        0.2690509493494081,
+        0.0,
+        -4.333748923979954
+      ],
+      "rot": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "lighting/floor lamp_dfd77e61-2811-5944-a365-648666dafdd4",
+      "uid": "40709/model",
+      "jid": "3cc3f638-e0fa-4428-b49e-e9468c0fa258",
+      "label": "lighting/floor lamp",
+      "pos": [
+        1.3529639196031833,
+        0.0,
+        -4.519417490403434
+      ],
+      "rot": [
+        0.0,
+        -0.60407,
+        0.0,
+        0.79693
+      ],
+      "scale": [
+        0.982744864201451,
+        1.0,
+        1.0362830509482688
+      ]
+    },
+    {
+      "name": "table/side table_3dc0abd5-aff4-5eee-ab07-0c73e19cfa43",
+      "uid": "40750/model",
+      "jid": "bce3ba30-2b07-4e36-8444-f3ab430f6c67",
+      "label": "table/side table",
+      "pos": [
+        -0.7394688373804789,
+        0.0,
+        -4.563895973572192
+      ],
+      "rot": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "lighting/pendant light_b9aa0bb9-01cb-5a0e-b940-5346658b0116",
+      "uid": "49930/model",
+      "jid": "b1833d8e-5de3-4f85-9eb6-42b4767c53af",
+      "label": "lighting/pendant light",
+      "pos": [
+        -0.8068899999999999,
+        2.0075609814453124,
+        -4.593320563863118
+      ],
+      "rot": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "chair/chair_94a29f99-79dd-5cf8-ad1e-778b2f07aa3c",
+      "uid": "50541/model",
+      "jid": "13c62b58-7cc4-4bf7-80d1-3d5f05080f54",
+      "label": "chair/chair",
+      "pos": [
+        -0.8377700000000002,
+        0.0,
+        -2.9656
+      ],
+      "rot": [
+        0.0,
+        -0.5779327543997143,
+        0.0,
+        -0.8160899678295032
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "chair/chair_4b0d0f55-7c5a-5014-896c-58ddf083b3b6",
+      "uid": "50554/model",
+      "jid": "cac2df2b-5839-4b08-8212-2c07e14621e5",
+      "label": "chair/chair",
+      "pos": [
+        1.53411,
+        0.0,
+        -3.59028
+      ],
+      "rot": [
+        0.0,
+        -0.38268,
+        0.0,
+        0.92388
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "plants/plants - on top of others_e4148430-2f2d-56b5-936a-e9fd50cf81b1",
+      "uid": "50698/model",
+      "jid": "16801395-bc82-43f7-96ce-62ac5475fe6c",
+      "label": "plants/plants - on top of others",
+      "pos": [
+        1.66171,
+        0.0,
+        -4.783575000542535
+      ],
+      "rot": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "table/dining table - square_652ac70f-1e70-5c2b-bdae-79df7b1cbf8d",
+      "uid": "51544/model",
+      "jid": "72ef43f5-ea82-43b4-81c9-11f713843d8e",
+      "label": "table/dining table - square",
+      "pos": [
+        2.258136437035016,
+        0.0,
+        -2.0952309365045383
+      ],
+      "rot": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "chair/armchair_bfa48a11-db54-523a-8691-d55308f34add",
+      "uid": "51727/model",
+      "jid": "758b7302-a6c5-4281-9939-2eebaa6ed2b9",
+      "label": "chair/armchair",
+      "pos": [
+        2.9358088701036245,
+        0.0,
+        -2.78534
+      ],
+      "rot": [
+        0.0,
+        -0.70711,
+        0.0,
+        0.70711
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "chair/armchair_26cccf75-1fc5-5e2a-ad24-86f254eb9955",
+      "uid": "51737/model",
+      "jid": "758b7302-a6c5-4281-9939-2eebaa6ed2b9",
+      "label": "chair/armchair",
+      "pos": [
+        1.3428314965308217,
+        0.0,
+        -1.880909957403127
+      ],
+      "rot": [
+        0.0,
+        0.86522,
+        0.0,
+        0.5014
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "lighting/pendant light_5994bc21-3160-5821-8213-396baac7c6d1",
+      "uid": "51896/model",
+      "jid": "b1833d8e-5de3-4f85-9eb6-42b4767c53af",
+      "label": "lighting/pendant light",
+      "pos": [
+        2.25539,
+        2.0075650024414062,
+        -1.71406
+      ],
+      "rot": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "cabinet/hutch&buffet_69b11556-e4bf-5e29-8329-8f4701f10ba2",
+      "uid": "52168/model",
+      "jid": "346eb388-299e-4236-895a-7a527db53990",
+      "label": "cabinet/hutch&buffet",
+      "pos": [
+        0.2311277064354228,
+        0.0,
+        -1.692147175842571
+      ],
+      "rot": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "accessory/accessory - floor-based_c10ae6b9-85bd-5906-8cd0-f5ea973540ed",
+      "uid": "52488/model",
+      "jid": "31bce7fa-35f6-4932-a137-af534a7c6f09",
+      "label": "accessory/accessory - floor-based",
+      "pos": [
+        3.2058679790258933,
+        0.0,
+        -3.5089740646346526
+      ],
+      "rot": [
+        0.0,
+        -0.6397,
+        0.0,
+        0.76863
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "lighting/ceiling light_36e30766-0e98-5751-a086-fa98271a8431",
+      "uid": "52502/model",
+      "jid": "b4e96b08-b603-4021-8730-13a70cbb10d0",
+      "label": "lighting/ceiling light",
+      "pos": [
+        1.12827,
+        2.8830694977951055,
+        -3.14347
+      ],
+      "rot": [
+        0.0,
+        -0.70711,
+        0.0,
+        0.70711
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ]
+}

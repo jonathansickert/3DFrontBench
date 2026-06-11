@@ -97,7 +97,7 @@ SELECTED_SCENES = [
 
 
 FRONT_PATH = Path("/home/jonathansickert/git/DLinVC/3D-FRONT/3D-FRONT")
-DATA_PATH = Path("/home/jonathansickert/git/DLinVC/dataset_huggingface")
+DATA_PATH = Path("/home/jonathansickert/git/DLinVC/dataset")
 CAM_PARAMS_PATH = Path("/home/jonathansickert/git/DLinVC/dataset_cam_params")
 
 

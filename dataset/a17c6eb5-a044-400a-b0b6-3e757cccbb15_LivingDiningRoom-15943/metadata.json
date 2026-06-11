@@ -1,0 +1,512 @@
+{
+  "scene_id": "a17c6eb5-a044-400a-b0b6-3e757cccbb15",
+  "room_id": "LivingDiningRoom-15943",
+  "furniture": [
+    {
+      "name": "sofa/ multi seat sofa_4cde05f0-6c21-5c8e-9d50-67713e9d5051",
+      "uid": "22625/model",
+      "jid": "4208bb28-b006-4701-affa-c5df5f1f2f86",
+      "label": "sofa/ multi seat sofa",
+      "pos": [
+        0.2942603773832835,
+        0.0,
+        2.330307952921316
+      ],
+      "rot": [
+        0.0,
+        -0.70711,
+        0.0,
+        0.70711
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "table/coffee table - round_d1f46bbc-1e20-5580-b7c2-7781b5b4af2b",
+      "uid": "25021/model",
+      "jid": "338c64d0-57d1-4580-8e09-07ef8a97e002",
+      "label": "table/coffee table - round",
+      "pos": [
+        -0.801433423551017,
+        0.0,
+        2.3033111743778427
+      ],
+      "rot": [
+        0.0,
+        0.70711,
+        0.0,
+        0.70711
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "accessory/accessory - floor-based_42499af4-a3fb-5827-aa6e-75d64e05af8b",
+      "uid": "25533/model",
+      "jid": "9a695621-9fb0-4266-adf2-7555ddc68f0b",
+      "label": "accessory/accessory - floor-based",
+      "pos": [
+        0.4811568134103591,
+        0.0,
+        3.9418640568136087
+      ],
+      "rot": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "lighting/floor lamp_19970ca6-b425-59ab-a421-d0af0977cea5",
+      "uid": "25592/model",
+      "jid": "09fdda8c-7df0-4af6-ac68-aee7cbead3fb",
+      "label": "lighting/floor lamp",
+      "pos": [
+        0.15397955827484408,
+        0.0,
+        3.6555577994232333
+      ],
+      "rot": [
+        0.0,
+        0.58519,
+        0.0,
+        0.8109
+      ],
+      "scale": [
+        1.0805063455594026,
+        1.0,
+        1.2401100947146004
+      ]
+    },
+    {
+      "name": "chair/armchair_73c77bce-3ec7-5324-848e-6ab12e0d1c11",
+      "uid": "29795/model",
+      "jid": "297ae078-c07a-4181-8a8d-a680f5691d5e",
+      "label": "chair/armchair",
+      "pos": [
+        -0.9266980744892644,
+        0.0,
+        3.900514128222083
+      ],
+      "rot": [
+        0.0,
+        0.92388,
+        0.0,
+        -0.38268
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "plants/plants - on top of others_84621173-7517-5d7c-8056-2ade622e23c2",
+      "uid": "29804/model",
+      "jid": "28df2d4a-eddd-4486-9598-5f180d54358a",
+      "label": "plants/plants - on top of others",
+      "pos": [
+        -3.21927,
+        0.0,
+        0.60013
+      ],
+      "rot": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "plants/plants - on top of others_63b75ee0-bf3f-5cdf-b5b9-3d4802da2fec",
+      "uid": "29805/model",
+      "jid": "43be8f87-d260-4c9c-a8c2-6127d94acb2f",
+      "label": "plants/plants - on top of others",
+      "pos": [
+        -3.33528,
+        0.0,
+        3.77484
+      ],
+      "rot": [
+        0.0,
+        0.98345,
+        0.0,
+        -0.1812
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "table/dining table - round_a6d542da-7068-5491-9518-3f09d40a6a4a",
+      "uid": "33134/model",
+      "jid": "0e90ef50-aced-4b4c-97b1-cd7ced5724f5",
+      "label": "table/dining table - round",
+      "pos": [
+        -0.856409290187783,
+        0.0,
+        -1.5434200511408513
+      ],
+      "rot": [
+        0.0,
+        -0.70711,
+        0.0,
+        0.70711
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "table/side table_07c958a6-33ef-5357-96b4-ff9fddb500c1",
+      "uid": "44018/model",
+      "jid": "61e113b3-9ce5-4a0e-aa18-9ea2f16227de",
+      "label": "table/side table",
+      "pos": [
+        0.4425,
+        0.0,
+        0.65442
+      ],
+      "rot": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "storage unit/dresser_66a88afb-580b-5283-afc7-e7965570517c",
+      "uid": "44321/model",
+      "jid": "edf66837-14bc-417f-a8cf-e48635eaadc7",
+      "label": "storage unit/dresser",
+      "pos": [
+        0.83162,
+        0.0,
+        -1.7079099999999998
+      ],
+      "rot": [
+        0.0,
+        -0.70711,
+        0.0,
+        0.70711
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "plants/plants - on top of others_2b68a01c-6e44-5ba1-8e97-af37ce4eb4a5",
+      "uid": "45047/model",
+      "jid": "5d231b48-1c50-4ca3-977c-8f9aa5912a32",
+      "label": "plants/plants - on top of others",
+      "pos": [
+        0.6823600000000001,
+        0.0,
+        -2.7860794115651446
+      ],
+      "rot": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        0.82601,
+        0.82601,
+        0.82601
+      ]
+    },
+    {
+      "name": "cabinet/floor-based cabinet_9c64bf37-8047-546d-9b3a-fd5d494927fb",
+      "uid": "45074/model",
+      "jid": "877293a1-df79-4a77-a420-495fdb1e4933",
+      "label": "cabinet/floor-based cabinet",
+      "pos": [
+        -3.260156769422211,
+        0.0,
+        -1.988112955704762
+      ],
+      "rot": [
+        0.0,
+        0.70711,
+        0.0,
+        0.70711
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "media unit/floor-based media unit_6297b0d6-8f30-5e89-8854-1e07067f834f",
+      "uid": "46367/model",
+      "jid": "1a4af735-398a-483b-ad94-68baeb0517bd",
+      "label": "media unit/floor-based media unit",
+      "pos": [
+        -2.1296205128046455,
+        0.0,
+        -0.6766673583833107
+      ],
+      "rot": [
+        0.0,
+        0.70711,
+        0.0,
+        0.70711
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "chair/chair_11c96b76-abaa-5609-a83f-382bc0189912",
+      "uid": "85091/model",
+      "jid": "5157b498-3cdf-4513-bd97-237358b1979e",
+      "label": "chair/chair",
+      "pos": [
+        -1.5324405164862132,
+        0.0,
+        -1.1079840457490082
+      ],
+      "rot": [
+        0.0,
+        0.70711,
+        0.0,
+        0.70711
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "chair/chair_80000ff8-5489-5428-bb36-9240b0ea82cb",
+      "uid": "85091/model",
+      "jid": "5157b498-3cdf-4513-bd97-237358b1979e",
+      "label": "chair/chair",
+      "pos": [
+        -1.5559748018222608,
+        0.0,
+        -1.6403879246324944
+      ],
+      "rot": [
+        0.0,
+        0.70711,
+        0.0,
+        0.70711
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "chair/chair_94ff4062-6f84-5fd1-a51a-46fe5ac5d656",
+      "uid": "85091/model",
+      "jid": "5157b498-3cdf-4513-bd97-237358b1979e",
+      "label": "chair/chair",
+      "pos": [
+        -1.599884801822261,
+        0.0,
+        -2.206272594821737
+      ],
+      "rot": [
+        0.0,
+        0.70711,
+        0.0,
+        0.70711
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "chair/chair_5791d5f7-02e9-5f5b-a8dc-14ce4ebae6a9",
+      "uid": "85091/model",
+      "jid": "5157b498-3cdf-4513-bd97-237358b1979e",
+      "label": "chair/chair",
+      "pos": [
+        -0.18783516422794988,
+        0.0,
+        -1.1038424525593427
+      ],
+      "rot": [
+        0.0,
+        -0.70711,
+        0.0,
+        0.70711
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "chair/chair_ad0e73f8-a296-5224-ae9d-b7e3b612d97d",
+      "uid": "85091/model",
+      "jid": "5157b498-3cdf-4513-bd97-237358b1979e",
+      "label": "chair/chair",
+      "pos": [
+        -0.20990516422795003,
+        0.0,
+        -1.6361980425646685
+      ],
+      "rot": [
+        0.0,
+        -0.70711,
+        0.0,
+        0.70711
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "chair/chair_6dd0ee4a-5f15-5a39-83f7-ca7000b3eeb2",
+      "uid": "85091/model",
+      "jid": "5157b498-3cdf-4513-bd97-237358b1979e",
+      "label": "chair/chair",
+      "pos": [
+        -0.25381516422795003,
+        0.0,
+        -2.202082712753911
+      ],
+      "rot": [
+        0.0,
+        -0.70711,
+        0.0,
+        0.70711
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "lighting/pendant light_91455e5b-c09d-5359-a959-2b8316b54684",
+      "uid": "310083/model",
+      "jid": "3b24e2fc-2f7f-49b3-bf76-81b226a74046",
+      "label": "lighting/pendant light",
+      "pos": [
+        -0.73708,
+        1.9572890234375,
+        2.25835
+      ],
+      "rot": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "lighting/pendant light_bc7470de-03b4-5360-b78b-6ec8913f3db5",
+      "uid": "310085/model",
+      "jid": "3b24e2fc-2f7f-49b3-bf76-81b226a74046",
+      "label": "lighting/pendant light",
+      "pos": [
+        -0.7370799999999998,
+        1.9572919921875,
+        -1.69449
+      ],
+      "rot": [
+        0.0,
+        0.70711,
+        0.0,
+        0.70711
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "sofa/ottoman_48f71fcd-e380-5c17-a634-a8eea4890268",
+      "uid": "317796/model",
+      "jid": "7a2d6a8d-6929-4d68-a070-75bd3f614026",
+      "label": "sofa/ottoman",
+      "pos": [
+        -1.3224944127751876,
+        0.0,
+        0.9639717444443436
+      ],
+      "rot": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "sofa/ottoman_cbd8b7fe-ace4-5050-8e59-0bca0cf7d074",
+      "uid": "317796/model",
+      "jid": "7a2d6a8d-6929-4d68-a070-75bd3f614026",
+      "label": "sofa/ottoman",
+      "pos": [
+        -0.6274055872248122,
+        0.0,
+        0.9624282555556565
+      ],
+      "rot": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ]
+}

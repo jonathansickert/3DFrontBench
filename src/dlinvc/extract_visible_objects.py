@@ -19,34 +19,10 @@ import trimesh
 from dlinvc.util import blender_c2w_to_opencv, c2w_to_w2c, visible_vertex_mask, load_scene
 
 
-def _match_geometries(scene: trimesh.Scene, metadata: dict) -> list[trimesh.Trimesh]:
-    """Match each metadata furniture entry to its world-space geometry.
-
-    The GLB bakes all node transforms into vertex positions (every scene graph
-    transform is identity). When the same furniture name appears multiple times,
-    the GLTF has only one named node — other instances are stored as anonymous
-    meshes. Matching by centroid-to-pos distance recovers the correct geometry
-    for every instance.
-
-    Returns a list parallel to metadata["furniture"].
-    """
-    geom_centroids = {name: np.asarray(g.vertices, dtype=np.float64).mean(axis=0) for name, g in scene.geometry.items()}
-    centroid_arr = np.stack(list(geom_centroids.values()))  # (G, 3)
-    geom_names = list(geom_centroids.keys())
-
-    matched = []
-    for item in metadata["furniture"]:
-        pos = np.array(item["pos"], dtype=np.float64)
-        dists = np.linalg.norm(centroid_arr - pos, axis=1)
-        best = geom_names[int(dists.argmin())]
-        matched.append(scene.geometry[best])
-    return matched
-
-
 def get_visible_objects(
     scene: trimesh.Scene,
-    metadata: dict,
     cam: dict,
+    metadata: dict,
 ) -> list[tuple[dict, trimesh.Trimesh]]:
     """Return (furniture_item, geometry) for each visible object."""
     K = np.array(cam["K"], dtype=np.float64)
@@ -58,11 +34,11 @@ def get_visible_objects(
     znear: float = cam["znear"]
     zfar: float = cam["zfar"]
 
-    geometries = _match_geometries(scene, metadata)
-
     results = []
-    for item, geom in zip(metadata["furniture"], geometries):
-        # Vertices are already in world space (transforms baked on GLB export)
+    for item in metadata["furniture"]:
+        node_name = item["name"]
+        _, geom_name = scene.graph[node_name]
+        geom = scene.geometry[geom_name]
         vertices = np.asarray(geom.vertices, dtype=np.float64)
         if visible_vertex_mask(vertices, w2c, K, width, height, znear, zfar).any():
             results.append((item, geom))
@@ -82,14 +58,15 @@ def extract_visible_objects(scene_dir: Path) -> list[dict]:
     """
 
     scene = load_scene(scene_dir / "scene.glb")
-    with open(scene_dir / "metadata.json") as f:
-        metadata = json.load(f)
     with open(scene_dir / "camera.json") as f:
         cam = json.load(f)
 
+    with open(scene_dir / "metadata.json") as f:
+        metadata = json.load(f)
+
     visible_objects = []
 
-    for visible_item, geom in get_visible_objects(scene, metadata, cam):
+    for visible_item, geom in get_visible_objects(scene, cam, metadata):
         name = visible_item["name"]
         label = visible_item["label"]
         mesh = geom.copy()
@@ -108,7 +85,7 @@ def extract_visible_objects(scene_dir: Path) -> list[dict]:
 if __name__ == "__main__":
     visible_objects = extract_visible_objects(
         Path(
-            "/Users/jonathansickert/git/DLinVC/dataset_huggingface/0f661df2-0f41-47a4-830c-7444f4a33a03_LivingDiningRoom-12554"
+            "/home/jonathansickert/git/DLinVC/dataset_huggingface/0f661df2-0f41-47a4-830c-7444f4a33a03_LivingDiningRoom-12554/"
         )
     )
 
