@@ -3,7 +3,7 @@
   "room_id": "MasterBedroom-5966",
   "furniture": [
     {
-      "name": "bed/king-size bed_00b9bac5-24ae-50bc-b5f3-558ab02ecd47",
+      "name": "bed_king_size_bed_00b9bac5-24ae-50bc-b5f3-558ab02ecd47",
       "uid": "61469/model",
       "jid": "27c28ae1-d885-4018-81a3-f3c033cd8f47",
       "label": "bed/king-size bed",
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "name": "table/night table_4a26cddf-c3dd-5f56-8eb9-f29c48b8ea8f",
+      "name": "table_night_table_4a26cddf-c3dd-5f56-8eb9-f29c48b8ea8f",
       "uid": "61470/model",
       "jid": "3664dd1d-7fd1-49b2-b5d4-8b9c613c1fcd",
       "label": "table/night table",
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "name": "table/night table_c2d2dde9-bd8e-51e8-b563-a305aa3df67f",
+      "name": "table_night_table_c2d2dde9-bd8e-51e8-b563-a305aa3df67f",
       "uid": "61470/model",
       "jid": "3664dd1d-7fd1-49b2-b5d4-8b9c613c1fcd",
       "label": "table/night table",
@@ -69,7 +69,7 @@
       ]
     },
     {
-      "name": "lighting/pendant light_b1d9b8b3-333b-5856-88b7-a6c59cc63b4a",
+      "name": "lighting_pendant_light_b1d9b8b3-333b-5856-88b7-a6c59cc63b4a",
       "uid": "61472/model",
       "jid": "f7a9e634-d3af-4d90-beb4-c97da4d82ee4",
       "label": "lighting/pendant light",
@@ -91,7 +91,7 @@
       ]
     },
     {
-      "name": "lighting/pendant light_511c4e12-1bf4-501f-8c34-e2cb2bae5399",
+      "name": "lighting_pendant_light_511c4e12-1bf4-501f-8c34-e2cb2bae5399",
       "uid": "61472/model",
       "jid": "f7a9e634-d3af-4d90-beb4-c97da4d82ee4",
       "label": "lighting/pendant light",
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "name": "table/table_6fe72376-b219-5f02-8dfb-0a7f448d351b",
+      "name": "table_table_6fe72376-b219-5f02-8dfb-0a7f448d351b",
       "uid": "61476/model",
       "jid": "e274da8d-d814-43e6-bb8d-d5f6bfd950fb",
       "label": "table/table",
@@ -135,7 +135,7 @@
       ]
     },
     {
-      "name": "storage unit/armoire - L shaped_9c34898e-35b5-58dc-917e-94fa2293f844",
+      "name": "storage_unit_armoire_L_shaped_9c34898e-35b5-58dc-917e-94fa2293f844",
       "uid": "61481/model",
       "jid": "146cea9c-0e87-4c90-8526-e5f7e5340530",
       "label": "storage unit/armoire - L shaped",
@@ -157,7 +157,7 @@
       ]
     },
     {
-      "name": "lighting/ceiling light_7809344a-b471-56f7-9336-78aaa81316ea",
+      "name": "lighting_ceiling_light_7809344a-b471-56f7-9336-78aaa81316ea",
       "uid": "62272/model",
       "jid": "6c7ba746-fa09-4a7b-8d0f-129b2abd8bea",
       "label": "lighting/ceiling light",
@@ -179,7 +179,7 @@
       ]
     },
     {
-      "name": "lighting/ceiling light_44996b9b-2a5e-594f-92e0-4164a7c8fee3",
+      "name": "lighting_ceiling_light_44996b9b-2a5e-594f-92e0-4164a7c8fee3",
       "uid": "62273/model",
       "jid": "6c7ba746-fa09-4a7b-8d0f-129b2abd8bea",
       "label": "lighting/ceiling light",
@@ -201,7 +201,7 @@
       ]
     },
     {
-      "name": "storage unit/armoire - L shaped_07a8c147-b4f3-58c2-8fa8-f292815a6efb",
+      "name": "storage_unit_armoire_L_shaped_07a8c147-b4f3-58c2-8fa8-f292815a6efb",
       "uid": "62983/model",
       "jid": "146cea9c-0e87-4c90-8526-e5f7e5340530",
       "label": "storage unit/armoire - L shaped",
@@ -222,5 +222,14 @@
         1.0
       ]
     }
+  ],
+  "visible_furniture": [
+    "bed_king_size_bed_00b9bac5-24ae-50bc-b5f3-558ab02ecd47",
+    "table_night_table_4a26cddf-c3dd-5f56-8eb9-f29c48b8ea8f",
+    "table_night_table_c2d2dde9-bd8e-51e8-b563-a305aa3df67f",
+    "lighting_pendant_light_b1d9b8b3-333b-5856-88b7-a6c59cc63b4a",
+    "lighting_pendant_light_511c4e12-1bf4-501f-8c34-e2cb2bae5399",
+    "table_table_6fe72376-b219-5f02-8dfb-0a7f448d351b",
+    "storage_unit_armoire_L_shaped_9c34898e-35b5-58dc-917e-94fa2293f844"
   ]
 }

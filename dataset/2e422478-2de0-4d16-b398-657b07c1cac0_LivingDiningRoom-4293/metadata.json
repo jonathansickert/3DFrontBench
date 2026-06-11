@@ -3,7 +3,7 @@
   "room_id": "LivingDiningRoom-4293",
   "furniture": [
     {
-      "name": "Three-Seat / Multi-person sofa_ba82eca7-bd9b-5dca-a496-9979cb04f346",
+      "name": "Three_Seat_Multi_person_sofa_ba82eca7-bd9b-5dca-a496-9979cb04f346",
       "uid": "2021159369769437015072/model",
       "jid": "43b586c5-37b3-4c9b-bf51-7bcde22b28b7",
       "label": "Three-Seat / Multi-person sofa",
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "name": "Tea Table_c32141e8-31cf-5891-9b75-c96be5d9c751",
+      "name": "Tea_Table_c32141e8-31cf-5891-9b75-c96be5d9c751",
       "uid": "2021159369769437233696/model",
       "jid": "987da1e6-eccc-4f43-a911-55ef1cd7c5d0",
       "label": "Tea Table",
@@ -91,7 +91,7 @@
       ]
     },
     {
-      "name": "TV Stand_3adeef65-7c72-5602-ab21-3b7e3e51e2ed",
+      "name": "TV_Stand_3adeef65-7c72-5602-ab21-3b7e3e51e2ed",
       "uid": "2021159369769437714016/model",
       "jid": "1a55111c-d745-475c-b3fb-884f7bb102db",
       "label": "TV Stand",
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "name": "Drawer Chest / Corner cabinet_fe53e994-f6f9-5628-90ec-55ea953f1dc5",
+      "name": "Drawer_Chest_Corner_cabinet_fe53e994-f6f9-5628-90ec-55ea953f1dc5",
       "uid": "2021159369769437721792/model",
       "jid": "1978275c-8e55-49e4-aa8e-ba0c4800d40b",
       "label": "Drawer Chest / Corner cabinet",
@@ -135,7 +135,7 @@
       ]
     },
     {
-      "name": "Children Cabinet_05ce3858-2af0-5906-8ef6-e328f0657ee3",
+      "name": "Children_Cabinet_05ce3858-2af0-5906-8ef6-e328f0657ee3",
       "uid": "2021159369769438021888/model",
       "jid": "28db412b-c62b-4c83-ae16-c0ce86d93491",
       "label": "Children Cabinet",
@@ -179,7 +179,7 @@
       ]
     },
     {
-      "name": "Dining Table_d300d78c-c8f0-5956-aeb2-c07271f3cc35",
+      "name": "Dining_Table_d300d78c-c8f0-5956-aeb2-c07271f3cc35",
       "uid": "2021159369769438217792/model",
       "jid": "74345089-2a96-44e0-9da1-b640fb6f7f5d",
       "label": "Dining Table",
@@ -201,7 +201,7 @@
       ]
     },
     {
-      "name": "Dining Chair_f9561ef8-5811-5484-8c49-4127840cbdcc",
+      "name": "Dining_Chair_f9561ef8-5811-5484-8c49-4127840cbdcc",
       "uid": "2021159369769438219488/model",
       "jid": "01fe3767-6f21-49cf-b8da-e16b53267dc8",
       "label": "Dining Chair",
@@ -223,7 +223,7 @@
       ]
     },
     {
-      "name": "Dining Chair_c73646e0-b120-57bf-a7e5-58ec5bdd5483",
+      "name": "Dining_Chair_c73646e0-b120-57bf-a7e5-58ec5bdd5483",
       "uid": "2021159369769438219488/model",
       "jid": "01fe3767-6f21-49cf-b8da-e16b53267dc8",
       "label": "Dining Chair",
@@ -245,7 +245,7 @@
       ]
     },
     {
-      "name": "Pendant Lamp_d93a3b07-6225-5908-94b5-7e79831375b0",
+      "name": "Pendant_Lamp_d93a3b07-6225-5908-94b5-7e79831375b0",
       "uid": "2021159369769438342720/model",
       "jid": "d6141075-cfb2-4347-9d9a-7e657ede7276",
       "label": "Pendant Lamp",
@@ -267,7 +267,7 @@
       ]
     },
     {
-      "name": "Pendant Lamp_03865645-661d-5ee9-991d-9d8f4aafd182",
+      "name": "Pendant_Lamp_03865645-661d-5ee9-991d-9d8f4aafd182",
       "uid": "2021159369769438435296/model",
       "jid": "dd6632d8-6a8a-452b-b5a7-05aa1caaa67b",
       "label": "Pendant Lamp",
@@ -288,5 +288,20 @@
         1.9822298510785796
       ]
     }
+  ],
+  "visible_furniture": [
+    "Three_Seat_Multi_person_sofa_ba82eca7-bd9b-5dca-a496-9979cb04f346",
+    "Tea_Table_c32141e8-31cf-5891-9b75-c96be5d9c751",
+    "Others_865caabf-2291-55ab-8d8b-aa53b82c1097",
+    "Others_cf707cf2-0d21-5b06-a744-10a368659d5e",
+    "TV_Stand_3adeef65-7c72-5602-ab21-3b7e3e51e2ed",
+    "Drawer_Chest_Corner_cabinet_fe53e994-f6f9-5628-90ec-55ea953f1dc5",
+    "Children_Cabinet_05ce3858-2af0-5906-8ef6-e328f0657ee3",
+    "Shelf_7197123a-46e4-5e73-b44d-568d53c7a240",
+    "Dining_Table_d300d78c-c8f0-5956-aeb2-c07271f3cc35",
+    "Dining_Chair_f9561ef8-5811-5484-8c49-4127840cbdcc",
+    "Dining_Chair_c73646e0-b120-57bf-a7e5-58ec5bdd5483",
+    "Pendant_Lamp_d93a3b07-6225-5908-94b5-7e79831375b0",
+    "Pendant_Lamp_03865645-661d-5ee9-991d-9d8f4aafd182"
   ]
 }

@@ -3,7 +3,7 @@
   "room_id": "LivingDiningRoom-9326",
   "furniture": [
     {
-      "name": "sofa/right corner sofa_883aa2fc-c938-5af5-865c-fb4a778dd336",
+      "name": "sofa_right_corner_sofa_883aa2fc-c938-5af5-865c-fb4a778dd336",
       "uid": "3377/model",
       "jid": "00e371c6-da47-429e-b0cd-2ba243912ee8",
       "label": "sofa/right corner sofa",
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "name": "chair/chair_0f420d90-ffe6-58b9-b36f-a63df10b5cb6",
+      "name": "chair_chair_0f420d90-ffe6-58b9-b36f-a63df10b5cb6",
       "uid": "3378/model",
       "jid": "04b7beca-998e-4249-9aa2-8179e547f7fe",
       "label": "chair/chair",
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "name": "chair/chair_f164c45a-092a-5b71-bb83-4425e18c9d92",
+      "name": "chair_chair_f164c45a-092a-5b71-bb83-4425e18c9d92",
       "uid": "3379/model",
       "jid": "dd9128e2-d08e-4110-895f-af34c39eb231",
       "label": "chair/chair",
@@ -69,7 +69,7 @@
       ]
     },
     {
-      "name": "table/coffee table_526f72f1-5f2a-5546-8efd-2407665e5627",
+      "name": "table_coffee_table_526f72f1-5f2a-5546-8efd-2407665e5627",
       "uid": "3380/model",
       "jid": "b83731c6-687a-4642-89a3-05d625bf3023",
       "label": "table/coffee table",
@@ -91,7 +91,7 @@
       ]
     },
     {
-      "name": "chair/chair_bd153358-2d13-5884-9858-7250a6d4fe10",
+      "name": "chair_chair_bd153358-2d13-5884-9858-7250a6d4fe10",
       "uid": "3379/model",
       "jid": "dd9128e2-d08e-4110-895f-af34c39eb231",
       "label": "chair/chair",
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "name": "table/dining table - square_422fcb35-b3e0-5e77-a975-2b5bd11e54d7",
+      "name": "table_dining_table_square_422fcb35-b3e0-5e77-a975-2b5bd11e54d7",
       "uid": "3386/model",
       "jid": "3124954e-9fdd-4935-8cba-c4c3c2790dac",
       "label": "table/dining table - square",
@@ -135,7 +135,7 @@
       ]
     },
     {
-      "name": "chair/chair_2e7ba43d-593c-5d83-8fcf-c3d206face9f",
+      "name": "chair_chair_2e7ba43d-593c-5d83-8fcf-c3d206face9f",
       "uid": "3389/model",
       "jid": "4ae411dd-cd8f-3b77-acbd-8f4d813d7534",
       "label": "chair/chair",
@@ -157,7 +157,7 @@
       ]
     },
     {
-      "name": "chair/chair_cc94bd19-6bed-552d-a58e-f671203820d6",
+      "name": "chair_chair_cc94bd19-6bed-552d-a58e-f671203820d6",
       "uid": "3389/model",
       "jid": "4ae411dd-cd8f-3b77-acbd-8f4d813d7534",
       "label": "chair/chair",
@@ -179,7 +179,7 @@
       ]
     },
     {
-      "name": "chair/chair_23b0a001-e6cd-50d1-a4c4-bdc9fbe27e3a",
+      "name": "chair_chair_23b0a001-e6cd-50d1-a4c4-bdc9fbe27e3a",
       "uid": "3389/model",
       "jid": "4ae411dd-cd8f-3b77-acbd-8f4d813d7534",
       "label": "chair/chair",
@@ -201,7 +201,7 @@
       ]
     },
     {
-      "name": "chair/chair_9966fe77-8c68-59cb-9140-80c75ec1aca9",
+      "name": "chair_chair_9966fe77-8c68-59cb-9140-80c75ec1aca9",
       "uid": "3389/model",
       "jid": "4ae411dd-cd8f-3b77-acbd-8f4d813d7534",
       "label": "chair/chair",
@@ -223,7 +223,7 @@
       ]
     },
     {
-      "name": "lighting/pendant light_f68a40ce-cd37-59fa-8d45-a2ff28d0226e",
+      "name": "lighting_pendant_light_f68a40ce-cd37-59fa-8d45-a2ff28d0226e",
       "uid": "4510/model",
       "jid": "eb8adc45-62a2-46ae-b880-bc79208f4b5c",
       "label": "lighting/pendant light",
@@ -245,7 +245,7 @@
       ]
     },
     {
-      "name": "lighting/pendant light_87b4eff2-e869-52c3-935d-1834d483ef26",
+      "name": "lighting_pendant_light_87b4eff2-e869-52c3-935d-1834d483ef26",
       "uid": "4511/model",
       "jid": "a08373a6-e9bc-44c1-877f-1c078a9eb841",
       "label": "lighting/pendant light",
@@ -267,7 +267,7 @@
       ]
     },
     {
-      "name": "plants/plants - floor-based_ff0637cb-1778-52e1-a89d-38e715474675",
+      "name": "plants_plants_floor_based_ff0637cb-1778-52e1-a89d-38e715474675",
       "uid": "4482/model",
       "jid": "50e050e8-ba69-4eef-b76f-120369aca884",
       "label": "plants/plants - floor-based",
@@ -289,7 +289,7 @@
       ]
     },
     {
-      "name": "lighting/pendant light_6f93172d-afde-554c-9b1f-47e2c79e9fa6",
+      "name": "lighting_pendant_light_6f93172d-afde-554c-9b1f-47e2c79e9fa6",
       "uid": "4753/model",
       "jid": "a08373a6-e9bc-44c1-877f-1c078a9eb841",
       "label": "lighting/pendant light",
@@ -310,5 +310,20 @@
         1.0
       ]
     }
+  ],
+  "visible_furniture": [
+    "sofa_right_corner_sofa_883aa2fc-c938-5af5-865c-fb4a778dd336",
+    "chair_chair_0f420d90-ffe6-58b9-b36f-a63df10b5cb6",
+    "chair_chair_f164c45a-092a-5b71-bb83-4425e18c9d92",
+    "table_coffee_table_526f72f1-5f2a-5546-8efd-2407665e5627",
+    "chair_chair_bd153358-2d13-5884-9858-7250a6d4fe10",
+    "table_dining_table_square_422fcb35-b3e0-5e77-a975-2b5bd11e54d7",
+    "chair_chair_2e7ba43d-593c-5d83-8fcf-c3d206face9f",
+    "chair_chair_cc94bd19-6bed-552d-a58e-f671203820d6",
+    "chair_chair_23b0a001-e6cd-50d1-a4c4-bdc9fbe27e3a",
+    "chair_chair_9966fe77-8c68-59cb-9140-80c75ec1aca9",
+    "lighting_pendant_light_f68a40ce-cd37-59fa-8d45-a2ff28d0226e",
+    "plants_plants_floor_based_ff0637cb-1778-52e1-a89d-38e715474675",
+    "lighting_pendant_light_6f93172d-afde-554c-9b1f-47e2c79e9fa6"
   ]
 }

@@ -3,7 +3,7 @@
   "room_id": "Hallway-34943",
   "furniture": [
     {
-      "name": "table/dining table - round_3e9e44d8-5dbc-5b11-9341-09fa53394f78",
+      "name": "table_dining_table_round_3e9e44d8-5dbc-5b11-9341-09fa53394f78",
       "uid": "10513/model",
       "jid": "c83adaa6-3842-4a61-94b2-3e9841166c40",
       "label": "table/dining table - round",
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "name": "chair/armchair_54fdae2b-cf40-512e-8f87-1b713e4bdd69",
+      "name": "chair_armchair_54fdae2b-cf40-512e-8f87-1b713e4bdd69",
       "uid": "10514/model",
       "jid": "11789dc3-bcf2-4d2a-90aa-ecd0e9a55cf1",
       "label": "chair/armchair",
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "name": "chair/armchair_ac75f194-6710-5cf7-b13f-db7c27394f2f",
+      "name": "chair_armchair_ac75f194-6710-5cf7-b13f-db7c27394f2f",
       "uid": "10514/model",
       "jid": "11789dc3-bcf2-4d2a-90aa-ecd0e9a55cf1",
       "label": "chair/armchair",
@@ -69,7 +69,7 @@
       ]
     },
     {
-      "name": "chair/armchair_6331a6f4-9611-5a03-a18e-40b44799f3cb",
+      "name": "chair_armchair_6331a6f4-9611-5a03-a18e-40b44799f3cb",
       "uid": "10514/model",
       "jid": "11789dc3-bcf2-4d2a-90aa-ecd0e9a55cf1",
       "label": "chair/armchair",
@@ -91,7 +91,7 @@
       ]
     },
     {
-      "name": "chair/armchair_fd5acde5-a0c4-577b-b3b1-5404bc6d7396",
+      "name": "chair_armchair_fd5acde5-a0c4-577b-b3b1-5404bc6d7396",
       "uid": "10514/model",
       "jid": "11789dc3-bcf2-4d2a-90aa-ecd0e9a55cf1",
       "label": "chair/armchair",
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "name": "chair/armchair_a818b9c1-915e-5a9d-bc99-be4309a84c7b",
+      "name": "chair_armchair_a818b9c1-915e-5a9d-bc99-be4309a84c7b",
       "uid": "10514/model",
       "jid": "11789dc3-bcf2-4d2a-90aa-ecd0e9a55cf1",
       "label": "chair/armchair",
@@ -135,7 +135,7 @@
       ]
     },
     {
-      "name": "chair/armchair_6f334685-d717-541c-a26f-95dfebffcd26",
+      "name": "chair_armchair_6f334685-d717-541c-a26f-95dfebffcd26",
       "uid": "10514/model",
       "jid": "11789dc3-bcf2-4d2a-90aa-ecd0e9a55cf1",
       "label": "chair/armchair",
@@ -157,7 +157,7 @@
       ]
     },
     {
-      "name": "cabinet/hutch&buffet_06123244-8072-5b10-bca6-8e69e1991d18",
+      "name": "cabinet_hutch_buffet_06123244-8072-5b10-bca6-8e69e1991d18",
       "uid": "10534/model",
       "jid": "34e88056-8de1-43ea-b59f-d193e6874fc6",
       "label": "cabinet/hutch&buffet",
@@ -179,7 +179,7 @@
       ]
     },
     {
-      "name": "cabinet/floor-based cabinet_bdcbe8ce-dc7a-5390-8a50-5c1c86106675",
+      "name": "cabinet_floor_based_cabinet_bdcbe8ce-dc7a-5390-8a50-5c1c86106675",
       "uid": "10535/model",
       "jid": "8076578e-eacb-4865-8d1e-4b977bbe8a61",
       "label": "cabinet/floor-based cabinet",
@@ -201,7 +201,7 @@
       ]
     },
     {
-      "name": "cabinet/floor-based cabinet_05b2e797-3f2b-5d3b-b8b5-1053ff730078",
+      "name": "cabinet_floor_based_cabinet_05b2e797-3f2b-5d3b-b8b5-1053ff730078",
       "uid": "10535/model",
       "jid": "8076578e-eacb-4865-8d1e-4b977bbe8a61",
       "label": "cabinet/floor-based cabinet",
@@ -223,7 +223,7 @@
       ]
     },
     {
-      "name": "cabinet/hutch&buffet_47413000-b853-5f46-a937-4d245b31e3c8",
+      "name": "cabinet_hutch_buffet_47413000-b853-5f46-a937-4d245b31e3c8",
       "uid": "10936/model",
       "jid": "29ed0e9c-02ae-4404-a8dd-f6f178dc79b4",
       "label": "cabinet/hutch&buffet",
@@ -245,7 +245,7 @@
       ]
     },
     {
-      "name": "lighting/pendant light_3464b60c-ab6a-5489-a2ce-e0120022b2bd",
+      "name": "lighting_pendant_light_3464b60c-ab6a-5489-a2ce-e0120022b2bd",
       "uid": "12124/model",
       "jid": "c6fb58e0-e5b5-4118-9b22-76696095bff0",
       "label": "lighting/pendant light",
@@ -267,7 +267,7 @@
       ]
     },
     {
-      "name": "lighting/pendant light_e6678cbe-90fd-5e13-b40f-076819ce4e79",
+      "name": "lighting_pendant_light_e6678cbe-90fd-5e13-b40f-076819ce4e79",
       "uid": "12124/model",
       "jid": "c6fb58e0-e5b5-4118-9b22-76696095bff0",
       "label": "lighting/pendant light",
@@ -289,7 +289,7 @@
       ]
     },
     {
-      "name": "lighting/pendant light_323012c1-a820-5703-ab90-9538771bdc0a",
+      "name": "lighting_pendant_light_323012c1-a820-5703-ab90-9538771bdc0a",
       "uid": "12124/model",
       "jid": "c6fb58e0-e5b5-4118-9b22-76696095bff0",
       "label": "lighting/pendant light",
@@ -310,5 +310,20 @@
         1.0
       ]
     }
+  ],
+  "visible_furniture": [
+    "table_dining_table_round_3e9e44d8-5dbc-5b11-9341-09fa53394f78",
+    "chair_armchair_54fdae2b-cf40-512e-8f87-1b713e4bdd69",
+    "chair_armchair_ac75f194-6710-5cf7-b13f-db7c27394f2f",
+    "chair_armchair_6331a6f4-9611-5a03-a18e-40b44799f3cb",
+    "chair_armchair_fd5acde5-a0c4-577b-b3b1-5404bc6d7396",
+    "chair_armchair_a818b9c1-915e-5a9d-bc99-be4309a84c7b",
+    "chair_armchair_6f334685-d717-541c-a26f-95dfebffcd26",
+    "cabinet_hutch_buffet_06123244-8072-5b10-bca6-8e69e1991d18",
+    "cabinet_floor_based_cabinet_bdcbe8ce-dc7a-5390-8a50-5c1c86106675",
+    "cabinet_floor_based_cabinet_05b2e797-3f2b-5d3b-b8b5-1053ff730078",
+    "cabinet_hutch_buffet_47413000-b853-5f46-a937-4d245b31e3c8",
+    "lighting_pendant_light_3464b60c-ab6a-5489-a2ce-e0120022b2bd",
+    "lighting_pendant_light_e6678cbe-90fd-5e13-b40f-076819ce4e79"
   ]
 }

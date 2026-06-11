@@ -3,7 +3,7 @@
   "room_id": "LivingRoom-9915",
   "furniture": [
     {
-      "name": "media unit/floor-based media unit_a028c0c9-03a0-5c05-a7ea-800ab54e671d",
+      "name": "media_unit_floor_based_media_unit_a028c0c9-03a0-5c05-a7ea-800ab54e671d",
       "uid": "888/model",
       "jid": "08011234-d5e0-4eb0-bd6b-bed34868ca89",
       "label": "media unit/floor-based media unit",
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "name": "lighting/floor lamp_843abed3-0635-5c82-a908-2440a93c5e1e",
+      "name": "lighting_floor_lamp_843abed3-0635-5c82-a908-2440a93c5e1e",
       "uid": "1249/model",
       "jid": "fbcec391-8135-4d60-8126-74dd96c3bd1c",
       "label": "lighting/floor lamp",
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "name": "table/coffee table - rectangular_da753aa5-3140-5ad9-bd79-da7d9f767434",
+      "name": "table_coffee_table_rectangular_da753aa5-3140-5ad9-bd79-da7d9f767434",
       "uid": "1269/model",
       "jid": "2b15dc28-9a81-4daf-b3e2-96c01c83eaca",
       "label": "table/coffee table - rectangular",
@@ -69,7 +69,7 @@
       ]
     },
     {
-      "name": "lighting/pendant light_2f670082-4208-5806-bbf6-592958610974",
+      "name": "lighting_pendant_light_2f670082-4208-5806-bbf6-592958610974",
       "uid": "1271/model",
       "jid": "173eb984-a4e8-4907-9353-4ecc1977237f",
       "label": "lighting/pendant light",
@@ -91,7 +91,7 @@
       ]
     },
     {
-      "name": "cabinet/floor-based cabinet_ce15bfe6-72ab-58f7-96ee-e2ec661e2b3d",
+      "name": "cabinet_floor_based_cabinet_ce15bfe6-72ab-58f7-96ee-e2ec661e2b3d",
       "uid": "1999/model",
       "jid": "c6fc874d-c963-4eba-9956-956241dc5c32",
       "label": "cabinet/floor-based cabinet",
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "name": "cabinet/floor-based cabinet_2138b263-cb89-59b8-bb8e-94decd229c9e",
+      "name": "cabinet_floor_based_cabinet_2138b263-cb89-59b8-bb8e-94decd229c9e",
       "uid": "2002/model",
       "jid": "72ceae36-37b8-4b8d-9549-ceea4b653229",
       "label": "cabinet/floor-based cabinet",
@@ -135,7 +135,7 @@
       ]
     },
     {
-      "name": "cabinet/floor-based cabinet_cd649d3e-521a-5e55-b2fd-2f243f8832f8",
+      "name": "cabinet_floor_based_cabinet_cd649d3e-521a-5e55-b2fd-2f243f8832f8",
       "uid": "2240/model",
       "jid": "412f0245-abe1-4a35-94b1-288796c1aae1",
       "label": "cabinet/floor-based cabinet",
@@ -157,7 +157,7 @@
       ]
     },
     {
-      "name": "accessory/accessory - on top of others_1dd6b493-1152-593c-8617-d4cd828be064",
+      "name": "accessory_accessory_on_top_of_others_1dd6b493-1152-593c-8617-d4cd828be064",
       "uid": "2253/model",
       "jid": "08eb09be-9aac-4c07-88b0-b715c98257fa",
       "label": "accessory/accessory - on top of others",
@@ -179,7 +179,7 @@
       ]
     },
     {
-      "name": "lighting/pendant light_3e7080f3-5144-53b7-920c-1161801dc1e2",
+      "name": "lighting_pendant_light_3e7080f3-5144-53b7-920c-1161801dc1e2",
       "uid": "2283/model",
       "jid": "3b24e2fc-2f7f-49b3-bf76-81b226a74046",
       "label": "lighting/pendant light",
@@ -201,7 +201,7 @@
       ]
     },
     {
-      "name": "table/dining table - square_0c45f1bb-3d15-5429-bb5a-1c26d9fa13ce",
+      "name": "table_dining_table_square_0c45f1bb-3d15-5429-bb5a-1c26d9fa13ce",
       "uid": "2944/model",
       "jid": "1ead30d0-b899-4318-b72e-9aedfaffe9f7",
       "label": "table/dining table - square",
@@ -223,7 +223,7 @@
       ]
     },
     {
-      "name": "chair/chair_b32378f5-c0e2-5a1d-ac32-fc96ad5bafe5",
+      "name": "chair_chair_b32378f5-c0e2-5a1d-ac32-fc96ad5bafe5",
       "uid": "2961/model",
       "jid": "9188a5fc-0d33-4e95-9c23-598c93f8a514",
       "label": "chair/chair",
@@ -245,7 +245,7 @@
       ]
     },
     {
-      "name": "chair/chair_68dd6a4d-2f46-5f72-87b6-d39df2c7e49a",
+      "name": "chair_chair_68dd6a4d-2f46-5f72-87b6-d39df2c7e49a",
       "uid": "2961/model",
       "jid": "9188a5fc-0d33-4e95-9c23-598c93f8a514",
       "label": "chair/chair",
@@ -267,7 +267,7 @@
       ]
     },
     {
-      "name": "chair/chair_2801c5f3-7cfa-536e-8ac2-10b120846f2d",
+      "name": "chair_chair_2801c5f3-7cfa-536e-8ac2-10b120846f2d",
       "uid": "2961/model",
       "jid": "9188a5fc-0d33-4e95-9c23-598c93f8a514",
       "label": "chair/chair",
@@ -289,7 +289,7 @@
       ]
     },
     {
-      "name": "chair/chair_793be4ec-8c52-5869-8894-7254aa24329e",
+      "name": "chair_chair_793be4ec-8c52-5869-8894-7254aa24329e",
       "uid": "2961/model",
       "jid": "9188a5fc-0d33-4e95-9c23-598c93f8a514",
       "label": "chair/chair",
@@ -311,7 +311,7 @@
       ]
     },
     {
-      "name": "sofa/ multi seat sofa_b455023d-1815-5e38-9871-01e20cacdef6",
+      "name": "sofa_multi_seat_sofa_b455023d-1815-5e38-9871-01e20cacdef6",
       "uid": "2966/model",
       "jid": "29570056-ebce-4b38-b9f6-550b3253cd67",
       "label": "sofa/ multi seat sofa",
@@ -332,5 +332,17 @@
         1.0
       ]
     }
+  ],
+  "visible_furniture": [
+    "lighting_floor_lamp_843abed3-0635-5c82-a908-2440a93c5e1e",
+    "table_coffee_table_rectangular_da753aa5-3140-5ad9-bd79-da7d9f767434",
+    "cabinet_floor_based_cabinet_ce15bfe6-72ab-58f7-96ee-e2ec661e2b3d",
+    "cabinet_floor_based_cabinet_cd649d3e-521a-5e55-b2fd-2f243f8832f8",
+    "table_dining_table_square_0c45f1bb-3d15-5429-bb5a-1c26d9fa13ce",
+    "chair_chair_b32378f5-c0e2-5a1d-ac32-fc96ad5bafe5",
+    "chair_chair_68dd6a4d-2f46-5f72-87b6-d39df2c7e49a",
+    "chair_chair_2801c5f3-7cfa-536e-8ac2-10b120846f2d",
+    "chair_chair_793be4ec-8c52-5869-8894-7254aa24329e",
+    "sofa_multi_seat_sofa_b455023d-1815-5e38-9871-01e20cacdef6"
   ]
 }

@@ -15,6 +15,7 @@ corresponding metadata JSON files.
 
 from dlinvc.util import render_trimesh_scene, get_pyrender_cam, remove_textures
 from dlinvc.dataset.json_to_3d_front_scene import build_room_scene
+from dlinvc.dataset.extract_visible_objects import get_visible_objects
 from pathlib import Path
 import json
 from PIL import Image
@@ -128,7 +129,7 @@ def generate_dataset():
         scene_bbox_mesh, _, _, _ = build_room_scene(scene_json, room_json, bounding_box=True)
 
         assert len(furniture_list) >= 10
-        assert is_valid
+        assert is_valid            
 
         metadata = {
             "scene_id": scene_id,
@@ -138,6 +139,18 @@ def generate_dataset():
 
         with open(CAM_PARAMS_PATH / f"{name}_camera.json") as f:
             cam_params = json.load(f)
+
+
+        visible_furniture_names = []
+        visible_furniture_path = scene_target_dir / "visible_furniture"
+        visible_furniture_path.mkdir(parents=True, exist_ok=True)
+
+        for visible_furniture, geom in get_visible_objects(scene_mesh, cam_params, metadata):
+            name = visible_furniture["name"]
+            visible_furniture_names.append(name)
+            geom.export(visible_furniture_path / f"{name}.glb")
+
+        metadata["visible_furniture"] = visible_furniture_names
 
         with open(scene_target_dir / "metadata.json", "w") as f:
             json.dump(metadata, f, indent=2)

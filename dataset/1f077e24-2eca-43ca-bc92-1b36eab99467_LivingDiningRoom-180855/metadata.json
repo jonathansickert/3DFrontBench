@@ -3,7 +3,7 @@
   "room_id": "LivingDiningRoom-180855",
   "furniture": [
     {
-      "name": "sofa/lounge chair_f4fc3959-a13a-55fa-8594-832d77e2fe98",
+      "name": "sofa_lounge_chair_f4fc3959-a13a-55fa-8594-832d77e2fe98",
       "uid": "160310/model",
       "jid": "1ca9ff35-404f-4276-a4a0-ac2800f7aab2",
       "label": "sofa/lounge chair",
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "name": "sofa/ multi seat sofa_31829bd2-9573-5610-bfef-c2f7f114d4a4",
+      "name": "sofa_multi_seat_sofa_31829bd2-9573-5610-bfef-c2f7f114d4a4",
       "uid": "160311/model",
       "jid": "46b28a7c-2681-42bd-9b22-54be8a2f2d0e",
       "label": "sofa/ multi seat sofa",
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "name": "table/side table_11e180f9-97de-5979-ac7b-3dc4e167361b",
+      "name": "table_side_table_11e180f9-97de-5979-ac7b-3dc4e167361b",
       "uid": "160314/model",
       "jid": "a6e20b78-6405-4afe-8c64-65bd57a3caff",
       "label": "table/side table",
@@ -69,7 +69,7 @@
       ]
     },
     {
-      "name": "table/coffee table_7de90c4a-c52d-554b-9e85-2bdfad8d36fd",
+      "name": "table_coffee_table_7de90c4a-c52d-554b-9e85-2bdfad8d36fd",
       "uid": "160315/model",
       "jid": "54681d75-6559-4263-ae9c-759d57db7d22",
       "label": "table/coffee table",
@@ -91,7 +91,7 @@
       ]
     },
     {
-      "name": "table/side table_05c09941-df84-5e83-a3cb-43559d008921",
+      "name": "table_side_table_05c09941-df84-5e83-a3cb-43559d008921",
       "uid": "160314/model",
       "jid": "a6e20b78-6405-4afe-8c64-65bd57a3caff",
       "label": "table/side table",
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "name": "sofa/double seat sofa_22b5249d-47f1-59b7-9663-a693365f8d03",
+      "name": "sofa_double_seat_sofa_22b5249d-47f1-59b7-9663-a693365f8d03",
       "uid": "160318/model",
       "jid": "167d7f1a-cd1a-435f-966d-d99f5ab982fc",
       "label": "sofa/double seat sofa",
@@ -135,7 +135,7 @@
       ]
     },
     {
-      "name": "cabinet/hutch&buffet_d5d3d067-3f2f-5c99-b4dd-de5ee0c8552e",
+      "name": "cabinet_hutch_buffet_d5d3d067-3f2f-5c99-b4dd-de5ee0c8552e",
       "uid": "160327/model",
       "jid": "0ff2235c-d954-4b07-935a-5e4dd2c583a2",
       "label": "cabinet/hutch&buffet",
@@ -157,7 +157,7 @@
       ]
     },
     {
-      "name": "table/dining table - square_73a08431-522f-5aa4-884c-c6eb59acb9a3",
+      "name": "table_dining_table_square_73a08431-522f-5aa4-884c-c6eb59acb9a3",
       "uid": "160329/model",
       "jid": "fc93abbf-984c-432a-abb7-7f1ce951955f",
       "label": "table/dining table - square",
@@ -179,7 +179,7 @@
       ]
     },
     {
-      "name": "chair/chair_c0d93ca7-e54f-558b-88f4-91f55add4a24",
+      "name": "chair_chair_c0d93ca7-e54f-558b-88f4-91f55add4a24",
       "uid": "160330/model",
       "jid": "7599c6c3-3472-4237-8ee5-7b77f3934fa4",
       "label": "chair/chair",
@@ -201,7 +201,7 @@
       ]
     },
     {
-      "name": "chair/chair_13ce55b6-5740-5f89-af52-8a41e9f6f186",
+      "name": "chair_chair_13ce55b6-5740-5f89-af52-8a41e9f6f186",
       "uid": "160330/model",
       "jid": "7599c6c3-3472-4237-8ee5-7b77f3934fa4",
       "label": "chair/chair",
@@ -223,7 +223,7 @@
       ]
     },
     {
-      "name": "chair/chair_e5b3a13e-f0b2-55e1-b186-173db2294308",
+      "name": "chair_chair_e5b3a13e-f0b2-55e1-b186-173db2294308",
       "uid": "160330/model",
       "jid": "7599c6c3-3472-4237-8ee5-7b77f3934fa4",
       "label": "chair/chair",
@@ -245,7 +245,7 @@
       ]
     },
     {
-      "name": "chair/chair_463a6c14-65f3-5436-ba2d-1ed93017593e",
+      "name": "chair_chair_463a6c14-65f3-5436-ba2d-1ed93017593e",
       "uid": "160330/model",
       "jid": "7599c6c3-3472-4237-8ee5-7b77f3934fa4",
       "label": "chair/chair",
@@ -267,7 +267,7 @@
       ]
     },
     {
-      "name": "chair/chair_0a80fcbc-c40c-5fc4-b726-8b578d70098d",
+      "name": "chair_chair_0a80fcbc-c40c-5fc4-b726-8b578d70098d",
       "uid": "160330/model",
       "jid": "7599c6c3-3472-4237-8ee5-7b77f3934fa4",
       "label": "chair/chair",
@@ -289,7 +289,7 @@
       ]
     },
     {
-      "name": "chair/chair_aa3d52b4-3c50-5c97-9c50-ad0f88b012c0",
+      "name": "chair_chair_aa3d52b4-3c50-5c97-9c50-ad0f88b012c0",
       "uid": "160330/model",
       "jid": "7599c6c3-3472-4237-8ee5-7b77f3934fa4",
       "label": "chair/chair",
@@ -311,7 +311,7 @@
       ]
     },
     {
-      "name": "accessory/accessory - floor-based_3859612b-3c7e-5ff2-88af-fb0ce5f42abf",
+      "name": "accessory_accessory_floor_based_3859612b-3c7e-5ff2-88af-fb0ce5f42abf",
       "uid": "160346/model",
       "jid": "91c70914-7c69-4383-b4f8-4860ffe4bcd6",
       "label": "accessory/accessory - floor-based",
@@ -333,7 +333,7 @@
       ]
     },
     {
-      "name": "plants/plants - floor-based_52eab3cf-48e0-5369-8399-eaa42f9186c6",
+      "name": "plants_plants_floor_based_52eab3cf-48e0-5369-8399-eaa42f9186c6",
       "uid": "160347/model",
       "jid": "079cca6e-c638-459b-9008-813b69145117",
       "label": "plants/plants - floor-based",
@@ -355,7 +355,7 @@
       ]
     },
     {
-      "name": "plants/plants - on top of others_0746aeb4-b25c-597c-ba68-1073d1445c4d",
+      "name": "plants_plants_on_top_of_others_0746aeb4-b25c-597c-ba68-1073d1445c4d",
       "uid": "160348/model",
       "jid": "aec967ca-9327-45f4-aa03-3f432ae9003b",
       "label": "plants/plants - on top of others",
@@ -377,7 +377,7 @@
       ]
     },
     {
-      "name": "plants/plants - on top of others_062f241f-ebfa-54a8-9af5-255c41a70e45",
+      "name": "plants_plants_on_top_of_others_062f241f-ebfa-54a8-9af5-255c41a70e45",
       "uid": "160351/model",
       "jid": "4d4d646d-db1a-44e9-a33d-bcd531324e42",
       "label": "plants/plants - on top of others",
@@ -399,7 +399,7 @@
       ]
     },
     {
-      "name": "plants/plants - on top of others_b7cbab61-a8bb-5aa2-8db4-1e4285ac2263",
+      "name": "plants_plants_on_top_of_others_b7cbab61-a8bb-5aa2-8db4-1e4285ac2263",
       "uid": "160351/model",
       "jid": "4d4d646d-db1a-44e9-a33d-bcd531324e42",
       "label": "plants/plants - on top of others",
@@ -421,7 +421,7 @@
       ]
     },
     {
-      "name": "cabinet/hutch&buffet_5b84b388-118c-52a2-b842-2402c11e8b38",
+      "name": "cabinet_hutch_buffet_5b84b388-118c-52a2-b842-2402c11e8b38",
       "uid": "160355/model",
       "jid": "4fdb17b0-77f8-4651-8062-11e83e082762",
       "label": "cabinet/hutch&buffet",
@@ -443,7 +443,7 @@
       ]
     },
     {
-      "name": "media unit/floor-based media unit_8babeae4-884e-50fe-be0c-3fd6ba08f347",
+      "name": "media_unit_floor_based_media_unit_8babeae4-884e-50fe-be0c-3fd6ba08f347",
       "uid": "160382/model",
       "jid": "3f4d9136-8cc9-4b63-a04b-98e2141f964f",
       "label": "media unit/floor-based media unit",
@@ -465,7 +465,7 @@
       ]
     },
     {
-      "name": "plants/plants - on top of others_69d12e92-fe55-5345-9f4a-22f7bbc69d44",
+      "name": "plants_plants_on_top_of_others_69d12e92-fe55-5345-9f4a-22f7bbc69d44",
       "uid": "160348/model",
       "jid": "aec967ca-9327-45f4-aa03-3f432ae9003b",
       "label": "plants/plants - on top of others",
@@ -487,7 +487,7 @@
       ]
     },
     {
-      "name": "lighting/pendant light_fc156c48-5b44-5ace-9afd-240170a683c1",
+      "name": "lighting_pendant_light_fc156c48-5b44-5ace-9afd-240170a683c1",
       "uid": "161165/model",
       "jid": "59a0de9d-7bd0-4886-8e6e-26eb7af6134c",
       "label": "lighting/pendant light",
@@ -509,7 +509,7 @@
       ]
     },
     {
-      "name": "plants/plants - on top of others_b47db7f0-74b6-5fa4-ad82-1d617d4d1599",
+      "name": "plants_plants_on_top_of_others_b47db7f0-74b6-5fa4-ad82-1d617d4d1599",
       "uid": "160351/model",
       "jid": "4d4d646d-db1a-44e9-a33d-bcd531324e42",
       "label": "plants/plants - on top of others",
@@ -530,5 +530,29 @@
         1.0
       ]
     }
+  ],
+  "visible_furniture": [
+    "sofa_lounge_chair_f4fc3959-a13a-55fa-8594-832d77e2fe98",
+    "sofa_multi_seat_sofa_31829bd2-9573-5610-bfef-c2f7f114d4a4",
+    "table_side_table_11e180f9-97de-5979-ac7b-3dc4e167361b",
+    "table_coffee_table_7de90c4a-c52d-554b-9e85-2bdfad8d36fd",
+    "sofa_double_seat_sofa_22b5249d-47f1-59b7-9663-a693365f8d03",
+    "cabinet_hutch_buffet_d5d3d067-3f2f-5c99-b4dd-de5ee0c8552e",
+    "table_dining_table_square_73a08431-522f-5aa4-884c-c6eb59acb9a3",
+    "chair_chair_c0d93ca7-e54f-558b-88f4-91f55add4a24",
+    "chair_chair_13ce55b6-5740-5f89-af52-8a41e9f6f186",
+    "chair_chair_e5b3a13e-f0b2-55e1-b186-173db2294308",
+    "chair_chair_463a6c14-65f3-5436-ba2d-1ed93017593e",
+    "chair_chair_0a80fcbc-c40c-5fc4-b726-8b578d70098d",
+    "chair_chair_aa3d52b4-3c50-5c97-9c50-ad0f88b012c0",
+    "accessory_accessory_floor_based_3859612b-3c7e-5ff2-88af-fb0ce5f42abf",
+    "plants_plants_floor_based_52eab3cf-48e0-5369-8399-eaa42f9186c6",
+    "plants_plants_on_top_of_others_062f241f-ebfa-54a8-9af5-255c41a70e45",
+    "plants_plants_on_top_of_others_b7cbab61-a8bb-5aa2-8db4-1e4285ac2263",
+    "cabinet_hutch_buffet_5b84b388-118c-52a2-b842-2402c11e8b38",
+    "media_unit_floor_based_media_unit_8babeae4-884e-50fe-be0c-3fd6ba08f347",
+    "plants_plants_on_top_of_others_69d12e92-fe55-5345-9f4a-22f7bbc69d44",
+    "lighting_pendant_light_fc156c48-5b44-5ace-9afd-240170a683c1",
+    "plants_plants_on_top_of_others_b47db7f0-74b6-5fa4-ad82-1d617d4d1599"
   ]
 }

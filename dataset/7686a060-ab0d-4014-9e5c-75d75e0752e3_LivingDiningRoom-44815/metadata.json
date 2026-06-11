@@ -3,7 +3,7 @@
   "room_id": "LivingDiningRoom-44815",
   "furniture": [
     {
-      "name": "Three-Seat / Multi-person sofa_d3da2fd1-76fc-58f6-812a-b3f6b6c46c65",
+      "name": "Three_Seat_Multi_person_sofa_d3da2fd1-76fc-58f6-812a-b3f6b6c46c65",
       "uid": "2021159102035872808512/model",
       "jid": "4a44ab0c-af72-49e6-8813-e36f746977dd",
       "label": "Three-Seat / Multi-person sofa",
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "name": "Tea Table_ed087eac-dcac-535c-a7bb-7ae06416e4a4",
+      "name": "Tea_Table_ed087eac-dcac-535c-a7bb-7ae06416e4a4",
       "uid": "2021159102035873022304/model",
       "jid": "fe662b9d-7948-4c39-ac66-ff477cac0f2b",
       "label": "Tea Table",
@@ -69,7 +69,7 @@
       ]
     },
     {
-      "name": "Lounge Chair / Book-chair / Computer Chair_76a9f92b-3f9a-518b-829d-cea59781315e",
+      "name": "Lounge_Chair_Book_chair_Computer_Chair_76a9f92b-3f9a-518b-829d-cea59781315e",
       "uid": "2021159102035873104320/model",
       "jid": "638408fa-2023-4cce-9dcf-a378e28312d9",
       "label": "Lounge Chair / Book-chair / Computer Chair",
@@ -91,7 +91,7 @@
       ]
     },
     {
-      "name": "Lounge Chair / Book-chair / Computer Chair_0d228e43-b45a-5729-bf19-f37e20964167",
+      "name": "Lounge_Chair_Book_chair_Computer_Chair_0d228e43-b45a-5729-bf19-f37e20964167",
       "uid": "2021159102035873104320/model",
       "jid": "638408fa-2023-4cce-9dcf-a378e28312d9",
       "label": "Lounge Chair / Book-chair / Computer Chair",
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "name": "TV Stand_37be6399-214e-5722-bb8b-8424b9645b8a",
+      "name": "TV_Stand_37be6399-214e-5722-bb8b-8424b9645b8a",
       "uid": "2021159102035873260992/model",
       "jid": "967011ed-753f-4eb2-8505-feefe3f33f88",
       "label": "TV Stand",
@@ -157,7 +157,7 @@
       ]
     },
     {
-      "name": "Dining Table_960d31c8-21fa-5423-be1f-e98b9bd681b0",
+      "name": "Dining_Table_960d31c8-21fa-5423-be1f-e98b9bd681b0",
       "uid": "2021159102035873430720/model",
       "jid": "3ee0376a-5f95-4076-8ef5-e81a8eeb4e32",
       "label": "Dining Table",
@@ -179,7 +179,7 @@
       ]
     },
     {
-      "name": "Lounge Chair / Book-chair / Computer Chair_ba4dc183-86a2-5ac9-b5b0-78b35851d32c",
+      "name": "Lounge_Chair_Book_chair_Computer_Chair_ba4dc183-86a2-5ac9-b5b0-78b35851d32c",
       "uid": "2021159102035873104320/model",
       "jid": "638408fa-2023-4cce-9dcf-a378e28312d9",
       "label": "Lounge Chair / Book-chair / Computer Chair",
@@ -201,7 +201,7 @@
       ]
     },
     {
-      "name": "Lounge Chair / Book-chair / Computer Chair_33ee555c-9233-53c4-bde3-35fffeba67c8",
+      "name": "Lounge_Chair_Book_chair_Computer_Chair_33ee555c-9233-53c4-bde3-35fffeba67c8",
       "uid": "2021159102035873104320/model",
       "jid": "638408fa-2023-4cce-9dcf-a378e28312d9",
       "label": "Lounge Chair / Book-chair / Computer Chair",
@@ -223,7 +223,7 @@
       ]
     },
     {
-      "name": "Lounge Chair / Book-chair / Computer Chair_785806d5-a93b-5935-8cfe-da7d38aa17eb",
+      "name": "Lounge_Chair_Book_chair_Computer_Chair_785806d5-a93b-5935-8cfe-da7d38aa17eb",
       "uid": "2021159102035873104320/model",
       "jid": "638408fa-2023-4cce-9dcf-a378e28312d9",
       "label": "Lounge Chair / Book-chair / Computer Chair",
@@ -245,7 +245,7 @@
       ]
     },
     {
-      "name": "Lounge Chair / Book-chair / Computer Chair_f3a9f89b-09fb-5085-8cfe-cbdf73f17cf3",
+      "name": "Lounge_Chair_Book_chair_Computer_Chair_f3a9f89b-09fb-5085-8cfe-cbdf73f17cf3",
       "uid": "2021159102035873104320/model",
       "jid": "638408fa-2023-4cce-9dcf-a378e28312d9",
       "label": "Lounge Chair / Book-chair / Computer Chair",
@@ -267,7 +267,7 @@
       ]
     },
     {
-      "name": "Drawer Chest / Corner cabinet_d3189031-3297-5e01-931b-6013d892b9f7",
+      "name": "Drawer_Chest_Corner_cabinet_d3189031-3297-5e01-931b-6013d892b9f7",
       "uid": "2021159102035873754272/model",
       "jid": "dd577dff-09c1-472c-a578-8415767e983f",
       "label": "Drawer Chest / Corner cabinet",
@@ -289,7 +289,7 @@
       ]
     },
     {
-      "name": "Pendant Lamp_0ecc2b4b-6ac2-5bbf-ab54-8af938138452",
+      "name": "Pendant_Lamp_0ecc2b4b-6ac2-5bbf-ab54-8af938138452",
       "uid": "2021159102035873783808/model",
       "jid": "37c8590a-f99b-471b-835d-7457da2aeb4b",
       "label": "Pendant Lamp",
@@ -355,7 +355,7 @@
       ]
     },
     {
-      "name": "Pendant Lamp_1a81488b-5485-50f0-8455-ac9ff81f854e",
+      "name": "Pendant_Lamp_1a81488b-5485-50f0-8455-ac9ff81f854e",
       "uid": "2021159102035874333088/model",
       "jid": "0f17b0de-610d-4ed6-accc-e19c9ac0a900",
       "label": "Pendant Lamp",
@@ -376,5 +376,12 @@
         7.51423361240932
       ]
     }
+  ],
+  "visible_furniture": [
+    "Three_Seat_Multi_person_sofa_d3da2fd1-76fc-58f6-812a-b3f6b6c46c65",
+    "armchair_4a23f932-1aa6-5fbf-a426-be0a14037faf",
+    "Tea_Table_ed087eac-dcac-535c-a7bb-7ae06416e4a4",
+    "Lounge_Chair_Book_chair_Computer_Chair_76a9f92b-3f9a-518b-829d-cea59781315e",
+    "Lounge_Chair_Book_chair_Computer_Chair_0d228e43-b45a-5729-bf19-f37e20964167"
   ]
 }

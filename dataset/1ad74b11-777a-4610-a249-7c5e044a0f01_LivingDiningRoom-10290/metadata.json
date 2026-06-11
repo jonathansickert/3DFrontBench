@@ -3,7 +3,7 @@
   "room_id": "LivingDiningRoom-10290",
   "furniture": [
     {
-      "name": "Tea Table_146831ef-7637-5816-b66c-b1d22198e02f",
+      "name": "Tea_Table_146831ef-7637-5816-b66c-b1d22198e02f",
       "uid": "2021159374325626304704/model",
       "jid": "6ac38df4-d64e-4aa4-b31d-ee57a33c5d7b",
       "label": "Tea Table",
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "name": "TV Stand_7bdc6629-eb50-5bf2-83d0-3d47aef4443c",
+      "name": "TV_Stand_7bdc6629-eb50-5bf2-83d0-3d47aef4443c",
       "uid": "2021159374325626387392/model",
       "jid": "5354b81e-2f1a-4930-b077-c449f3b32490",
       "label": "TV Stand",
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "name": "Three-Seat / Multi-person sofa_c442c7fc-4f15-5390-8ee0-4acac10f6561",
+      "name": "Three_Seat_Multi_person_sofa_c442c7fc-4f15-5390-8ee0-4acac10f6561",
       "uid": "2021159374325626450688/model",
       "jid": "43b586c5-37b3-4c9b-bf51-7bcde22b28b7",
       "label": "Three-Seat / Multi-person sofa",
@@ -91,7 +91,7 @@
       ]
     },
     {
-      "name": "Dining Chair_4133781b-8f73-5d17-b571-ddfaf604b9cb",
+      "name": "Dining_Chair_4133781b-8f73-5d17-b571-ddfaf604b9cb",
       "uid": "2021159374325626554624/model",
       "jid": "01fe3767-6f21-49cf-b8da-e16b53267dc8",
       "label": "Dining Chair",
@@ -135,7 +135,7 @@
       ]
     },
     {
-      "name": "Corner/Side Table_16697ba2-4075-5995-9b5e-8292325fb1dd",
+      "name": "Corner_Side_Table_16697ba2-4075-5995-9b5e-8292325fb1dd",
       "uid": "2021159374325626950400/model",
       "jid": "6bfecc53-56aa-444f-8787-4bb5c1da3edb",
       "label": "Corner/Side Table",
@@ -157,7 +157,7 @@
       ]
     },
     {
-      "name": "Dining Chair_8e4f5296-c286-592b-9b26-c0a1e82ac65a",
+      "name": "Dining_Chair_8e4f5296-c286-592b-9b26-c0a1e82ac65a",
       "uid": "2021159374325626554624/model",
       "jid": "01fe3767-6f21-49cf-b8da-e16b53267dc8",
       "label": "Dining Chair",
@@ -179,7 +179,7 @@
       ]
     },
     {
-      "name": "Dining Chair_1a2b1402-3c05-569d-a9ec-efd32d73043c",
+      "name": "Dining_Chair_1a2b1402-3c05-569d-a9ec-efd32d73043c",
       "uid": "2021159374325626554624/model",
       "jid": "01fe3767-6f21-49cf-b8da-e16b53267dc8",
       "label": "Dining Chair",
@@ -201,7 +201,7 @@
       ]
     },
     {
-      "name": "Dining Chair_87bff490-6144-551b-a858-055b0d400707",
+      "name": "Dining_Chair_87bff490-6144-551b-a858-055b0d400707",
       "uid": "2021159374325626554624/model",
       "jid": "01fe3767-6f21-49cf-b8da-e16b53267dc8",
       "label": "Dining Chair",
@@ -245,7 +245,7 @@
       ]
     },
     {
-      "name": "Corner/Side Table_2957469d-d7db-582a-8890-af342919ba47",
+      "name": "Corner_Side_Table_2957469d-d7db-582a-8890-af342919ba47",
       "uid": "2021159374325627421696/model",
       "jid": "6bfecc53-56aa-444f-8787-4bb5c1da3edb",
       "label": "Corner/Side Table",
@@ -267,7 +267,7 @@
       ]
     },
     {
-      "name": "Sideboard / Side Cabinet / Console_7468350f-4184-5ca1-b39b-6a88fe510827",
+      "name": "Sideboard_Side_Cabinet_Console_7468350f-4184-5ca1-b39b-6a88fe510827",
       "uid": "2021159374325627808800/model",
       "jid": "972f278d-f277-4b92-a6ec-6fc99ed7e92e",
       "label": "Sideboard / Side Cabinet / Console",
@@ -289,7 +289,7 @@
       ]
     },
     {
-      "name": "Corner/Side Table_39413920-013f-5123-8fb3-350bd6e0b46c",
+      "name": "Corner_Side_Table_39413920-013f-5123-8fb3-350bd6e0b46c",
       "uid": "2021159374325626950400/model",
       "jid": "6bfecc53-56aa-444f-8787-4bb5c1da3edb",
       "label": "Corner/Side Table",
@@ -333,7 +333,7 @@
       ]
     },
     {
-      "name": "Pendant Lamp_90d98c64-06ca-59c1-b7bd-ee775ef1b0a5",
+      "name": "Pendant_Lamp_90d98c64-06ca-59c1-b7bd-ee775ef1b0a5",
       "uid": "2021159374325628063904/model",
       "jid": "24bc76e9-7b52-48ea-92d5-e7cf72b9cf43",
       "label": "Pendant Lamp",
@@ -355,7 +355,7 @@
       ]
     },
     {
-      "name": "Pendant Lamp_05093e55-7e29-56b2-be0d-c03878466c6c",
+      "name": "Pendant_Lamp_05093e55-7e29-56b2-be0d-c03878466c6c",
       "uid": "2021159374325628130304/model",
       "jid": "6289a052-b4a7-417a-b687-b22fddc14663",
       "label": "Pendant Lamp",
@@ -377,7 +377,7 @@
       ]
     },
     {
-      "name": "Round End Table_09bbda35-fd35-5d2c-83c6-3b9e97ddc92c",
+      "name": "Round_End_Table_09bbda35-fd35-5d2c-83c6-3b9e97ddc92c",
       "uid": "2021159374325628214112/model",
       "jid": "66f31cc3-4f55-4a48-b149-248ca8154fa5",
       "label": "Round End Table",
@@ -399,7 +399,7 @@
       ]
     },
     {
-      "name": "Sideboard / Side Cabinet / Console_a375acba-72cb-52d1-b8bd-146511ca1e5f",
+      "name": "Sideboard_Side_Cabinet_Console_a375acba-72cb-52d1-b8bd-146511ca1e5f",
       "uid": "2021159374325627808800/model",
       "jid": "972f278d-f277-4b92-a6ec-6fc99ed7e92e",
       "label": "Sideboard / Side Cabinet / Console",
@@ -420,5 +420,26 @@
         0.9849482092356655
       ]
     }
+  ],
+  "visible_furniture": [
+    "Tea_Table_146831ef-7637-5816-b66c-b1d22198e02f",
+    "TV_Stand_7bdc6629-eb50-5bf2-83d0-3d47aef4443c",
+    "Three_Seat_Multi_person_sofa_c442c7fc-4f15-5390-8ee0-4acac10f6561",
+    "Table_3d514bd9-a26b-5443-b2f6-0960699ec054",
+    "Dining_Chair_4133781b-8f73-5d17-b571-ddfaf604b9cb",
+    "Others_e6ad6ddc-4d4d-566f-845a-1839d59450d9",
+    "Corner_Side_Table_16697ba2-4075-5995-9b5e-8292325fb1dd",
+    "Dining_Chair_8e4f5296-c286-592b-9b26-c0a1e82ac65a",
+    "Dining_Chair_1a2b1402-3c05-569d-a9ec-efd32d73043c",
+    "Dining_Chair_87bff490-6144-551b-a858-055b0d400707",
+    "Others_07545f8a-9ab9-58da-9dc3-d2b608c00425",
+    "Corner_Side_Table_2957469d-d7db-582a-8890-af342919ba47",
+    "Sideboard_Side_Cabinet_Console_7468350f-4184-5ca1-b39b-6a88fe510827",
+    "Corner_Side_Table_39413920-013f-5123-8fb3-350bd6e0b46c",
+    "Others_c7f61f7a-2db0-5ba0-bf0d-d9a8eeb3db69",
+    "Pendant_Lamp_90d98c64-06ca-59c1-b7bd-ee775ef1b0a5",
+    "Pendant_Lamp_05093e55-7e29-56b2-be0d-c03878466c6c",
+    "Round_End_Table_09bbda35-fd35-5d2c-83c6-3b9e97ddc92c",
+    "Sideboard_Side_Cabinet_Console_a375acba-72cb-52d1-b8bd-146511ca1e5f"
   ]
 }

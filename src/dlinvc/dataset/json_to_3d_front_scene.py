@@ -21,6 +21,7 @@ from pydantic import BaseModel
 import numpy as np
 from dlinvc.util import make_transform
 import uuid
+import re
 
 FRONT_PATH = Path("/home/jonathansickert/git/DLinVC/3D-FRONT/3D-FRONT")
 FUTURE_PATH = Path("/home/jonathansickert/git/DLinVC/3D-FRONT/3D-FUTURE")
@@ -47,8 +48,10 @@ class FurnitureMesh(BaseModel):
     def get_name(self) -> str:
         key = f"{self.uid}_{self.jid}_{self.pos}_{self.rot}_{self.scale}"
         furniture_uuid = uuid.uuid5(uuid.NAMESPACE_DNS, key)
+        clean_label = re.sub(r"[^A-Za-z_]", "_", self.label)
+        clean_label = re.sub(r"_+", "_", clean_label).strip("_")
 
-        return f"{self.label}_{furniture_uuid}"
+        return f"{clean_label}_{furniture_uuid}"
 
 class LayoutMesh(BaseModel):
     uid: str

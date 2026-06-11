@@ -3,7 +3,7 @@
   "room_id": "LivingDiningRoom-8149",
   "furniture": [
     {
-      "name": "Bookcase / jewelry Armoire_d28fd3f2-ab20-5107-b6c4-3a60d9d59ee0",
+      "name": "Bookcase_jewelry_Armoire_d28fd3f2-ab20-5107-b6c4-3a60d9d59ee0",
       "uid": "2021159369918259353312/model",
       "jid": "aa7bff4d-e25c-4f4a-9493-9b989cda5644",
       "label": "Bookcase / jewelry Armoire",
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "name": "TV Stand_2e4e6931-48ff-521a-88fc-047e4f32f81e",
+      "name": "TV_Stand_2e4e6931-48ff-521a-88fc-047e4f32f81e",
       "uid": "2021159369918259476384/model",
       "jid": "7a0ff9f9-85e9-4bde-93ca-c2c929233258",
       "label": "TV Stand",
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "name": "Tea Table_3ffc698d-da24-5eff-a286-4548f2059c83",
+      "name": "Tea_Table_3ffc698d-da24-5eff-a286-4548f2059c83",
       "uid": "2021159369918259620000/model",
       "jid": "d7b7be7a-5ed6-419e-8d47-cfa909735db7",
       "label": "Tea Table",
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "name": "Two-seat Sofa_688c4087-9585-5659-abd7-8c934d305e35",
+      "name": "Two_seat_Sofa_688c4087-9585-5659-abd7-8c934d305e35",
       "uid": "2021159369918260037408/model",
       "jid": "6595fb13-1e56-41f9-985d-dc9e7367210c",
       "label": "Two-seat Sofa",
@@ -135,7 +135,7 @@
       ]
     },
     {
-      "name": "Bookcase / jewelry Armoire_fca8da40-21b0-59d4-a0aa-79bf8a13dca0",
+      "name": "Bookcase_jewelry_Armoire_fca8da40-21b0-59d4-a0aa-79bf8a13dca0",
       "uid": "2021159369918259353312/model",
       "jid": "aa7bff4d-e25c-4f4a-9493-9b989cda5644",
       "label": "Bookcase / jewelry Armoire",
@@ -157,7 +157,7 @@
       ]
     },
     {
-      "name": "Dining Table_7d93c6be-9077-56b4-8f46-b769fc34b12c",
+      "name": "Dining_Table_7d93c6be-9077-56b4-8f46-b769fc34b12c",
       "uid": "2021159369918260413376/model",
       "jid": "ffd71c3f-5625-4090-a8d7-a3caba1af504",
       "label": "Dining Table",
@@ -179,7 +179,7 @@
       ]
     },
     {
-      "name": "Dining Chair_af386785-8e84-5cf9-8e11-b53f080e9658",
+      "name": "Dining_Chair_af386785-8e84-5cf9-8e11-b53f080e9658",
       "uid": "2021159369918260471392/model",
       "jid": "8d47cb7b-eff9-46e1-924c-2e33eed6f20c",
       "label": "Dining Chair",
@@ -201,7 +201,7 @@
       ]
     },
     {
-      "name": "Dining Chair_9fd3018e-742d-5155-90e1-9a439cb9f9ad",
+      "name": "Dining_Chair_9fd3018e-742d-5155-90e1-9a439cb9f9ad",
       "uid": "2021159369918260471392/model",
       "jid": "8d47cb7b-eff9-46e1-924c-2e33eed6f20c",
       "label": "Dining Chair",
@@ -223,7 +223,7 @@
       ]
     },
     {
-      "name": "Dining Chair_d6df4001-e75c-58c7-900b-0aa2e0c341a5",
+      "name": "Dining_Chair_d6df4001-e75c-58c7-900b-0aa2e0c341a5",
       "uid": "2021159369918260471392/model",
       "jid": "8d47cb7b-eff9-46e1-924c-2e33eed6f20c",
       "label": "Dining Chair",
@@ -245,7 +245,7 @@
       ]
     },
     {
-      "name": "Dining Chair_26892064-5554-5f06-9e6b-12dd1d0e0c2b",
+      "name": "Dining_Chair_26892064-5554-5f06-9e6b-12dd1d0e0c2b",
       "uid": "2021159369918260471392/model",
       "jid": "8d47cb7b-eff9-46e1-924c-2e33eed6f20c",
       "label": "Dining Chair",
@@ -267,7 +267,7 @@
       ]
     },
     {
-      "name": "Pendant Lamp_e781b5b2-e1ba-543a-a18a-87b08638aa22",
+      "name": "Pendant_Lamp_e781b5b2-e1ba-543a-a18a-87b08638aa22",
       "uid": "2021159369918260673408/model",
       "jid": "4bdb8763-e976-43a0-ab37-23bb156cd742",
       "label": "Pendant Lamp",
@@ -289,7 +289,7 @@
       ]
     },
     {
-      "name": "Pendant Lamp_c337b0aa-9aa7-5029-9822-589d670489e1",
+      "name": "Pendant_Lamp_c337b0aa-9aa7-5029-9822-589d670489e1",
       "uid": "2021159369918260695104/model",
       "jid": "2a89f148-8de5-4100-a6f4-e0019bd6e57b",
       "label": "Pendant Lamp",
@@ -310,5 +310,18 @@
         0.02242363246453339
       ]
     }
+  ],
+  "visible_furniture": [
+    "TV_Stand_2e4e6931-48ff-521a-88fc-047e4f32f81e",
+    "Tea_Table_3ffc698d-da24-5eff-a286-4548f2059c83",
+    "Others_57bed6b0-234a-5046-9ac2-9bb8dff5a699",
+    "Two_seat_Sofa_688c4087-9585-5659-abd7-8c934d305e35",
+    "Dining_Table_7d93c6be-9077-56b4-8f46-b769fc34b12c",
+    "Dining_Chair_af386785-8e84-5cf9-8e11-b53f080e9658",
+    "Dining_Chair_9fd3018e-742d-5155-90e1-9a439cb9f9ad",
+    "Dining_Chair_d6df4001-e75c-58c7-900b-0aa2e0c341a5",
+    "Dining_Chair_26892064-5554-5f06-9e6b-12dd1d0e0c2b",
+    "Pendant_Lamp_e781b5b2-e1ba-543a-a18a-87b08638aa22",
+    "Pendant_Lamp_c337b0aa-9aa7-5029-9822-589d670489e1"
   ]
 }

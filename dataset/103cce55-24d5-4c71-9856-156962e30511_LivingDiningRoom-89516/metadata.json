@@ -3,7 +3,7 @@
   "room_id": "LivingDiningRoom-89516",
   "furniture": [
     {
-      "name": "Sideboard / Side Cabinet / Console_b1b5c611-ea2d-5d01-b09d-fbc93f97b11b",
+      "name": "Sideboard_Side_Cabinet_Console_b1b5c611-ea2d-5d01-b09d-fbc93f97b11b",
       "uid": "2021159369472796304576/model",
       "jid": "a4a3deb5-a21b-4c69-914b-3ed6e596aa4a",
       "label": "Sideboard / Side Cabinet / Console",
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "name": "Tea Table_0fd24be8-b353-5f1f-88eb-76bd51f6df65",
+      "name": "Tea_Table_0fd24be8-b353-5f1f-88eb-76bd51f6df65",
       "uid": "2021159369472796876000/model",
       "jid": "30926db2-c1b3-4f71-9800-e363d36a51d0",
       "label": "Tea Table",
@@ -135,7 +135,7 @@
       ]
     },
     {
-      "name": "L-shaped Sofa_c35f04d5-6aa3-5e9e-a931-da5f4fa3d125",
+      "name": "L_shaped_Sofa_c35f04d5-6aa3-5e9e-a931-da5f4fa3d125",
       "uid": "2021159369472796951520/model",
       "jid": "76436dd7-77a5-45c4-a226-7d4b875429d3",
       "label": "L-shaped Sofa",
@@ -223,7 +223,7 @@
       ]
     },
     {
-      "name": "Dining Chair_a575defa-ce6c-50d5-b410-23be417133c1",
+      "name": "Dining_Chair_a575defa-ce6c-50d5-b410-23be417133c1",
       "uid": "2021159369472798060000/model",
       "jid": "cf51c0d0-ec0d-4be7-a33c-f432993f9448",
       "label": "Dining Chair",
@@ -245,7 +245,7 @@
       ]
     },
     {
-      "name": "Dining Chair_eac3f63d-349d-5b01-be76-1a891bb02ff8",
+      "name": "Dining_Chair_eac3f63d-349d-5b01-be76-1a891bb02ff8",
       "uid": "2021159369472798060000/model",
       "jid": "cf51c0d0-ec0d-4be7-a33c-f432993f9448",
       "label": "Dining Chair",
@@ -266,5 +266,16 @@
         1.014852283122072
       ]
     }
+  ],
+  "visible_furniture": [
+    "Sideboard_Side_Cabinet_Console_b1b5c611-ea2d-5d01-b09d-fbc93f97b11b",
+    "Others_2f2d9083-0398-5d01-8d64-259055be9402",
+    "Others_89738741-f919-5d73-a014-b535621477ad",
+    "Others_68042cea-6cc2-5b40-8166-c40ce4dc4bfe",
+    "Others_403009a9-9a7e-57aa-a004-93b83789e43e",
+    "Tea_Table_0fd24be8-b353-5f1f-88eb-76bd51f6df65",
+    "L_shaped_Sofa_c35f04d5-6aa3-5e9e-a931-da5f4fa3d125",
+    "Others_939911cb-bad6-5e60-a91a-6487d35b8c6d",
+    "Others_ba19e14d-f6bb-5265-a994-a913f7170330"
   ]
 }

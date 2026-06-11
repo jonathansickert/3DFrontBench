@@ -3,7 +3,7 @@
   "room_id": "Corridor-20684",
   "furniture": [
     {
-      "name": "cabinet/hutch&buffet_2bb91a29-1fb0-57a0-8fef-45ae92b76771",
+      "name": "cabinet_hutch_buffet_2bb91a29-1fb0-57a0-8fef-45ae92b76771",
       "uid": "15424/model",
       "jid": "57955f74-652d-44a0-822d-7e3427a77bdc",
       "label": "cabinet/hutch&buffet",
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "name": "cabinet/floor-based cabinet_f78c7a48-791b-556b-aca3-bc91f3da5195",
+      "name": "cabinet_floor_based_cabinet_f78c7a48-791b-556b-aca3-bc91f3da5195",
       "uid": "15433/model",
       "jid": "b62fcbb9-2b80-4d9e-ab5c-a8055ce5532e",
       "label": "cabinet/floor-based cabinet",
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "name": "sofa/double seat sofa_c8bd4871-0b0b-590f-ae03-c05c9aa35f1f",
+      "name": "sofa_double_seat_sofa_c8bd4871-0b0b-590f-ae03-c05c9aa35f1f",
       "uid": "15442/model",
       "jid": "df5ef408-faef-42b8-a0bf-edd67e8f1cdb",
       "label": "sofa/double seat sofa",
@@ -69,7 +69,7 @@
       ]
     },
     {
-      "name": "sofa/ottoman_74d4e4ca-8bbb-5f06-920a-e5377c81b75e",
+      "name": "sofa_ottoman_74d4e4ca-8bbb-5f06-920a-e5377c81b75e",
       "uid": "15445/model",
       "jid": "552c5262-425c-48b6-a723-5366b4c0408f",
       "label": "sofa/ottoman",
@@ -91,7 +91,7 @@
       ]
     },
     {
-      "name": "cabinet/hutch&buffet_1c23b046-da99-5855-9e28-447008a03242",
+      "name": "cabinet_hutch_buffet_1c23b046-da99-5855-9e28-447008a03242",
       "uid": "15461/model",
       "jid": "42168de2-4200-4bd6-9232-f5ea8fc0f5d6",
       "label": "cabinet/hutch&buffet",
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "name": "table/dining table - square_b73f1c20-d46f-570c-b301-4aded31c32a5",
+      "name": "table_dining_table_square_b73f1c20-d46f-570c-b301-4aded31c32a5",
       "uid": "15467/model",
       "jid": "725b5283-33c2-44c2-a0f8-628e3621e9a0",
       "label": "table/dining table - square",
@@ -135,7 +135,7 @@
       ]
     },
     {
-      "name": "chair/chair_bc2c6808-cf57-555a-8806-4889322270c0",
+      "name": "chair_chair_bc2c6808-cf57-555a-8806-4889322270c0",
       "uid": "15468/model",
       "jid": "7e159024-b82a-476a-89ec-757926d16fb2",
       "label": "chair/chair",
@@ -157,7 +157,7 @@
       ]
     },
     {
-      "name": "chair/chair_fcf0d81a-b17c-5ba6-ad84-72fc0f747801",
+      "name": "chair_chair_fcf0d81a-b17c-5ba6-ad84-72fc0f747801",
       "uid": "15468/model",
       "jid": "7e159024-b82a-476a-89ec-757926d16fb2",
       "label": "chair/chair",
@@ -179,7 +179,7 @@
       ]
     },
     {
-      "name": "chair/chair_706fb7a3-4f11-58fd-87ae-56e7e3bfce8e",
+      "name": "chair_chair_706fb7a3-4f11-58fd-87ae-56e7e3bfce8e",
       "uid": "15468/model",
       "jid": "7e159024-b82a-476a-89ec-757926d16fb2",
       "label": "chair/chair",
@@ -201,7 +201,7 @@
       ]
     },
     {
-      "name": "chair/chair_8ec096b8-89c3-5930-882d-bac041b7ca93",
+      "name": "chair_chair_8ec096b8-89c3-5930-882d-bac041b7ca93",
       "uid": "15468/model",
       "jid": "7e159024-b82a-476a-89ec-757926d16fb2",
       "label": "chair/chair",
@@ -223,7 +223,7 @@
       ]
     },
     {
-      "name": "chair/chair_369e9f8a-050e-5b17-933a-be118fd5b983",
+      "name": "chair_chair_369e9f8a-050e-5b17-933a-be118fd5b983",
       "uid": "15468/model",
       "jid": "7e159024-b82a-476a-89ec-757926d16fb2",
       "label": "chair/chair",
@@ -245,7 +245,7 @@
       ]
     },
     {
-      "name": "chair/chair_5f5dc4fa-3dc0-5999-85c8-f9eb6b377eb3",
+      "name": "chair_chair_5f5dc4fa-3dc0-5999-85c8-f9eb6b377eb3",
       "uid": "15468/model",
       "jid": "7e159024-b82a-476a-89ec-757926d16fb2",
       "label": "chair/chair",
@@ -267,7 +267,7 @@
       ]
     },
     {
-      "name": "cabinet/hutch&buffet_33ccce9f-6c6b-5516-ba34-5bca6b6289bd",
+      "name": "cabinet_hutch_buffet_33ccce9f-6c6b-5516-ba34-5bca6b6289bd",
       "uid": "15475/model",
       "jid": "19cc37f8-9549-48b2-b4a2-612eb1053a4d",
       "label": "cabinet/hutch&buffet",
@@ -289,7 +289,7 @@
       ]
     },
     {
-      "name": "lighting/pendant light_9ed82f5d-6d7e-5c03-b9f5-9c55e26b5658",
+      "name": "lighting_pendant_light_9ed82f5d-6d7e-5c03-b9f5-9c55e26b5658",
       "uid": "16154/model",
       "jid": "1bbc85a0-31b1-4685-9754-689fa1c4c547",
       "label": "lighting/pendant light",
@@ -311,7 +311,7 @@
       ]
     },
     {
-      "name": "lighting/pendant light_2653c407-569c-5d91-aada-7b0ce4d9dd1f",
+      "name": "lighting_pendant_light_2653c407-569c-5d91-aada-7b0ce4d9dd1f",
       "uid": "16155/model",
       "jid": "84262ca0-1f72-4be0-8c23-68ba829f9f30",
       "label": "lighting/pendant light",
@@ -332,5 +332,19 @@
         1.0
       ]
     }
+  ],
+  "visible_furniture": [
+    "cabinet_hutch_buffet_2bb91a29-1fb0-57a0-8fef-45ae92b76771",
+    "sofa_ottoman_74d4e4ca-8bbb-5f06-920a-e5377c81b75e",
+    "cabinet_hutch_buffet_1c23b046-da99-5855-9e28-447008a03242",
+    "table_dining_table_square_b73f1c20-d46f-570c-b301-4aded31c32a5",
+    "chair_chair_bc2c6808-cf57-555a-8806-4889322270c0",
+    "chair_chair_fcf0d81a-b17c-5ba6-ad84-72fc0f747801",
+    "chair_chair_706fb7a3-4f11-58fd-87ae-56e7e3bfce8e",
+    "chair_chair_8ec096b8-89c3-5930-882d-bac041b7ca93",
+    "chair_chair_369e9f8a-050e-5b17-933a-be118fd5b983",
+    "chair_chair_5f5dc4fa-3dc0-5999-85c8-f9eb6b377eb3",
+    "cabinet_hutch_buffet_33ccce9f-6c6b-5516-ba34-5bca6b6289bd",
+    "lighting_pendant_light_2653c407-569c-5d91-aada-7b0ce4d9dd1f"
   ]
 }

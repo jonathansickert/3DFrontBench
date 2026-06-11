@@ -3,7 +3,7 @@
   "room_id": "LivingDiningRoom-8344",
   "furniture": [
     {
-      "name": "Three-Seat / Multi-person sofa_4b9b58e1-2add-5752-842a-63a364e8d949",
+      "name": "Three_Seat_Multi_person_sofa_4b9b58e1-2add-5752-842a-63a364e8d949",
       "uid": "2021159400895786043200/model",
       "jid": "48b5ee7a-e3a5-4701-b27b-e2850f43d558",
       "label": "Three-Seat / Multi-person sofa",
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "name": "Tea Table_234dedb3-31ee-59aa-9d38-10db515d5e74",
+      "name": "Tea_Table_234dedb3-31ee-59aa-9d38-10db515d5e74",
       "uid": "2021159400895786231488/model",
       "jid": "eb3e7ea0-e2de-48ef-8c0a-8953b51399bf",
       "label": "Tea Table",
@@ -69,7 +69,7 @@
       ]
     },
     {
-      "name": "TV Stand_68ca7e87-d6c5-5f33-a536-454445a2e94d",
+      "name": "TV_Stand_68ca7e87-d6c5-5f33-a536-454445a2e94d",
       "uid": "2021159400895786273696/model",
       "jid": "60b72399-743b-49b9-b31f-6b37e77d8f46",
       "label": "TV Stand",
@@ -91,7 +91,7 @@
       ]
     },
     {
-      "name": "Dining Table_0e89354f-4af1-5dfc-ae4b-f124f1b8de7d",
+      "name": "Dining_Table_0e89354f-4af1-5dfc-ae4b-f124f1b8de7d",
       "uid": "2021159400895786316096/model",
       "jid": "5fc8fb35-60d0-4e73-a68e-be5181f22af7",
       "label": "Dining Table",
@@ -157,7 +157,7 @@
       ]
     },
     {
-      "name": "Bookcase / jewelry Armoire_d9caf2a1-adb9-5df5-af49-7d6e00e61ef5",
+      "name": "Bookcase_jewelry_Armoire_d9caf2a1-adb9-5df5-af49-7d6e00e61ef5",
       "uid": "2021159400895786923008/model",
       "jid": "fa90fa64-0a7a-49c4-96f8-530fd880c3a5",
       "label": "Bookcase / jewelry Armoire",
@@ -179,7 +179,7 @@
       ]
     },
     {
-      "name": "Wine Cooler_0a5dc0c9-cde6-5852-a5a8-29eec551be45",
+      "name": "Wine_Cooler_0a5dc0c9-cde6-5852-a5a8-29eec551be45",
       "uid": "2021159400895786992704/model",
       "jid": "99447c8e-3639-4726-9a8f-450b879a46ad",
       "label": "Wine Cooler",
@@ -245,7 +245,7 @@
       ]
     },
     {
-      "name": "Pendant Lamp_43022362-2975-5f27-b591-a3be958127f0",
+      "name": "Pendant_Lamp_43022362-2975-5f27-b591-a3be958127f0",
       "uid": "2021159400895787515200/model",
       "jid": "7a7032d9-bd16-45cb-b815-3c23bfb97c14",
       "label": "Pendant Lamp",
@@ -266,5 +266,15 @@
         0.2533590017574475
       ]
     }
+  ],
+  "visible_furniture": [
+    "Three_Seat_Multi_person_sofa_4b9b58e1-2add-5752-842a-63a364e8d949",
+    "armchair_ff01ce6e-2b21-5997-91a0-3e7b3ccb29b1",
+    "Tea_Table_234dedb3-31ee-59aa-9d38-10db515d5e74",
+    "TV_Stand_68ca7e87-d6c5-5f33-a536-454445a2e94d",
+    "armchair_06934536-c714-57d2-823c-0a621da426ce",
+    "Others_da141180-03f7-5f9b-981e-892fe393ab8f",
+    "Bookcase_jewelry_Armoire_d9caf2a1-adb9-5df5-af49-7d6e00e61ef5",
+    "Others_da3516c5-da80-53a3-a382-1c1fbbd0245c"
   ]
 }

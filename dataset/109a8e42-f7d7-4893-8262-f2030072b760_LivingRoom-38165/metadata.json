@@ -3,7 +3,7 @@
   "room_id": "LivingRoom-38165",
   "furniture": [
     {
-      "name": "Single bed_a23f8e02-f1bc-5736-843a-1235f0337d46",
+      "name": "Single_bed_a23f8e02-f1bc-5736-843a-1235f0337d46",
       "uid": "2021159370630763664096/model",
       "jid": "2b6fb0d5-2e87-495f-9abb-a6d1eccf5476",
       "label": "Single bed",
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "name": "Two-seat Sofa_6f2e0324-1759-5f56-9f02-30a40ea43df7",
+      "name": "Two_seat_Sofa_6f2e0324-1759-5f56-9f02-30a40ea43df7",
       "uid": "2021159370630763713184/model",
       "jid": "3e71de39-8a26-4124-a3b9-f3a13c7c8512",
       "label": "Two-seat Sofa",
@@ -69,7 +69,7 @@
       ]
     },
     {
-      "name": "Footstool / Sofastool / Bed End Stool / Stool_0a289743-8b5e-52be-89f7-af9069f04e92",
+      "name": "Footstool_Sofastool_Bed_End_Stool_Stool_0a289743-8b5e-52be-89f7-af9069f04e92",
       "uid": "2021159370630763825792/model",
       "jid": "6d486dd3-8a92-4d27-b989-d5bb8a2ce25b",
       "label": "Footstool / Sofastool / Bed End Stool / Stool",
@@ -91,7 +91,7 @@
       ]
     },
     {
-      "name": "Tea Table_ff279d3d-1979-56c1-a55b-17f705456744",
+      "name": "Tea_Table_ff279d3d-1979-56c1-a55b-17f705456744",
       "uid": "2021159370630763845504/model",
       "jid": "235a9a69-8756-4391-9ccf-df601fe349f3",
       "label": "Tea Table",
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "name": "TV Stand_e3a0badc-8e39-5d0b-b6c9-82a5bc1d76c6",
+      "name": "TV_Stand_e3a0badc-8e39-5d0b-b6c9-82a5bc1d76c6",
       "uid": "2021159370630763855008/model",
       "jid": "1f04134b-e388-4630-8f9b-49a549397dcb",
       "label": "TV Stand",
@@ -135,7 +135,7 @@
       ]
     },
     {
-      "name": "Wine Cooler_b4a90f29-876b-55f6-bebe-a37f09404813",
+      "name": "Wine_Cooler_b4a90f29-876b-55f6-bebe-a37f09404813",
       "uid": "2021159370630763859520/model",
       "jid": "b328cfe4-5621-493f-994f-24740d65dcde",
       "label": "Wine Cooler",
@@ -223,7 +223,7 @@
       ]
     },
     {
-      "name": "Bookcase / jewelry Armoire_aff303c9-1f17-5d4c-b090-35375f8bb93b",
+      "name": "Bookcase_jewelry_Armoire_aff303c9-1f17-5d4c-b090-35375f8bb93b",
       "uid": "2021159370630764499712/model",
       "jid": "c38e9641-3409-4d36-97a2-509b6b9b62a9",
       "label": "Bookcase / jewelry Armoire",
@@ -245,7 +245,7 @@
       ]
     },
     {
-      "name": "Footstool / Sofastool / Bed End Stool / Stool_d400f59c-244c-5c03-aee6-4e9e4660f2f0",
+      "name": "Footstool_Sofastool_Bed_End_Stool_Stool_d400f59c-244c-5c03-aee6-4e9e4660f2f0",
       "uid": "2021159370630764626624/model",
       "jid": "c72614b4-2669-42c1-8793-2a8e11d399f6",
       "label": "Footstool / Sofastool / Bed End Stool / Stool",
@@ -267,7 +267,7 @@
       ]
     },
     {
-      "name": "Dining Chair_4904e126-c3e9-5d84-99dd-b9f454a2805d",
+      "name": "Dining_Chair_4904e126-c3e9-5d84-99dd-b9f454a2805d",
       "uid": "2021159370630764842912/model",
       "jid": "a779b65c-2f81-4532-bfe9-cee2c56eaac6",
       "label": "Dining Chair",
@@ -289,7 +289,7 @@
       ]
     },
     {
-      "name": "Dining Chair_bfc9cf29-16bd-56f2-86f9-99b1364e6e77",
+      "name": "Dining_Chair_bfc9cf29-16bd-56f2-86f9-99b1364e6e77",
       "uid": "2021159370630764842912/model",
       "jid": "a779b65c-2f81-4532-bfe9-cee2c56eaac6",
       "label": "Dining Chair",
@@ -311,7 +311,7 @@
       ]
     },
     {
-      "name": "Dining Table_618f213d-a6ed-5f5f-ac39-15fd67b25993",
+      "name": "Dining_Table_618f213d-a6ed-5f5f-ac39-15fd67b25993",
       "uid": "2021159370630765025888/model",
       "jid": "e1e8fb58-c8d2-40fe-8686-b669bc013059",
       "label": "Dining Table",
@@ -333,7 +333,7 @@
       ]
     },
     {
-      "name": "Dining Chair_c924464c-5b31-55e4-8a9e-431c5a1cead2",
+      "name": "Dining_Chair_c924464c-5b31-55e4-8a9e-431c5a1cead2",
       "uid": "2021159370630764842912/model",
       "jid": "a779b65c-2f81-4532-bfe9-cee2c56eaac6",
       "label": "Dining Chair",
@@ -355,7 +355,7 @@
       ]
     },
     {
-      "name": "Dining Chair_61afe79a-32e3-569e-b718-e1f0e210b21c",
+      "name": "Dining_Chair_61afe79a-32e3-569e-b718-e1f0e210b21c",
       "uid": "2021159370630764842912/model",
       "jid": "a779b65c-2f81-4532-bfe9-cee2c56eaac6",
       "label": "Dining Chair",
@@ -377,7 +377,7 @@
       ]
     },
     {
-      "name": "Pendant Lamp_9f0f411d-558e-51dd-9c77-c2a1587d2800",
+      "name": "Pendant_Lamp_9f0f411d-558e-51dd-9c77-c2a1587d2800",
       "uid": "2021159370630765324224/model",
       "jid": "faa6f628-cd9f-439a-9dc2-c483c9c3854f",
       "label": "Pendant Lamp",
@@ -399,7 +399,7 @@
       ]
     },
     {
-      "name": "Pendant Lamp_28cfdbc7-09ba-5ffa-9356-08d0dca82a47",
+      "name": "Pendant_Lamp_28cfdbc7-09ba-5ffa-9356-08d0dca82a47",
       "uid": "2021159370630765324224/model",
       "jid": "faa6f628-cd9f-439a-9dc2-c483c9c3854f",
       "label": "Pendant Lamp",
@@ -421,7 +421,7 @@
       ]
     },
     {
-      "name": "Lounge Chair / Book-chair / Computer Chair_94bda4af-9c63-55fc-8c08-478fc2afa244",
+      "name": "Lounge_Chair_Book_chair_Computer_Chair_94bda4af-9c63-55fc-8c08-478fc2afa244",
       "uid": "2021159370630765521632/model",
       "jid": "521b52b9-5024-4ecf-8fae-3a448c205686",
       "label": "Lounge Chair / Book-chair / Computer Chair",
@@ -442,5 +442,14 @@
         1.066612340428025
       ]
     }
+  ],
+  "visible_furniture": [
+    "Single_bed_a23f8e02-f1bc-5736-843a-1235f0337d46",
+    "Two_seat_Sofa_6f2e0324-1759-5f56-9f02-30a40ea43df7",
+    "armchair_d02373f8-2ebd-5233-88a3-c7a5b524c5fb",
+    "Tea_Table_ff279d3d-1979-56c1-a55b-17f705456744",
+    "TV_Stand_e3a0badc-8e39-5d0b-b6c9-82a5bc1d76c6",
+    "Footstool_Sofastool_Bed_End_Stool_Stool_d400f59c-244c-5c03-aee6-4e9e4660f2f0",
+    "Pendant_Lamp_28cfdbc7-09ba-5ffa-9356-08d0dca82a47"
   ]
 }

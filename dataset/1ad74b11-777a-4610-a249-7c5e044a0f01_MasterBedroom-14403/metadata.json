@@ -3,7 +3,7 @@
   "room_id": "MasterBedroom-14403",
   "furniture": [
     {
-      "name": "bed/king-size bed_7f44bd8f-2d49-55fa-a3f7-37c51c80e133",
+      "name": "bed_king_size_bed_7f44bd8f-2d49-55fa-a3f7-37c51c80e133",
       "uid": "20691/model",
       "jid": "1feb0ade-8650-4ffc-829c-511f8b8eb215",
       "label": "bed/king-size bed",
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "name": "table/table_d47fdbb0-1d01-51bc-bfcb-0f8b869bac20",
+      "name": "table_table_d47fdbb0-1d01-51bc-bfcb-0f8b869bac20",
       "uid": "20693/model",
       "jid": "15b94a23-059b-4c12-98f8-bd651083d20f",
       "label": "table/table",
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "name": "table/night table_5c77a657-2c7f-5e2a-adc2-e97a45bdadc7",
+      "name": "table_night_table_5c77a657-2c7f-5e2a-adc2-e97a45bdadc7",
       "uid": "20703/model",
       "jid": "115678d8-847c-46c8-9fd4-f8801c65082a",
       "label": "table/night table",
@@ -69,7 +69,7 @@
       ]
     },
     {
-      "name": "storage unit/armoire_e9802c17-6c4c-550a-9734-6f64ec9ba6dd",
+      "name": "storage_unit_armoire_e9802c17-6c4c-550a-9734-6f64ec9ba6dd",
       "uid": "33385/model",
       "jid": "ff62d9c3-1813-406a-88c2-427eaaee4578",
       "label": "storage unit/armoire",
@@ -91,7 +91,7 @@
       ]
     },
     {
-      "name": "table/night table_0b2b5a53-ced7-54c5-9b75-bf7a73175cad",
+      "name": "table_night_table_0b2b5a53-ced7-54c5-9b75-bf7a73175cad",
       "uid": "20703/model",
       "jid": "115678d8-847c-46c8-9fd4-f8801c65082a",
       "label": "table/night table",
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "name": "sofa/ottoman_03c80d6e-9c02-57ac-bb12-dcb81df80761",
+      "name": "sofa_ottoman_03c80d6e-9c02-57ac-bb12-dcb81df80761",
       "uid": "34289/model",
       "jid": "5746f841-ebfc-4485-b85e-55d930150297",
       "label": "sofa/ottoman",
@@ -135,7 +135,7 @@
       ]
     },
     {
-      "name": "shelf/decorative shelf_46084945-f628-5683-9bf0-dfb3e8e9724f",
+      "name": "shelf_decorative_shelf_46084945-f628-5683-9bf0-dfb3e8e9724f",
       "uid": "35342/model",
       "jid": "cd1b300a-06c1-442e-a2a4-530eb5f9aa60",
       "label": "shelf/decorative shelf",
@@ -157,7 +157,7 @@
       ]
     },
     {
-      "name": "table/side table_023fb02a-1aed-5167-92df-af4ae6a50164",
+      "name": "table_side_table_023fb02a-1aed-5167-92df-af4ae6a50164",
       "uid": "35345/model",
       "jid": "61e113b3-9ce5-4a0e-aa18-9ea2f16227de",
       "label": "table/side table",
@@ -179,7 +179,7 @@
       ]
     },
     {
-      "name": "lighting/chandelier_3eee8c9e-3945-5306-9add-92d41c44a131",
+      "name": "lighting_chandelier_3eee8c9e-3945-5306-9add-92d41c44a131",
       "uid": "36212/model",
       "jid": "4d9f88b8-4fc4-43fe-b6c4-978311646225",
       "label": "lighting/chandelier",
@@ -201,7 +201,7 @@
       ]
     },
     {
-      "name": "sofa/ottoman_e087b121-2ea8-5b41-8cbf-875865fcb55b",
+      "name": "sofa_ottoman_e087b121-2ea8-5b41-8cbf-875865fcb55b",
       "uid": "38085/model",
       "jid": "8f76d2f8-6b0d-462c-ac3a-2eb97dda23ac",
       "label": "sofa/ottoman",
@@ -223,7 +223,7 @@
       ]
     },
     {
-      "name": "media unit/floor-based media unit_22568e9d-c4f2-5a8c-b689-b9ea7603c803",
+      "name": "media_unit_floor_based_media_unit_22568e9d-c4f2-5a8c-b689-b9ea7603c803",
       "uid": "38173/model",
       "jid": "0eafbc4c-760e-4f66-b149-78fb144fa9e7",
       "label": "media unit/floor-based media unit",
@@ -245,7 +245,7 @@
       ]
     },
     {
-      "name": "chair/armchair_82cb901c-6bfb-51c1-86c0-2c7ef183e3dc",
+      "name": "chair_armchair_82cb901c-6bfb-51c1-86c0-2c7ef183e3dc",
       "uid": "38503/model",
       "jid": "badee8ce-ba11-484c-91df-c3b10a27619f",
       "label": "chair/armchair",
@@ -266,5 +266,17 @@
         1.0
       ]
     }
+  ],
+  "visible_furniture": [
+    "bed_king_size_bed_7f44bd8f-2d49-55fa-a3f7-37c51c80e133",
+    "table_table_d47fdbb0-1d01-51bc-bfcb-0f8b869bac20",
+    "table_night_table_0b2b5a53-ced7-54c5-9b75-bf7a73175cad",
+    "sofa_ottoman_03c80d6e-9c02-57ac-bb12-dcb81df80761",
+    "shelf_decorative_shelf_46084945-f628-5683-9bf0-dfb3e8e9724f",
+    "table_side_table_023fb02a-1aed-5167-92df-af4ae6a50164",
+    "lighting_chandelier_3eee8c9e-3945-5306-9add-92d41c44a131",
+    "sofa_ottoman_e087b121-2ea8-5b41-8cbf-875865fcb55b",
+    "media_unit_floor_based_media_unit_22568e9d-c4f2-5a8c-b689-b9ea7603c803",
+    "chair_armchair_82cb901c-6bfb-51c1-86c0-2c7ef183e3dc"
   ]
 }
