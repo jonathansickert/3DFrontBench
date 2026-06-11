@@ -38,7 +38,6 @@ class FurnitureMesh(BaseModel):
 
     def to_mesh(self, bounding_box: bool = False) -> trimesh.Trimesh:
         mesh = trimesh.load(FUTURE_PATH / self.jid / "raw_model.obj")
-        mesh.apply_transform(make_transform(pos=self.pos, rot=self.rot, scale=self.scale))
 
         if bounding_box:
             mesh = mesh.bounding_primitive
@@ -177,7 +176,8 @@ def build_room_scene(
     for mesh in furnitures:
         m = mesh.to_mesh(bounding_box=bounding_box)
         node_name = mesh.get_name()
-        scene.add_geometry(m, node_name=node_name)
+        transform = make_transform(pos=mesh.pos, rot=mesh.rot, scale=mesh.scale)
+        scene.add_geometry(m, node_name=node_name, transform=transform)
 
         if mesh.label is None:
             is_valid = False

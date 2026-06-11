@@ -37,10 +37,12 @@ def get_visible_objects(
     results = []
     for item in metadata["furniture"]:
         node_name = item["name"]
-        _, geom_name = scene.graph[node_name]
+        transform, geom_name = scene.graph[node_name]
         geom = scene.geometry[geom_name]
-        vertices = np.asarray(geom.vertices, dtype=np.float64)
-        if visible_vertex_mask(vertices, w2c, K, width, height, znear, zfar).any():
+        vertices_world = trimesh.transform_points(
+            np.asarray(geom.vertices, dtype=np.float64), transform
+        )
+        if visible_vertex_mask(vertices_world, w2c, K, width, height, znear, zfar).any():
             results.append((item, geom))
 
     return results
