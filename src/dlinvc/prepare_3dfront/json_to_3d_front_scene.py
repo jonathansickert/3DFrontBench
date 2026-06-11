@@ -20,25 +20,12 @@ import json
 from pathlib import Path
 from pydantic import BaseModel
 import numpy as np
-import trimesh.transformations as tf
+from dlinvc.util import make_transform
 import argparse
 
 FRONT_PATH = Path("/home/jonathansickert/git/DLinVC/3D-FRONT/3D-FRONT")
 FUTURE_PATH = Path("/home/jonathansickert/git/DLinVC/3D-FRONT/3D-FUTURE")
 TEXTURE_PATH = Path("/home/jonathansickert/git/DLinVC/3D-FRONT/3D-FRONT-texture")
-
-
-def make_transform(pos: list, rot: list, scale: list) -> np.ndarray:
-    sx, sy, sz = scale
-    S = np.diag([sx, sy, sz, 1.0])
-
-    qx, qy, qz, qw = rot
-    R = tf.quaternion_matrix([qw, qx, qy, qz])
-
-    T = tf.translation_matrix(pos)
-
-    return T @ R @ S
-
 
 class FurnitureMesh(BaseModel):
     uid: str
@@ -58,7 +45,7 @@ class FurnitureMesh(BaseModel):
         return mesh
 
     def get_name(self) -> str:
-        return f"{self.label}_{self.jid}"
+        return f"{self.label}_{self.jid}_{self.uid}"
 
 
 class LayoutMesh(BaseModel):
@@ -199,39 +186,3 @@ def build_room_scene(scene_json: dict, room: dict, bounding_box: bool) -> trimes
         )
 
     return scene, len(furnitures), furniture_list, is_valid
-
-
-def print_room_ids(scene_json: dict):
-    rooms = scene_json["scene"]["room"]
-    for i, room in enumerate(rooms):
-        print(f"{i}: {room['instanceid']}")
-
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--print_rooms", action="store_true")
-    parser.add_argument("scene_json", type=str)
-    parser.add_argument("room_idx", nargs="?", type=int, default=None)
-    args = parser.parse_args()
-
-    with open(args.scene_json) as f:
-        scene_json = json.load(f)
-
-    if args.print_rooms:
-        print_room_ids(scene_json=scene_json)
-
-        if args.room_idx is None:
-            exit()
-
-    if args.room_idx is None:
-        parser.error("Room index required. Use --print_rooms to get the available rooms.")
-
-    room = scene_json["scene"]["room"][args.room_idx]
-
-    scene_normal = build_room_scene(scene_json=scene_json, room=room, bounding_box=False)
-    if scene_normal is not None:
-        scene_normal.export(f"./dataset/{room['instanceid']}.glb")
-
-    scene_bbox = build_room_scene(scene_json=scene_json, room=room, bounding_box=True)
-    if scene_bbox is not None:
-        scene_bbox.export(f"./dataset/{room['instanceid']}_bbox.glb")
