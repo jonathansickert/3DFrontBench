@@ -42,27 +42,31 @@ def sample_random_material():
                                "lava cardboard", "clay", "diamond plate", "ice", "moss", "pipe", "candy",
                                "chipboard", "rope", "sponge", "tactile paving", "paper", "cork",
                                "wood chips"]
-    
 
-    random_texture_type = random.choice(probably_useful_texture)
-    candidates = []
-    for texture_dir in CCTEXTURES_PATH.iterdir():
-        if texture_dir.name.lower().startswith(random_texture_type.replace(" ", "")):
-            candidates.append(texture_dir)
+    prefixes = tuple(t.replace(" ", "") for t in probably_useful_texture)
+    candidates = [
+        d for d in CCTEXTURES_PATH.iterdir()
+        if d.name.lower().startswith(prefixes)
+    ]
+    random.shuffle(candidates)
 
-    random_texture_path = random.choice(candidates)
+    for texture_dir in candidates:
+        color_path = texture_dir / f"{texture_dir.name}_2K-JPG_Color.jpg"
+        metallic_path = texture_dir / f"{texture_dir.name}_2K-JPG_Metalness.jpg"
+        roughness_path = texture_dir / f"{texture_dir.name}_2K-JPG_Roughness.jpg"
+        normal_path = texture_dir / f"{texture_dir.name}_2K-JPG_NormalGL.jpg"
 
-    color_path = random_texture_path / f"{random_texture_path.name}_2K-JPG_Color.jpg"
-    metallic_path = random_texture_path / f"{random_texture_path.name}_2K-JPG_Metalness.jpg"
-    roughness_path = random_texture_path / f"{random_texture_path.name}_2K-JPG_Roughness.jpg"
-    normal_path = random_texture_path / f"{random_texture_path.name}_2K-JPG_NormalGL.jpg"
+        if not all(p.exists() for p in (color_path, metallic_path, roughness_path, normal_path)):
+            continue
 
-    return {
-        "color" : Image.open(color_path),
-        "metallic" : Image.open(metallic_path),
-        "roughness" : Image.open(roughness_path),
-        "normal" : Image.open(normal_path),
-    }
+        return {
+            "color": Image.open(color_path),
+            "metallic": Image.open(metallic_path),
+            "roughness": Image.open(roughness_path),
+            "normal": Image.open(normal_path),
+        }
+
+    raise RuntimeError(f"No complete CCTextures material found under {CCTEXTURES_PATH}")
 
 
 
