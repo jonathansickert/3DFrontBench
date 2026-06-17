@@ -66,6 +66,7 @@ Each group of three columns shows, left to right: the RGB render, the depth map,
    ```bash
    python -m venv .venv && source .venv/bin/activate
    pip install -r requirements.txt
+   pip install -e .
    ```
 
 3. Copy the environment template and fill in your credentials:
