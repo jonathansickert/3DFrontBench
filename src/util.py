@@ -102,6 +102,19 @@ def get_pyrender_cam(cam_params: dict):
     return cam, c2w, cam_params["width"], cam_params["height"]
 
 
+def get_light_positions(scene: trimesh.Scene) -> list[np.ndarray]:
+    transforms = []
+    for node in scene.graph.nodes_geometry:
+        if "light" in node.lower():
+            mat, geom_name = scene.graph[node]
+            centroid_local = scene.geometry[geom_name].centroid
+            pos = (mat @ np.append(centroid_local, 1))[:3]
+            T = np.eye(4)
+            T[:3, 3] = pos
+            transforms.append(T)
+    return transforms
+
+
 def render_trimesh_scene(scene: trimesh.Scene, cam: pyrender.IntrinsicsCamera, c2w: np.array, width: int, height: int):
     pyrender_scene = pyrender.Scene.from_trimesh_scene(scene, ambient_light=[0.3, 0.3, 0.3])
     renderer = pyrender.OffscreenRenderer(viewport_width=width, viewport_height=height)
@@ -109,6 +122,10 @@ def render_trimesh_scene(scene: trimesh.Scene, cam: pyrender.IntrinsicsCamera, c
     pyrender_scene.add(cam, pose=c2w)
     light = pyrender.DirectionalLight(color=np.ones(3), intensity=3.0)
     pyrender_scene.add(light, pose=c2w)
+
+    point_light = pyrender.PointLight(color=np.ones(3), intensity=300.0)
+    for T in get_light_positions(scene):
+        pyrender_scene.add(point_light, pose=T)
 
     color, depth = renderer.render(pyrender_scene)
     depth = norm_depth(depth)

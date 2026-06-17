@@ -110,14 +110,13 @@ class LayoutMesh(BaseModel):
     seam_width: float | None = None
     uv_transform: list[float] | None = None
 
-    def to_mesh(self) -> trimesh.Trimesh:
+    def to_mesh(self, texture: dict) -> trimesh.Trimesh:
         verts = np.array(self.xyz).reshape(-1, 3)
         normals = np.array(self.normal).reshape(-1, 3)
         faces = np.array(self.faces, dtype=np.int32).reshape(-1, 3)
         mesh = trimesh.Trimesh(vertices=verts, faces=faces, vertex_normals=normals, process=False)
 
         uv = np.array(self.uv).reshape(-1, 2)
-        texture = sample_random_material()
         material = trimesh.visual.material.PBRMaterial(
             baseColorTexture=texture["color"],
             metallicRoughnessTexture=texture["roughness"],
@@ -212,9 +211,14 @@ def build_room_scene(
         print("Room does not have any furniture objects")
         return None, None, [], False
 
+    texture_by_type = {}
+    for mesh in meshes:
+        if mesh.type not in texture_by_type:
+            texture_by_type[mesh.type] = sample_random_material()
+
     scene = trimesh.Scene()
     for mesh in meshes:
-        m = mesh.to_mesh()
+        m = mesh.to_mesh(texture_by_type[mesh.type])
         node_name = mesh.get_name()
         scene.add_geometry(m, node_name=node_name)
 

@@ -1,6 +1,7 @@
 import bpy
 import json
 import sys
+import mathutils
 from pathlib import Path
 
 argv = sys.argv[sys.argv.index("--") + 1 :]
@@ -114,6 +115,19 @@ def render_normals(output_path):
     bpy.data.materials.remove(mat)
 
 
+def add_lights_for_light_meshes():
+    for obj in list(bpy.context.scene.objects):
+        if obj.type != "MESH" or "light" not in obj.name.lower():
+            continue
+        world_verts = [obj.matrix_world @ v.co for v in obj.data.vertices]
+        if not world_verts:
+            continue
+        centroid = sum(world_verts, mathutils.Vector()) / len(world_verts)
+        bpy.ops.object.light_add(type="POINT", location=centroid)
+        bpy.context.object.data.energy = 500
+        bpy.context.object.data.shadow_soft_size = 0.25
+
+
 def render_scene(scene_path):
     scene_path = Path(scene_path).resolve()
     render_color(scene_path.with_suffix(".png"))
@@ -123,10 +137,12 @@ def render_scene(scene_path):
 clear_scene()
 prepare_scene()
 bpy.ops.import_scene.gltf(filepath=scene_a_path)
+add_lights_for_light_meshes()
 render_scene(scene_a_path)
 
 
 clear_scene()
 prepare_scene()
 bpy.ops.import_scene.gltf(filepath=scene_b_path)
+add_lights_for_light_meshes()
 render_scene(scene_b_path)
