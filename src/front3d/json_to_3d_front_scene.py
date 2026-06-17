@@ -108,15 +108,16 @@ class LayoutMesh(BaseModel):
 
     def to_mesh(self) -> trimesh.Trimesh:
         verts = np.array(self.xyz).reshape(-1, 3)
-        faces = np.array(self.faces).reshape(-1, 3)
-        mesh = trimesh.Trimesh(verts, faces, process=False)
-        mesh.fix_normals()
+        normals = np.array(self.normal).reshape(-1, 3)
+        faces = np.array(self.faces, dtype=np.int32).reshape(-1, 3)
+        mesh = trimesh.Trimesh(vertices=verts, faces=faces, vertex_normals=normals, process=False)
 
         uv = np.array(self.uv).reshape(-1, 2)
         texture = sample_random_material()
         material = trimesh.visual.material.PBRMaterial(
             baseColorTexture=texture["color"],
-            metallicRoughnessTexture=["roughness"],
+            metallicRoughnessTexture=texture["roughness"],
+            doubleSided=True,
         )
 
         mesh.visual = trimesh.visual.texture.TextureVisuals(
