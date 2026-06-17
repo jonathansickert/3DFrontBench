@@ -79,6 +79,3 @@ Each group of three columns shows, left to right: the RGB render, the depth map,
    GEMINI_PROJECT_NUMBER=<your GCP project number>
    ```
 
-4. To download the 3D-FRONT source data and populate the `dataset/` directory, run the notebooks in order:
-   - `notebooks/3d_front_download.ipynb`
-   - `notebooks/render_hyperism.ipynb`
