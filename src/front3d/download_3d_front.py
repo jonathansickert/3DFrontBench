@@ -5,6 +5,7 @@ from pathlib import Path
 from huggingface_hub import hf_hub_download
 
 BASE_DIR = Path("./3D-FRONT")
+BASE_DIR.mkdir(parents=True, exist_ok=True)
 
 if __name__ == "__main__":
     # download main 3D front json files
