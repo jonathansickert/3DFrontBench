@@ -13,9 +13,9 @@ consistent naming conventions: scene_id_room_id.glb, scene_id_room_id_bbox.glb, 
 corresponding metadata JSON files.
 """
 
-from util import render_trimesh_scene, get_pyrender_cam, remove_textures
-from front3d.json_to_3d_front_scene import build_room_scene
-from front3d.extract_visible_objects import get_visible_objects
+from src.util import render_trimesh_scene, get_pyrender_cam, remove_textures
+from src.front3d.json_to_3d_front_scene import build_room_scene
+from src.front3d.extract_visible_objects import get_visible_objects
 from pathlib import Path
 import json
 from PIL import Image

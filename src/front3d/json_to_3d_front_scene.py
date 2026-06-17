@@ -19,13 +19,51 @@ import trimesh
 from pathlib import Path
 from pydantic import BaseModel
 import numpy as np
-from util import make_transform
+from src.util import make_transform
 import uuid
 import re
+import random
+from PIL import Image
 
 FRONT_PATH = Path("/home/jonathansickert/git/DLinVC/3D-FRONT/3D-FRONT")
 FUTURE_PATH = Path("/home/jonathansickert/git/DLinVC/3D-FRONT/3D-FUTURE")
 TEXTURE_PATH = Path("/home/jonathansickert/git/DLinVC/3D-FRONT/3D-FRONT-texture")
+CCTEXTURES_PATH = Path("/home/jonathansickert/git/DLinVC/3D-FRONT/cctextures")
+
+
+
+
+def sample_random_material():
+    probably_useful_texture = ["paving stones", "tiles", "wood", "fabric", "bricks", "metal", "wood floor",
+                               "ground", "rock", "concrete", "leather", "planks", "rocks", "gravel",
+                               "asphalt", "painted metal", "painted plaster", "marble", "carpet",
+                               "plastic", "roofing tiles", "bark", "metal plates", "wood siding",
+                               "terrazzo", "plaster", "paint", "corrugated steel", "painted wood",
+                               "lava cardboard", "clay", "diamond plate", "ice", "moss", "pipe", "candy",
+                               "chipboard", "rope", "sponge", "tactile paving", "paper", "cork",
+                               "wood chips"]
+    
+
+    random_texture_type = random.choice(probably_useful_texture)
+    candidates = []
+    for texture_dir in CCTEXTURES_PATH.iterdir():
+        if texture_dir.name.lower().startswith(random_texture_type.replace(" ", "")):
+            candidates.append(texture_dir)
+
+    random_texture_path = random.choice(candidates)
+
+    color_path = random_texture_path / f"{random_texture_path.name}_2K-JPG_Color.jpg"
+    metallic_path = random_texture_path / f"{random_texture_path.name}_2K-JPG_Metalness.jpg"
+    roughness_path = random_texture_path / f"{random_texture_path.name}_2K-JPG_Roughness.jpg"
+    normal_path = random_texture_path / f"{random_texture_path.name}_2K-JPG_NormalGL.jpg"
+
+    return {
+        "color" : Image.open(color_path),
+        "metallic" : Image.open(metallic_path),
+        "roughness" : Image.open(roughness_path),
+        "normal" : Image.open(normal_path),
+    }
+
 
 
 class FurnitureMesh(BaseModel):
@@ -71,11 +109,19 @@ class LayoutMesh(BaseModel):
     def to_mesh(self) -> trimesh.Trimesh:
         verts = np.array(self.xyz).reshape(-1, 3)
         faces = np.array(self.faces).reshape(-1, 3)
-        mesh = trimesh.Trimesh(verts, faces)
+        mesh = trimesh.Trimesh(verts, faces, process=False)
         mesh.fix_normals()
-        color = np.array(self.color)
-        mesh.visual.vertex_colors = np.tile(color, (len(mesh.vertices), 1))
 
+        uv = np.array(self.uv).reshape(-1, 2)
+        texture = sample_random_material()
+        material = trimesh.visual.material.PBRMaterial(
+            baseColorTexture=texture["color"],
+            metallicRoughnessTexture=["roughness"],
+        )
+
+        mesh.visual = trimesh.visual.texture.TextureVisuals(
+            uv=uv, material=material,
+        )
         return mesh
 
     def get_name(self) -> str:

@@ -16,7 +16,7 @@ from pathlib import Path
 import numpy as np
 import trimesh
 
-from util import blender_c2w_to_opencv, c2w_to_w2c, visible_vertex_mask, load_scene
+from src.util import blender_c2w_to_opencv, c2w_to_w2c, visible_vertex_mask, load_scene
 
 
 def get_visible_objects(
