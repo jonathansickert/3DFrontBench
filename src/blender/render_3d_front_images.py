@@ -1,22 +1,23 @@
+
+import os
+os.environ["LIBGL_ALWAYS_SOFTWARE"] = "1"
+
+
 import bpy
 import json
-import sys
 import mathutils
-from pathlib import Path
 
-argv = sys.argv[sys.argv.index("--") + 1 :]
-camera_path = argv[0]
-scene_a_path = argv[1]
-scene_b_path = argv[2]
-
-print(camera_path, scene_a_path, scene_b_path)
-
-with open(camera_path) as file:
-    cam_json = json.load(file)
-
-loc = cam_json["loc"]
-rot = cam_json["rot"]
-focal_length = cam_json["focal_length"]
+def add_lights_for_light_meshes():
+    for obj in list(bpy.context.scene.objects):
+        if obj.type != "MESH" or "light" not in obj.name.lower():
+            continue
+        world_verts = [obj.matrix_world @ v.co for v in obj.data.vertices]
+        if not world_verts:
+            continue
+        centroid = sum(world_verts, mathutils.Vector()) / len(world_verts)
+        bpy.ops.object.light_add(type="POINT", location=centroid)
+        bpy.context.object.data.energy = 500
+        bpy.context.object.data.shadow_soft_size = 0.25
 
 
 def enable_sky_texture():
@@ -43,106 +44,45 @@ def enable_sky_texture():
     links.new(bg.outputs["Background"], output.inputs["Surface"])
 
 
-def clear_scene():
-    bpy.ops.object.select_all(action="SELECT")
-    bpy.ops.object.delete()
-    for col in bpy.data.collections:
-        bpy.data.collections.remove(col)
+camera_path = "/home/jonathansickert/git/DLinVC/dataset/0f661df2-0f41-47a4-830c-7444f4a33a03_LivingDiningRoom-12554/camera.json"
+scene_path = "/home/jonathansickert/git/DLinVC/outputs/sample_scene.glb"
+output_path = "/home/jonathansickert/git/DLinVC/outputs/sample_rendering.png"
+
+with open(camera_path) as file:
+    cam_dict = json.load(file)
+
+bpy.ops.import_scene.gltf(filepath=scene_path)
 
 
-def prepare_scene():
-    enable_sky_texture()
-    bpy.ops.object.camera_add(location=loc, rotation=rot)
-    cam = bpy.context.object
-    cam.data.lens_unit = "MILLIMETERS"
-    cam.data.lens = focal_length
-    bpy.context.scene.camera = cam
+# Add Camera
+cam = bpy.data.cameras.new(name=cam_dict["camera_name"])
+cam.type = cam_dict["camera_type"]
+cam.clip_start = cam_dict["znear"]
+cam.clip_end = cam_dict["zfar"]
 
+sensor_width = 36.0
+cam.sensor_fit = "HORIZONTAL"
+cam.sensor_width = sensor_width
+cam.lens = cam_dict["fx"] * sensor_width / cam_dict["width"]
+cam.shift_x = (cam_dict["cx"] - cam_dict["width"] / 2.0) / cam_dict["width"]
+cam.shift_y = (cam_dict["cy"] - cam_dict["height"] / 2.0) / cam_dict["width"]
+cam_obj = bpy.data.objects.new(name=cam_dict["camera_name"], object_data=cam)
+bpy.context.scene.collection.objects.link(cam_obj)
 
-def render_color(output_path):
-    bpy.context.scene.use_nodes = False
-    bpy.context.scene.render.filepath = str(output_path)
-    bpy.context.scene.render.image_settings.file_format = "PNG"
-    bpy.ops.render.render(write_still=True)
+cam_obj.matrix_world = mathutils.Matrix(cam_dict["c2w_blender"])
 
+scene = bpy.context.scene
+scene.render.resolution_x = cam_dict["width"]
+scene.render.resolution_y = cam_dict["height"]
+scene.render.resolution_percentage = 100
+scene.camera = cam_obj
 
-def render_normals(output_path):
-    mat = bpy.data.materials.new(name="_NormalViz")
-    mat.use_nodes = True
-    nodes = mat.node_tree.nodes
-    links = mat.node_tree.links
-    nodes.clear()
-
-    geo = nodes.new("ShaderNodeNewGeometry")
-    sep = nodes.new("ShaderNodeSeparateXYZ")
-    comb = nodes.new("ShaderNodeCombineColor")
-    emis = nodes.new("ShaderNodeEmission")
-    out = nodes.new("ShaderNodeOutputMaterial")
-
-    # Remap each normal component [-1,1] → [0,1] with scalar Math nodes
-    def remap(in_socket, out_socket):
-        add = nodes.new("ShaderNodeMath")
-        add.operation = "ADD"
-        add.inputs[1].default_value = 1.0
-        div = nodes.new("ShaderNodeMath")
-        div.operation = "DIVIDE"
-        div.inputs[1].default_value = 2.0
-        links.new(in_socket, add.inputs[0])
-        links.new(add.outputs[0], div.inputs[0])
-        links.new(div.outputs[0], out_socket)
-
-    links.new(geo.outputs["Normal"], sep.inputs["Vector"])
-    remap(sep.outputs["X"], comb.inputs["Red"])
-    remap(sep.outputs["Y"], comb.inputs["Green"])
-    remap(sep.outputs["Z"], comb.inputs["Blue"])
-    links.new(comb.outputs["Color"], emis.inputs["Color"])
-    links.new(emis.outputs["Emission"], out.inputs["Surface"])
-
-    # material_override is unreliable in background mode; swap slots directly
-    saved = {obj: [s.material for s in obj.material_slots] for obj in bpy.context.scene.objects if obj.type == "MESH"}
-    for obj in saved:
-        for slot in obj.material_slots:
-            slot.material = mat
-
-    bpy.context.scene.use_nodes = False
-    bpy.context.scene.render.filepath = str(output_path)
-    bpy.context.scene.render.image_settings.file_format = "PNG"
-    bpy.ops.render.render(write_still=True)
-
-    for obj, mats in saved.items():
-        for slot, orig in zip(obj.material_slots, mats):
-            slot.material = orig
-    bpy.data.materials.remove(mat)
-
-
-def add_lights_for_light_meshes():
-    for obj in list(bpy.context.scene.objects):
-        if obj.type != "MESH" or "light" not in obj.name.lower():
-            continue
-        world_verts = [obj.matrix_world @ v.co for v in obj.data.vertices]
-        if not world_verts:
-            continue
-        centroid = sum(world_verts, mathutils.Vector()) / len(world_verts)
-        bpy.ops.object.light_add(type="POINT", location=centroid)
-        bpy.context.object.data.energy = 500
-        bpy.context.object.data.shadow_soft_size = 0.25
-
-
-def render_scene(scene_path):
-    scene_path = Path(scene_path).resolve()
-    render_color(scene_path.with_suffix(".png"))
-    render_normals(scene_path.with_name(scene_path.stem + "_normals.png"))
-
-
-clear_scene()
-prepare_scene()
-bpy.ops.import_scene.gltf(filepath=scene_a_path)
 add_lights_for_light_meshes()
-render_scene(scene_a_path)
+enable_sky_texture()
 
 
-clear_scene()
-prepare_scene()
-bpy.ops.import_scene.gltf(filepath=scene_b_path)
-add_lights_for_light_meshes()
-render_scene(scene_b_path)
+# Render Scene
+bpy.context.scene.use_nodes = False
+bpy.context.scene.render.filepath = output_path
+bpy.context.scene.render.image_settings.file_format = "PNG"
+bpy.ops.render.render(write_still=True)

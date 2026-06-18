@@ -11,3 +11,4 @@ ipykernel>=7.2.0,<8.0.0
 ruff>=0.15.16,<0.16.0
 matplotlib
 setuptools
+bpy==4.2.0
