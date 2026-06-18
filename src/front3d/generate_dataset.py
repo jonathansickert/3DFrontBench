@@ -1,24 +1,7 @@
-"""
-Generate a 3D-FRONT dataset by processing scene data and exporting room geometries.
-
-This script processes 3D-FRONT JSON scene files to extract individual rooms and generate
-a structured dataset. For each valid room, it:
-- Builds a 3D scene representation and corresponding bounding box
-- Exports both as GLB (GL Transmission Format) files
-- Creates metadata JSON files containing scene information and furniture lists
-
-The script filters rooms based on size (minimum 10 objects) and validity checks to ensure
-high-quality dataset samples. Output files are organized in the 'dataset/' directory with
-consistent naming conventions: scene_id_room_id.glb, scene_id_room_id_bbox.glb, and
-corresponding metadata JSON files.
-"""
-
-from src.util import render_trimesh_scene, get_pyrender_cam, remove_textures
 from src.front3d.json_to_3d_front_scene import build_room_scene
 from src.front3d.extract_visible_objects import get_visible_objects
 from pathlib import Path
 import json
-from PIL import Image
 
 
 def legacy_generate_dataset(samples: int = 30):
@@ -161,23 +144,6 @@ def generate_dataset():
         scene_mesh.export(scene_target_dir / "scene.glb")
         scaffold_mesh.export(scene_target_dir / "scene_scaffold.glb")
         scene_bbox_mesh.export(scene_target_dir / "scene_bbox.glb")
-
-        remove_textures(scene_mesh)
-        remove_textures(scaffold_mesh)
-        remove_textures(scene_bbox_mesh)
-
-        cam, c2w, width, height = get_pyrender_cam(cam_params)
-        color, depth = render_trimesh_scene(scene_mesh, cam, c2w, width, height)
-        color_scaffold, depth_scaffold = render_trimesh_scene(scaffold_mesh, cam, c2w, width, height)
-        color_bbox, depth_bbox = render_trimesh_scene(scene_bbox_mesh, cam, c2w, width, height)
-
-        Image.fromarray(color).save(scene_target_dir / "color.png")
-        Image.fromarray(depth).save(scene_target_dir / "depth.png")
-        Image.fromarray(color_scaffold).save(scene_target_dir / "color_scaffold.png")
-        Image.fromarray(depth_scaffold).save(scene_target_dir / "depth_scaffold.png")
-        Image.fromarray(color_bbox).save(scene_target_dir / "color_bbox.png")
-        Image.fromarray(depth_bbox).save(scene_target_dir / "depth_bbox.png")
-
 
 if __name__ == "__main__":
     generate_dataset()
