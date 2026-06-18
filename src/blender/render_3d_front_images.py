@@ -4,31 +4,17 @@ import mathutils
 
 def add_lights_for_light_meshes():
     for obj in list(bpy.context.scene.objects):
-        if obj.type != "MESH" or "light" not in obj.name.lower():
+        if obj.type != "MESH" or ("light" not in obj.name.lower() and "lamp" not in obj.name.lower()):
             continue
 
-        # Emission material so the fixture itself glows
-        mat = bpy.data.materials.new(name=f"{obj.name}_emission")
-        mat.use_nodes = True
-        nodes = mat.node_tree.nodes
-        links = mat.node_tree.links
-        nodes.clear()
-        emission = nodes.new(type="ShaderNodeEmission")
-        emission.inputs["Color"].default_value = (1.0, 0.95, 0.85, 1.0)
-        emission.inputs["Strength"].default_value = 10.0
-        output = nodes.new(type="ShaderNodeOutputMaterial")
-        links.new(emission.outputs["Emission"], output.inputs["Surface"])
-        obj.data.materials.clear()
-        obj.data.materials.append(mat)
-
-        # Point light at centroid so it actually illuminates the room
         world_verts = [obj.matrix_world @ v.co for v in obj.data.vertices]
         if not world_verts:
             continue
         centroid = sum(world_verts, mathutils.Vector()) / len(world_verts)
         light_data = bpy.data.lights.new(name=f"{obj.name}_point", type="POINT")
-        light_data.energy = 500
+        light_data.energy = 300
         light_data.shadow_soft_size = 0.25
+        light_data.color = (1.0, 0.95, 0.8)  # warm white
         light_obj = bpy.data.objects.new(name=f"{obj.name}_point", object_data=light_data)
         bpy.context.scene.collection.objects.link(light_obj)
         light_obj.location = centroid
@@ -59,7 +45,7 @@ def enable_sky_texture():
 
 
 camera_path = "/Users/jonathansickert/git/3DFrontBench/dataset/0f661df2-0f41-47a4-830c-7444f4a33a03_LivingDiningRoom-12554/camera.json"
-scene_path = "/Users/jonathansickert/git/3DFrontBench/assets/scene_with_texture.glb"
+scene_path = "/Users/jonathansickert/git/3DFrontBench/assets/sample_scene.glb"
 output_path = "/Users/jonathansickert/git/3DFrontBench/assets/sample_rendering.png"
 
 with open(camera_path) as file:
@@ -92,7 +78,7 @@ scene.render.resolution_percentage = 100
 scene.camera = cam_obj
 
 add_lights_for_light_meshes()
-enable_sky_texture()
+# enable_sky_texture()
 
 
 # Render Scene
