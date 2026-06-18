@@ -1,8 +1,3 @@
-
-import os
-os.environ["LIBGL_ALWAYS_SOFTWARE"] = "1"
-
-
 import bpy
 import json
 import mathutils
@@ -11,21 +6,32 @@ def add_lights_for_light_meshes():
     for obj in list(bpy.context.scene.objects):
         if obj.type != "MESH" or "light" not in obj.name.lower():
             continue
+
+        # Emission material so the fixture itself glows
         mat = bpy.data.materials.new(name=f"{obj.name}_emission")
         mat.use_nodes = True
         nodes = mat.node_tree.nodes
         links = mat.node_tree.links
         nodes.clear()
-
         emission = nodes.new(type="ShaderNodeEmission")
-        emission.inputs["Color"].default_value = (1.0, 0.95, 0.85, 1.0)  # warm white
+        emission.inputs["Color"].default_value = (1.0, 0.95, 0.85, 1.0)
         emission.inputs["Strength"].default_value = 10.0
-
         output = nodes.new(type="ShaderNodeOutputMaterial")
         links.new(emission.outputs["Emission"], output.inputs["Surface"])
-
         obj.data.materials.clear()
         obj.data.materials.append(mat)
+
+        # Point light at centroid so it actually illuminates the room
+        world_verts = [obj.matrix_world @ v.co for v in obj.data.vertices]
+        if not world_verts:
+            continue
+        centroid = sum(world_verts, mathutils.Vector()) / len(world_verts)
+        light_data = bpy.data.lights.new(name=f"{obj.name}_point", type="POINT")
+        light_data.energy = 500
+        light_data.shadow_soft_size = 0.25
+        light_obj = bpy.data.objects.new(name=f"{obj.name}_point", object_data=light_data)
+        bpy.context.scene.collection.objects.link(light_obj)
+        light_obj.location = centroid
 
 
 def enable_sky_texture():
@@ -52,9 +58,9 @@ def enable_sky_texture():
     links.new(bg.outputs["Background"], output.inputs["Surface"])
 
 
-camera_path = "/home/jonathansickert/git/DLinVC/dataset/0f661df2-0f41-47a4-830c-7444f4a33a03_LivingDiningRoom-12554/camera.json"
-scene_path = "/home/jonathansickert/git/DLinVC/outputs/sample_scene.glb"
-output_path = "/home/jonathansickert/git/DLinVC/outputs/sample_rendering.png"
+camera_path = "/Users/jonathansickert/git/3DFrontBench/dataset/0f661df2-0f41-47a4-830c-7444f4a33a03_LivingDiningRoom-12554/camera.json"
+scene_path = "/Users/jonathansickert/git/3DFrontBench/assets/scene_with_texture.glb"
+output_path = "/Users/jonathansickert/git/3DFrontBench/assets/sample_rendering.png"
 
 with open(camera_path) as file:
     cam_dict = json.load(file)
@@ -90,8 +96,7 @@ enable_sky_texture()
 
 
 # Render Scene
-bpy.context.scene.render.engine = "CYCLES"
-bpy.context.scene.cycles.device = "GPU"
+bpy.context.scene.render.engine = "BLENDER_EEVEE"
 bpy.context.scene.use_nodes = False
 bpy.context.scene.render.filepath = output_path
 bpy.context.scene.render.image_settings.file_format = "PNG"
