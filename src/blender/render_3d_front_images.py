@@ -11,13 +11,21 @@ def add_lights_for_light_meshes():
     for obj in list(bpy.context.scene.objects):
         if obj.type != "MESH" or "light" not in obj.name.lower():
             continue
-        world_verts = [obj.matrix_world @ v.co for v in obj.data.vertices]
-        if not world_verts:
-            continue
-        centroid = sum(world_verts, mathutils.Vector()) / len(world_verts)
-        bpy.ops.object.light_add(type="POINT", location=centroid)
-        bpy.context.object.data.energy = 500
-        bpy.context.object.data.shadow_soft_size = 0.25
+        mat = bpy.data.materials.new(name=f"{obj.name}_emission")
+        mat.use_nodes = True
+        nodes = mat.node_tree.nodes
+        links = mat.node_tree.links
+        nodes.clear()
+
+        emission = nodes.new(type="ShaderNodeEmission")
+        emission.inputs["Color"].default_value = (1.0, 0.95, 0.85, 1.0)  # warm white
+        emission.inputs["Strength"].default_value = 10.0
+
+        output = nodes.new(type="ShaderNodeOutputMaterial")
+        links.new(emission.outputs["Emission"], output.inputs["Surface"])
+
+        obj.data.materials.clear()
+        obj.data.materials.append(mat)
 
 
 def enable_sky_texture():
@@ -82,6 +90,8 @@ enable_sky_texture()
 
 
 # Render Scene
+bpy.context.scene.render.engine = "CYCLES"
+bpy.context.scene.cycles.device = "GPU"
 bpy.context.scene.use_nodes = False
 bpy.context.scene.render.filepath = output_path
 bpy.context.scene.render.image_settings.file_format = "PNG"
