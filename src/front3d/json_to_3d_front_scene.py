@@ -31,24 +31,72 @@ TEXTURE_PATH = Path("/home/jonathansickert/git/DLinVC/3D-FRONT/3D-FRONT-texture"
 CCTEXTURES_PATH = Path("/home/jonathansickert/git/DLinVC/3D-FRONT/cctextures")
 
 
+def sample_random_material(mesh_type: str, seed: str):
+    floor_textures = [
+        "bamboo",
+        "carpet",
+        "concrete",
+        "granite",
+        "marble",
+        "planks",
+        "porcelain",
+        "rock",
+        "rocks",
+        "tatami",
+        "terrazzo",
+        "tiles",
+        "travertine",
+        "wood",
+        "wood chips",
+        "wood floor",
+    ]
 
+    ceiling_textures = [
+        "concrete",
+        "office ceiling",
+        "chipboard",
+        "planks",
+        "wood",
+    ]
 
-def sample_random_material():
-    probably_useful_texture = ["paving stones", "tiles", "wood", "fabric", "bricks", "metal", "wood floor",
-                               "ground", "rock", "concrete", "leather", "planks", "rocks", "gravel",
-                               "asphalt", "painted metal", "painted plaster", "marble", "carpet",
-                               "plastic", "roofing tiles", "bark", "metal plates", "wood siding",
-                               "terrazzo", "plaster", "paint", "corrugated steel", "painted wood",
-                               "lava cardboard", "clay", "diamond plate", "ice", "moss", "pipe", "candy",
-                               "chipboard", "rope", "sponge", "tactile paving", "paper", "cork",
-                               "wood chips"]
+    wall_textures = [
+        "bricks",
+        "painted bricks",
+        "chipboard",
+        "clay",
+        "concrete",
+        "glazed terracotta",
+        "granite",
+        "marble",
+        "planks",
+        "porcelain",
+        "rock",
+        "rocks",
+        "tiles",
+        "travertine",
+        "wood",
+        "wood siding",
+    ]
+
+    all_textures = list(set(wall_textures + floor_textures + ceiling_textures))
+
+    probably_useful_texture = []
+    if "floor" in mesh_type.lower():
+        probably_useful_texture = floor_textures
+    elif "ceiling" in mesh_type.lower():
+        probably_useful_texture = ceiling_textures
+    elif "wall" in mesh_type.lower():
+        probably_useful_texture = wall_textures
+    else:
+        probably_useful_texture = all_textures
 
     prefixes = tuple(t.replace(" ", "") for t in probably_useful_texture)
     candidates = [
         d for d in CCTEXTURES_PATH.iterdir()
         if d.name.lower().startswith(prefixes)
     ]
-    random.shuffle(candidates)
+    rng = random.Random(seed)
+    rng.shuffle(candidates)
 
     for texture_dir in candidates:
         color_path = texture_dir / f"{texture_dir.name}_2K-JPG_Color.jpg"
@@ -214,7 +262,7 @@ def build_room_scene(
     texture_by_type = {}
     for mesh in meshes:
         if mesh.type not in texture_by_type:
-            texture_by_type[mesh.type] = sample_random_material()
+            texture_by_type[mesh.type] = sample_random_material(mesh_type=mesh.type, seed=mesh.get_name())
 
     scene = trimesh.Scene()
     for mesh in meshes:
