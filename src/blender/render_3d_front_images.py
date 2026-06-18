@@ -59,6 +59,9 @@ def _parse_args():
 
 scene_path, camera_path, output_path = _parse_args()
 
+bpy.ops.object.select_all(action="SELECT")
+bpy.ops.object.delete()
+
 with open(camera_path) as file:
     cam_dict = json.load(file)
 
