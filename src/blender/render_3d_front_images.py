@@ -43,10 +43,21 @@ def enable_sky_texture():
     links.new(sky.outputs["Color"], bg.inputs["Color"])
     links.new(bg.outputs["Background"], output.inputs["Surface"])
 
+import sys
 
-camera_path = "/Users/jonathansickert/git/3DFrontBench/dataset/0f661df2-0f41-47a4-830c-7444f4a33a03_LivingDiningRoom-12554/camera.json"
-scene_path = "/Users/jonathansickert/git/3DFrontBench/assets/sample_scene.glb"
-output_path = "/Users/jonathansickert/git/3DFrontBench/assets/sample_rendering.png"
+def _parse_args():
+    argv = sys.argv
+    if "--" not in argv:
+        raise SystemExit(
+            "Usage: blender --background --python render_3d_front_images.py"
+            " -- <scene_glb> <camera_json> <output_png>"
+        )
+    args = argv[argv.index("--") + 1:]
+    if len(args) < 3:
+        raise SystemExit("Expected three arguments: scene_glb camera_json output_png")
+    return args[0], args[1], args[2]
+
+scene_path, camera_path, output_path = _parse_args()
 
 with open(camera_path) as file:
     cam_dict = json.load(file)
