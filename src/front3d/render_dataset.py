@@ -7,9 +7,9 @@ RENDER_SCRIPT = Path(__file__).resolve().parents[2] / "src" / "blender" / "rende
 DATASET_DIR = Path(__file__).resolve().parents[2] / "dataset"
 
 VARIANTS = [
-    ("scene.glb",          "color.png"),
+    ("scene.glb", "color.png"),
     ("scene_scaffold.glb", "color_scaffold.png"),
-    ("scene_bbox.glb",     "color_bbox.png"),
+    ("scene_bbox.glb", "color_bbox.png"),
 ]
 
 
@@ -24,7 +24,8 @@ def render_glb_file(blender: str, scene_dir: Path, glb_name: str, out_name: str)
     cmd = [
         blender,
         "--background",
-        "--python", str(RENDER_SCRIPT),
+        "--python",
+        str(RENDER_SCRIPT),
         "--",
         str(glb_path),
         str(cam_path),
@@ -39,11 +40,7 @@ def render_glb_file(blender: str, scene_dir: Path, glb_name: str, out_name: str)
 
 def main():
     scene_dirs = sorted(d for d in DATASET_DIR.iterdir() if d.is_dir() and d.name != ".cache")
-    tasks = [
-        (scene_dir, glb_name, out_name)
-        for scene_dir in scene_dirs
-        for glb_name, out_name in VARIANTS
-    ]
+    tasks = [(scene_dir, glb_name, out_name) for scene_dir in scene_dirs for glb_name, out_name in VARIANTS]
 
     for scene_dir, glb_name, out_name in tasks:
         print(f"Rendering {scene_dir.name}/{glb_name} ...")

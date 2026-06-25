@@ -12,3 +12,6 @@ ruff>=0.15.16,<0.16.0
 matplotlib
 setuptools
 bpy==4.2.0
+torch
+lpips
+scikit-image

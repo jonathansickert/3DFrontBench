@@ -115,7 +115,13 @@ def get_light_positions(scene: trimesh.Scene) -> list[np.ndarray]:
     return transforms
 
 
-def render_trimesh_scene(scene: trimesh.Scene, cam: pyrender.IntrinsicsCamera, c2w: np.array, width: int, height: int):
+def render_trimesh_scene(
+    scene: trimesh.Scene,
+    cam: pyrender.IntrinsicsCamera,
+    c2w: np.array,
+    width: int,
+    height: int,
+):
     pyrender_scene = pyrender.Scene.from_trimesh_scene(scene, ambient_light=[0.3, 0.3, 0.3])
     renderer = pyrender.OffscreenRenderer(viewport_width=width, viewport_height=height)
 

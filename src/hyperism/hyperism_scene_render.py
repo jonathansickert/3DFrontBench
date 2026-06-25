@@ -65,7 +65,9 @@ def download_hyperism_cam_metadata(download_dir: str) -> None:
     urllib.request.urlretrieve(url, download_dir / "metadata_camera_parameters.csv")
 
 
-def extract_hyperism_scene_boundary_boxes(scene_dir: str) -> tuple[np.array, np.array, np.array]:
+def extract_hyperism_scene_boundary_boxes(
+    scene_dir: str,
+) -> tuple[np.array, np.array, np.array]:
     """Extract bounding box parameters from Hypersim scene.
 
     Args:
@@ -239,7 +241,9 @@ def hyperism_scene_render(
     """
     extents, orientations, positions = extract_hyperism_scene_boundary_boxes(scene_dir=scene_dir)
     M_c2w, fov_y, width_pixels, height_pixels = extract_hyperism_scene_camera_params(
-        scene_dir=scene_dir, frame_id=frame_id, hyperism_cam_metadata_file=hyperism_cam_metadata_file
+        scene_dir=scene_dir,
+        frame_id=frame_id,
+        hyperism_cam_metadata_file=hyperism_cam_metadata_file,
     )
 
     output_dir = Path(output_dir)

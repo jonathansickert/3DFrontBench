@@ -39,9 +39,7 @@ def get_visible_objects(
         node_name = item["name"]
         transform, geom_name = scene.graph[node_name]
         geom = scene.geometry[geom_name]
-        vertices_world = trimesh.transform_points(
-            np.asarray(geom.vertices, dtype=np.float64), transform
-        )
+        vertices_world = trimesh.transform_points(np.asarray(geom.vertices, dtype=np.float64), transform)
         if visible_vertex_mask(vertices_world, w2c, K, width, height, znear, zfar).any():
             results.append((item, geom))
 
@@ -86,9 +84,7 @@ def extract_visible_objects(scene_dir: Path) -> list[dict]:
 
 if __name__ == "__main__":
     visible_objects = extract_visible_objects(
-        Path(
-            "/home/jonathansickert/git/DLinVC/dataset/109a8e42-f7d7-4893-8262-f2030072b760_LivingRoom-38165"
-        )
+        Path("/home/jonathansickert/git/DLinVC/dataset/109a8e42-f7d7-4893-8262-f2030072b760_LivingRoom-38165")
     )
 
     for visible_object in visible_objects:

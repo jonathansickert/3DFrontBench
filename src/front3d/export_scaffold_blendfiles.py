@@ -11,7 +11,8 @@ def export_scaffold_blendfile(blender: str, scene_dir: Path):
     cmd = [
         blender,
         "--background",
-        "--python", str(RENDER_SCRIPT),
+        "--python",
+        str(RENDER_SCRIPT),
         "--",
         str(scene_dir),
     ]
@@ -31,7 +32,6 @@ def main():
             export_scaffold_blendfile(BLENDER_PATH, scene_dir)
         except RuntimeError as e:
             print(f"Export failed: {e}")
-            
 
 
 if __name__ == "__main__":

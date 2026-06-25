@@ -4,7 +4,13 @@ import bpy
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
-from src.blender.blender_helper import add_lights_for_light_meshes, clear_scene, add_camera, enable_sky_texture
+from src.blender.blender_helper import (
+    add_lights_for_light_meshes,
+    clear_scene,
+    add_camera,
+    enable_sky_texture,
+)
+
 
 def parse_scene_dir() -> Path:
     argv = sys.argv
@@ -33,5 +39,3 @@ add_camera(cam_dict=cam_dict)
 
 bpy.ops.wm.save_as_mainfile(filepath=str(output_blend))
 print(f"Saved: {output_blend}")
-
-

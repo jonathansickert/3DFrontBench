@@ -25,12 +25,9 @@ def visualize_dataset(dataset: Eval3DFrontDataset):
         for ax in [axes[r, c], axes[r, c + 1], axes[r + 1, c], axes[r + 1, c + 1]]:
             ax.axis("off")
 
-
     fig.savefig("./assets/dataset_visualization.png", dpi=300, bbox_inches="tight")
 
 
 if __name__ == "__main__":
     dataset = Eval3DFrontDataset("./dataset")
     visualize_dataset(dataset=dataset)
-
-

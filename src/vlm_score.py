@@ -31,9 +31,25 @@ class VLMScoreAgent:
     ) -> VLMSceneScore:
         response = self.client.models.generate_content(
             model="gemini-3.1-flash-lite",
-            contents=[prompt, target_image, target_image_depth, rendering_image, rendering_image_depth],
-            config={"response_mime_type": "application/json", "response_schema": VLMSceneScore},
+            contents=[
+                prompt,
+                target_image,
+                target_image_depth,
+                rendering_image,
+                rendering_image_depth,
+            ],
+            config={
+                "response_mime_type": "application/json",
+                "response_schema": VLMSceneScore,
+            },
         )
 
         vlm_score = response.parsed
         return vlm_score
+
+
+def compute_vlm_score(path1: str, path2: str) -> dict[str, float]:
+    vlm_agent = VLMSceneScore()
+
+    img = Image.open(path1)
+    img = Image.open(path2)

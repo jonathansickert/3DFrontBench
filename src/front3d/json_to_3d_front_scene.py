@@ -91,10 +91,7 @@ def sample_random_material(mesh_type: str, seed: str):
         probably_useful_texture = all_textures
 
     prefixes = tuple(t.replace(" ", "") for t in probably_useful_texture)
-    candidates = [
-        d for d in CCTEXTURES_PATH.iterdir()
-        if d.name.lower().startswith(prefixes)
-    ]
+    candidates = [d for d in CCTEXTURES_PATH.iterdir() if d.name.lower().startswith(prefixes)]
     rng = random.Random(seed)
     rng.shuffle(candidates)
 
@@ -115,7 +112,6 @@ def sample_random_material(mesh_type: str, seed: str):
         }
 
     raise RuntimeError(f"No complete CCTextures material found under {CCTEXTURES_PATH}")
-
 
 
 class FurnitureMesh(BaseModel):
@@ -141,6 +137,7 @@ class FurnitureMesh(BaseModel):
         clean_label = re.sub(r"_+", "_", clean_label).strip("_")
 
         return f"{clean_label}_{furniture_uuid}"
+
 
 class LayoutMesh(BaseModel):
     uid: str
@@ -172,7 +169,8 @@ class LayoutMesh(BaseModel):
         )
 
         mesh.visual = trimesh.visual.texture.TextureVisuals(
-            uv=uv, material=material,
+            uv=uv,
+            material=material,
         )
         return mesh
 
@@ -202,7 +200,12 @@ def load_furniture_objects_for_room(scene_json: dict, room: dict) -> list[Furnit
         label = furniture.get("title") or furniture.get("category")
 
         f = FurnitureMesh(
-            uid=furniture["uid"], jid=jid, label=label, pos=obj["pos"], rot=obj["rot"], scale=obj["scale"]
+            uid=furniture["uid"],
+            jid=jid,
+            label=label,
+            pos=obj["pos"],
+            rot=obj["rot"],
+            scale=obj["scale"],
         )
 
         furnitures.append(f)
