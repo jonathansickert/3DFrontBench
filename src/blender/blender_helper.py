@@ -1,9 +1,11 @@
 import bpy
 import mathutils
 
+
 def clear_scene():
     bpy.ops.object.select_all(action="SELECT")
     bpy.ops.object.delete()
+
 
 def add_lights_for_light_meshes():
     for obj in list(bpy.context.scene.objects):
@@ -21,6 +23,12 @@ def add_lights_for_light_meshes():
         light_obj = bpy.data.objects.new(name=f"{obj.name}_point", object_data=light_data)
         bpy.context.scene.collection.objects.link(light_obj)
         light_obj.location = centroid
+
+
+def clear_cameras():
+    for obj in list(bpy.context.scene.objects):
+        if obj.type == "CAMERA":
+            bpy.data.objects.remove(obj, do_unlink=True)
 
 
 def add_camera(cam_dict: dict):
