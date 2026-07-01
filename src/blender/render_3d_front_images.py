@@ -8,6 +8,7 @@ from src.blender.blender_helper import (
     add_lights_for_light_meshes,
     clear_scene,
     add_camera,
+    enable_sky_texture
 )
 
 
@@ -31,6 +32,7 @@ with open(camera_path) as file:
 clear_scene()
 bpy.ops.import_scene.gltf(filepath=scene_path)
 add_lights_for_light_meshes()
+enable_sky_texture()
 add_camera(cam_dict=cam_dict)
 
 # Render Scene
