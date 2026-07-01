@@ -24,9 +24,7 @@ class VLMScoreAgent:
     def generate_score(
         self,
         target_image: Image.Image,
-        target_image_depth: Image.Image,
         rendering_image: Image.Image,
-        rendering_image_depth: Image.Image,
         prompt: str,
     ) -> VLMSceneScore:
         response = self.client.models.generate_content(
@@ -34,9 +32,7 @@ class VLMScoreAgent:
             contents=[
                 prompt,
                 target_image,
-                target_image_depth,
                 rendering_image,
-                rendering_image_depth,
             ],
             config={
                 "response_mime_type": "application/json",
@@ -48,8 +44,25 @@ class VLMScoreAgent:
         return vlm_score
 
 
-def compute_vlm_score(path1: str, path2: str) -> dict[str, float]:
-    vlm_agent = VLMSceneScore()
 
-    img = Image.open(path1)
-    img = Image.open(path2)
+def compute_vlm_score(target_path: str, render_path: str, runs: int = 1) -> list[dict[str, float]]:
+    vlm_agent = VLMScoreAgent()
+    with open("/Users/jonathansickert/git/3DFrontBench/prompts/vlm_score_prompt.txt") as f:
+        prompt = f.read()
+
+    target_img = Image.open(target_path)
+    render_img = Image.open(render_path)
+
+    results = []
+    for _ in range(runs):
+        result = vlm_agent.generate_score(
+            target_image=target_img,
+            rendering_image=render_img,
+            prompt=prompt,
+        )
+
+        results.append(
+            result.model_dump_json()
+        )
+
+    return results
