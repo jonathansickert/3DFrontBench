@@ -1,0 +1,187 @@
+{
+  "6ae193c4-4fe1-42e8-b2dd-38ded31b7f12_LivingDiningRoom-48379": [
+    [
+      "{\"object_count\":5,\"object_placement\":6,\"object_scale\":8,\"object_orientation\":7,\"reasoning\":\"The rendered scene is missing the central coffee table present in the target image and includes an extra chair that was not in the target. The placement of the sofa and the side table has shifted significantly compared to the target, leading to a lower score for placement. The scales of the remaining items are generally accurate, but the overall layout is quite different.\"}"
+    ],
+    [
+      "{\"object_count\":7,\"object_placement\":7,\"object_scale\":8,\"object_orientation\":7,\"reasoning\":\"The rendered scene captures most of the furniture, but there are notable discrepancies. The side table from the target image is missing, replaced by a chair in a different location. The coffee table and sofa are present, but their spatial arrangement differs slightly from the target due to the inclusion of the chair. Scale and orientation of the remaining items are generally consistent, though the overall layout logic has shifted.\"}"
+    ],
+    [
+      "{\"object_count\":5,\"object_placement\":5,\"object_scale\":6,\"object_orientation\":5,\"reasoning\":\"The rendered scene is missing several key furniture items present in the target, specifically the central coffee table and the large wooden side table. Instead, it has introduced a dining-style chair and shifted the placement of the remaining furniture. While the scale of individual items is generally acceptable, the overall layout and composition significantly deviate from the target configuration.\"}"
+    ],
+    [
+      "{\"object_count\":8,\"object_placement\":7,\"object_scale\":9,\"object_orientation\":8,\"reasoning\":\"The object count is mostly consistent, although a table was removed and a chair added. The placement of the furniture follows the general layout of the original scene. The scale of the objects is consistent, and the orientation of the major pieces, like the sofa and armchair, matches the target.\"}"
+    ],
+    [
+      "{\"object_count\":8,\"object_placement\":7,\"object_scale\":9,\"object_orientation\":8,\"reasoning\":\"The furniture items in the rendered scene generally match the intended layout. However, there are some discrepancies: an additional chair is present in the rendered scene that was not in the original reference. The placement is mostly consistent, although some minor adjustments are needed to align perfectly with the target composition. Scales and orientations of the primary pieces like the sofa, armchair, and coffee table are accurate.\"}"
+    ],
+    [
+      "{\"object_count\":6,\"object_placement\":7,\"object_scale\":8,\"object_orientation\":7,\"reasoning\":\"The sofa and black armchair are present, but the coffee table has shifted positions relative to the target, and a side table was replaced by a chair in the rendered image. The plant stand remains in a similar relative position. The scale of the furniture is generally accurate to the layout.\"}"
+    ],
+    [
+      "{\"object_count\":2,\"object_placement\":2,\"object_scale\":3,\"object_orientation\":3,\"reasoning\":\"The rendered scene is missing the primary sofa and the main coffee table from the target image. The chair and pedestal are present, but the arrangement is completely different due to the missing major furniture pieces, leading to a very poor match.\"}"
+    ],
+    [
+      "{\"object_count\":8,\"object_placement\":7,\"object_scale\":8,\"object_orientation\":8,\"reasoning\":\"The rendered scene captures the primary furniture pieces correctly: a sofa, a coffee table, a black armchair, and accent tables. There are minor discrepancies in the precise arrangement of the side tables and chairs behind the sofa compared to the reference image, but the overall composition and scale are well-maintained.\"}"
+    ]
+  ],
+  "0f661df2-0f41-47a4-830c-7444f4a33a03_LivingDiningRoom-12554": [
+    [
+      "{\"object_count\":8,\"object_placement\":8,\"object_scale\":9,\"object_orientation\":9,\"reasoning\":\"The rendered scene captures all the major furniture pieces found in the target image (dining table, dining chairs, sofa, side tables, lounge chair, coffee table, and media console). The placement, scale, and orientation are highly accurate to the target configuration, with only minor variations in the exact positioning of some smaller items like the side tables.\"}"
+    ]
+  ],
+  "103cce55-24d5-4c71-9856-156962e30511_LivingDiningRoom-89516": [
+    [
+      "{\"object_count\":8,\"object_placement\":7,\"object_scale\":8,\"object_orientation\":9,\"reasoning\":\"The rendered scene includes extra furniture items compared to the target, specifically a sideboard/console table positioned behind the sofa which was not present in the target image. The main furniture, the media console unit and the sofa, are correctly placed, scaled, and oriented according to the original layout.\"}"
+    ],
+    [
+      "{\"object_count\":2,\"object_placement\":2,\"object_scale\":5,\"object_orientation\":3,\"reasoning\":\"The rendered scene is missing the main sofa and the sideboard/console table present in the target. The only furniture piece present is a small side table which is misplaced compared to the target, significantly altering the intended layout.\"}"
+    ],
+    [
+      "{\"object_count\":3,\"object_placement\":4,\"object_scale\":6,\"object_orientation\":5,\"reasoning\":\"The rendered scene is missing the major sofa and cabinet furniture pieces present in the target image. Only the wall-mounted shelving unit and a side table are present, which does not match the comprehensive furniture set in the target.\"}"
+    ],
+    [
+      "{\"object_count\":2,\"object_placement\":3,\"object_scale\":5,\"object_orientation\":4,\"reasoning\":\"The rendered scene is missing the main sofa and the console table behind it that are present in the target image. The only furniture piece correctly present in both is the wall-mounted shelving unit on the left, though it is slightly less detailed in the rendering.\"}"
+    ],
+    [
+      "{\"object_count\":2,\"object_placement\":2,\"object_scale\":5,\"object_orientation\":3,\"reasoning\":\"The rendered image is missing the sofa, the coffee table, and the console table present in the target image. It only contains the wall-mounted shelving unit and a small black table, leading to a significant mismatch in object count and placement. The scale and orientation of the remaining objects are somewhat consistent, but the overall scene composition is largely empty compared to the target.\"}"
+    ],
+    [
+      "{\"object_count\":5,\"object_placement\":5,\"object_scale\":7,\"object_orientation\":8,\"reasoning\":\"The rendered image is missing several pieces of furniture present in the target image, specifically the console table behind the sofa and the decorative objects. The main furniture items that are present, such as the sofa, the wall unit, and the side table, are placed reasonably well, but the overall set is incomplete compared to the target.\"}"
+    ]
+  ],
+  "10e2d93c-2a82-49f2-a95c-7598d24901f2_LivingDiningRoom-8149": [
+    [
+      "{\"object_count\":10,\"object_placement\":9,\"object_scale\":10,\"object_orientation\":10,\"reasoning\":\"The rendered scene accurately reflects the target scene's furniture configuration. The dining set (table and four chairs), the sofa, and the console table are all correctly placed and scaled. While the light fixtures have swapped positions compared to the reference image, the instruction indicates that only furniture (tables, chairs, sofas, cabinets) should be evaluated, so this change does not impact the scoring of the furniture geometry itself.\"}"
+    ],
+    [
+      "{\"object_count\":10,\"object_placement\":9,\"object_scale\":10,\"object_orientation\":10,\"reasoning\":\"The rendered scene successfully captures all furniture items present in the target image, including the dining table, four chairs, sofa, and side table. Their relative placement, scale, and orientation are consistent with the target, despite the slight variation in camera angle.\"}"
+    ],
+    [
+      "{\"object_count\":10,\"object_placement\":9,\"object_scale\":10,\"object_orientation\":10,\"reasoning\":\"The rendered scene accurately reproduces all the furniture items found in the target scene, including the dining table, chairs, sofa, and side table. Their relative placement, scaling, and orientation are consistent with the original design.\"}"
+    ],
+    [
+      "{\"object_count\":10,\"object_placement\":9,\"object_scale\":10,\"object_orientation\":10,\"reasoning\":\"The rendered scene successfully includes all furniture items present in the target image. The placement, scale, and orientation of the dining table, chairs, sofa, and console table are accurate. The minor displacement of the cat and rug is negligible as per the instructions, and the overall scene geometry is a very high-quality match.\"}"
+    ],
+    [
+      "{\"object_count\":8,\"object_placement\":5,\"object_scale\":7,\"object_orientation\":6,\"reasoning\":\"The object count is accurate, featuring a dining set (table and 4 chairs), a sofa, and a sideboard. However, the placement and orientation of the furniture are significantly altered. The sofa is pushed into the corner instead of being positioned centrally against the wall, the sideboard has been moved to a different area, and the overhead lighting fixtures are swapped in their room locations relative to the furniture.\"}"
+    ],
+    [
+      "{\"object_count\":10,\"object_placement\":10,\"object_scale\":10,\"object_orientation\":10,\"reasoning\":\"The generated scene correctly includes all major furniture items present in the target scene, including the dining table, four chairs, the sofa, and the side table/cabinet unit. The placement, relative scale, and orientation of all furniture pieces accurately match the target.\"}"
+    ]
+  ],
+  "2e422478-2de0-4d16-b398-657b07c1cac0_LivingDiningRoom-4293": [],
+  "7686a060-ab0d-4014-9e5c-75d75e0752e3_LivingDiningRoom-44815": [
+    [
+      "{\"object_count\":0,\"object_placement\":0,\"object_scale\":0,\"object_orientation\":0,\"reasoning\":\"The rendered image is missing almost all furniture items present in the target image. Only the coffee table is present; the sofa, armchair, and side chair are completely missing.\"}"
+    ],
+    [
+      "{\"object_count\":0,\"object_placement\":0,\"object_scale\":0,\"object_orientation\":0,\"reasoning\":\"The rendered image is empty and does not contain any of the furniture items (sofa, chairs, coffee table) present in the target scene image.\"}"
+    ]
+  ],
+  "09d742d0-9e99-4e31-ac3d-ad1879cf691b_LivingDiningRoom-9326": [
+    [
+      "{\"object_count\":2,\"object_placement\":2,\"object_scale\":3,\"object_orientation\":4,\"reasoning\":\"The rendered image is missing the majority of the furniture present in the target image. Specifically, the entire L-shaped sofa, the two office chairs, the breakfast bar/island, and the additional seating are missing or replaced by a single low-profile seating element and a table. The furniture that is present does not match the scale or placement of the original scene.\"}"
+    ],
+    [
+      "{\"object_count\":2,\"object_placement\":2,\"object_scale\":4,\"object_orientation\":3,\"reasoning\":\"The rendered scene is missing almost all furniture items present in the target, specifically the kitchen island, chairs, coffee table, and auxiliary chairs. Only the sofa remains, and even that is incorrectly placed and scaled relative to the room.\"}"
+    ]
+  ],
+  "473fb8fd-a6d4-4fc1-bd5d-1afd61a9617e_LivingRoom-9915": [
+    [
+      "{\"object_count\":8,\"object_placement\":7,\"object_scale\":8,\"object_orientation\":9,\"reasoning\":\"The furniture items (sofa, coffee tables, dining table, chairs, shelving units) are present and correctly oriented. However, the placement is swapped: in the target image, the bookshelf is on the right and the storage unit/lamp setup is on the left, whereas in the rendered image, the bookshelf is on the right and the storage/lamp setup is on the left; additionally, the bookshelf design in the render is different from the target (multi-tiered open shelving vs. a enclosed cabinet).\"}"
+    ],
+    [
+      "{\"object_count\":8,\"object_placement\":7,\"object_scale\":8,\"object_orientation\":9,\"reasoning\":\"The objects are largely the same, however, the target image features a storage cabinet on the right and a shelving unit on the left, whereas the generated image swaps their positions (cabinet on the left, shelving on the right). Otherwise, the count and proportions of the coffee tables, sofa, and dining set are accurate to the scene.\"}"
+    ],
+    [
+      "{\"object_count\":8,\"object_placement\":8,\"object_scale\":9,\"object_orientation\":9,\"reasoning\":\"The rendered scene captures the main furniture components well: sofa, coffee tables, dining table, and dining chairs. However, there is a discrepancy in the cabinet/storage unit. The target image features a tall wood/metal cabinet, while the rendered scene features a different wooden shelf unit in a different location. The overall furniture placement and scale remain consistent with the target's layout.\"}"
+    ],
+    [
+      "{\"object_count\":8,\"object_placement\":7,\"object_scale\":8,\"object_orientation\":9,\"reasoning\":\"The objects are largely present and correctly oriented, however the shelving unit on the left and right sides were swapped in their placement and design between the target and the rendered image, causing a discrepancy in the spatial layout.\"}"
+    ],
+    [
+      "{\"object_count\":10,\"object_placement\":9,\"object_scale\":9,\"object_orientation\":10,\"reasoning\":\"The rendered scene matches the target image very well. All major furniture pieces (sofa, coffee tables, dining table, chairs, shelving units) are present and in the correct relative positions. The scaling and orientations are also accurate. The main difference is the style of the shelving units on the left and right, but the placement and count are maintained.\"}"
+    ],
+    [
+      "{\"object_count\":8,\"object_placement\":7,\"object_scale\":8,\"object_orientation\":9,\"reasoning\":\"The rendered scene captures all major furniture pieces: sofa, coffee tables, dining set, and shelving unit. The placement is quite accurate, though the shelving unit in the render has a significantly different, more complex geometric structure than the simpler cabinet in the target image. Scale and orientation are generally consistent with the target setup.\"}"
+    ],
+    [
+      "{\"object_count\":8,\"object_placement\":8,\"object_scale\":9,\"object_orientation\":9,\"reasoning\":\"The object count is correct with a sofa, two coffee tables, a dining set (table and chairs), and a shelving unit present in both scenes. The placement and orientation are very consistent across both. The only notable difference is the design style of the shelving unit, which was interpreted differently in the generation, but it occupies the same functional space and maintains appropriate scale.\"}"
+    ]
+  ],
+  "6e7a0c41-15f3-4909-a20c-dab460b45ada_LivingDiningRoom-847": [
+    [
+      "{\"object_count\":5,\"object_placement\":4,\"object_scale\":5,\"object_orientation\":4,\"reasoning\":\"The rendered scene includes the sofa, dining table, dining chair, side lamp, and sideboard/console, matching the count of the target image. However, the placement is significantly different; the console is positioned differently, the chair is incorrectly placed, and the overall layout lacks the cohesive arrangement seen in the target. The scale and proportions of objects, particularly the console relative to the lamp, are inconsistent with the target.\"}"
+    ],
+    [
+      "{\"object_count\":10,\"object_placement\":9,\"object_scale\":9,\"object_orientation\":9,\"reasoning\":\"The rendered scene accurately includes all furniture items present in the target image (sofa, dining chairs, dining table, console, and side table). The spatial layout and relative positioning are well-maintained. The scale and orientations of the objects are consistent with the original arrangement.\"}"
+    ]
+  ],
+  "5e6d0804-54a9-4d4a-b4ed-1b4f22aa1d01_LivingRoom-16933": [],
+  "1f077e24-2eca-43ca-bc92-1b36eab99467_LivingDiningRoom-180855": [
+    [
+      "{\"object_count\":4,\"object_placement\":3,\"object_scale\":4,\"object_orientation\":4,\"reasoning\":\"The generated scene is missing most of the major furniture items present in the reference, such as the dining table, the console table, the sofa, and the coffee table. The piano and a small side table are the only items that align with the reference, but their placement and surrounding context are entirely different due to the lack of the main furniture set.\"}"
+    ]
+  ],
+  "109c84cd-7194-4b1d-ac52-8d1862565c6c_Corridor-20684": [
+    [
+      "{\"object_count\":10,\"object_placement\":9,\"object_scale\":10,\"object_orientation\":10,\"reasoning\":\"The rendered scene accurately reflects all furniture items present in the target image. The placement, scale, and orientation are nearly identical. The slight variation in placement is negligible and likely due to camera perspective differences.\"}"
+    ],
+    [
+      "{\"object_count\":5,\"object_placement\":5,\"object_scale\":8,\"object_orientation\":8,\"reasoning\":\"The rendered image is missing the tall gray cabinet on the left and the dark locker-style cabinet on the right compared to the target image. The central dining set (table, chairs, and ottoman) is present and reasonably positioned, but the absence of the storage cabinets significantly impacts the overall scene composition and count.\"}"
+    ],
+    [
+      "{\"object_count\":5,\"object_placement\":5,\"object_scale\":6,\"object_orientation\":7,\"reasoning\":\"The rendered scene is missing the two large cabinets (one on the left and one on the right) present in the target image. The dining set (table and chairs) and the stool are present, but the overall furniture count is significantly lower, leading to poor placement scores for the room as a whole.\"}"
+    ],
+    [
+      "{\"object_count\":5,\"object_placement\":5,\"object_scale\":8,\"object_orientation\":9,\"reasoning\":\"The rendered scene is missing the two large cabinets (one on the left and one on the right) and the ottoman that were present in the target image. The dining set (table and chairs) and the sideboard are present and generally well-placed and oriented, but the missing major furniture pieces significantly lower the overall score.\"}"
+    ]
+  ],
+  "2eeb434c-855e-4298-a8d5-29b1ca838608_MasterBedroom-5966": [
+    [
+      "{\"object_count\":5,\"object_placement\":4,\"object_scale\":5,\"object_orientation\":5,\"reasoning\":\"The rendered scene is missing several key furniture pieces from the target image, specifically the two bedside tables and the large open-front wardrobe. The wardrobe present in the render is a completely different, solid-front minimalist unit that does not match the target's style or configuration. While the bed and desk chair are present, the overall room layout and furniture composition are significantly different.\"}"
+    ]
+  ],
+  "109a8e42-f7d7-4893-8262-f2030072b760_LivingRoom-38165": [
+    [
+      "{\"object_count\":8,\"object_placement\":7,\"object_scale\":9,\"object_orientation\":8,\"reasoning\":\"The rendered scene successfully includes the main furniture pieces: the bed, sofa, two coffee tables, and the sideboard console. However, the sofa chair that was present in the target scene is missing in the render, resulting in a lower score for object count. The relative positioning of the furniture pieces generally follows the original layout, but the spacing and grouping are slightly off. The scale of the individual objects is quite accurate, maintaining consistency with the room. The orientations of the objects are well-maintained, correctly facing the intended directions within the room space.\"}"
+    ],
+    [
+      "{\"object_count\":5,\"object_placement\":4,\"object_scale\":6,\"object_orientation\":5,\"reasoning\":\"The rendered image is missing the TV stand/cabinet that is present in the target image. Furthermore, the furniture layout is significantly different; the bed, the coffee table, the side table, and the armchair are all rearranged relative to one another compared to the target, leading to lower scores in placement and orientation.\"}"
+    ],
+    [
+      "{\"object_count\":2,\"object_placement\":2,\"object_scale\":5,\"object_orientation\":4,\"reasoning\":\"The rendered image is missing several key furniture items present in the target image, including the coffee tables, the media console, and the bed is partially out of frame/misplaced. Only the armchair is present, and its placement and orientation relative to the other missing pieces cannot be validated correctly, leading to low scores across all categories.\"}"
+    ]
+  ],
+  "8174e94b-cb97-4d24-bd3a-81a095192bbe_LivingDiningRoom-33640": [
+    [
+      "{\"object_count\":3,\"object_placement\":3,\"object_scale\":6,\"object_orientation\":5,\"reasoning\":\"The rendered scene is missing several key furniture items present in the target, specifically the tall cabinet, the chair, and the white stool/side table. Only the sofa and the nested coffee tables remain. The placement of the remaining objects is significantly altered due to the missing context of the other pieces, and the orientation of the sofa has been adjusted to face the center of the room instead of the side wall.\"}"
+    ]
+  ],
+  "1ad74b11-777a-4610-a249-7c5e044a0f01_LivingDiningRoom-10290": [
+    [
+      "{\"object_count\":2,\"object_placement\":2,\"object_scale\":3,\"object_orientation\":4,\"reasoning\":\"The rendered scene is missing the dining set and the coffee table. The couch is placed incorrectly along the back wall instead of the right wall, and the side table/stool configuration is incorrect. The furniture present is significantly different from the target layout.\"}"
+    ],
+    [
+      "{\"object_count\":2,\"object_placement\":2,\"object_scale\":3,\"object_orientation\":3,\"reasoning\":\"The rendered scene is missing most of the furniture from the target image, including the dining table, chairs, sofa, and multiple side tables. The furniture that is present is incorrectly placed and scaled.\"}"
+    ],
+    [
+      "{\"object_count\":2,\"object_placement\":2,\"object_scale\":5,\"object_orientation\":3,\"reasoning\":\"The rendered scene is missing the majority of the furniture present in the target image. Specifically, the dining set (table and chairs), the media console, and the side tables are all missing or incorrectly placed. Only the sofa and one small table/console piece are identifiable, and their placement and orientation relative to the room layout do not match the intended design.\"}"
+    ],
+    [
+      "{\"object_count\":2,\"object_placement\":2,\"object_scale\":4,\"object_orientation\":3,\"reasoning\":\"The rendered image is missing the majority of the furniture present in the target image. The dining table set, the coffee table, and the main sofa are absent or incorrectly placed/substituted. Only a media console-like piece and a small table remain, leading to a significant mismatch in count, placement, and overall scene composition.\"}"
+    ],
+    [
+      "{\"object_count\":2,\"object_placement\":2,\"object_scale\":4,\"object_orientation\":3,\"reasoning\":\"The rendered scene is missing almost all furniture items present in the target scene, including the sofa, coffee table, and most dining room furniture. Only a sideboard and one chair remain, and their placement does not reflect the layout of the target. Scale and orientation are poorly represented due to the lack of context and the incorrect placement of the few items that are present.\"}"
+    ]
+  ],
+  "1ad74b11-777a-4610-a249-7c5e044a0f01_MasterBedroom-14403": [
+    [
+      "{\"object_count\":3,\"object_placement\":3,\"object_scale\":7,\"object_orientation\":6,\"reasoning\":\"The generated scene is missing several key furniture items compared to the target image, specifically the bed, the vanity desk, and the decorative tree-like coat rack. The items that are present (armchair, side table, and stool) are placed generally in the correct area, but the absence of the other furniture significantly alters the room's composition. Scale and orientation for the existing items are reasonably accurate, but the overall lack of required objects makes the scene incomplete.\"}"
+    ],
+    [
+      "{\"object_count\":3,\"object_placement\":4,\"object_scale\":8,\"object_orientation\":8,\"reasoning\":\"The rendered scene is missing several key furniture items present in the target image: the large bed, the vanity desk, the matching stool, and the decorative coat rack. The items that are present (the chair, side table, nightstand, and bench) are placed relatively well in accordance with the target, but the overall scene composition is significantly incomplete.\"}"
+    ]
+  ]
+}

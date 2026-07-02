@@ -1,8 +1,10 @@
 import os
 
 from google import genai
+from google.genai import errors
 from PIL import Image
 from pydantic import BaseModel
+import time
 
 
 class VLMSceneScore(BaseModel):
@@ -26,22 +28,28 @@ class VLMScoreAgent:
         target_image: Image.Image,
         rendering_image: Image.Image,
         prompt: str,
+        max_retries: int = 3,
     ) -> VLMSceneScore:
-        response = self.client.models.generate_content(
-            model="gemini-3.1-flash-lite",
-            contents=[
-                prompt,
-                target_image,
-                rendering_image,
-            ],
-            config={
-                "response_mime_type": "application/json",
-                "response_schema": VLMSceneScore,
-            },
-        )
-
-        vlm_score = response.parsed
-        return vlm_score
+        for attempt in range(max_retries):
+            try:
+                response = self.client.models.generate_content(
+                    model="gemini-3.1-flash-lite",
+                    contents=[
+                        prompt,
+                        target_image,
+                        rendering_image,
+                    ],
+                    config={
+                        "response_mime_type": "application/json",
+                        "response_schema": VLMSceneScore,
+                    },
+                )
+                return response.parsed
+            except errors.ServerError:
+                if attempt == max_retries - 1:
+                    raise
+                print("Error in VLM score, waiting 5 second before retrying...")
+                time.sleep(5)
 
 
 
