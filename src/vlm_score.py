@@ -1,7 +1,8 @@
+import base64
+import io
 import os
 
-from google import genai
-from google.genai import errors
+import openai
 from PIL import Image
 from pydantic import BaseModel
 import time
@@ -15,13 +16,23 @@ class VLMSceneScore(BaseModel):
     reasoning: str
 
 
+def _image_to_data_url(image: Image.Image) -> str:
+    buffer = io.BytesIO()
+    image.save(buffer, format="PNG")
+    encoded = base64.b64encode(buffer.getvalue()).decode("utf-8")
+    return f"data:image/png;base64,{encoded}"
+
+
 class VLMScoreAgent:
     def __init__(self, api_key: str | None = None):
-        api_key = api_key or os.getenv("GEMINI_API_KEY")
+        api_key = api_key or os.getenv("OPENROUTER_API_KEY")
         if not api_key:
             raise ValueError("No API key found.")
 
-        self.client = genai.Client(api_key=api_key)
+        self.client = openai.OpenAI(
+            api_key=api_key,
+            base_url="https://openrouter.ai/api/v1",
+        )
 
     def generate_score(
         self,
@@ -32,20 +43,33 @@ class VLMScoreAgent:
     ) -> VLMSceneScore:
         for attempt in range(max_retries):
             try:
-                response = self.client.models.generate_content(
-                    model="gemini-3.1-flash-lite",
-                    contents=[
-                        prompt,
-                        target_image,
-                        rendering_image,
+                completion = self.client.chat.completions.parse(
+                    model="google/gemini-3.1-flash-lite",
+                    messages=[
+                        {
+                            "role": "system",
+                            "content": prompt,
+                        },
+                        {
+                            "role": "user",
+                            "content": [
+                                {
+                                    "type": "image_url",
+                                    "image_url": {"url": _image_to_data_url(target_image)},
+                                },
+                                {
+                                    "type": "image_url",
+                                    "image_url": {"url": _image_to_data_url(rendering_image)},
+                                },
+                            ],
+                        },
                     ],
-                    config={
-                        "response_mime_type": "application/json",
-                        "response_schema": VLMSceneScore,
-                    },
+                    response_format=VLMSceneScore,
+                    max_tokens=1024,
+
                 )
-                return response.parsed
-            except errors.ServerError:
+                return completion.choices[0].message.parsed
+            except (openai.APIConnectionError, openai.InternalServerError):
                 if attempt == max_retries - 1:
                     raise
                 print("Error in VLM score, waiting 5 second before retrying...")
