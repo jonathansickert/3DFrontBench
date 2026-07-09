@@ -114,6 +114,21 @@ def select_random_visible_furniture(metadata: dict, percent: float, rng: random.
     return rng.sample(visible_names, n)
 
 
+def compute_perturbation_score(magnitudes: dict[str, float], total_visible: int) -> float:
+    """A single scene-level score for how much a scene got perturbed.
+
+    Sums the per-object perturbation magnitude (e.g. degrees rotated,
+    translation distance, |scale factor - 1|, or 1.0 per removed object) and
+    averages over every visible object in the scene, not just the perturbed
+    ones, so untouched objects implicitly contribute 0. This makes the score
+    reflect both how many objects were touched and how strongly.
+    """
+    if total_visible == 0:
+        return 0.0
+
+    return sum(magnitudes.values()) / total_visible
+
+
 def prepare_permuted_scene_dir(scene_dir: Path, output_dir: Path) -> Path:
     """Set up output_dir with just scene.glb and camera.json copied from scene_dir.
 

@@ -7,31 +7,23 @@ from PIL import Image
 from pydantic import BaseModel
 import time
 
-
-class VLMSceneScore(BaseModel):
-    object_count: int
-    object_placement: int
-    object_scale: int
-    object_orientation: int
-    reasoning: str
-
 class VLMPlacementScore(BaseModel):
-    object_placement: int
+    score: int
     reasoning: str
     missing_info: str
 
 class VLMScaleScore(BaseModel):
-    object_scale: int
+    score: int
     reasoning: str
     missing_info: str
 
-class VLMOrientationScore(BaseModel):
-    object_orientation: int
+class VLMRotationScore(BaseModel):
+    score: int
     reasoning: str
     missing_info: str
 
 class VLMCountScore(BaseModel):
-    object_count: int
+    score: int
     reasoning: str
     missing_info: str
 
@@ -46,6 +38,9 @@ class VLMScoreAgent:
     def __init__(self, api_key: str | None = None, base_url: str | None = None):
         api_key = api_key or os.getenv("GEMINI_API_KEY")
         base_url = base_url or os.getenv("GEMINI_BASE_URL")
+        model = os.getenv("GEMINI_MODEL")
+
+        self.model = model
 
         if not api_key:
             raise ValueError("No API key found.")
@@ -65,11 +60,11 @@ class VLMScoreAgent:
         prompt: str,
         response_format: BaseModel,
         max_retries: int = 3,
-    ) -> VLMSceneScore:
+    ) -> BaseModel:
         for attempt in range(max_retries):
             try:
                 completion = self.client.chat.completions.parse(
-                    model="google/gemini-3.1-flash-lite",
+                    model=self.model,
                     messages=[
                         {
                             "role": "system",
@@ -110,13 +105,13 @@ def compute_vlm_score(target_path: str, render_path: str, score_type: str) -> di
             prompt = f.read()
         response_format = VLMCountScore
     elif score_type == "placement":
-        with open("/Users/jonathansickert/git/3DFrontBench/prompts/vlm_placement_prompt.txt") as f:
+        with open("/Users/jonathansickert/git/3DFrontBench/prompts/vlm_placement_score_prompt.txt") as f:
             prompt = f.read()
         response_format = VLMPlacementScore
-    elif score_type == "orientation":
-        with open("/Users/jonathansickert/git/3DFrontBench/prompts/vlm_orientation_score_prompt.txt") as f:
+    elif score_type == "rotation":
+        with open("/Users/jonathansickert/git/3DFrontBench/prompts/vlm_rotation_score_prompt.txt") as f:
             prompt = f.read()
-        response_format = VLMOrientationScore
+        response_format = VLMRotationScore
     elif score_type == "scale":
         with open("/Users/jonathansickert/git/3DFrontBench/prompts/vlm_scale_score_prompt.txt") as f:
             prompt = f.read()

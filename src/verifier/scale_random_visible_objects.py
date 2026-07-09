@@ -14,6 +14,7 @@ import random
 from pathlib import Path
 
 from src.util import (
+    compute_perturbation_score,
     furniture_by_name,
     load_metadata,
     make_transform,
@@ -66,6 +67,11 @@ def scale_random_visible_objects(
         update_node_transforms(scene_glb_path, new_transforms)
 
     write_json(output_dir / "scaling.json", scaling)
+
+    magnitudes = {name: abs(factor - 1.0) for name, factor in scaling.items()}
+    score = compute_perturbation_score(magnitudes, len(metadata["visible_furniture"]))
+    write_json(output_dir / "score.json", {"score": score})
+
     write_json(output_dir / "percent.json", {"percent": percent})
 
     return scaling

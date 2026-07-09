@@ -12,6 +12,7 @@ import random
 from pathlib import Path
 
 from src.util import (
+    compute_perturbation_score,
     load_metadata,
     prepare_permuted_scene_dir,
     remove_nodes,
@@ -50,6 +51,11 @@ def remove_random_visible_objects(
 
     removed_objects = {name: name in selected for name in metadata["visible_furniture"]}
     write_json(output_dir / "removed_objects.json", removed_objects)
+
+    magnitudes = {name: 1.0 for name in selected}
+    score = compute_perturbation_score(magnitudes, len(metadata["visible_furniture"]))
+    write_json(output_dir / "score.json", {"score": score})
+
     write_json(output_dir / "percent.json", {"percent": percent})
 
     return removed_objects

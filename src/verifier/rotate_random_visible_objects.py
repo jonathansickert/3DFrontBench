@@ -16,6 +16,7 @@ import numpy as np
 import trimesh.transformations as tf
 
 from src.util import (
+    compute_perturbation_score,
     furniture_by_name,
     load_metadata,
     make_transform,
@@ -77,6 +78,10 @@ def rotate_random_visible_objects(
         update_node_transforms(scene_glb_path, new_transforms)
 
     write_json(output_dir / "rotations.json", rotations)
+
+    score = compute_perturbation_score(rotations, len(metadata["visible_furniture"]))
+    write_json(output_dir / "score.json", {"score": score})
+
     write_json(output_dir / "percent.json", {"percent": percent})
 
     return rotations

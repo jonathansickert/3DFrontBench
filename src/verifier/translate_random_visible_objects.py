@@ -16,6 +16,7 @@ import random
 from pathlib import Path
 
 from src.util import (
+    compute_perturbation_score,
     furniture_by_name,
     load_metadata,
     make_transform,
@@ -61,10 +62,12 @@ def translate_random_visible_objects(
     selected = select_random_visible_furniture(metadata, percent, rng)
 
     translations = {}
+    distances = {}
     for name in selected:
         distance = rng.uniform(min_distance, max_distance)
         angle = rng.uniform(0, 2 * math.pi)
         translations[name] = [distance * math.cos(angle), 0.0, distance * math.sin(angle)]
+        distances[name] = distance
 
     scene_glb_path = prepare_permuted_scene_dir(scene_dir, output_dir)
 
@@ -77,6 +80,10 @@ def translate_random_visible_objects(
         update_node_transforms(scene_glb_path, new_transforms)
 
     write_json(output_dir / "translations.json", translations)
+
+    score = compute_perturbation_score(distances, len(metadata["visible_furniture"]))
+    write_json(output_dir / "score.json", {"score": score})
+
     write_json(output_dir / "percent.json", {"percent": percent})
 
     return translations
