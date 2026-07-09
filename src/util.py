@@ -1,3 +1,7 @@
+import json
+import random
+import shutil
+
 import numpy as np
 import trimesh
 from pathlib import Path
@@ -74,6 +78,63 @@ def make_transform(pos: list, rot: list, scale: list) -> np.ndarray:
     T = tf.translation_matrix(pos)
 
     return T @ R @ S
+
+
+def load_metadata(scene_dir: Path) -> dict:
+    with open(scene_dir / "metadata.json") as f:
+        return json.load(f)
+
+
+def furniture_by_name(metadata: dict) -> dict[str, dict]:
+    return {item["name"]: item for item in metadata["furniture"]}
+
+
+def select_random_visible_furniture(metadata: dict, percent: float, rng: random.Random) -> list[str]:
+    """Randomly sample n% of a scene's visible furniture names."""
+    if not 0 <= percent <= 100:
+        raise ValueError(f"percent must be in [0, 100], got {percent}")
+
+    visible_names = list(metadata["visible_furniture"])
+    n = round(len(visible_names) * percent / 100)
+
+    return rng.sample(visible_names, n)
+
+
+def prepare_permuted_scene_dir(scene_dir: Path, output_dir: Path) -> Path:
+    """Set up output_dir with just scene.glb and camera.json copied from scene_dir.
+
+    Returns:
+        Path to the copied scene.glb, ready to be edited in place.
+    """
+    if output_dir.exists():
+        shutil.rmtree(output_dir)
+    output_dir.mkdir(parents=True)
+
+    shutil.copy2(scene_dir / "scene.glb", output_dir / "scene.glb")
+    shutil.copy2(scene_dir / "camera.json", output_dir / "camera.json")
+
+    return output_dir / "scene.glb"
+
+
+def update_node_transforms(glb_path: Path, transforms: dict[str, np.ndarray]) -> None:
+    """Overwrite the world transform of one or more nodes in a GLB scene, in place."""
+    scene = trimesh.load(glb_path, process=False)
+    for node_name, transform in transforms.items():
+        scene.graph.update(frame_to=node_name, matrix=transform)
+    scene.export(glb_path)
+
+
+def remove_nodes(glb_path: Path, node_names: list[str]) -> None:
+    """Delete one or more named nodes (and their geometry) from a GLB scene, in place."""
+    scene = trimesh.load(glb_path, process=False)
+    geom_names = {scene.graph[name][1] for name in node_names}
+    scene.delete_geometry(geom_names)
+    scene.export(glb_path)
+
+
+def write_json(path: Path, data: dict) -> None:
+    with open(path, "w") as f:
+        json.dump(data, f, indent=2)
 
 
 def norm_depth(depth):

@@ -2,34 +2,26 @@
 
 Reads the "visible_furniture" list from metadata.json, picks a random n% of
 those objects, and multiplies each one's scale by a random uniform factor
-(same factor on x/y/z, so the object keeps its proportions) in scene.glb /
-scene_bbox.glb. Position and orientation are unchanged. The furniture's
-"scale" field in metadata.json is updated to match, and the original scale
-plus the applied factor is recorded under metadata["scaled_furniture"] for
-ground truth.
+(same factor on x/y/z, so the object keeps its proportions) in scene.glb.
+Position and orientation are unchanged. Writes the result (scene.glb +
+camera.json only) to a new output directory.
 """
 
 from __future__ import annotations
 
 import argparse
-import json
 import random
-import shutil
 from pathlib import Path
 
-import trimesh
-
-from src.util import make_transform
-
-
-def _scale_objects_in_glb(glb_path: Path, transforms: dict[str, list]) -> None:
-    if not glb_path.exists():
-        return
-
-    scene = trimesh.load(glb_path, process=False)
-    for node_name, new_transform in transforms.items():
-        scene.graph.update(frame_to=node_name, matrix=new_transform)
-    scene.export(glb_path)
+from src.util import (
+    furniture_by_name,
+    load_metadata,
+    make_transform,
+    prepare_permuted_scene_dir,
+    select_random_visible_furniture,
+    update_node_transforms,
+    write_json,
+)
 
 
 def scale_random_visible_objects(
@@ -40,69 +32,39 @@ def scale_random_visible_objects(
     min_factor: float = 0.5,
     max_factor: float = 1.5,
 ) -> dict[str, float]:
-    """Copy a scene to output_dir with n% of its visible objects uniformly rescaled.
+    """Uniformly rescale n% of a scene's visible objects, in place.
 
     Args:
-        scene_dir: Source scene directory (contains scene.glb, metadata.json, visible_furniture/).
-        output_dir: Destination directory to write the modified scene to. Must not already exist.
+        scene_dir: Source scene directory (contains scene.glb, camera.json, metadata.json).
+        output_dir: Destination directory for the modified scene. Overwritten if it exists.
         percent: Percentage (0-100) of visible objects to scale.
         seed: Optional RNG seed for reproducible selection and factors.
         min_factor: Minimum scale factor.
         max_factor: Maximum scale factor.
 
     Returns:
-        Mapping of scaled object name to the applied scale factor.
+        scaling: mapping of scaled furniture name -> applied scale factor.
     """
-    if not 0 <= percent <= 100:
-        raise ValueError(f"percent must be in [0, 100], got {percent}")
-    if output_dir.exists():
-        raise FileExistsError(f"output_dir already exists: {output_dir}")
-
-    shutil.copytree(scene_dir, output_dir)
-
-    metadata_path = output_dir / "metadata.json"
-    with open(metadata_path) as f:
-        metadata = json.load(f)
-
-    visible_names = list(metadata["visible_furniture"])
-    n_scale = round(len(visible_names) * percent / 100)
+    metadata = load_metadata(scene_dir)
+    furniture = furniture_by_name(metadata)
 
     rng = random.Random(seed)
-    scaled_names = rng.sample(visible_names, n_scale)
-    factors = {name: rng.uniform(min_factor, max_factor) for name in scaled_names}
+    selected = select_random_visible_furniture(metadata, percent, rng)
+    scaling = {name: rng.uniform(min_factor, max_factor) for name in selected}
 
-    if not factors:
-        with open(metadata_path, "w") as f:
-            json.dump(metadata, f, indent=2)
-        return {}
+    scene_glb_path = prepare_permuted_scene_dir(scene_dir, output_dir)
 
-    new_transforms = {}
-    scaled_furniture = []
-    for item in metadata["furniture"]:
-        name = item["name"]
-        if name not in factors:
-            continue
-        factor = factors[name]
-        original_scale = item["scale"]
-        item["scale"] = [s * factor for s in original_scale]
-        new_transforms[name] = make_transform(item["pos"], item["rot"], item["scale"]).tolist()
-        scaled_furniture.append(
-            {
-                "name": name,
-                "factor": factor,
-                "original_scale": original_scale,
-                "new_scale": item["scale"],
-            }
-        )
-    metadata["scaled_furniture"] = scaled_furniture
+    if scaling:
+        new_transforms = {}
+        for name, factor in scaling.items():
+            item = furniture[name]
+            new_scale = [s * factor for s in item["scale"]]
+            new_transforms[name] = make_transform(item["pos"], item["rot"], new_scale)
+        update_node_transforms(scene_glb_path, new_transforms)
 
-    _scale_objects_in_glb(output_dir / "scene.glb", new_transforms)
-    _scale_objects_in_glb(output_dir / "scene_bbox.glb", new_transforms)
+    write_json(output_dir / "scaling.json", scaling)
 
-    with open(metadata_path, "w") as f:
-        json.dump(metadata, f, indent=2)
-
-    return factors
+    return scaling
 
 
 def main() -> None:
@@ -115,7 +77,7 @@ def main() -> None:
     parser.add_argument("--max-factor", type=float, default=1.5, help="Maximum scale factor")
     args = parser.parse_args()
 
-    factors = scale_random_visible_objects(
+    scaling = scale_random_visible_objects(
         args.scene_dir,
         args.output_dir,
         args.percent,
@@ -124,8 +86,8 @@ def main() -> None:
         max_factor=args.max_factor,
     )
 
-    print(f"Scaled {len(factors)} object(s) in {args.output_dir}:")
-    for name, factor in factors.items():
+    print(f"Scaled {len(scaling)} object(s) in {args.output_dir}:")
+    for name, factor in scaling.items():
         print(f"  - {name}: {factor:.2f}x")
 
 
