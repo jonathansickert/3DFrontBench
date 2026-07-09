@@ -89,6 +89,20 @@ def furniture_by_name(metadata: dict) -> dict[str, dict]:
     return {item["name"]: item for item in metadata["furniture"]}
 
 
+def resolve_percent(percent: float | None, rng: random.Random) -> float:
+    """Resolve an optional percent argument.
+
+    If percent is None, sample one of 0, 10, ..., 100 at random.
+    """
+    if percent is None:
+        percent = rng.randint(0, 10) * 10
+
+    if not 0 <= percent <= 100:
+        raise ValueError(f"percent must be in [0, 100], got {percent}")
+
+    return percent
+
+
 def select_random_visible_furniture(metadata: dict, percent: float, rng: random.Random) -> list[str]:
     """Randomly sample n% of a scene's visible furniture names."""
     if not 0 <= percent <= 100:

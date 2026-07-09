@@ -20,6 +20,7 @@ from src.util import (
     load_metadata,
     make_transform,
     prepare_permuted_scene_dir,
+    resolve_percent,
     select_random_visible_furniture,
     update_node_transforms,
     write_json,
@@ -38,7 +39,7 @@ def _rotate_quaternion(rot: list[float], angle_rad: float) -> list[float]:
 def rotate_random_visible_objects(
     scene_dir: Path,
     output_dir: Path,
-    percent: float,
+    percent: float | None = None,
     seed: int | None = None,
     min_degrees: float = 0.0,
     max_degrees: float = 360.0,
@@ -48,7 +49,8 @@ def rotate_random_visible_objects(
     Args:
         scene_dir: Source scene directory (contains scene.glb, camera.json, metadata.json).
         output_dir: Destination directory for the modified scene. Overwritten if it exists.
-        percent: Percentage (0-100) of visible objects to rotate.
+        percent: Percentage (0-100) of visible objects to rotate. If omitted, sampled
+            randomly from {0, 10, ..., 100} and recorded in percent.json.
         seed: Optional RNG seed for reproducible selection and angles.
         min_degrees: Minimum rotation magnitude, in degrees.
         max_degrees: Maximum rotation magnitude, in degrees.
@@ -60,6 +62,7 @@ def rotate_random_visible_objects(
     furniture = furniture_by_name(metadata)
 
     rng = random.Random(seed)
+    percent = resolve_percent(percent, rng)
     selected = select_random_visible_furniture(metadata, percent, rng)
     rotations = {name: rng.uniform(min_degrees, max_degrees) for name in selected}
 
@@ -74,6 +77,7 @@ def rotate_random_visible_objects(
         update_node_transforms(scene_glb_path, new_transforms)
 
     write_json(output_dir / "rotations.json", rotations)
+    write_json(output_dir / "percent.json", {"percent": percent})
 
     return rotations
 
@@ -82,7 +86,13 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("scene_dir", type=Path, help="Source scene directory")
     parser.add_argument("output_dir", type=Path, help="Destination directory for the modified scene")
-    parser.add_argument("percent", type=float, help="Percentage (0-100) of visible objects to rotate")
+    parser.add_argument(
+        "percent",
+        type=float,
+        nargs="?",
+        default=None,
+        help="Percentage (0-100) of visible objects to rotate. If omitted, sampled randomly from 0,10,...,100",
+    )
     parser.add_argument("--seed", type=int, default=None, help="RNG seed for reproducible selection")
     parser.add_argument("--min-degrees", type=float, default=0.0, help="Minimum rotation magnitude")
     parser.add_argument("--max-degrees", type=float, default=360.0, help="Maximum rotation magnitude")
