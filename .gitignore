@@ -219,10 +219,11 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-dataset
+dataset*
 dataset_huggingface
 ./hyperism/
 3D-FRONT/
 3D-FRONT-SCENES/
 .DS_Store
 runs*
+
