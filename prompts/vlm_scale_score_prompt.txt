@@ -13,6 +13,6 @@ Rate object_scale 0–10:
 
 Any deviation from the target's exact relative size lowers the score. Only compare objects that clearly correspond in both images; don't penalize for extra/missing items.
 [Output]
-- object_scale: 0–10
+- score: 0–10
 - reasoning: brief note on which objects informed the score and how exactly their sizes matched
 - missing_info: what additional view (e.g., top-down, different angle, reference measurement) would help assess scale more accurately
