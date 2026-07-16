@@ -114,19 +114,38 @@ def select_random_visible_furniture(metadata: dict, percent: float, rng: random.
     return rng.sample(visible_names, n)
 
 
-def compute_perturbation_score(magnitudes: dict[str, float], total_visible: int) -> float:
-    """A single scene-level score for how much a scene got perturbed.
+def compute_perturbation_score(
+    magnitudes: dict[str, float], total_visible: int, max_magnitude: float = 1.0
+) -> float:
+    """A single scene-level score in [0, 1] for how much a scene got perturbed.
 
-    Sums the per-object perturbation magnitude (e.g. degrees rotated,
-    translation distance, |scale factor - 1|, or 1.0 per removed object) and
-    averages over every visible object in the scene, not just the perturbed
+    Each per-object perturbation magnitude (e.g. degrees rotated, translation
+    distance, |scale factor - 1|, or 1.0 per removed object) is divided by
+    max_magnitude -- the largest magnitude that perturbation could have
+    produced -- and clipped to 1.0, so the result is always in [0, 1]
+    regardless of the raw units involved. The normalized magnitudes are then
+    averaged over every visible object in the scene, not just the perturbed
     ones, so untouched objects implicitly contribute 0. This makes the score
     reflect both how many objects were touched and how strongly.
     """
-    if total_visible == 0:
+    if total_visible == 0 or max_magnitude <= 0:
         return 0.0
 
-    return sum(magnitudes.values()) / total_visible
+    normalized = sum(min(magnitude / max_magnitude, 1.0) for magnitude in magnitudes.values())
+    return normalized / total_visible
+
+
+def circular_angle_distance(angle_deg: float) -> float:
+    """Smallest-magnitude visual displacement of a rotation, in degrees, within [0, 180].
+
+    Rotation wraps: spinning an object by 350 deg looks almost identical to
+    spinning it by -10 deg, and 180 deg is the point of maximum visual
+    difference (any further rotation starts looking more similar to the
+    original again). This maps a raw sampled angle (of any magnitude, e.g.
+    from resampling in [0, 360)) onto that perceptual scale.
+    """
+    remainder = angle_deg % 360.0
+    return min(remainder, 360.0 - remainder)
 
 
 def prepare_permuted_scene_dir(scene_dir: Path, output_dir: Path) -> Path:

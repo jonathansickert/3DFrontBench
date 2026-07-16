@@ -69,7 +69,8 @@ def scale_random_visible_objects(
     write_json(output_dir / "scaling.json", scaling)
 
     magnitudes = {name: abs(factor - 1.0) for name, factor in scaling.items()}
-    score = compute_perturbation_score(magnitudes, len(metadata["visible_furniture"]))
+    max_magnitude = max(abs(max_factor - 1.0), abs(min_factor - 1.0))
+    score = compute_perturbation_score(magnitudes, len(metadata["visible_furniture"]), max_magnitude=max_magnitude)
     write_json(output_dir / "score.json", {"score": score})
 
     write_json(output_dir / "percent.json", {"percent": percent})
@@ -90,7 +91,7 @@ def main() -> None:
     )
     parser.add_argument("--seed", type=int, default=None, help="RNG seed for reproducible selection")
     parser.add_argument("--min-factor", type=float, default=0.5, help="Minimum scale factor")
-    parser.add_argument("--max-factor", type=float, default=1.5, help="Maximum scale factor")
+    parser.add_argument("--max-factor", type=float, default=2.0, help="Maximum scale factor")
     args = parser.parse_args()
 
     scaling = scale_random_visible_objects(

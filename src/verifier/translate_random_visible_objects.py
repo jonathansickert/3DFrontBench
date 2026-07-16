@@ -81,7 +81,7 @@ def translate_random_visible_objects(
 
     write_json(output_dir / "translations.json", translations)
 
-    score = compute_perturbation_score(distances, len(metadata["visible_furniture"]))
+    score = compute_perturbation_score(distances, len(metadata["visible_furniture"]), max_magnitude=max_distance)
     write_json(output_dir / "score.json", {"score": score})
 
     write_json(output_dir / "percent.json", {"percent": percent})
@@ -101,8 +101,8 @@ def main() -> None:
         help="Percentage (0-100) of visible objects to translate. If omitted, sampled randomly from 0,10,...,100",
     )
     parser.add_argument("--seed", type=int, default=None, help="RNG seed for reproducible selection")
-    parser.add_argument("--min-distance", type=float, default=0.3, help="Minimum translation distance")
-    parser.add_argument("--max-distance", type=float, default=1.0, help="Maximum translation distance")
+    parser.add_argument("--min-distance", type=float, default=0.5, help="Minimum translation distance")
+    parser.add_argument("--max-distance", type=float, default=2.0, help="Maximum translation distance")
     args = parser.parse_args()
 
     translations = translate_random_visible_objects(

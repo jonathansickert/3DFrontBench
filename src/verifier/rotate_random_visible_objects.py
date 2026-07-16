@@ -16,6 +16,7 @@ import numpy as np
 import trimesh.transformations as tf
 
 from src.util import (
+    circular_angle_distance,
     compute_perturbation_score,
     furniture_by_name,
     load_metadata,
@@ -79,7 +80,8 @@ def rotate_random_visible_objects(
 
     write_json(output_dir / "rotations.json", rotations)
 
-    score = compute_perturbation_score(rotations, len(metadata["visible_furniture"]))
+    magnitudes = {name: circular_angle_distance(angle_deg) for name, angle_deg in rotations.items()}
+    score = compute_perturbation_score(magnitudes, len(metadata["visible_furniture"]), max_magnitude=180.0)
     write_json(output_dir / "score.json", {"score": score})
 
     write_json(output_dir / "percent.json", {"percent": percent})
