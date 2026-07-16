@@ -36,8 +36,16 @@ enable_sky_texture()
 add_camera(cam_dict=cam_dict)
 
 # Render Scene
-bpy.context.scene.render.engine = "BLENDER_EEVEE"
+bpy.context.scene.render.engine = "CYCLES"
 bpy.context.scene.use_nodes = False
+
+cycles_prefs = bpy.context.preferences.addons["cycles"].preferences
+cycles_prefs.compute_device_type = "CUDA"
+cycles_prefs.get_devices()
+for device in cycles_prefs.devices:
+    device.use = device.type == "CUDA"
+bpy.context.scene.cycles.device = "GPU"
+bpy.context.scene.cycles.samples = 32
 bpy.context.scene.render.filepath = output_path
 bpy.context.scene.render.image_settings.file_format = "PNG"
 bpy.ops.render.render(write_still=True)

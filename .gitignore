@@ -222,6 +222,7 @@ __marimo__/
 dataset*
 dataset_huggingface
 ./hyperism/
+indoor
 3D-FRONT/
 3D-FRONT-SCENES/
 .DS_Store
