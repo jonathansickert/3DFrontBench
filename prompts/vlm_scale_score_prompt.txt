@@ -14,4 +14,4 @@ Any deviation from the target's exact relative size lowers the score.
 [Output]
 - score: 0–10
 - reasoning: brief note on which objects informed the score and how exactly their sizes matched
-- missing_info: what additional view (e.g., top-down, bounding boxes, ...) would help assess object count more accurately
+- missing_info: what additional view (e.g., top-down, bounding boxes, ...) would help assess object scale more accurately
