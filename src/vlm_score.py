@@ -27,6 +27,35 @@ class VLMCountScore(BaseModel):
     reasoning: str
     missing_info: str
 
+class ObjectScore(BaseModel):
+    label: str
+    score: int
+    note: str
+
+class VLMPlacementScorePerObject(BaseModel):
+    object_scores: list[ObjectScore]
+    score: int
+    reasoning: str
+    missing_info: str
+
+class VLMScaleScorePerObject(BaseModel):
+    object_scores: list[ObjectScore]
+    score: int
+    reasoning: str
+    missing_info: str
+
+class VLMRotationScorePerObject(BaseModel):
+    object_scores: list[ObjectScore]
+    score: int
+    reasoning: str
+    missing_info: str
+
+class VLMCountScorePerObject(BaseModel):
+    object_scores: list[ObjectScore]
+    score: int
+    reasoning: str
+    missing_info: str
+
 def _image_to_data_url(image: Image.Image) -> str:
     buffer = io.BytesIO()
     image.save(buffer, format="PNG")
@@ -60,6 +89,7 @@ class VLMScoreAgent:
         prompt: str,
         response_format: BaseModel,
         max_retries: int = 3,
+        max_tokens: int = 1024,
     ) -> BaseModel:
         for attempt in range(max_retries):
             try:
@@ -85,7 +115,7 @@ class VLMScoreAgent:
                         },
                     ],
                     response_format=response_format,
-                    max_tokens=1024,
+                    max_tokens=max_tokens,
 
                 )
                 return completion.choices[0].message.parsed
@@ -101,19 +131,19 @@ def compute_vlm_score(target_path: str, render_path: str, score_type: str) -> di
     vlm_agent = VLMScoreAgent()
 
     if score_type == "count":
-        with open("/Users/jonathansickert/git/3DFrontBench/prompts/vlm_count_score_prompt.txt") as f:
+        with open("/home/jonathansickert/git/3DFrontBench/prompts/vlm_count_score_prompt.txt") as f:
             prompt = f.read()
         response_format = VLMCountScore
     elif score_type == "placement":
-        with open("/Users/jonathansickert/git/3DFrontBench/prompts/vlm_placement_score_prompt.txt") as f:
+        with open("/home/jonathansickert/git/3DFrontBench/prompts/vlm_placement_score_prompt.txt") as f:
             prompt = f.read()
         response_format = VLMPlacementScore
     elif score_type == "rotation":
-        with open("/Users/jonathansickert/git/3DFrontBench/prompts/vlm_rotation_score_prompt.txt") as f:
+        with open("/home/jonathansickert/git/3DFrontBench/prompts/vlm_rotation_score_prompt.txt") as f:
             prompt = f.read()
         response_format = VLMRotationScore
     elif score_type == "scale":
-        with open("/Users/jonathansickert/git/3DFrontBench/prompts/vlm_scale_score_prompt.txt") as f:
+        with open("/home/jonathansickert/git/3DFrontBench/prompts/vlm_scale_score_prompt.txt") as f:
             prompt = f.read()
         response_format = VLMScaleScore
 
@@ -126,6 +156,41 @@ def compute_vlm_score(target_path: str, render_path: str, score_type: str) -> di
         rendering_image=render_img,
         response_format=response_format,
         prompt=prompt,
+    )
+
+    return result.model_dump()
+
+
+def compute_vlm_score_per_object(target_path: str, render_path: str, score_type: str) -> dict[str, float]:
+    vlm_agent = VLMScoreAgent()
+
+    if score_type == "count":
+        with open("/home/jonathansickert/git/3DFrontBench/prompts/vlm_count_score_per_object_prompt.txt") as f:
+            prompt = f.read()
+        response_format = VLMCountScorePerObject
+    elif score_type == "placement":
+        with open("/home/jonathansickert/git/3DFrontBench/prompts/vlm_placement_score_per_object_prompt.txt") as f:
+            prompt = f.read()
+        response_format = VLMPlacementScorePerObject
+    elif score_type == "rotation":
+        with open("/home/jonathansickert/git/3DFrontBench/prompts/vlm_rotation_score_per_object_prompt.txt") as f:
+            prompt = f.read()
+        response_format = VLMRotationScorePerObject
+    elif score_type == "scale":
+        with open("/home/jonathansickert/git/3DFrontBench/prompts/vlm_scale_score_per_object_prompt.txt") as f:
+            prompt = f.read()
+        response_format = VLMScaleScorePerObject
+
+
+    target_img = Image.open(target_path)
+    render_img = Image.open(render_path)
+
+    result = vlm_agent.generate_score(
+        target_image=target_img,
+        rendering_image=render_img,
+        response_format=response_format,
+        prompt=prompt,
+        max_tokens=4096,
     )
 
     return result.model_dump()
