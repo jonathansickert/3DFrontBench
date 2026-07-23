@@ -7,6 +7,7 @@ import trimesh
 from pathlib import Path
 import trimesh.transformations as tf
 import pyrender
+from PIL import Image
 
 
 def blender_c2w_to_opencv(c2w_blender: np.ndarray) -> np.ndarray:
@@ -245,3 +246,13 @@ def render_trimesh_scene(
     color, depth = renderer.render(pyrender_scene)
     depth = norm_depth(depth)
     return color, depth
+
+
+HD_IMAGE_SIZE = (1280, 720)
+
+def resize_image(image: Image.Image, max_size: tuple[int, int] = HD_IMAGE_SIZE) -> Image.Image:
+    if image.width <= max_size[0] and image.height <= max_size[1]:
+        return image
+    resized = image.copy()
+    resized.thumbnail(max_size, Image.LANCZOS)
+    return resized

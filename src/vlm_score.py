@@ -6,6 +6,7 @@ import openai
 from PIL import Image
 from pydantic import BaseModel
 import time
+from src.util import resize_image
 
 class VLMPlacementScore(BaseModel):
     score: int
@@ -64,10 +65,19 @@ def _image_to_data_url(image: Image.Image) -> str:
 
 
 class VLMScoreAgent:
-    def __init__(self, api_key: str | None = None, base_url: str | None = None):
-        api_key = api_key or os.getenv("GEMINI_API_KEY")
-        base_url = base_url or os.getenv("GEMINI_BASE_URL")
-        model = os.getenv("GEMINI_MODEL")
+    def __init__(self, api_key: str | None = None, base_url: str | None = None, model_choice: str = "gemini"):
+        if model_choice == "gemini":
+            api_key = api_key or os.getenv("GEMINI_API_KEY")
+            base_url = base_url or os.getenv("GEMINI_BASE_URL")
+            model = os.getenv("GEMINI_MODEL")
+        if model_choice == "qwen":
+            api_key = api_key or os.getenv("OPENROUTER_API_KEY")
+            base_url = base_url or os.getenv("OPENROUTER_BASE_URL")
+            model = os.getenv("OPENROUTER_QWEN")
+        if model_choice == "glm":
+            api_key = api_key or os.getenv("OPENROUTER_API_KEY")
+            base_url = base_url or os.getenv("OPENROUTER_BASE_URL")
+            model = os.getenv("OPENROUTER_GLM")
 
         self.model = model
 
@@ -161,8 +171,8 @@ def compute_vlm_score(target_path: str, render_path: str, score_type: str) -> di
     return result.model_dump()
 
 
-def compute_vlm_score_per_object(target_path: str, render_path: str, score_type: str) -> dict[str, float]:
-    vlm_agent = VLMScoreAgent()
+def compute_vlm_score_per_object(target_path: str, render_path: str, score_type: str, model_choice: str, resize_to_hd: bool = True) -> dict[str, float]:
+    vlm_agent = VLMScoreAgent(model_choice=model_choice)
 
     if score_type == "count":
         with open("/home/jonathansickert/git/3DFrontBench/prompts/vlm_count_score_per_object_prompt.txt") as f:
@@ -181,9 +191,12 @@ def compute_vlm_score_per_object(target_path: str, render_path: str, score_type:
             prompt = f.read()
         response_format = VLMScaleScorePerObject
 
-
     target_img = Image.open(target_path)
     render_img = Image.open(render_path)
+
+    if resize_to_hd:
+        target_img = resize_image(target_img)
+        render_img = resize_image(render_img)
 
     result = vlm_agent.generate_score(
         target_image=target_img,
