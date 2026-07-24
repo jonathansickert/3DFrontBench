@@ -1,0 +1,1192 @@
+{
+  "0f661df2-0f41-47a4-830c-7444f4a33a03_LivingDiningRoom-12554": {
+    "object_scores": [
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "The circular table appears rotationally symmetric."
+      },
+      {
+        "label": "dining chairs",
+        "score": 10,
+        "note": "The chairs maintain the same orientation relative to the table."
+      },
+      {
+        "label": "swivel armchair",
+        "score": 10,
+        "note": "The orientation appears consistent across both views."
+      },
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The sofa is positioned and oriented identically."
+      },
+      {
+        "label": "coffee table",
+        "score": 10,
+        "note": "The round coffee table is symmetric."
+      },
+      {
+        "label": "media console",
+        "score": 10,
+        "note": "The console is oriented parallel to the wall in both views."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The furniture arrangement and orientation in the rendered image match the target image perfectly, with no perceptible deviations in object angles.",
+    "missing_info": "A top-down floor plan or an orthographic projection would allow for more precise verification of alignment."
+  },
+  "996d5631-517a-4906-b232-5e1148c97867_LivingDiningRoom-8344": {
+    "object_scores": [
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The sofa orientation matches the target perfectly."
+      },
+      {
+        "label": "left arm chair",
+        "score": 8,
+        "note": "The chair is slightly rotated inward compared to the target, which is noticeable."
+      },
+      {
+        "label": "right arm chair",
+        "score": 10,
+        "note": "The right arm chair orientation matches the target."
+      },
+      {
+        "label": "coffee table",
+        "score": 10,
+        "note": "The coffee table is round, so its orientation is visually indistinguishable."
+      },
+      {
+        "label": "TV stand",
+        "score": 10,
+        "note": "The TV stand is aligned with the wall, matching the target."
+      },
+      {
+        "label": "black pedestal",
+        "score": 10,
+        "note": "The pedestal is rotationally symmetric, making its orientation effectively 10."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The furniture arrangement is consistent with the target image, with only a minor, barely perceptible rotation difference in the left chair.",
+    "missing_info": "A top-down or orthographic floor plan would allow for a more precise measurement of angular deviation for the chairs."
+  },
+  "1f077e24-2eca-43ca-bc92-1b36eab99467_LivingDiningRoom-180855": {
+    "object_scores": [
+      {
+        "label": "black sideboard on left",
+        "score": 10,
+        "note": "Orientation is identical to the target; rotation is visually fixed."
+      },
+      {
+        "label": "white console table",
+        "score": 10,
+        "note": "Aligned identically with the target scene."
+      },
+      {
+        "label": "leaf-shaped coffee table",
+        "score": 10,
+        "note": "Rotation appears identical to the reference image."
+      },
+      {
+        "label": "dining table",
+        "score": 5,
+        "note": "The table geometry is rotated differently compared to the rectangular target table, making the change visually significant."
+      },
+      {
+        "label": "piano",
+        "score": 10,
+        "note": "Orientation remains consistent with the target."
+      },
+      {
+        "label": "sofa on right",
+        "score": 10,
+        "note": "Orientation is maintained from the target."
+      },
+      {
+        "label": "storage cabinet",
+        "score": 10,
+        "note": "Aligned as in the target scene."
+      }
+    ],
+    "score": 9,
+    "reasoning": "Almost all furniture pieces are oriented identically to the target image, with the exception of the dining table, which appears to have a different geometric orientation.",
+    "missing_info": "A top-down view (floor plan) would provide definitive confirmation of the rotation angles for the dining table and other furniture."
+  },
+  "2eeb434c-855e-4298-a8d5-29b1ca838608_MasterBedroom-5966": {
+    "object_scores": [
+      {
+        "label": "left nightstand",
+        "score": 10,
+        "note": "Orientation is identical to target; rotation is visually detectable due to leg structure."
+      },
+      {
+        "label": "right nightstand",
+        "score": 10,
+        "note": "Orientation is identical to target; orientation matches."
+      },
+      {
+        "label": "bed",
+        "score": 10,
+        "note": "Orientation matches target perfectly."
+      },
+      {
+        "label": "wardrobe",
+        "score": 10,
+        "note": "Orientation matches target; aligned with wall."
+      },
+      {
+        "label": "chair",
+        "score": 10,
+        "note": "Orientation is identical to target; rotation is visible due to chair back design."
+      },
+      {
+        "label": "left ceiling light",
+        "score": 10,
+        "note": "Symmetric object; rotation not visually distinct."
+      },
+      {
+        "label": "right ceiling light",
+        "score": 10,
+        "note": "Symmetric object; rotation not visually distinct."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture pieces are oriented identically to the target image.",
+    "missing_info": "Top-down floor plan view would definitively confirm precise rotation angles, though current angles appear correct."
+  },
+  "6e7a0c41-15f3-4909-a20c-dab460b45ada_LivingDiningRoom-847": {
+    "object_scores": [
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The sofa is positioned and oriented identically to the target image."
+      },
+      {
+        "label": "dining chair",
+        "score": 10,
+        "note": "The chair orientation is consistent with the target perspective."
+      },
+      {
+        "label": "table lamp",
+        "score": 10,
+        "note": "The lamp position and orientation remain unchanged."
+      },
+      {
+        "label": "sideboard cabinet",
+        "score": 5,
+        "note": "The cabinet in the rendered image has a different geometric shape and orientation compared to the target image."
+      }
+    ],
+    "score": 9,
+    "reasoning": "Most furniture pieces are correctly oriented, though the sideboard cabinet in the rendered image appears to be a different model or significantly rotated compared to the target.",
+    "missing_info": "A top-down floor plan view would be helpful to confirm the absolute rotation of objects and distinguish between object model differences and orientation errors."
+  },
+  "10e2d93c-2a82-49f2-a95c-7598d24901f2_LivingDiningRoom-8149": {
+    "object_scores": [
+      {
+        "label": "dining chair 1 (front-left)",
+        "score": 10,
+        "note": "Orientation matches target visually."
+      },
+      {
+        "label": "dining chair 2 (front-right)",
+        "score": 10,
+        "note": "Orientation matches target visually."
+      },
+      {
+        "label": "dining chair 3 (back-left)",
+        "score": 10,
+        "note": "Orientation matches target visually."
+      },
+      {
+        "label": "dining chair 4 (back-right)",
+        "score": 10,
+        "note": "Orientation matches target visually."
+      },
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "Table rotation is symmetric, no visible deviation."
+      },
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "Orientation matches target visually."
+      },
+      {
+        "label": "media console",
+        "score": 10,
+        "note": "Orientation matches target visually."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture items appear correctly aligned and oriented as in the target scene.",
+    "missing_info": "Top-down view to confirm precise rotation and alignment."
+  },
+  "e44c4ecc-0260-469d-a60d-b71cf1d34029_LivingRoom-15009": {
+    "object_scores": [
+      {
+        "label": "floor lamp",
+        "score": 10,
+        "note": "The lamp base and arm orientation are identical to the target image."
+      },
+      {
+        "label": "armchair",
+        "score": 10,
+        "note": "The orientation and angle of the armchair match perfectly."
+      },
+      {
+        "label": "tall cabinet",
+        "score": 10,
+        "note": "The cabinet is flat against the wall, matching the target orientation."
+      },
+      {
+        "label": "folding chair",
+        "score": 10,
+        "note": "The chair is positioned and rotated exactly like in the target scene."
+      },
+      {
+        "label": "round table",
+        "score": 10,
+        "note": "As a symmetric object, rotation is not visually detectable and appears correct."
+      },
+      {
+        "label": "dining chair 1",
+        "score": 10,
+        "note": "The orientation facing the table is maintained perfectly."
+      },
+      {
+        "label": "dining chair 2",
+        "score": 10,
+        "note": "The orientation is consistent with the target image."
+      },
+      {
+        "label": "sideboard",
+        "score": 10,
+        "note": "The sideboard is correctly aligned parallel to the wall."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture objects in the rendered image maintain the exact same spatial orientation and alignment as those in the target image.",
+    "missing_info": "No additional views are required as the perspective provides a clear view of all furniture rotations."
+  },
+  "f006ad67-40d2-4068-950c-2ce3805d3932_LivingDiningRoom-38341": {
+    "object_scores": [
+      {
+        "label": "spotted sofa",
+        "score": 8,
+        "note": "The sofa is placed in a similar area, but its orientation and configuration relative to the room layout differ from the target."
+      },
+      {
+        "label": "white pedestal table",
+        "score": 10,
+        "note": "The circular top of the pedestal table makes its rotation visually undetectable, so it appears consistent."
+      },
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "The dining table is rectangular and oriented correctly parallel to the back wall."
+      },
+      {
+        "label": "dining chairs",
+        "score": 10,
+        "note": "The dining chairs are arranged around the table in the same orientation as the target."
+      },
+      {
+        "label": "white cabinet",
+        "score": 10,
+        "note": "The cabinet is placed along the right wall consistently in both images."
+      }
+    ],
+    "score": 10,
+    "reasoning": "Most furniture objects are placed and oriented accurately according to the target scene.",
+    "missing_info": "A top-down floor plan view would be the most helpful to confirm exact rotation and alignment of the furniture pieces."
+  },
+  "b34c215e-1449-4702-8080-e7173e8e8f67_LivingDiningRoom-14069": {
+    "object_scores": [
+      {
+        "label": "dining chair (left)",
+        "score": 10,
+        "note": "The orientation is identical to the target image."
+      },
+      {
+        "label": "dining chair (right)",
+        "score": 10,
+        "note": "The orientation is identical to the target image."
+      },
+      {
+        "label": "side chair",
+        "score": 10,
+        "note": "The orientation is identical to the target image."
+      },
+      {
+        "label": "yellow sofa",
+        "score": 10,
+        "note": "The orientation is identical to the target image."
+      },
+      {
+        "label": "brown sofa",
+        "score": 10,
+        "note": "The orientation is identical to the target image."
+      },
+      {
+        "label": "coffee table",
+        "score": 10,
+        "note": "The orientation is identical to the target image."
+      },
+      {
+        "label": "black cabinet",
+        "score": 10,
+        "note": "The orientation is identical to the target image."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture objects in the rendered image match the orientations observed in the target image perfectly.",
+    "missing_info": "A top-down or floor-plan view would allow for higher precision in confirming rotational alignment for objects that appear similar in perspective projection."
+  },
+  "09d742d0-9e99-4e31-ac3d-ad1879cf691b_LivingDiningRoom-9326": {
+    "object_scores": [
+      {
+        "label": "office chair left",
+        "score": 10,
+        "note": "Orientation is identical to the target; chair is aligned with the desk."
+      },
+      {
+        "label": "office chair right",
+        "score": 10,
+        "note": "Orientation is identical to the target; chair is aligned with the desk."
+      },
+      {
+        "label": "counter desk",
+        "score": 10,
+        "note": "The orientation is identical; the shape is symmetrical along the length."
+      },
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The sectional sofa orientation matches the target perfectly."
+      },
+      {
+        "label": "round coffee table",
+        "score": 10,
+        "note": "The table is rotationally symmetric, so its orientation is indistinguishable from target."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered scene is identical to the target image, with all furniture objects perfectly matching in orientation.",
+    "missing_info": "No missing information needed as the rendered image perfectly matches the target."
+  },
+  "1ad74b11-777a-4610-a249-7c5e044a0f01_LivingDiningRoom-10290": {
+    "object_scores": [
+      {
+        "label": "media console left",
+        "score": 10,
+        "note": "Orientation matches target perfectly."
+      },
+      {
+        "label": "side cabinet background left",
+        "score": 10,
+        "note": "Orientation matches target perfectly."
+      },
+      {
+        "label": "dining chair back left",
+        "score": 10,
+        "note": "Orientation matches target perfectly."
+      },
+      {
+        "label": "dining chair front left",
+        "score": 10,
+        "note": "Orientation matches target perfectly."
+      },
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "Rectangular table orientation matches target."
+      },
+      {
+        "label": "dining chair back right",
+        "score": 10,
+        "note": "Orientation matches target perfectly."
+      },
+      {
+        "label": "dining chair front right",
+        "score": 10,
+        "note": "Orientation matches target perfectly."
+      },
+      {
+        "label": "side table background right",
+        "score": 10,
+        "note": "Orientation matches target perfectly."
+      },
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "Orientation matches target perfectly."
+      },
+      {
+        "label": "coffee table",
+        "score": 10,
+        "note": "Orientation matches target perfectly."
+      },
+      {
+        "label": "nesting side tables front right",
+        "score": 10,
+        "note": "Orientation matches target perfectly."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture objects in the rendered scene are oriented identical to the target image.",
+    "missing_info": "Top-down view would confirm precise rotation, but current perspective is sufficient for high confidence."
+  },
+  "7c2e62e7-ab51-4900-bfdc-1932415fb295_LivingDiningRoom-16509": {
+    "object_scores": [
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The sofa maintains the same orientation relative to the room walls in both images."
+      },
+      {
+        "label": "armchair",
+        "score": 10,
+        "note": "The armchair faces the center of the room identically in both renders."
+      },
+      {
+        "label": "coffee table",
+        "score": 10,
+        "note": "The coffee table orientation is consistent."
+      },
+      {
+        "label": "two ottomans",
+        "score": 10,
+        "note": "The ottomans are positioned and rotated consistently with the target."
+      },
+      {
+        "label": "bookshelf cabinet",
+        "score": 10,
+        "note": "The cabinet is fixed against the wall in the same orientation."
+      },
+      {
+        "label": "pendant light",
+        "score": 10,
+        "note": "The light fixture is symmetrical and matches."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All visible furniture objects in the rendered image are positioned and oriented identically to the target image.",
+    "missing_info": "A top-down floor plan view would confirm precise alignment, though the current perspective shows perfect matching."
+  },
+  "7686a060-ab0d-4014-9e5c-75d75e0752e3_LivingDiningRoom-44815": {
+    "object_scores": [
+      {
+        "label": "black sofa",
+        "score": 10,
+        "note": "The orientation and placement remain consistent with the target image."
+      },
+      {
+        "label": "armchair",
+        "score": 10,
+        "note": "The chair remains in the same relative position and orientation."
+      },
+      {
+        "label": "wooden coffee table",
+        "score": 8,
+        "note": "The table has been shifted slightly to the left, but the rotation seems mostly preserved."
+      },
+      {
+        "label": "side chair",
+        "score": 10,
+        "note": "The side chair is in the same position and orientation as in the target."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The furniture objects retain their general orientation, despite a slight positional shift of the coffee table.",
+    "missing_info": "A top-down view would confirm the exact rotation angles relative to the wall."
+  },
+  "109c84cd-7194-4b1d-ac52-8d1862565c6c_Corridor-20684": {
+    "object_scores": [
+      {
+        "label": "Left cabinet",
+        "score": 10,
+        "note": "Orientation matches target exactly; rotation is clearly visible due to rectangular face."
+      },
+      {
+        "label": "Right cabinet",
+        "score": 10,
+        "note": "Orientation matches target; rectangular shape makes rotation easily verifiable."
+      },
+      {
+        "label": "Dining table",
+        "score": 10,
+        "note": "Round table, rotation is not visually detectable."
+      },
+      {
+        "label": "Dining chairs",
+        "score": 10,
+        "note": "All chairs are aligned correctly with the table in both images."
+      },
+      {
+        "label": "Central stool",
+        "score": 10,
+        "note": "Cylindrical shape, rotation is not visually detectable."
+      },
+      {
+        "label": "Background sideboard",
+        "score": 10,
+        "note": "Aligns correctly with the wall behind the dining table."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture objects are positioned and oriented identically to the target scene.",
+    "missing_info": "Top-down view or wireframe overlay would provide definitive proof of precision, though standard perspective is sufficient here."
+  },
+  "2e422478-2de0-4d16-b398-657b07c1cac0_LivingDiningRoom-4293": {
+    "object_scores": [
+      {
+        "label": "media console",
+        "score": 10,
+        "note": "The orientation appears identical to the target; the rectangular shape makes rotation clearly visible."
+      },
+      {
+        "label": "cabinet",
+        "score": 10,
+        "note": "The cabinet is oriented the same way as the target; orientation is visually detectable."
+      },
+      {
+        "label": "coffee table",
+        "score": 10,
+        "note": "Matches the target's orientation perfectly; rotation is easily visible."
+      },
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The sofa is correctly placed and oriented relative to the living area; rotation is clearly visible."
+      },
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "The round table is oriented identically; rotation is not visually distinct due to its symmetry, which is acceptable."
+      },
+      {
+        "label": "dining chairs",
+        "score": 10,
+        "note": "The chairs are properly oriented toward the table, matching the target."
+      },
+      {
+        "label": "storage unit",
+        "score": 10,
+        "note": "The small storage unit in the back matches the target orientation."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture items in the rendered scene are oriented in the same direction as the target image, with no visible discrepancies in placement or rotation.",
+    "missing_info": "A top-down floor plan view would be the most effective way to verify exact angular alignment."
+  },
+  "9f283b51-0327-43d5-9ec0-44d867530f4e_Hallway-34943": {
+    "object_scores": [
+      {
+        "label": "side cabinet",
+        "score": 10,
+        "note": "The orientation appears identical to the target; the rectangular shape makes rotation clearly detectable."
+      },
+      {
+        "label": "left cabinet",
+        "score": 10,
+        "note": "The orientation is aligned with the target; rotation is detectable due to its vertical rectangular frame."
+      },
+      {
+        "label": "right cabinet",
+        "score": 10,
+        "note": "The orientation matches the target; vertical alignment is consistent."
+      },
+      {
+        "label": "buffet unit",
+        "score": 10,
+        "note": "Orientation is correct, alignment is visually confirmed."
+      },
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "Orientation is consistent with the target."
+      },
+      {
+        "label": "front left chair",
+        "score": 10,
+        "note": "Orientation is identical to the target."
+      },
+      {
+        "label": "front center chair",
+        "score": 10,
+        "note": "Matches the target orientation perfectly."
+      },
+      {
+        "label": "front right chair",
+        "score": 10,
+        "note": "Orientation aligns correctly with the target."
+      },
+      {
+        "label": "rear left chair",
+        "score": 10,
+        "note": "Matches target orientation."
+      },
+      {
+        "label": "rear right chair",
+        "score": 10,
+        "note": "Matches target orientation."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture items appear to be oriented correctly in the rendered scene compared to the target image.",
+    "missing_info": "A top-down view would provide definitive verification of exact rotation angles for the furniture."
+  },
+  "103cce55-24d5-4c71-9856-156962e30511_LivingDiningRoom-89516": {
+    "object_scores": [
+      {
+        "label": "wall-mounted cabinet unit",
+        "score": 10,
+        "note": "The orientation matches perfectly with the target image."
+      },
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The sofa is positioned and oriented exactly as in the target."
+      },
+      {
+        "label": "sideboard cabinet",
+        "score": 10,
+        "note": "The cabinet orientation is consistent with the target."
+      },
+      {
+        "label": "floor plant",
+        "score": 10,
+        "note": "Symmetric object, rotation is not visually detectable."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered scene is an identical match to the target image in terms of furniture orientation.",
+    "missing_info": "No additional views are required as the rendered image appears to be an exact duplicate of the target."
+  },
+  "ab6d1b3b-31ba-4191-bc17-d03e504484a8_LivingDiningRoom-209062": {
+    "object_scores": [
+      {
+        "label": "white bookshelf",
+        "score": 10,
+        "note": "Aligned perfectly against the wall."
+      },
+      {
+        "label": "black sofa",
+        "score": 10,
+        "note": "Position and orientation are identical."
+      },
+      {
+        "label": "orange accent chair",
+        "score": 10,
+        "note": "Facing the same direction as in the target image."
+      },
+      {
+        "label": "coffee table",
+        "score": 10,
+        "note": "Orientation is identical."
+      },
+      {
+        "label": "bar stools",
+        "score": 10,
+        "note": "Both stools are correctly oriented facing the opening."
+      },
+      {
+        "label": "sideboard cabinet",
+        "score": 10,
+        "note": "Perfectly aligned along the wall."
+      },
+      {
+        "label": "white velvet armchairs",
+        "score": 10,
+        "note": "Rotation appears identical in both foreground positions."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture items match the target image's orientations perfectly.",
+    "missing_info": "A top-down view would confirm precise alignment with the room's axes."
+  },
+  "9f283b51-0327-43d5-9ec0-44d867530f4e_Library-35224": {
+    "object_scores": [
+      {
+        "label": "cabinet near left wall",
+        "score": 10,
+        "note": "The orientation appears identical to the target image."
+      },
+      {
+        "label": "long bench in foreground",
+        "score": 10,
+        "note": "The orientation matches the target image."
+      },
+      {
+        "label": "shelf unit in back",
+        "score": 10,
+        "note": "The unit faces forward identically to the target."
+      },
+      {
+        "label": "left dining chair",
+        "score": 5,
+        "note": "The chair is angled outward compared to the forward-facing position in the target."
+      },
+      {
+        "label": "center dining chair",
+        "score": 10,
+        "note": "Faces forward as in the target."
+      },
+      {
+        "label": "right dining chair",
+        "score": 10,
+        "note": "Faces forward as in the target."
+      },
+      {
+        "label": "black console unit on right",
+        "score": 2,
+        "note": "The unit is rotated significantly differently from the rectangular alignment in the target."
+      }
+    ],
+    "score": 8,
+    "reasoning": "Most furniture is correctly oriented, though the black console unit and the left-most dining chair show noticeable rotation discrepancies compared to the target scene.",
+    "missing_info": "A top-down floor plan view would be the most effective way to definitively measure the precise angular orientation of each furniture object."
+  },
+  "1ad74b11-777a-4610-a249-7c5e044a0f01_MasterBedroom-14403": {
+    "object_scores": [
+      {
+        "label": "Decorative shelving unit",
+        "score": 10,
+        "note": "Orientation is identical to the target; rotation is visually detectable."
+      },
+      {
+        "label": "Armchair",
+        "score": 10,
+        "note": "Faces the same direction as the target; rotation is clearly visible."
+      },
+      {
+        "label": "Side table",
+        "score": 10,
+        "note": "Symmetric object, orientation appears correct relative to the chair."
+      },
+      {
+        "label": "Vanity desk",
+        "score": 10,
+        "note": "Orientation is consistent with the target."
+      },
+      {
+        "label": "Vanity mirror",
+        "score": 10,
+        "note": "Mirrored component alignment is identical to the target."
+      },
+      {
+        "label": "Ottoman stool",
+        "score": 10,
+        "note": "Cylindrical object, rotation is not visually distinct."
+      },
+      {
+        "label": "Bedside cabinet",
+        "score": 10,
+        "note": "Orientation is identical to the target."
+      },
+      {
+        "label": "Bed bench",
+        "score": 10,
+        "note": "Orientation is consistent with the target."
+      },
+      {
+        "label": "Bed platform",
+        "score": 10,
+        "note": "Alignment with the room structure is identical to the target."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered image is almost identical to the target image in terms of furniture placement and object orientation.",
+    "missing_info": "Top-down view would help confirm precise angular placement for non-symmetric objects."
+  },
+  "aa9d393b-30df-456f-96dc-dad7bb8554c9_LivingRoom-38326": {
+    "object_scores": [
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "The rectangular table is aligned identically in both views."
+      },
+      {
+        "label": "dining chair (front left)",
+        "score": 10,
+        "note": "The chair faces the same direction relative to the table."
+      },
+      {
+        "label": "dining chair (front right)",
+        "score": 10,
+        "note": "The chair orientation remains consistent with the target."
+      },
+      {
+        "label": "dining chair (back left)",
+        "score": 10,
+        "note": "Aligned as expected."
+      },
+      {
+        "label": "dining chair (back right)",
+        "score": 10,
+        "note": "Aligned as expected."
+      },
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The sofa is placed parallel to the wall, matching the target."
+      },
+      {
+        "label": "coffee table",
+        "score": 10,
+        "note": "The round shape makes rotation undetectable, but it is in the correct location."
+      },
+      {
+        "label": "TV stand",
+        "score": 10,
+        "note": "The orientation is identical to the target image."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture objects are correctly positioned and oriented as per the target image.",
+    "missing_info": "A top-down view would confirm precise alignment, although the current perspective provides sufficient clarity for this assessment."
+  },
+  "f36889f8-d94b-4ab9-9da1-46e06a27ff90_LivingRoom-12836": {
+    "object_scores": [
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The sofa is positioned and oriented identically to the target."
+      },
+      {
+        "label": "armchair_left",
+        "score": 10,
+        "note": "The orientation is identical to the target."
+      },
+      {
+        "label": "armchair_right",
+        "score": 10,
+        "note": "The orientation is identical to the target."
+      },
+      {
+        "label": "coffee_table",
+        "score": 10,
+        "note": "The coffee table orientation appears perfectly aligned with the target."
+      },
+      {
+        "label": "tall_cabinet_right",
+        "score": 10,
+        "note": "The cabinet is flush against the wall in the same orientation as the target."
+      },
+      {
+        "label": "foreground_cowhide_chair",
+        "score": 10,
+        "note": "The chair is facing the same direction as in the target."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All major furniture pieces appear correctly oriented in the rendered image compared to the target image.",
+    "missing_info": "A top-down floor plan view would definitively confirm precise rotation angles for all furniture objects."
+  },
+  "473fb8fd-a6d4-4fc1-bd5d-1afd61a9617e_LivingRoom-9915": {
+    "object_scores": [
+      {
+        "label": "sofa",
+        "score": 5,
+        "note": "The sofa in the rendered image is angled significantly away from the wall compared to the parallel orientation in the target."
+      },
+      {
+        "label": "coffee table",
+        "score": 8,
+        "note": "The coffee table arrangement appears rotated slightly differently, though the elliptical shape makes precise orientation judgment difficult."
+      },
+      {
+        "label": "cabinet",
+        "score": 10,
+        "note": "The cabinet is flush against the back wall in both images, appearing correctly oriented."
+      },
+      {
+        "label": "dining chairs",
+        "score": 9,
+        "note": "The chairs are positioned around the table consistently with the target; minor positional variances do not affect their fundamental orientation."
+      },
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "The rectangular table's orientation is consistent with the target relative to the wall and cabinet."
+      }
+    ],
+    "score": 8,
+    "reasoning": "Most furniture pieces are well-aligned, except for the sofa which has shifted from a parallel position to an angled one.",
+    "missing_info": "A top-down view would definitively confirm the rotation angles of all furniture pieces relative to the walls."
+  },
+  "d650faee-f134-46fd-b8f7-38712998f3b5_LivingRoom-2922": {
+    "object_scores": [
+      {
+        "label": "television console",
+        "score": 10,
+        "note": "The orientation appears identical to the target image."
+      },
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The sofa position and orientation are consistent with the target."
+      },
+      {
+        "label": "coffee table",
+        "score": 10,
+        "note": "The orientation is aligned correctly."
+      },
+      {
+        "label": "pink chair",
+        "score": 10,
+        "note": "The pink chair is in the same relative position and orientation."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture items in the rendered scene perfectly match the target image in orientation and placement.",
+    "missing_info": "A top-down layout view would be beneficial for confirming precise alignment if the perspective is skewed, but for this view, they appear identical."
+  },
+  "6ae193c4-4fe1-42e8-b2dd-38ded31b7f12_LivingDiningRoom-48379": {
+    "object_scores": [
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The sofa orientation matches the target perfectly."
+      },
+      {
+        "label": "coffee table",
+        "score": 10,
+        "note": "The coffee table is aligned correctly with the sofa."
+      },
+      {
+        "label": "accent chair",
+        "score": 10,
+        "note": "The chair's orientation is consistent with the target."
+      },
+      {
+        "label": "side table",
+        "score": 10,
+        "note": "The small table behind the sofa is positioned correctly."
+      },
+      {
+        "label": "pedestal planter",
+        "score": 10,
+        "note": "The green pedestal planter is in the correct orientation."
+      },
+      {
+        "label": "side cabinet left",
+        "score": 10,
+        "note": "The side cabinet on the left matches the target."
+      },
+      {
+        "label": "side cabinet right",
+        "score": 10,
+        "note": "The cabinet on the right is placed correctly."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All major furniture objects are correctly rotated and aligned with the target scene.",
+    "missing_info": "Top-down view would provide better confirmation of precise rotational alignment for objects like the coffee table and sofa."
+  },
+  "a0b8b195-676d-47bd-afce-3e135b8fde83_LivingDiningRoom-22853": {
+    "object_scores": [
+      {
+        "label": "white tall corner cabinet",
+        "score": 10,
+        "note": "The cabinet is oriented identically to the target."
+      },
+      {
+        "label": "white dresser",
+        "score": 10,
+        "note": "The dresser is oriented identically to the target."
+      },
+      {
+        "label": "black dining table",
+        "score": 10,
+        "note": "The dining table is oriented identically to the target."
+      },
+      {
+        "label": "four dining chairs",
+        "score": 10,
+        "note": "All four chairs are facing the table as in the target."
+      },
+      {
+        "label": "black sofa",
+        "score": 10,
+        "note": "The sofa is oriented identically to the target."
+      },
+      {
+        "label": "coffee table",
+        "score": 10,
+        "note": "The coffee table is oriented identically to the target."
+      },
+      {
+        "label": "armchair",
+        "score": 10,
+        "note": "The armchair is oriented identically to the target."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture objects appear to be perfectly aligned in the rendered image compared to the target image.",
+    "missing_info": "No additional views are needed as all orientations are clearly visible and match perfectly."
+  },
+  "8174e94b-cb97-4d24-bd3a-81a095192bbe_LivingDiningRoom-33640": {
+    "object_scores": [
+      {
+        "label": "teal sideboard",
+        "score": 10,
+        "note": "Orientation is identical to the target image."
+      },
+      {
+        "label": "tall wooden cabinet",
+        "score": 10,
+        "note": "Orientation is identical to the target image."
+      },
+      {
+        "label": "white cylindrical stool",
+        "score": 10,
+        "note": "Symmetric object, rotation is visually indistinguishable."
+      },
+      {
+        "label": "rattan chair",
+        "score": 10,
+        "note": "Orientation is identical to the target image."
+      },
+      {
+        "label": "small coffee tables",
+        "score": 10,
+        "note": "Orientation is identical to the target image."
+      },
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "Orientation is identical to the target image."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture objects in the rendered scene are correctly oriented to match the target scene image.",
+    "missing_info": "Top-down view would confirm precise alignment, though current perspective shows no deviation."
+  },
+  "a17c6eb5-a044-400a-b0b6-3e757cccbb15_LivingDiningRoom-15943": {
+    "object_scores": [
+      {
+        "label": "blue cabinet",
+        "score": 10,
+        "note": "Orientation appears identical to target."
+      },
+      {
+        "label": "dining chairs",
+        "score": 10,
+        "note": "All six chairs maintain the same orientation relative to the table."
+      },
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "Aligned correctly with the window and chair placement."
+      },
+      {
+        "label": "tv console",
+        "score": 10,
+        "note": "Rectangular orientation matches target."
+      },
+      {
+        "label": "floor poufs",
+        "score": 10,
+        "note": "Round shape, orientation is visually indistinguishable/correct."
+      },
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "Position and orientation perfectly aligned with target."
+      },
+      {
+        "label": "armchair",
+        "score": 10,
+        "note": "Orientation facing the sofa matches target."
+      },
+      {
+        "label": "orange cabinet",
+        "score": 10,
+        "note": "Matches orientation of the target."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered image is a near-perfect replication of the target scene with all furniture objects exhibiting identical orientations.",
+    "missing_info": "No additional views are strictly necessary given the high level of visual alignment."
+  },
+  "5e6d0804-54a9-4d4a-b4ed-1b4f22aa1d01_LivingRoom-16933": {
+    "object_scores": [
+      {
+        "label": "Front left armchair",
+        "score": 10,
+        "note": "The orientation is identical between both images."
+      },
+      {
+        "label": "Media console unit",
+        "score": 10,
+        "note": "Orientation is aligned correctly with the wall."
+      },
+      {
+        "label": "White armchair in background",
+        "score": 10,
+        "note": "Orientation remains consistent."
+      },
+      {
+        "label": "Dining table and chairs",
+        "score": 10,
+        "note": "No detectable change in orientation."
+      },
+      {
+        "label": "Sofa",
+        "score": 10,
+        "note": "Orientation is identical."
+      },
+      {
+        "label": "Large center table",
+        "score": 0,
+        "note": "The center table has been rotated 90 degrees compared to the target."
+      },
+      {
+        "label": "Benches",
+        "score": 0,
+        "note": "The benches are completely reoriented from parallel to the wall to a T-shape configuration."
+      }
+    ],
+    "score": 6,
+    "reasoning": "Most furniture objects maintained their correct orientation, but the center table and the two benches in the foreground were significantly rotated in the rendered image compared to the target.",
+    "missing_info": "A top-down floor plan view would definitively confirm the rotation angles of the central furniture pieces."
+  },
+  "109a8e42-f7d7-4893-8262-f2030072b760_LivingRoom-38165": {
+    "object_scores": [
+      {
+        "label": "black sofa",
+        "score": 10,
+        "note": "The orientation matches perfectly."
+      },
+      {
+        "label": "bed",
+        "score": 10,
+        "note": "The orientation matches perfectly."
+      },
+      {
+        "label": "rectangular coffee table",
+        "score": 10,
+        "note": "The orientation matches perfectly."
+      },
+      {
+        "label": "round side table",
+        "score": 10,
+        "note": "The orientation is rotationally symmetric, making changes undetectable."
+      },
+      {
+        "label": "media console",
+        "score": 10,
+        "note": "The orientation matches perfectly."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered scene is identical to the target image in terms of object orientation.",
+    "missing_info": "No additional views are required as the scene is perfectly matched."
+  }
+}

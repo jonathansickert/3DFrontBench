@@ -1,0 +1,1295 @@
+{
+  "0f661df2-0f41-47a4-830c-7444f4a33a03_LivingDiningRoom-12554": {
+    "object_scores": [
+      {
+        "label": "dining table near left wall",
+        "score": 10,
+        "note": "Round table; rotation is not visually detectable due to symmetry."
+      },
+      {
+        "label": "dining chair near left wall, closest to camera",
+        "score": 10,
+        "note": "Chair has a distinct backrest shape; orientation appears unchanged from target."
+      },
+      {
+        "label": "dining chair behind dining table, left side",
+        "score": 10,
+        "note": "Chair orientation matches target; backrest and legs aligned similarly."
+      },
+      {
+        "label": "dining chair behind dining table, right side",
+        "score": 10,
+        "note": "Chair orientation matches target; backrest and legs aligned similarly."
+      },
+      {
+        "label": "armchair with ribbed back near sofa",
+        "score": 10,
+        "note": "Chair has a distinct ribbed back and star base; orientation appears unchanged."
+      },
+      {
+        "label": "sofa against back wall",
+        "score": 10,
+        "note": "Sofa has a rectangular shape with cushions; orientation appears unchanged."
+      },
+      {
+        "label": "round coffee table near sofa",
+        "score": 10,
+        "note": "Round table; rotation is not visually detectable due to symmetry."
+      },
+      {
+        "label": "low cabinet near window",
+        "score": 10,
+        "note": "Rectangular cabinet; orientation appears unchanged, facing the same direction."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All visible furniture objects appear to maintain the same orientation as in the target image. Symmetric objects (round tables) are scored 10 regardless of rotation, while asymmetric objects (chairs, sofa, cabinet) show no visible deviation in orientation. No objects were missed or mismatched.",
+    "missing_info": "Top-down view or bounding boxes with rotation angles would help assess object rotation more accurately, especially for chairs and the sofa."
+  },
+  "996d5631-517a-4906-b232-5e1148c97867_LivingDiningRoom-8344": {
+    "object_scores": [
+      {
+        "label": "gray sofa on left",
+        "score": 10,
+        "note": "The sofa is oriented identically in both images, facing forward with its back against the wall. Its rectangular shape makes rotation visually detectable, and it matches perfectly."
+      },
+      {
+        "label": "black armchair on left (near window)",
+        "score": 8,
+        "note": "This armchair appears to be rotated slightly to the left in the rendered image compared to the target, though the difference is minimal. The curved backrest makes orientation detectable, and the rotation is slight but noticeable."
+      },
+      {
+        "label": "black armchair on right (near window)",
+        "score": 10,
+        "note": "This armchair is oriented identically in both images, facing forward. The curved backrest makes rotation detectable, and it matches perfectly."
+      },
+      {
+        "label": "black round coffee table",
+        "score": 10,
+        "note": "The table is circular and symmetric, so rotation is not visually detectable. It is in the same position and orientation in both images."
+      },
+      {
+        "label": "black tiered side table on right",
+        "score": 10,
+        "note": "This object is rectangular and oriented the same way in both images, with its long side aligned with the wall. Its shape makes rotation detectable, and it matches perfectly."
+      },
+      {
+        "label": "black hourglass-shaped lamp on far right",
+        "score": 10,
+        "note": "This object is symmetrical along its vertical axis, so rotation is not visually detectable. It is in the same position and orientation in both images."
+      }
+    ],
+    "score": 9,
+    "reasoning": "All furniture objects are present and mostly aligned with the target. The only minor deviation is in the left armchair, which appears slightly rotated. All other objects, including symmetric ones, match perfectly in orientation.",
+    "missing_info": "Top-down view or bounding boxes to precisely determine orientation angles of furniture objects."
+  },
+  "1f077e24-2eca-43ca-bc92-1b36eab99467_LivingDiningRoom-180855": {
+    "object_scores": [
+      {
+        "label": "black TV cabinet on left wall",
+        "score": 10,
+        "note": "Long rectangular cabinet with no visible front-facing features; orientation is not visually detectable due to symmetry and perspective. Rotation does not affect appearance."
+      },
+      {
+        "label": "white console table in center",
+        "score": 10,
+        "note": "Rectangular table with visible legs and drawer fronts; orientation appears consistent with target. No visible rotation deviation."
+      },
+      {
+        "label": "triangular wooden coffee table",
+        "score": 10,
+        "note": "Asymmetric triangular shape; orientation appears unchanged. The apex points in the same direction as in target."
+      },
+      {
+        "label": "gray sofa on right",
+        "score": 10,
+        "note": "Rectangular sofa with no visible directional features; rotation is not visually detectable due to symmetry."
+      },
+      {
+        "label": "dining table in back room",
+        "score": 10,
+        "note": "Rectangular table; orientation appears consistent with target. The long side is aligned with the same wall as in target."
+      },
+      {
+        "label": "dining chair near window (left side)",
+        "score": 10,
+        "note": "Chair with visible backrest and seat; orientation appears unchanged. Backrest faces same direction as in target."
+      },
+      {
+        "label": "dining chair near window (right side)",
+        "score": 10,
+        "note": "Chair with visible backrest and seat; orientation appears unchanged. Backrest faces same direction as in target."
+      },
+      {
+        "label": "black piano on right",
+        "score": 10,
+        "note": "Piano with visible lid and keys; orientation appears consistent. Front face aligned with wall as in target."
+      },
+      {
+        "label": "side cabinet next to dining area",
+        "score": 10,
+        "note": "Rectangular cabinet with visible doors and shelves; orientation appears unchanged. Front face aligned with wall as in target."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All visible furniture objects appear to maintain the same orientation as in the target image. Symmetric objects (like cabinets and sofas) are scored 10 regardless of rotation since their appearance does not change. Asymmetric objects (like the triangular coffee table and dining chairs) show no visible rotation deviation. The rendered scene matches the target closely in object placement and orientation.",
+    "missing_info": "Top-down or orthographic view would help assess exact orientations of furniture, especially for chairs and tables where subtle rotations are hard to judge from a single perspective."
+  },
+  "2eeb434c-855e-4298-a8d5-29b1ca838608_MasterBedroom-5966": {
+    "object_scores": [
+      {
+        "label": "bed",
+        "score": 10,
+        "note": "The bed is oriented identically in both images, with the headboard against the green wall and footboard facing forward. The wooden frame and mattress alignment are consistent. Rotation is visually detectable due to the asymmetrical headboard and footboard design."
+      },
+      {
+        "label": "nightstand on left",
+        "score": 10,
+        "note": "The black nightstand is positioned identically to the target, with its front facing forward and aligned with the bed. Its rectangular shape makes rotation detectable, and it matches perfectly."
+      },
+      {
+        "label": "desk chair behind bed",
+        "score": 10,
+        "note": "The chair is visible behind the bed, and its backrest is oriented toward the wardrobe, matching the target. The chair\u2019s backrest design is asymmetrical, making rotation detectable, and it appears to be in the same orientation."
+      },
+      {
+        "label": "wardrobe cabinet",
+        "score": 10,
+        "note": "The wardrobe is a large, multi-drawer unit with visible clothes and shelves. It is fixed against the wall and does not rotate; its orientation is consistent. Since it\u2019s a fixed structure, rotation is not applicable, but alignment is perfect."
+      },
+      {
+        "label": "chandelier above bed",
+        "score": 10,
+        "note": "The chandelier is circular and symmetrical, so rotation is not visually detectable. It appears in the same position and orientation as the target."
+      },
+      {
+        "label": "chandelier above wardrobe",
+        "score": 10,
+        "note": "The second chandelier is also circular and symmetrical, so rotation does not affect appearance. It is positioned identically to the target."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All visible furniture objects in the scene are oriented identically to the target. The bed, nightstand, chair, wardrobe, and chandeliers all match in position and rotation. Symmetrical objects like the chandeliers score 10 regardless of actual rotation, as no visual difference exists. No objects are missing or misaligned.",
+    "missing_info": "Top-down or side-view perspective to clearly assess the rotational alignment of the bed, nightstand, and desk chair; also, bounding boxes or object labels would help confirm identity and orientation of each furniture piece."
+  },
+  "6e7a0c41-15f3-4909-a20c-dab460b45ada_LivingDiningRoom-847": {
+    "object_scores": [
+      {
+        "label": "white tufted sofa",
+        "score": 0,
+        "note": "The sofa is rotated approximately 90 degrees in the rendered image compared to the target \u2014 it now faces right instead of left. The object's elongated shape makes rotation visually detectable."
+      },
+      {
+        "label": "dark brown cabinet with geometric front",
+        "score": 0,
+        "note": "The cabinet is rotated in the rendered image \u2014 it now faces left instead of right. Its asymmetric design makes rotation visually detectable."
+      },
+      {
+        "label": "small round side table with gold legs",
+        "score": 10,
+        "note": "The table is symmetric and appears unchanged in orientation; rotation is not visually detectable."
+      },
+      {
+        "label": "brown side table with twisted base",
+        "score": 10,
+        "note": "The table is symmetric in shape and appears unchanged in orientation; rotation is not visually detectable."
+      },
+      {
+        "label": "dark chair at the back table",
+        "score": 7,
+        "note": "The chair is rotated slightly \u2014 its backrest faces more toward the center in the rendered image. Its asymmetry makes rotation detectable, but the change is minor."
+      },
+      {
+        "label": "light-colored rectangular table in the back",
+        "score": 10,
+        "note": "The table is symmetric and appears unchanged in orientation; rotation is not visually detectable."
+      }
+    ],
+    "score": 6,
+    "reasoning": "The sofa and cabinet show significant rotation errors (0/10), while the symmetric tables score 10/10. The chair shows minor rotation (7/10). Overall, the scene has major orientation mismatches for key furniture.",
+    "missing_info": "Top-down view or bounding boxes to accurately determine object orientations, especially for the sofa and cabinet which appear rotated differently in the two images."
+  },
+  "10e2d93c-2a82-49f2-a95c-7598d24901f2_LivingDiningRoom-8149": {
+    "object_scores": [
+      {
+        "label": "dining chair near window (leftmost)",
+        "score": 9,
+        "note": "Chair is oriented similarly to target, back facing wall with slight turn toward table; minor rotation difference but visually aligned due to symmetry of backrest design."
+      },
+      {
+        "label": "dining chair next to leftmost (front-left)",
+        "score": 10,
+        "note": "Chair faces same direction as target, backrest aligned with wall and table; no visible rotation mismatch."
+      },
+      {
+        "label": "dining chair on right side of table (front-right)",
+        "score": 10,
+        "note": "Chair orientation matches target; backrest aligned with wall and table; no detectable rotation difference."
+      },
+      {
+        "label": "dining chair behind table (rightmost)",
+        "score": 10,
+        "note": "Chair is rotated slightly more toward the table than in target, but the ornate backrest is symmetric, so rotation is not visually detectable."
+      },
+      {
+        "label": "round dining table",
+        "score": 10,
+        "note": "Circular table \u2014 rotation is not visually detectable regardless of orientation; thus, score is 10."
+      },
+      {
+        "label": "sofa against back wall",
+        "score": 10,
+        "note": "Sofa is oriented with back against wall and facing forward; slight rotation in rendered image but not visually discernible due to symmetrical cushions and shape."
+      },
+      {
+        "label": "black desk with white top",
+        "score": 10,
+        "note": "Desk is oriented with long side facing the sofa; in rendered image, it appears slightly rotated but the rectangular shape and uniform surface make rotation visually indistinguishable."
+      },
+      {
+        "label": "black side table or cabinet next to desk",
+        "score": 10,
+        "note": "Small rectangular cabinet; no visible rotation difference due to symmetry and lack of distinguishing features."
+      },
+      {
+        "label": "chandelier above dining table",
+        "score": 10,
+        "note": "Ornate chandelier with symmetrical arms; rotation is not visually detectable, so orientation is considered unchanged."
+      },
+      {
+        "label": "black spherical pendant light",
+        "score": 10,
+        "note": "Spherical light fixture \u2014 rotation is not visually detectable due to perfect symmetry."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture objects were matched and scored individually. Most objects have symmetric designs (chairs, table, lights, cabinet) making rotation visually indistinguishable, resulting in high scores. The sofa and desk show minor orientation differences, but due to symmetry and perspective, they are not visually detectable. Average score is high.",
+    "missing_info": "Top-down or orthographic views would help assess exact rotational alignment of furniture, especially for chairs and sofa, since current perspective makes precise orientation comparison difficult."
+  },
+  "e44c4ecc-0260-469d-a60d-b71cf1d34029_LivingRoom-15009": {
+    "object_scores": [
+      {
+        "label": "black armchair in bottom-left corner",
+        "score": 10,
+        "note": "The armchair is oriented the same in both images; its back faces toward the center of the room, and the visible side profile matches exactly. The object is asymmetrical, so rotation is visually detectable."
+      },
+      {
+        "label": "wooden folding chair near center",
+        "score": 10,
+        "note": "The wooden chair maintains the same orientation in both images; its backrest faces slightly toward the left wall, and the leg positions are identical. Asymmetrical design makes rotation detectable."
+      },
+      {
+        "label": "teal chair behind round table (left side)",
+        "score": 8,
+        "note": "The teal chair is rotated slightly in the rendered image \u2014 its backrest appears to face more toward the table than in the target, suggesting a minor rotation. However, the change is subtle and may be due to perspective; score adjusted for minor deviation."
+      },
+      {
+        "label": "teal chair behind round table (right side)",
+        "score": 6,
+        "note": "This chair appears rotated in the rendered image \u2014 its backrest is more angled toward the right wall compared to the target. The asymmetry of the chair makes this rotation visually detectable."
+      },
+      {
+        "label": "round black dining table",
+        "score": 10,
+        "note": "The table is circular and symmetric, so rotation is not visually detectable. It appears identical in both images."
+      },
+      {
+        "label": "light wood shelving unit against back wall",
+        "score": 7,
+        "note": "The shelving unit is rotated slightly in the rendered image \u2014 its front face is angled more toward the right, reducing visibility of the left side. The asymmetrical design makes rotation detectable."
+      },
+      {
+        "label": "dark brown sideboard on right wall",
+        "score": 10,
+        "note": "The sideboard is oriented identically in both images; its front faces the room, and the drawer alignment matches. Asymmetrical design allows detection of rotation."
+      },
+      {
+        "label": "floor lamp near left wall",
+        "score": 10,
+        "note": "The lamp is positioned and oriented the same in both images; the shade points toward the center of the room. The object is asymmetrical, so rotation is detectable."
+      }
+    ],
+    "score": 9,
+    "reasoning": "Most furniture objects are correctly oriented, with only minor deviations in the teal chairs and shelving unit. Symmetric objects like the table score 10 regardless of rotation. The overall scene orientation is largely preserved.",
+    "missing_info": "Top-down view or bounding boxes with rotation angles would help assess object rotation more accurately, especially for objects with subtle orientation changes."
+  },
+  "f006ad67-40d2-4068-950c-2ce3805d3932_LivingDiningRoom-38341": {
+    "object_scores": [
+      {
+        "label": "dining table in background",
+        "score": 0,
+        "note": "The rectangular dining table is rotated 90 degrees compared to the target; its long side is now perpendicular to the window instead of parallel. Rotation is detectable due to its rectangular shape."
+      },
+      {
+        "label": "dining chair on left side of table",
+        "score": 0,
+        "note": "The chair is rotated approximately 90 degrees relative to its position in the target, facing away from the table instead of toward it. Orientation is detectable due to its asymmetrical backrest."
+      },
+      {
+        "label": "dining chair on right side of table",
+        "score": 0,
+        "note": "This chair is also rotated approximately 90 degrees, facing away from the table. Its orientation is visually detectable due to its asymmetrical design."
+      },
+      {
+        "label": "sofa in foreground",
+        "score": 0,
+        "note": "The sofa is rotated approximately 90 degrees compared to the target \u2014 it now runs left-to-right instead of front-to-back. Orientation is detectable due to its long, segmented shape and visible backrests."
+      },
+      {
+        "label": "conical coffee table",
+        "score": 10,
+        "note": "This object is rotationally symmetric (conical shape), so any rotation is visually indistinguishable. Orientation cannot be detected."
+      },
+      {
+        "label": "white cabinet on right wall",
+        "score": 0,
+        "note": "The cabinet is rotated approximately 90 degrees \u2014 it now runs front-to-back instead of left-to-right. Its orientation is detectable due to its rectangular shape and drawer alignment."
+      }
+    ],
+    "score": 2,
+    "reasoning": "All furniture objects except the conical coffee table are rotated incorrectly relative to the target image. The sofa, dining table, chairs, and cabinet have been rotated by approximately 90 degrees, making their orientations visually distinct from the target. The conical coffee table scores 10 due to rotational symmetry.",
+    "missing_info": "Top-down or orthographic views would help assess object rotation more accurately, especially for the sofa and dining chairs where orientation is ambiguous from this perspective. Bounding boxes or object segmentation would also clarify which objects are being compared."
+  },
+  "b34c215e-1449-4702-8080-e7173e8e8f67_LivingDiningRoom-14069": {
+    "object_scores": [
+      {
+        "label": "dining chair near black round table (left)",
+        "score": 10,
+        "note": "This chair is symmetric and its orientation is not visually detectable; it appears identical regardless of rotation."
+      },
+      {
+        "label": "dining chair near black round table (right)",
+        "score": 10,
+        "note": "This chair is symmetric and its orientation is not visually detectable; it appears identical regardless of rotation."
+      },
+      {
+        "label": "yellow sofa with green cushions",
+        "score": 10,
+        "note": "This sofa is oriented the same in both images; its back faces the left wall and it is positioned identically."
+      },
+      {
+        "label": "brown sofa facing forward",
+        "score": 0,
+        "note": "In the rendered image, the brown sofa appears rotated 90 degrees (now facing right), which is a significant orientation change."
+      },
+      {
+        "label": "rectangular coffee table",
+        "score": 10,
+        "note": "The coffee table is symmetric and its orientation is not visually detectable; it looks the same regardless of rotation."
+      },
+      {
+        "label": "black cabinet with plant on top",
+        "score": 0,
+        "note": "The cabinet appears rotated 90 degrees in the rendered image (now facing forward instead of right), which changes its orientation relative to the wall."
+      }
+    ],
+    "score": 7,
+    "reasoning": "Most furniture objects are symmetric or positioned identically, scoring 10. However, the brown sofa and black cabinet are clearly rotated differently in the rendered image, scoring 0. The average score is 6.67, rounded to 7.",
+    "missing_info": "Top-down view or bounding boxes with rotation angles would help accurately assess object orientations, especially for the brown sofa and black cabinet which appear rotated in the rendered image."
+  },
+  "09d742d0-9e99-4e31-ac3d-ad1879cf691b_LivingDiningRoom-9326": {
+    "object_scores": [
+      {
+        "label": "dining chair near window (left)",
+        "score": 10,
+        "note": "Chair is symmetric in front/back and appears to face the same direction as in target; rotation not visually detectable."
+      },
+      {
+        "label": "dining chair near window (right)",
+        "score": 10,
+        "note": "Chair is symmetric in front/back and appears to face the same direction as in target; rotation not visually detectable."
+      },
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "Round table; rotation is not visually detectable due to symmetry."
+      },
+      {
+        "label": "L-shaped sofa",
+        "score": 10,
+        "note": "Sofa is oriented identically in both images; front-facing sections align with target; no visible rotation deviation."
+      },
+      {
+        "label": "round coffee table",
+        "score": 10,
+        "note": "Circular table; rotation is not visually detectable due to symmetry."
+      },
+      {
+        "label": "ottoman in front of sofa (left)",
+        "score": 10,
+        "note": "Rectangular ottoman; appears to face same direction as target; no visible rotation."
+      },
+      {
+        "label": "ottoman in front of sofa (right)",
+        "score": 10,
+        "note": "Rectangular ottoman; appears to face same direction as target; no visible rotation."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture objects are either symmetric (round tables, chairs) or aligned identically with the target scene. No visible rotation deviations are present.",
+    "missing_info": "Top-down view or bounding boxes to precisely determine orientation of furniture, especially for objects with similar front and back (e.g., chairs, sofa sections)."
+  },
+  "1ad74b11-777a-4610-a249-7c5e044a0f01_LivingDiningRoom-10290": {
+    "object_scores": [
+      {
+        "label": "dining chair on left side of table",
+        "score": 7,
+        "note": "Chair is rotated slightly to the left compared to target; backrest and seat alignment differ by approximately 10 degrees. Shape is asymmetric, so rotation is visually detectable."
+      },
+      {
+        "label": "dining chair on right side of table",
+        "score": 7,
+        "note": "Chair is rotated slightly to the right compared to target; backrest and seat alignment differ by approximately 10 degrees. Shape is asymmetric, so rotation is visually detectable."
+      },
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "Rectangular table with symmetric shape; rotation is not visually detectable from this perspective. Orientation matches target."
+      },
+      {
+        "label": "wooden cabinet against left wall",
+        "score": 10,
+        "note": "Cabinet is rectangular and symmetric; no visible rotation difference. Orientation matches target."
+      },
+      {
+        "label": "sofa on right side",
+        "score": 10,
+        "note": "Sofa has a curved back and armrests; orientation appears unchanged. Armrests and cushions align with target."
+      },
+      {
+        "label": "coffee table in center",
+        "score": 10,
+        "note": "Rectangular and symmetric; rotation not visually detectable. Orientation matches target."
+      },
+      {
+        "label": "side table next to sofa",
+        "score": 10,
+        "note": "Circular top with black frame; rotation not visually detectable due to symmetry. Orientation matches target."
+      },
+      {
+        "label": "small stool near side table",
+        "score": 10,
+        "note": "Circular top with black frame; rotation not visually detectable due to symmetry. Orientation matches target."
+      },
+      {
+        "label": "TV stand with plant on left",
+        "score": 10,
+        "note": "Rectangular and symmetric; rotation not visually detectable. Orientation matches target."
+      },
+      {
+        "label": "small black stool next to TV stand",
+        "score": 10,
+        "note": "Circular top with black frame; rotation not visually detectable due to symmetry. Orientation matches target."
+      },
+      {
+        "label": "bar stool near doorway",
+        "score": 10,
+        "note": "Circular top with black frame; rotation not visually detectable due to symmetry. Orientation matches target."
+      }
+    ],
+    "score": 9,
+    "reasoning": "Most objects are symmetric (tables, stools, cabinet) and thus score 10 regardless of rotation. The two dining chairs show slight rotational deviation (\u224810 degrees) due to their asymmetric shape, leading to a score of 7 each. All other objects appear to match orientation exactly.",
+    "missing_info": "Top-down view or bounding boxes with rotation angles would help assess object rotation more accurately, especially for chairs and side tables where small orientation shifts are hard to judge from a single perspective."
+  },
+  "7c2e62e7-ab51-4900-bfdc-1932415fb295_LivingDiningRoom-16509": {
+    "object_scores": [
+      {
+        "label": "dark gray sofa on the left",
+        "score": 6,
+        "note": "The sofa appears rotated slightly clockwise in the rendered image compared to the target, with its backrest now facing more toward the center of the room. The shape is asymmetric, so rotation is visually detectable."
+      },
+      {
+        "label": "black armchair with white seat in center",
+        "score": 6,
+        "note": "The armchair is rotated slightly to the right in the rendered image, with its backrest no longer aligned with the window. The asymmetry of the backrest makes rotation detectable."
+      },
+      {
+        "label": "black rectangular coffee table in front of armchair",
+        "score": 10,
+        "note": "The table is symmetric and appears unchanged in orientation; rotation is not visually detectable."
+      },
+      {
+        "label": "left gray ottoman with white straps",
+        "score": 10,
+        "note": "The ottoman is symmetric and visually unchanged in orientation; rotation is not detectable."
+      },
+      {
+        "label": "right gray ottoman with white straps",
+        "score": 10,
+        "note": "The ottoman is symmetric and visually unchanged in orientation; rotation is not detectable."
+      },
+      {
+        "label": "tall dark cabinet on the right",
+        "score": 10,
+        "note": "The cabinet is vertically oriented and symmetric in profile; no visible rotation detected."
+      },
+      {
+        "label": "white and dark shelving unit next to tall cabinet",
+        "score": 10,
+        "note": "The unit is vertically oriented with symmetric shelves; no visible rotation detected."
+      },
+      {
+        "label": "black footstool near sofa on the left",
+        "score": 10,
+        "note": "The footstool is small and symmetric; rotation is not visually detectable."
+      }
+    ],
+    "score": 9,
+    "reasoning": "The sofa and armchair show slight rotational misalignment, scoring 6 each due to their asymmetric shapes. All other furniture pieces are symmetric or vertically oriented, so rotation is not visually detectable and scored 10. The overall average is 8.5, rounded to 9.",
+    "missing_info": "Top-down or side-view perspective would help confirm exact rotational alignment of furniture, especially for the sofa and armchair, which appear to be rotated slightly in the rendered image."
+  },
+  "7686a060-ab0d-4014-9e5c-75d75e0752e3_LivingDiningRoom-44815": {
+    "object_scores": [
+      {
+        "label": "black three-seater sofa",
+        "score": 5,
+        "note": "The sofa is rotated approximately 45 degrees clockwise in the rendered image compared to the target, making its front face angled toward the viewer instead of straight on. The asymmetry of its armrests and back cushions makes rotation visually detectable."
+      },
+      {
+        "label": "wooden armchair with dark cushion",
+        "score": 10,
+        "note": "The armchair is in the same orientation in both images; its backrest and armrests align identically. The rectangular frame and distinct cushion placement make rotation visually detectable."
+      },
+      {
+        "label": "oval wooden coffee table",
+        "score": 8,
+        "note": "The table is rotated slightly in the rendered image \u2014 its long axis is now more horizontal rather than diagonal as in the target. However, due to its oval shape and symmetrical legs, the rotation is subtle and not visually distinct; score adjusted for minimal perceptible difference."
+      },
+      {
+        "label": "metal-framed chair near left wall",
+        "score": 10,
+        "note": "The chair appears in the same orientation in both images, with its backrest and seat aligned identically. The chair\u2019s asymmetrical design makes rotation visually detectable."
+      }
+    ],
+    "score": 8,
+    "reasoning": "The black sofa is misrotated by about 45 degrees, lowering its score. The armchair and metal chair are correctly oriented. The coffee table is slightly rotated, but its oval shape makes the difference less noticeable, resulting in a high score. All furniture objects are present and matched.",
+    "missing_info": "Top-down view or bounding boxes with rotation angles would help assess object rotation more accurately."
+  },
+  "109c84cd-7194-4b1d-ac52-8d1862565c6c_Corridor-20684": {
+    "object_scores": [
+      {
+        "label": "dining table in center",
+        "score": 10,
+        "note": "Circular table \u2014 rotation is not visually detectable; orientation is irrelevant."
+      },
+      {
+        "label": "black chair on left side of table",
+        "score": 10,
+        "note": "Chair back faces toward the viewer; orientation matches target. No visible rotation difference."
+      },
+      {
+        "label": "black chair behind table (left side)",
+        "score": 10,
+        "note": "Chair back faces away from viewer; orientation matches target. No visible rotation difference."
+      },
+      {
+        "label": "black chair on right side of table",
+        "score": 10,
+        "note": "Chair back faces toward the viewer; orientation matches target. No visible rotation difference."
+      },
+      {
+        "label": "black chair behind table (right side)",
+        "score": 10,
+        "note": "Chair back faces away from viewer; orientation matches target. No visible rotation difference."
+      },
+      {
+        "label": "black stool in front of table",
+        "score": 10,
+        "note": "Cylindrical stool \u2014 rotation is not visually detectable; orientation is irrelevant."
+      },
+      {
+        "label": "gray cabinet on left wall",
+        "score": 10,
+        "note": "Rectangular cabinet; front faces the viewer in both images. Orientation matches target."
+      },
+      {
+        "label": "black cabinet on right wall",
+        "score": 10,
+        "note": "Rectangular cabinet; front faces the viewer in both images. Orientation matches target."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture objects are either symmetric (round table, stool) or oriented identically to the target image. No visible rotation discrepancies were detected.",
+    "missing_info": "Top-down view or bounding boxes with rotation angles would help assess object rotation more accurately, especially for chairs and cabinets where subtle orientation changes are hard to judge from a single perspective."
+  },
+  "2e422478-2de0-4d16-b398-657b07c1cac0_LivingDiningRoom-4293": {
+    "object_scores": [
+      {
+        "label": "beige sofa with pillows",
+        "score": 2,
+        "note": "Sofa is rotated significantly \u2014 in target, it faces left; in rendered, it faces right and is angled away from the coffee table. Orientation is clearly visible due to its asymmetric shape and pillow arrangement."
+      },
+      {
+        "label": "dark wood coffee table",
+        "score": 10,
+        "note": "Table is rectangular and symmetric; rotation is not visually detectable. Orientation appears consistent with target."
+      },
+      {
+        "label": "black TV cabinet",
+        "score": 10,
+        "note": "Long rectangular cabinet with symmetric front; no visible rotation difference. Orientation matches target."
+      },
+      {
+        "label": "light wood side cabinet",
+        "score": 8,
+        "note": "Cabinet has a distinct front and side; in rendered image, it appears rotated slightly compared to target, but difference is minor and not clearly visible."
+      },
+      {
+        "label": "round dining table",
+        "score": 10,
+        "note": "Circular table \u2014 rotation is not visually detectable regardless of actual orientation. Scored 10 as shape is symmetric."
+      },
+      {
+        "label": "dining chair near round table",
+        "score": 3,
+        "note": "Chair has a distinct backrest and seat orientation; in rendered image, it appears rotated ~90 degrees compared to target. Orientation is clearly visible."
+      },
+      {
+        "label": "second dining chair near round table",
+        "score": 3,
+        "note": "Chair appears rotated similarly to the first \u2014 backrest facing different direction. Shape is asymmetric, so rotation is detectable."
+      },
+      {
+        "label": "small wooden desk in background",
+        "score": 4,
+        "note": "Desk is rectangular and appears rotated \u2014 front facing different direction in rendered vs target. Orientation is visible due to its shape."
+      }
+    ],
+    "score": 6,
+    "reasoning": "Most objects are correctly oriented except the sofa and dining chairs, which show significant rotation. The sofa's misalignment is most severe, while chairs and desk show moderate deviation. Symmetric objects (coffee table, dining table) score 10 regardless of rotation.",
+    "missing_info": "Top-down view or bounding boxes to precisely determine orientation of furniture, especially for the sofa and chairs."
+  },
+  "9f283b51-0327-43d5-9ec0-44d867530f4e_Hallway-34943": {
+    "object_scores": [
+      {
+        "label": "dining table",
+        "score": 9,
+        "note": "The table is rectangular and appears to be rotated slightly in the rendered image compared to the target, but the difference is minimal and not visually detectable due to symmetry and viewing angle. Orientation is effectively preserved."
+      },
+      {
+        "label": "chair at front left of table",
+        "score": 10,
+        "note": "This chair is symmetric and visually indistinguishable in rotation; no visible change in orientation."
+      },
+      {
+        "label": "chair at front center of table",
+        "score": 10,
+        "note": "Symmetric chair with no visible orientation change; rotation is not detectable."
+      },
+      {
+        "label": "chair at front right of table",
+        "score": 10,
+        "note": "Symmetric chair; no detectable rotation change."
+      },
+      {
+        "label": "chair at back left of table",
+        "score": 10,
+        "note": "Symmetric chair; no visible orientation change."
+      },
+      {
+        "label": "chair at back right of table",
+        "score": 10,
+        "note": "Symmetric chair; no visible orientation change."
+      },
+      {
+        "label": "chair at back center of table",
+        "score": 10,
+        "note": "Symmetric chair; no visible orientation change."
+      },
+      {
+        "label": "gray cabinet on left wall",
+        "score": 7,
+        "note": "The cabinet appears to be rotated slightly in the rendered image \u2014 its front face is angled differently, suggesting a rotation of about 5-10 degrees. This is visually detectable due to its rectangular shape and panel details."
+      },
+      {
+        "label": "white cabinet behind table",
+        "score": 10,
+        "note": "This cabinet is symmetric in design and appears unchanged in orientation; rotation is not visually detectable."
+      },
+      {
+        "label": "tall black cabinet on left side of white cabinet",
+        "score": 10,
+        "note": "Symmetric tall cabinet; no visible rotation change."
+      },
+      {
+        "label": "tall black cabinet on right side of white cabinet",
+        "score": 10,
+        "note": "Symmetric tall cabinet; no visible rotation change."
+      }
+    ],
+    "score": 9,
+    "reasoning": "Most furniture objects are symmetric or their orientation changes are minimal and not visually detectable. The only notable deviation is the gray cabinet on the left wall, which appears rotated slightly, lowering its score. All other objects, including chairs and cabinets, maintain consistent orientation.",
+    "missing_info": "Top-down view or bounding boxes with rotation angles would help assess object rotation more accurately, especially for chairs and the cabinet."
+  },
+  "103cce55-24d5-4c71-9856-156962e30511_LivingDiningRoom-89516": {
+    "object_scores": [],
+    "score": 0,
+    "reasoning": "The target and rendered images are identical, so no furniture objects can be compared for orientation differences. Since there are no visible discrepancies, no individual object scores can be assigned. However, this implies all objects are oriented identically by default.",
+    "missing_info": "Top-down view or bounding boxes to confirm exact orientation of furniture, especially for objects with similar front-facing appearances."
+  },
+  "ab6d1b3b-31ba-4191-bc17-d03e504484a8_LivingDiningRoom-209062": {
+    "object_scores": [
+      {
+        "label": "black sofa against left wall",
+        "score": 10,
+        "note": "Sofa appears to be in the same orientation in both images; backrest and armrest alignment are consistent. Orientation is visually detectable due to asymmetrical shape."
+      },
+      {
+        "label": "orange armchair in front of sofa",
+        "score": 7,
+        "note": "Chair is rotated slightly in rendered image \u2014 front legs are angled differently compared to target. Orientation is detectable due to asymmetrical design."
+      },
+      {
+        "label": "white armchair on left foreground",
+        "score": 10,
+        "note": "Chair appears identical in both images; no visible rotation difference. Shape is somewhat symmetrical but orientation is still discernible from leg and backrest alignment."
+      },
+      {
+        "label": "black coffee table in center",
+        "score": 7,
+        "note": "Table is rectangular and appears to be rotated slightly \u2014 front edge is angled differently. Orientation is detectable due to rectangular shape."
+      },
+      {
+        "label": "wooden shelving unit on left wall",
+        "score": 10,
+        "note": "Shelving unit is upright and aligned identically in both images. Orientation is fixed by its vertical structure."
+      },
+      {
+        "label": "black console table against right wall",
+        "score": 10,
+        "note": "Console table is in same orientation \u2014 front panel and legs aligned identically. Orientation is detectable due to asymmetrical front design."
+      },
+      {
+        "label": "two wooden stools near window",
+        "score": 10,
+        "note": "Stools appear to be swapped in position and slightly rotated, but their orientation is not visually distinct due to symmetric triangular base. Rotation is not visually detectable."
+      }
+    ],
+    "score": 9,
+    "reasoning": "Most furniture objects are in the same orientation as in the target image. The orange armchair and coffee table show slight rotational differences, but are still mostly aligned. Symmetric objects like stools receive full score as rotation is not visually detectable.",
+    "missing_info": "Top-down view or bounding boxes to precisely determine orientation angles of furniture, especially for objects with similar shapes or symmetric designs."
+  },
+  "9f283b51-0327-43d5-9ec0-44d867530f4e_Library-35224": {
+    "object_scores": [
+      {
+        "label": "dining table in center",
+        "score": 10,
+        "note": "The table is rectangular and symmetric, so its rotation is not visually detectable; it appears identical regardless of orientation."
+      },
+      {
+        "label": "dining chair left of table",
+        "score": 7,
+        "note": "The chair is asymmetric and appears to face slightly left in the rendered image, whereas in the target it faces forward; this is a minor deviation."
+      },
+      {
+        "label": "dining chair center front",
+        "score": 10,
+        "note": "The chair faces forward in both images; orientation matches perfectly."
+      },
+      {
+        "label": "dining chair right of table",
+        "score": 7,
+        "note": "The chair is asymmetric and appears to face slightly right in the rendered image, whereas in the target it faces forward; minor deviation."
+      },
+      {
+        "label": "dining chair behind table (center)",
+        "score": 8,
+        "note": "This chair is mostly obscured and difficult to assess; however, its backrest orientation appears consistent with the target."
+      },
+      {
+        "label": "black shelf unit against back wall",
+        "score": 10,
+        "note": "The shelf is rectangular and symmetric; rotation is not visually detectable."
+      },
+      {
+        "label": "white cube-shaped cabinet on left",
+        "score": 10,
+        "note": "The cabinet is cube-shaped and symmetric; rotation is not visually detectable."
+      },
+      {
+        "label": "black low cabinet on right",
+        "score": 10,
+        "note": "The cabinet is rectangular and symmetric; rotation is not visually detectable."
+      },
+      {
+        "label": "beige bench in foreground",
+        "score": 10,
+        "note": "The bench is symmetric along its long axis; rotation is not visually detectable."
+      }
+    ],
+    "score": 9,
+    "reasoning": "Most furniture objects are symmetric or their orientations are consistent between images. The three visible dining chairs show minor rotational deviations, but overall the scene maintains high orientation fidelity.",
+    "missing_info": "Top-down view or bounding boxes with orientation indicators would help assess the exact rotation of chairs and the bench more accurately."
+  },
+  "1ad74b11-777a-4610-a249-7c5e044a0f01_MasterBedroom-14403": {
+    "object_scores": [
+      {
+        "label": "armchair near coat rack",
+        "score": 10,
+        "note": "The armchair faces the same direction in both images, with arms and backrest aligned consistently. Its asymmetrical shape makes rotation visually detectable."
+      },
+      {
+        "label": "small round side table next to armchair",
+        "score": 10,
+        "note": "This is a round table; rotation is not visually detectable due to symmetry. Scored 10 as orientation is irrelevant for symmetric objects."
+      },
+      {
+        "label": "bench at foot of bed",
+        "score": 7,
+        "note": "The bench appears rotated slightly in the rendered image \u2014 its long axis is not aligned with the bed\u2019s edge as in the target. The difference is subtle but noticeable due to its elongated shape."
+      },
+      {
+        "label": "green desk with monitor",
+        "score": 10,
+        "note": "The desk and monitor face the same direction in both images, with the monitor screen oriented correctly. The object\u2019s asymmetry makes rotation detectable."
+      },
+      {
+        "label": "wooden nightstand next to desk",
+        "score": 10,
+        "note": "The nightstand is a rectangular box; its front face is oriented similarly in both images. Rotation is not visually detectable due to symmetry."
+      },
+      {
+        "label": "round ottoman near desk",
+        "score": 10,
+        "note": "This is a round object; rotation is not visually detectable. Scored 10 as orientation is irrelevant."
+      },
+      {
+        "label": "wooden platform bed",
+        "score": 10,
+        "note": "The bed\u2019s headboard faces the same direction in both images. The bed\u2019s rectangular shape makes rotation detectable, and alignment is consistent."
+      },
+      {
+        "label": "wooden cabinet in foreground",
+        "score": 10,
+        "note": "The cabinet\u2019s front face is oriented similarly in both images. Its rectangular shape makes rotation detectable, and alignment is consistent."
+      }
+    ],
+    "score": 9,
+    "reasoning": "All furniture objects were matched and assessed individually. Most objects scored 10 due to correct orientation or symmetry. The bench at the foot of the bed shows a slight rotational discrepancy, reducing its score to 7. The average score is high, indicating overall good orientation alignment.",
+    "missing_info": "Top-down or orthographic views would help confirm exact orientations, especially for objects like the bench and side table where perspective makes rotation assessment ambiguous."
+  },
+  "aa9d393b-30df-456f-96dc-dad7bb8554c9_LivingRoom-38326": {
+    "object_scores": [
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "The table is rectangular and oriented similarly in both images; its long axis runs parallel to the back wall in both scenes. Orientation is consistent."
+      },
+      {
+        "label": "dining chair near left wall",
+        "score": 10,
+        "note": "Chair is positioned similarly in both images, with backrest facing the table and legs aligned with the table\u2019s edge. Orientation matches."
+      },
+      {
+        "label": "dining chair near right wall",
+        "score": 10,
+        "note": "Chair orientation matches the target; backrest faces table and legs are aligned with the table\u2019s edge."
+      },
+      {
+        "label": "dining chair at far end, left side",
+        "score": 9,
+        "note": "Chair is partially obscured but appears to face the table similarly in both images. Orientation is consistent."
+      },
+      {
+        "label": "dining chair at far end, right side",
+        "score": 10,
+        "note": "Chair orientation matches target; backrest faces table and legs are aligned with table edge."
+      },
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "Sofa is oriented along the same axis in both images, facing the coffee tables. Cushion arrangement is similar, indicating consistent rotation."
+      },
+      {
+        "label": "round coffee table (front)",
+        "score": 10,
+        "note": "Round table; rotation is not visually detectable due to symmetry. Scored 10 as orientation cannot be meaningfully assessed."
+      },
+      {
+        "label": "round coffee table (back)",
+        "score": 10,
+        "note": "Round table; symmetric shape makes rotation undetectable. Scored 10."
+      },
+      {
+        "label": "teal cabinet",
+        "score": 10,
+        "note": "Cabinet is oriented along the same axis in both images, with front facing the room. Orientation is consistent."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture objects are oriented consistently between the target and rendered images. Chairs are aligned with the table, the sofa faces the coffee tables, and symmetric objects (round tables) are scored 10 due to lack of visual rotation cues. No significant orientation deviations detected.",
+    "missing_info": "Top-down view or bounding boxes to precisely determine orientation of furniture, especially for chairs and sofa where rotation is subtle but important."
+  },
+  "f36889f8-d94b-4ab9-9da1-46e06a27ff90_LivingRoom-12836": {
+    "object_scores": [
+      {
+        "label": "white sofa against back wall",
+        "score": 10,
+        "note": "Sofa is oriented the same in both images, facing the coffee table and the open doorway. Its rectangular shape makes orientation detectable."
+      },
+      {
+        "label": "teal armchair with metal frame near left wall",
+        "score": 7,
+        "note": "Armchair is rotated slightly in the rendered image \u2014 its backrest appears to face more toward the center of the room compared to the target. Orientation is detectable due to asymmetrical design."
+      },
+      {
+        "label": "second teal armchair next to first",
+        "score": 7,
+        "note": "This armchair is rotated similarly to the first \u2014 slightly more toward the center. Asymmetrical frame makes orientation visible."
+      },
+      {
+        "label": "coffee table with two connected rectangular sections",
+        "score": 6,
+        "note": "The coffee table appears to be rotated slightly in the rendered image \u2014 the longer axis is not aligned with the sofa as in the target. Shape is asymmetrical, so rotation is detectable."
+      },
+      {
+        "label": "black shelving unit on right wall",
+        "score": 5,
+        "note": "In the rendered image, the shelving unit is now a closed cabinet with doors, whereas in the target it had open shelves. Since the object is fundamentally different, orientation cannot be meaningfully compared. However, if we assume it's the same object, its orientation appears unchanged \u2014 facing the room. But due to structural change, this is ambiguous."
+      },
+      {
+        "label": "cowhide chair in foreground",
+        "score": 10,
+        "note": "Only the back of the chair is visible in both images, and it appears identical in orientation. Since it's facing away from the viewer and symmetric in appearance, rotation is not visually detectable."
+      }
+    ],
+    "score": 8,
+    "reasoning": "Most furniture objects are aligned similarly between the two images, with minor rotational deviations in the armchairs and coffee table. The shelving unit has changed structurally, making orientation comparison uncertain. The cowhide chair is symmetric and not visually rotated. Average score is 7.5, rounded to 8.",
+    "missing_info": "Top-down view or bounding boxes to precisely determine orientation of furniture, especially for the coffee table and shelving unit."
+  },
+  "473fb8fd-a6d4-4fc1-bd5d-1afd61a9617e_LivingRoom-9915": {
+    "object_scores": [
+      {
+        "label": "beige sofa with black and beige pillows",
+        "score": 7,
+        "note": "The sofa is rotated slightly clockwise in the rendered image compared to the target, altering the alignment of the armrests and back cushions relative to the wall. The rotation is detectable due to the sofa's asymmetrical shape and pillow arrangement."
+      },
+      {
+        "label": "round white coffee table with books and cup",
+        "score": 8,
+        "note": "The coffee table is rotated slightly clockwise in the rendered image. Its position relative to the sofa and the other table is shifted, but the table\u2019s round shape makes rotation visually indistinguishable; however, the object's placement relative to the sofa suggests a slight orientation mismatch."
+      },
+      {
+        "label": "small round white side table with black vases",
+        "score": 8,
+        "note": "The side table is rotated slightly clockwise, and its position relative to the main coffee table and sofa has changed. The round shape makes rotation visually indistinguishable, but the displacement suggests a minor orientation shift."
+      },
+      {
+        "label": "wooden dining table with metal legs",
+        "score": 10,
+        "note": "The dining table appears to be in the same orientation as in the target. Its rectangular shape and alignment with the chairs and wall suggest no rotation. The visible edges and corners are consistent with the target."
+      },
+      {
+        "label": "metal dining chair with wooden seat (closest to viewer)",
+        "score": 10,
+        "note": "The chair is in the same orientation as in the target, with its backrest aligned similarly to the table and wall. The circular back and seat make rotation visually indistinguishable, but the alignment with the table suggests correct orientation."
+      },
+      {
+        "label": "metal dining chair with wooden seat (second from right)",
+        "score": 10,
+        "note": "This chair is in the same orientation as in the target, with consistent alignment to the table and wall. The circular back makes rotation visually indistinguishable, and its position relative to the table is unchanged."
+      },
+      {
+        "label": "metal dining chair with wooden seat (farthest from viewer)",
+        "score": 10,
+        "note": "The chair is in the same orientation as in the target. Its alignment with the table and wall is consistent, and its circular shape makes rotation visually indistinguishable."
+      },
+      {
+        "label": "wooden cabinet with open shelves and dark panel",
+        "score": 6,
+        "note": "The cabinet is rotated slightly clockwise in the rendered image, as evidenced by the misalignment of the dark panel and shelves relative to the wall. The rectangular shape makes rotation detectable."
+      },
+      {
+        "label": "floor lamp with white shade near sofa",
+        "score": 10,
+        "note": "The lamp is in the same orientation as in the target. Its vertical alignment and position relative to the sofa and wall are unchanged, and its cylindrical shape makes rotation visually indistinguishable."
+      },
+      {
+        "label": "open wooden shelving unit on left wall",
+        "score": 10,
+        "note": "The shelving unit is in the same orientation as in the target. Its vertical alignment and position relative to the wall are unchanged, and its rectangular shape makes rotation detectable but consistent."
+      }
+    ],
+    "score": 8,
+    "reasoning": "Most furniture objects are correctly oriented, with the sofa and cabinet showing slight rotation mismatches. The round tables and chairs have rotationally symmetric shapes, so minor rotations are not visually detectable, but their relative positions suggest slight misalignments. The dining table, lamp, and shelving unit are well-aligned.",
+    "missing_info": "Top-down view or bounding boxes with rotation angles would help assess object rotation more accurately, especially for objects with subtle orientation changes like the sofa and coffee tables."
+  },
+  "d650faee-f134-46fd-b8f7-38712998f3b5_LivingRoom-2922": {
+    "object_scores": [
+      {
+        "label": "blue cabinet against left wall",
+        "score": 10,
+        "note": "The cabinet is rectangular with distinct front-facing circular cutouts; its orientation appears identical in both images, aligned with the wall and facing forward. Rotation is visually detectable due to asymmetry."
+      },
+      {
+        "label": "bed with gray bedding and pillows",
+        "score": 10,
+        "note": "The bed is positioned against the back wall with headboard facing the window; orientation appears unchanged. The headboard\u2019s vertical slats and pillow arrangement indicate consistent front-facing direction."
+      },
+      {
+        "label": "black coffee table with plant",
+        "score": 10,
+        "note": "The table is square with a plant centered on top; due to symmetry, rotation is not visually detectable, so score is 10 regardless of actual orientation."
+      },
+      {
+        "label": "pink tufted armchair in foreground",
+        "score": 10,
+        "note": "The chair is oriented with its back facing the viewer in both images; the tufting pattern and curved backrest indicate consistent orientation. Rotation is detectable due to asymmetry."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All visible furniture objects in the target image are present in the rendered image with matching orientations. The cabinet, bed, coffee table, and armchair all maintain consistent alignment with the room\u2019s geometry, and no rotational discrepancies are visible. Symmetric objects (like the coffee table) are scored 10 by default as rotation is not visually distinguishable.",
+    "missing_info": "Top-down view or bounding boxes to confirm exact orientation of furniture, especially for the bed and armchair where front/back alignment is ambiguous from current perspective."
+  },
+  "6ae193c4-4fe1-42e8-b2dd-38ded31b7f12_LivingDiningRoom-48379": {
+    "object_scores": [
+      {
+        "label": "ornate brown sofa with pillows",
+        "score": 10,
+        "note": "The sofa is oriented identically in both images, with the same front-facing direction and armrest alignment. The object is asymmetric and rotation is clearly detectable."
+      },
+      {
+        "label": "rectangular coffee table with ornate legs",
+        "score": 7,
+        "note": "The coffee table is rotated slightly in the rendered image, appearing to be turned about 10-15 degrees clockwise compared to the target. The ornate legs and corners indicate directionality, so this rotation is visible."
+      },
+      {
+        "label": "black armchair near window",
+        "score": 4,
+        "note": "The armchair is significantly rotated in the rendered image \u2014 it appears to be facing more toward the center of the room rather than slightly toward the window as in the target. Its shape is asymmetric, so rotation is detectable."
+      },
+      {
+        "label": "dark wooden side table next to sofa",
+        "score": 10,
+        "note": "The side table is oriented the same in both images, with its front facing the sofa. The object is symmetric, but the visible legs and design suggest a consistent orientation. No visible rotation."
+      },
+      {
+        "label": "dark wooden cabinet against checkered wall",
+        "score": 5,
+        "note": "The cabinet is rotated in the rendered image \u2014 it now appears to face more toward the center of the room, whereas in the target it was aligned with the wall. Its design is asymmetric, so rotation is detectable."
+      }
+    ],
+    "score": 7,
+    "reasoning": "Most furniture objects are present in both images, but the armchair and cabinet show noticeable rotation errors. The coffee table has a minor rotation, while the sofa and side table are correctly oriented. The average score is based on these individual assessments.",
+    "missing_info": "Top-down or orthographic views would help assess rotation more accurately, especially for objects like the armchair and cabinet where perspective makes orientation ambiguous."
+  },
+  "a0b8b195-676d-47bd-afce-3e135b8fde83_LivingDiningRoom-22853": {
+    "object_scores": [],
+    "score": 0,
+    "reasoning": "The target and rendered images are identical. However, since no distinct orientation differences can be detected and no object-specific rotation assessment can be made without further view or annotation, no individual object scores are assigned. All furniture appears to be in the same orientation, but without a different view or explicit object labels, we cannot confirm or score individual rotations.",
+    "missing_info": "Top-down view or bounding boxes to confirm exact orientation of furniture, especially for chairs and sofa where backrests and armrests may be ambiguous from current angle."
+  },
+  "8174e94b-cb97-4d24-bd3a-81a095192bbe_LivingDiningRoom-33640": {
+    "object_scores": [
+      {
+        "label": "teal TV console near plant",
+        "score": 10,
+        "note": "The console appears rotated slightly more toward the viewer in the rendered image, but since it is rectangular and symmetric, the rotation is not visually detectable. Scored 10."
+      },
+      {
+        "label": "wood and white cabinet behind console",
+        "score": 10,
+        "note": "This cabinet is tall and narrow with a flat front; rotation is not visually detectable due to symmetry. Scored 10."
+      },
+      {
+        "label": "round ottoman in center",
+        "score": 10,
+        "note": "Perfectly round and symmetric; rotation cannot be detected visually. Scored 10."
+      },
+      {
+        "label": "woven chair with brown seat",
+        "score": 10,
+        "note": "The chair appears rotated slightly in the rendered image, but the woven pattern is symmetrical and the orientation change is not visually distinguishable. Scored 10."
+      },
+      {
+        "label": "small round side table near chair",
+        "score": 10,
+        "note": "Circular table with symmetric design; rotation is not visually detectable. Scored 10."
+      },
+      {
+        "label": "larger round coffee table with wooden legs",
+        "score": 10,
+        "note": "This table is circular and symmetric; no visible difference in orientation between images. Scored 10."
+      },
+      {
+        "label": "gray patterned sofa with dark pillows",
+        "score": 10,
+        "note": "The sofa is long and has a consistent pattern; its orientation is not visually distinguishable in rotation. Scored 10."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture objects are either symmetric or have designs where rotation is not visually detectable. Therefore, each object scores 10.",
+    "missing_info": "Top-down view or bounding boxes to precisely determine orientation of furniture, especially for objects with similar front and side profiles (e.g., coffee tables, ottoman)."
+  },
+  "a17c6eb5-a044-400a-b0b6-3e757cccbb15_LivingDiningRoom-15943": {
+    "object_scores": [
+      {
+        "label": "dining table",
+        "score": 7,
+        "note": "The table is rotated slightly counterclockwise in the rendered image compared to the target; its long axis is not perfectly aligned with the window. Rotation is detectable due to its rectangular shape."
+      },
+      {
+        "label": "dining chair near window (left side, front)",
+        "score": 6,
+        "note": "This chair is rotated slightly clockwise in the rendered image, causing its backrest to face a bit more toward the camera than in the target. Orientation is detectable due to its asymmetrical design."
+      },
+      {
+        "label": "dining chair near window (left side, back)",
+        "score": 6,
+        "note": "This chair appears rotated slightly clockwise compared to the target; its seat orientation is not perfectly aligned with the table. Rotation is detectable due to its asymmetrical form."
+      },
+      {
+        "label": "dining chair near window (right side, front)",
+        "score": 6,
+        "note": "This chair is rotated slightly counterclockwise in the rendered image, causing its backrest to face a bit more toward the table than in the target. Rotation is detectable due to its asymmetrical design."
+      },
+      {
+        "label": "dining chair near window (right side, back)",
+        "score": 6,
+        "note": "This chair appears rotated slightly counterclockwise compared to the target; its orientation relative to the table is slightly off. Rotation is detectable due to its asymmetrical form."
+      },
+      {
+        "label": "black armchair in foreground",
+        "score": 10,
+        "note": "The armchair is oriented identically in both images, facing toward the sofa and slightly left. Its rotation is detectable due to its asymmetrical backrest and armrests."
+      },
+      {
+        "label": "sofa with wooden base",
+        "score": 10,
+        "note": "The sofa is oriented identically in both images, facing left with its back against the wall. Rotation is detectable due to its asymmetrical design with wooden base and cushions."
+      },
+      {
+        "label": "floor lamp next to sofa",
+        "score": 10,
+        "note": "The lamp is oriented identically in both images, standing upright with shade facing forward. Its rotation is detectable due to its asymmetrical shade pattern."
+      },
+      {
+        "label": "orange cabinet against back wall",
+        "score": 10,
+        "note": "The cabinet is oriented identically in both images, standing upright with front facing forward. Rotation is detectable due to its rectangular shape and front-facing drawers."
+      },
+      {
+        "label": "gray ottoman near sofa (left)",
+        "score": 10,
+        "note": "The ottoman is circular and symmetric; rotation is not visually detectable, so it scores 10 regardless of actual orientation."
+      },
+      {
+        "label": "gray ottoman near sofa (right)",
+        "score": 10,
+        "note": "The ottoman is circular and symmetric; rotation is not visually detectable, so it scores 10 regardless of actual orientation."
+      },
+      {
+        "label": "gray bench near dining area",
+        "score": 10,
+        "note": "The bench is oriented identically in both images, facing toward the dining table. Its rotation is detectable due to its rectangular shape and front-facing side."
+      },
+      {
+        "label": "tall blue-gray cabinet on left",
+        "score": 10,
+        "note": "The cabinet is oriented identically in both images, standing upright with front facing forward. Rotation is detectable due to its rectangular shape and front-facing panels."
+      },
+      {
+        "label": "potted plant on left",
+        "score": 10,
+        "note": "The plant is symmetric in its container; rotation is not visually detectable, so it scores 10 regardless of actual orientation."
+      },
+      {
+        "label": "potted plant near orange cabinet",
+        "score": 10,
+        "note": "The plant is symmetric in its container; rotation is not visually detectable, so it scores 10 regardless of actual orientation."
+      }
+    ],
+    "score": 8,
+    "reasoning": "Most furniture objects are oriented correctly, with the dining table and chairs showing minor rotational discrepancies. Symmetric objects like ottomans and potted plants receive full scores regardless of rotation. The overall scene maintains consistent orientation for most items.",
+    "missing_info": "Top-down view or bounding boxes with rotation angles would help assess object rotation more accurately, especially for chairs and the dining table."
+  },
+  "5e6d0804-54a9-4d4a-b4ed-1b4f22aa1d01_LivingRoom-16933": {
+    "object_scores": [
+      {
+        "label": "white armchair with rolled cushion on left",
+        "score": 7,
+        "note": "The chair is rotated slightly clockwise in the rendered image compared to the target, but the difference is minimal and not visually disruptive; however, the backrest orientation shows a slight misalignment. Rotation is detectable due to asymmetrical backrest shape."
+      },
+      {
+        "label": "black media console with open shelves on left",
+        "score": 10,
+        "note": "The console is oriented identically in both images, facing the same direction with no visible rotation difference. Its rectangular shape makes rotation detectable only if misaligned."
+      },
+      {
+        "label": "long black bench next to media console",
+        "score": 10,
+        "note": "The bench is aligned identically in both images, facing the same direction. Its elongated rectangular shape makes rotation visually detectable."
+      },
+      {
+        "label": "central black coffee table",
+        "score": 0,
+        "note": "The coffee table is rotated approximately 90 degrees in the rendered image \u2014 it now runs perpendicular to the sofa instead of parallel. This is a clear misrotation and is visually detectable due to its rectangular shape."
+      },
+      {
+        "label": "two dark wooden benches in front of coffee table",
+        "score": 0,
+        "note": "The benches are now aligned side-by-side and rotated 90 degrees compared to the target, where they were parallel to the coffee table. Their rectangular shape makes rotation clearly visible."
+      },
+      {
+        "label": "white sofa with throw pillows on right",
+        "score": 10,
+        "note": "The sofa is oriented identically in both images, facing the same direction. Its curved armrests and asymmetrical shape make rotation detectable."
+      },
+      {
+        "label": "white lounge chair near back wall",
+        "score": 6,
+        "note": "The lounge chair is rotated slightly in the rendered image \u2014 its backrest is angled differently compared to the target. The asymmetrical shape makes this rotation detectable."
+      },
+      {
+        "label": "black cabinet behind lounge chair",
+        "score": 10,
+        "note": "The cabinet is oriented identically in both images. Its rectangular shape makes rotation detectable, but it appears unchanged."
+      },
+      {
+        "label": "white side table with plant on far right",
+        "score": 0,
+        "note": "The side table is rotated approximately 90 degrees \u2014 it now faces the wall instead of the room. Its rectangular shape makes this rotation clearly visible."
+      },
+      {
+        "label": "dining table and chairs in back room",
+        "score": 5,
+        "note": "The dining table and chairs are not clearly visible in either image due to distance and lighting, but appear to be in the same orientation. However, due to low visibility, this is an assumption; rotation may not be verifiable."
+      }
+    ],
+    "score": 6,
+    "reasoning": "Several key furniture pieces \u2014 particularly the central coffee table, front benches, and side table \u2014 are rotated incorrectly in the rendered image, resulting in a significant drop in orientation accuracy. The sofa, media console, and other objects are correctly oriented. The lounge chair and dining area show minor or unverifiable deviations.",
+    "missing_info": "Top-down view or bounding boxes with rotation angles would help assess object rotation more accurately, especially for objects with subtle orientation changes."
+  },
+  "109a8e42-f7d7-4893-8262-f2030072b760_LivingRoom-38165": {
+    "object_scores": [
+      {
+        "label": "black curved sofa on left",
+        "score": 10,
+        "note": "The sofa has a distinct curved shape and is oriented toward the center of the room, matching the target. Its orientation is visually detectable due to its asymmetry."
+      },
+      {
+        "label": "bed in the back corner",
+        "score": 10,
+        "note": "The bed is positioned against the back wall with a white duvet and pillows; its orientation is consistent with the target. The headboard side faces the wall, and no rotation is evident."
+      },
+      {
+        "label": "rectangular coffee table with dark top",
+        "score": 10,
+        "note": "The table is rectangular and positioned in front of the sofa. Its long axis aligns with the sofa, matching the target. Orientation is detectable due to its rectangular shape."
+      },
+      {
+        "label": "round side table with three legs",
+        "score": 10,
+        "note": "The table is circular and symmetric, so rotation is not visually detectable. Therefore, it scores 10 regardless of actual rotation."
+      },
+      {
+        "label": "wooden sideboard against right wall",
+        "score": 10,
+        "note": "The sideboard has a distinct front with drawers and a white panel; its orientation is consistent with the target. The front faces the room, and its shape makes rotation detectable."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All visible furniture objects in the scene are present and oriented identically to the target. Symmetric objects (like the round table) are scored 10 as rotation is not visually detectable. Asymmetric objects (sofa, bed, coffee table, sideboard) all match orientation perfectly.",
+    "missing_info": "Top-down view or bounding boxes to confirm exact orientation of furniture, especially for objects with similar shapes or symmetric designs."
+  }
+}

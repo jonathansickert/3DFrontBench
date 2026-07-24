@@ -1,0 +1,1617 @@
+{
+  "0f661df2-0f41-47a4-830c-7444f4a33a03_LivingDiningRoom-12554": {
+    "object_scores": [
+      {
+        "label": "dining table near left wall",
+        "score": 0,
+        "note": "Missing in rendered image."
+      },
+      {
+        "label": "dining chair near dining table (front left)",
+        "score": 0,
+        "note": "Missing in rendered image."
+      },
+      {
+        "label": "dining chair near dining table (back left)",
+        "score": 0,
+        "note": "Missing in rendered image."
+      },
+      {
+        "label": "dining chair near dining table (right side)",
+        "score": 0,
+        "note": "Missing in rendered image."
+      },
+      {
+        "label": "sofa against back wall",
+        "score": 0,
+        "note": "Missing in rendered image."
+      },
+      {
+        "label": "round coffee table near sofa",
+        "score": 0,
+        "note": "Missing in rendered image."
+      },
+      {
+        "label": "black armchair with ribbed back",
+        "score": 10,
+        "note": "Present in rendered image, matches target."
+      },
+      {
+        "label": "black bench against right wall",
+        "score": 0,
+        "note": "Missing in rendered image."
+      },
+      {
+        "label": "small side table next to sofa",
+        "score": 0,
+        "note": "Missing in rendered image."
+      },
+      {
+        "label": "[extra] black armchair with ribbed back",
+        "score": 0,
+        "note": "Only one armchair is present in target, but rendered image contains only this one \u2014 no extra object. This is a match, not extra."
+      }
+    ],
+    "score": 1,
+    "reasoning": "The rendered scene contains only one furniture item \u2014 the black ribbed armchair \u2014 which matches one item from the target. All other furniture from the target (dining table, four chairs, sofa, coffee table, bench, side table) are missing. No extraneous furniture is present in the rendered image.",
+    "missing_info": "Top-down view or bounding boxes would help confirm exact object positions and counts, especially for partially occluded or small furniture items."
+  },
+  "996d5631-517a-4906-b232-5e1148c97867_LivingDiningRoom-8344": {
+    "object_scores": [
+      {
+        "label": "gray sofa with multiple pillows on the left",
+        "score": 10,
+        "note": "Present in rendered image, matching position and appearance."
+      },
+      {
+        "label": "black armchair near the window on the left",
+        "score": 10,
+        "note": "Present in rendered image, matching position and appearance."
+      },
+      {
+        "label": "black armchair near the window on the right",
+        "score": 0,
+        "note": "Missing in rendered image \u2014 only one armchair is visible instead of two."
+      },
+      {
+        "label": "black round coffee table between the armchairs",
+        "score": 10,
+        "note": "Present in rendered image, matching position and appearance."
+      },
+      {
+        "label": "two-tiered gray bench on the right wall",
+        "score": 10,
+        "note": "Present in rendered image, matching position and appearance."
+      },
+      {
+        "label": "black sculptural floor lamp or vase on the far right",
+        "score": 10,
+        "note": "Present in rendered image, matching position and appearance."
+      },
+      {
+        "label": "[extra] black armchair near the window on the right",
+        "score": 0,
+        "note": "This object is not present in the target image; it is extraneous."
+      }
+    ],
+    "score": 7,
+    "reasoning": "The rendered scene matches the target for most furniture items, including the sofa, coffee table, bench, and one armchair. However, the second armchair present in the target is missing in the rendered image, while an extra armchair appears on the right \u2014 likely a rendering error or misalignment. The extra object is flagged separately. Overall, 5 out of 6 target objects are correctly present, but the mismatch in armchair count reduces the score.",
+    "missing_info": "Top-down or orthographic view would help confirm exact object count and positioning, especially for items that may be partially occluded or visually ambiguous."
+  },
+  "1f077e24-2eca-43ca-bc92-1b36eab99467_LivingDiningRoom-180855": {
+    "object_scores": [
+      {
+        "label": "black media console against left wall",
+        "score": 0,
+        "note": "Present in target but missing in rendered scene."
+      },
+      {
+        "label": "dining table in back room",
+        "score": 0,
+        "note": "Present in target but missing in rendered scene."
+      },
+      {
+        "label": "dining chair near window (left side)",
+        "score": 0,
+        "note": "Present in target but missing in rendered scene."
+      },
+      {
+        "label": "dining chair near window (right side)",
+        "score": 0,
+        "note": "Present in target but missing in rendered scene."
+      },
+      {
+        "label": "white console table in center",
+        "score": 10,
+        "note": "Present in both target and rendered scene."
+      },
+      {
+        "label": "wooden coffee table in front of console",
+        "score": 10,
+        "note": "Present in both target and rendered scene."
+      },
+      {
+        "label": "black grand piano against back wall",
+        "score": 10,
+        "note": "Present in both target and rendered scene."
+      },
+      {
+        "label": "gray sofa on right side",
+        "score": 10,
+        "note": "Present in both target and rendered scene."
+      },
+      {
+        "label": "gold side table next to sofa",
+        "score": 10,
+        "note": "Present in both target and rendered scene."
+      },
+      {
+        "label": "potted plant near dining area",
+        "score": 0,
+        "note": "Present in target but missing in rendered scene."
+      },
+      {
+        "label": "small potted plant near console table",
+        "score": 0,
+        "note": "Present in target but missing in rendered scene."
+      },
+      {
+        "label": "single chair in back room (center)",
+        "score": 10,
+        "note": "Present in both target and rendered scene."
+      },
+      {
+        "label": "[extra] gold side table with curved legs",
+        "score": 0,
+        "note": "Appears in rendered scene but not in target."
+      }
+    ],
+    "score": 6,
+    "reasoning": "The rendered scene is missing several key furniture items from the target, including the black media console, dining table, two dining chairs, and two potted plants. It also includes an extra gold side table not present in the target. The white console table, wooden coffee table, piano, sofa, and single chair in the back room are correctly matched.",
+    "missing_info": "Top-down view or bounding boxes would help confirm exact object positions and counts, especially for partially occluded or small furniture like side tables and chairs."
+  },
+  "2eeb434c-855e-4298-a8d5-29b1ca838608_MasterBedroom-5966": {
+    "object_scores": [
+      {
+        "label": "bed with wooden frame and brown bedding",
+        "score": 10,
+        "note": "Present in both images, matching in position, size, and appearance."
+      },
+      {
+        "label": "black nightstand with metal legs to the left of the bed",
+        "score": 0,
+        "note": "Missing in rendered image; not visible in the scene."
+      },
+      {
+        "label": "black wardrobe with open closet section and hanging clothes",
+        "score": 0,
+        "note": "Missing in rendered image; entire wardrobe is absent."
+      },
+      {
+        "label": "black desk or side table next to the wardrobe",
+        "score": 0,
+        "note": "Missing in rendered image; not present in the scene."
+      },
+      {
+        "label": "two black circular pendant lights above the bed",
+        "score": 0,
+        "note": "Missing in rendered image; lights are not present."
+      },
+      {
+        "label": "[extra] large window on the right wall",
+        "score": 0,
+        "note": "Present in rendered image but not in target; not a furniture item, but an architectural feature."
+      }
+    ],
+    "score": 2,
+    "reasoning": "The bed is correctly present, but all other furniture items from the target \u2014 including the nightstand, wardrobe, desk, and pendant lights \u2014 are missing in the rendered image. Additionally, a large window appears in the rendered image that is not in the target, which is not furniture but may affect scene context. No extra furniture items are present.",
+    "missing_info": "Top-down view or bounding boxes would help confirm if any furniture is hidden or partially occluded, especially near the walls or behind the bed."
+  },
+  "6e7a0c41-15f3-4909-a20c-dab460b45ada_LivingDiningRoom-847": {
+    "object_scores": [
+      {
+        "label": "white tufted sofa with pillows",
+        "score": 0,
+        "note": "Missing in rendered image."
+      },
+      {
+        "label": "brown side table attached to sofa",
+        "score": 0,
+        "note": "Missing in rendered image."
+      },
+      {
+        "label": "light-colored dining table with dark chair",
+        "score": 0,
+        "note": "Missing in rendered image."
+      },
+      {
+        "label": "geometric dark console table against right wall",
+        "score": 0,
+        "note": "Missing in rendered image."
+      },
+      {
+        "label": "small round wooden side table with metal legs",
+        "score": 0,
+        "note": "Missing in rendered image."
+      },
+      {
+        "label": "[extra] small dark brown cabinet in left corner",
+        "score": 0,
+        "note": "Present in rendered image but not in target."
+      }
+    ],
+    "score": 0,
+    "reasoning": "All five furniture items from the target image are missing in the rendered image. One extra cabinet is present in the rendered image. No furniture matches.",
+    "missing_info": "Top-down view or bounding boxes would help confirm exact object positions and counts, especially for partially occluded or small furniture."
+  },
+  "10e2d93c-2a82-49f2-a95c-7598d24901f2_LivingDiningRoom-8149": {
+    "object_scores": [
+      {
+        "label": "round dining table near window",
+        "score": 10,
+        "note": "Present in both images, same position and style."
+      },
+      {
+        "label": "dining chair near window (left)",
+        "score": 0,
+        "note": "Present in target, missing in rendered image."
+      },
+      {
+        "label": "dining chair near window (front-left)",
+        "score": 0,
+        "note": "Present in target, missing in rendered image."
+      },
+      {
+        "label": "dining chair near window (front-right)",
+        "score": 0,
+        "note": "Present in target, missing in rendered image."
+      },
+      {
+        "label": "dining chair near window (right)",
+        "score": 0,
+        "note": "Present in target, missing in rendered image."
+      },
+      {
+        "label": "light beige sofa with pillows",
+        "score": 10,
+        "note": "Present in both images, same position and style."
+      },
+      {
+        "label": "black and white side table or console table",
+        "score": 10,
+        "note": "Present in both images, same position and style."
+      },
+      {
+        "label": "chandelier with candles above dining table",
+        "score": 0,
+        "note": "Present in target, missing in rendered image."
+      },
+      {
+        "label": "black spherical pendant light above sofa",
+        "score": 10,
+        "note": "Present in both images, same position and style."
+      },
+      {
+        "label": "[extra] round dining table with different leg design",
+        "score": 0,
+        "note": "Appears in rendered image but not in target; different leg style and position."
+      },
+      {
+        "label": "[extra] single dining chair with different leg design",
+        "score": 0,
+        "note": "Appears in rendered image but not in target; different leg style and position."
+      }
+    ],
+    "score": 5,
+    "reasoning": "The rendered image is missing four dining chairs and the chandelier from the target. It includes an extra dining table and an extra chair with different designs. The sofa, side table, and pendant light are correctly matched.",
+    "missing_info": "Top-down view or bounding boxes would help confirm exact object counts and positions, especially for partially occluded or overlapping furniture."
+  },
+  "e44c4ecc-0260-469d-a60d-b71cf1d34029_LivingRoom-15009": {
+    "object_scores": [
+      {
+        "label": "black armchair in bottom-left corner",
+        "score": 0,
+        "note": "Missing in rendered image; only floor and wall visible in that area."
+      },
+      {
+        "label": "wooden folding chair with black frame near center",
+        "score": 0,
+        "note": "Missing in rendered image; no chair visible in that position."
+      },
+      {
+        "label": "teal chair behind round black table",
+        "score": 0,
+        "note": "Missing in rendered image; no chair visible near the table area."
+      },
+      {
+        "label": "teal chair to the right of round black table",
+        "score": 0,
+        "note": "Missing in rendered image; no chair visible in that position."
+      },
+      {
+        "label": "round black dining table",
+        "score": 0,
+        "note": "Missing in rendered image; no table visible in the center-right area."
+      },
+      {
+        "label": "light wood bookshelf with glass doors and wine rack",
+        "score": 0,
+        "note": "Missing in rendered image; no shelving unit visible in the back-left corner."
+      },
+      {
+        "label": "dark brown sideboard with drawers and open shelf on right wall",
+        "score": 0,
+        "note": "Missing in rendered image; no sideboard visible on the right wall."
+      },
+      {
+        "label": "black floor lamp near left wall",
+        "score": 10,
+        "note": "Present in rendered image; matches the target."
+      },
+      {
+        "label": "[extra] black floor lamp near left wall",
+        "score": 0,
+        "note": "This object is present in both images, but since it is not an extra item, it should not be flagged as such \u2014 correction: no extra objects detected."
+      }
+    ],
+    "score": 1,
+    "reasoning": "All furniture items from the target image (armchair, folding chair, two teal chairs, round table, bookshelf, sideboard) are missing in the rendered image. The only object present in both is the floor lamp, which is correctly matched. No extraneous furniture items appear in the rendered image.",
+    "missing_info": "Top-down view or bounding boxes would help confirm exact object positions and counts, especially for partially occluded or small furniture items."
+  },
+  "f006ad67-40d2-4068-950c-2ce3805d3932_LivingDiningRoom-38341": {
+    "object_scores": [
+      {
+        "label": "large spotted sectional sofa on left",
+        "score": 0,
+        "note": "Missing in rendered image."
+      },
+      {
+        "label": "conical coffee table with orange top",
+        "score": 0,
+        "note": "Missing in rendered image."
+      },
+      {
+        "label": "black dining table near doorway",
+        "score": 0,
+        "note": "Missing in rendered image."
+      },
+      {
+        "label": "dining chair near dining table (left side)",
+        "score": 0,
+        "note": "Missing in rendered image."
+      },
+      {
+        "label": "dining chair near dining table (right side)",
+        "score": 0,
+        "note": "Missing in rendered image."
+      },
+      {
+        "label": "white console cabinet with drawers on right wall",
+        "score": 0,
+        "note": "Missing in rendered image."
+      },
+      {
+        "label": "[extra] single dark chair near doorway",
+        "score": 0,
+        "note": "Present in rendered image but not in target image."
+      }
+    ],
+    "score": 0,
+    "reasoning": "All furniture items from the target image are missing in the rendered image. Only one extra chair appears in the rendered image, which is not present in the target. No objects are correctly matched.",
+    "missing_info": "Top-down view or bounding boxes would help confirm exact object positions and counts, especially for partially occluded or small furniture items."
+  },
+  "b34c215e-1449-4702-8080-e7173e8e8f67_LivingDiningRoom-14069": {
+    "object_scores": [
+      {
+        "label": "yellow sofa with green cushions against left wall",
+        "score": 10,
+        "note": "Present in both images, correctly matched."
+      },
+      {
+        "label": "brown two-seater sofa against back wall",
+        "score": 10,
+        "note": "Present in both images, correctly matched."
+      },
+      {
+        "label": "rectangular coffee table with dark legs in center",
+        "score": 10,
+        "note": "Present in both images, correctly matched."
+      },
+      {
+        "label": "black round dining table on left",
+        "score": 10,
+        "note": "Partially visible in both images; appears to be present in rendered image."
+      },
+      {
+        "label": "gray chair with black frame next to round table (leftmost)",
+        "score": 10,
+        "note": "Visible in both images, correctly matched."
+      },
+      {
+        "label": "gray chair with black frame next to round table (second from left)",
+        "score": 10,
+        "note": "Visible in both images, correctly matched."
+      },
+      {
+        "label": "gray chair with black frame next to round table (third from left)",
+        "score": 10,
+        "note": "Visible in both images, correctly matched."
+      },
+      {
+        "label": "gray chair with black frame next to round table (fourth from left)",
+        "score": 10,
+        "note": "Visible in both images, correctly matched."
+      },
+      {
+        "label": "small beige stool near coffee table",
+        "score": 10,
+        "note": "Present in both images, correctly matched."
+      },
+      {
+        "label": "black cabinet with plant on top against right wall",
+        "score": 10,
+        "note": "Present in both images, correctly matched."
+      },
+      {
+        "label": "white planter with tree on black cabinet",
+        "score": 10,
+        "note": "Present in both images, correctly matched."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture objects from the target image are present in the rendered image with no missing or extra items. The layout and object count are identical.",
+    "missing_info": "Top-down view or bounding boxes would help confirm exact object count, especially for partially occluded chairs and to verify if the black round table is fully present in both images."
+  },
+  "09d742d0-9e99-4e31-ac3d-ad1879cf691b_LivingDiningRoom-9326": {
+    "object_scores": [
+      {
+        "label": "black L-shaped sofa",
+        "score": 10,
+        "note": "Present in both images, matching in shape and position."
+      },
+      {
+        "label": "round black coffee table",
+        "score": 0,
+        "note": "Missing in rendered image; only partially visible in target."
+      },
+      {
+        "label": "two gray office chairs at desk",
+        "score": 0,
+        "note": "Present in target; rendered image has two chairs but one is white, one is gray \u2014 mismatch in color."
+      },
+      {
+        "label": "black desk with white top",
+        "score": 0,
+        "note": "Missing in rendered image; desk is absent entirely."
+      },
+      {
+        "label": "two gray ottomans in front of sofa",
+        "score": 0,
+        "note": "Only one ottoman is visible in rendered image; second is missing."
+      },
+      {
+        "label": "tall potted plant near sofa",
+        "score": 10,
+        "note": "Present in both images, matching in position and appearance."
+      },
+      {
+        "label": "black wall-mounted TV",
+        "score": 10,
+        "note": "Present in both images, matching in position and appearance."
+      },
+      {
+        "label": "black pendant light above desk",
+        "score": 10,
+        "note": "Present in both images, matching in position and appearance."
+      },
+      {
+        "label": "black wall sconce on right wall",
+        "score": 10,
+        "note": "Present in both images, matching in position and appearance."
+      },
+      {
+        "label": "two small tea sets on desk",
+        "score": 0,
+        "note": "Missing in rendered image; desk is empty."
+      },
+      {
+        "label": "[extra] white office chair at desk",
+        "score": 0,
+        "note": "Extra chair in rendered image; not present in target."
+      },
+      {
+        "label": "[extra] gray ottoman near bottom right",
+        "score": 0,
+        "note": "Only one ottoman is visible in rendered image; target has two \u2014 this is the one that matches, but the second is missing."
+      }
+    ],
+    "score": 7,
+    "reasoning": "The rendered scene is missing key furniture: the desk, coffee table, and one ottoman. Additionally, the office chairs differ in color (one white in rendered vs. both gray in target). The extra white chair is not present in the target. Most structural and decorative elements (sofa, TV, lights, plant) are correctly matched.",
+    "missing_info": "Top-down view or bounding boxes would help confirm exact object positions and counts, especially for partially occluded or similar-looking furniture."
+  },
+  "1ad74b11-777a-4610-a249-7c5e044a0f01_LivingDiningRoom-10290": {
+    "object_scores": [
+      {
+        "label": "dining table in center",
+        "score": 10,
+        "note": "Present in both images, matching size and position."
+      },
+      {
+        "label": "dining chair left of table",
+        "score": 10,
+        "note": "Present in both images, matching design and position."
+      },
+      {
+        "label": "dining chair right of table",
+        "score": 10,
+        "note": "Present in both images, matching design and position."
+      },
+      {
+        "label": "wooden cabinet against left wall",
+        "score": 10,
+        "note": "Present in both images, matching design and position."
+      },
+      {
+        "label": "sofa on right side",
+        "score": 10,
+        "note": "Present in both images, matching design and position."
+      },
+      {
+        "label": "coffee table in front of sofa",
+        "score": 10,
+        "note": "Present in both images, matching design and position."
+      },
+      {
+        "label": "low wooden TV stand on far left",
+        "score": 10,
+        "note": "Present in both images, matching design and position."
+      },
+      {
+        "label": "small side table next to sofa",
+        "score": 10,
+        "note": "Present in both images, matching design and position."
+      },
+      {
+        "label": "tall narrow side table near door",
+        "score": 10,
+        "note": "Present in both images, matching design and position."
+      },
+      {
+        "label": "small stool or side table behind tall side table",
+        "score": 10,
+        "note": "Present in both images, matching design and position."
+      },
+      {
+        "label": "blue throw blanket on sofa",
+        "score": 10,
+        "note": "Present in both images, matching position and appearance."
+      },
+      {
+        "label": "potted plant on left side",
+        "score": 10,
+        "note": "Present in both images, matching position and appearance."
+      },
+      {
+        "label": "[extra] small black stool behind TV stand",
+        "score": 0,
+        "note": "Visible in rendered image but not in target; appears to be an extra object."
+      }
+    ],
+    "score": 9,
+    "reasoning": "All furniture items from the target image are present and correctly positioned in the rendered image. The only discrepancy is an extra small black stool behind the TV stand in the rendered image, which is not present in the target. All other objects match perfectly.",
+    "missing_info": "Top-down view or bounding boxes would help confirm exact object positions and counts, especially for partially occluded or small furniture items."
+  },
+  "7c2e62e7-ab51-4900-bfdc-1932415fb295_LivingDiningRoom-16509": {
+    "object_scores": [
+      {
+        "label": "dark gray sofa on left",
+        "score": 10,
+        "note": "Present in rendered image, matching position and appearance."
+      },
+      {
+        "label": "black armchair with white seat in center",
+        "score": 10,
+        "note": "Present in rendered image, matching position and appearance."
+      },
+      {
+        "label": "black rectangular coffee table in front of armchair",
+        "score": 10,
+        "note": "Present in rendered image, matching position and appearance."
+      },
+      {
+        "label": "two gray ottomans with white straps in front of coffee table",
+        "score": 10,
+        "note": "Present in rendered image, matching position and appearance."
+      },
+      {
+        "label": "tall dark wood cabinet with white accents on right wall",
+        "score": 10,
+        "note": "Present in rendered image, matching position and appearance."
+      },
+      {
+        "label": "dark wood paneling with recessed rectangular sections on left wall",
+        "score": 10,
+        "note": "Present in rendered image, matching position and appearance."
+      },
+      {
+        "label": "small black side table near sofa on left",
+        "score": 10,
+        "note": "Present in rendered image, matching position and appearance."
+      },
+      {
+        "label": "modern chandelier with gold and dark brown elements",
+        "score": 10,
+        "note": "Present in rendered image, matching position and appearance."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture objects from the target image are present and correctly placed in the rendered image. There are no missing or extra furniture items.",
+    "missing_info": "Top-down or side-view perspective would help confirm if any furniture is hidden or partially occluded, especially near the walls or behind the sofa."
+  },
+  "7686a060-ab0d-4014-9e5c-75d75e0752e3_LivingDiningRoom-44815": {
+    "object_scores": [
+      {
+        "label": "black three-seater sofa against textured wall",
+        "score": 10,
+        "note": "Present in both images, identical in position and appearance."
+      },
+      {
+        "label": "wooden armchair with dark cushion on right",
+        "score": 10,
+        "note": "Present in both images, identical in position and appearance."
+      },
+      {
+        "label": "oval wooden coffee table in center",
+        "score": 10,
+        "note": "Present in both images, identical in position and appearance."
+      },
+      {
+        "label": "metal-framed chair on left",
+        "score": 0,
+        "note": "Visible in target image but missing in rendered image."
+      },
+      {
+        "label": "[extra] metal-framed chair behind sofa",
+        "score": 0,
+        "note": "Appears in rendered image but not in target image."
+      }
+    ],
+    "score": 6,
+    "reasoning": "The black sofa, wooden armchair, and coffee table are correctly matched. However, the metal-framed chair on the left is missing from the rendered image, while an identical chair appears behind the sofa in the rendered image \u2014 an extra object not present in the target.",
+    "missing_info": "Top-down view or bounding boxes would help confirm if any furniture is partially occluded or misaligned."
+  },
+  "109c84cd-7194-4b1d-ac52-8d1862565c6c_Corridor-20684": {
+    "object_scores": [
+      {
+        "label": "large grey cabinet on left wall",
+        "score": 10,
+        "note": "Present in both images, matching in size, color, and position."
+      },
+      {
+        "label": "black cabinet with multiple doors on right wall",
+        "score": 10,
+        "note": "Present in both images, matching in size, color, and position."
+      },
+      {
+        "label": "round black dining table in center",
+        "score": 10,
+        "note": "Present in both images, matching in shape, color, and position."
+      },
+      {
+        "label": "black dining chair near left side of table",
+        "score": 10,
+        "note": "Present in both images, matching in shape, color, and position."
+      },
+      {
+        "label": "black dining chair near right side of table",
+        "score": 10,
+        "note": "Present in both images, matching in shape, color, and position."
+      },
+      {
+        "label": "black dining chair at front of table",
+        "score": 10,
+        "note": "Present in both images, matching in shape, color, and position."
+      },
+      {
+        "label": "black dining chair at back of table",
+        "score": 10,
+        "note": "Present in both images, matching in shape, color, and position."
+      },
+      {
+        "label": "black cylindrical ottoman in foreground",
+        "score": 10,
+        "note": "Present in both images, matching in shape, color, and position."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture items visible in the target image are correctly present in the rendered image. There are no missing or extra furniture items. The scene is identical in object count and placement.",
+    "missing_info": "Top-down view or bounding boxes would help confirm exact object counts and positions, especially for partially occluded chairs or similar-looking furniture."
+  },
+  "2e422478-2de0-4d16-b398-657b07c1cac0_LivingDiningRoom-4293": {
+    "object_scores": [
+      {
+        "label": "beige sofa with blue and brown pillows",
+        "score": 10,
+        "note": "Present in both images, same position and appearance."
+      },
+      {
+        "label": "dark wooden coffee table in front of sofa",
+        "score": 10,
+        "note": "Present in both images, same position and appearance."
+      },
+      {
+        "label": "black media console against left wall",
+        "score": 10,
+        "note": "Present in both images, same position and appearance."
+      },
+      {
+        "label": "light wood sideboard with white vases on top",
+        "score": 10,
+        "note": "Present in both images, same position and appearance."
+      },
+      {
+        "label": "round wooden dining table in back room",
+        "score": 10,
+        "note": "Present in both images, same position and appearance."
+      },
+      {
+        "label": "dining chair with wooden frame and dark seat near round table",
+        "score": 10,
+        "note": "Present in both images, same position and appearance."
+      },
+      {
+        "label": "second dining chair with wooden frame and dark seat near round table",
+        "score": 10,
+        "note": "Present in both images, same position and appearance."
+      },
+      {
+        "label": "blue and white storage cabinet behind dining table",
+        "score": 10,
+        "note": "Present in both images, same position and appearance."
+      },
+      {
+        "label": "chandelier with multiple white shades hanging from ceiling",
+        "score": 0,
+        "note": "Missing in rendered image; not visible in rendered scene."
+      },
+      {
+        "label": "[extra] wall-mounted clock with black hands on back wall",
+        "score": 0,
+        "note": "Appears in rendered image but not in target image; extra object."
+      }
+    ],
+    "score": 9,
+    "reasoning": "All furniture items in the target image are correctly present in the rendered image except for the chandelier, which is missing. The rendered image contains an extra wall-mounted clock not present in the target. All other furniture matches in type, position, and appearance.",
+    "missing_info": "Top-down view or bounding boxes would help confirm exact object positions and counts, especially for items partially occluded or near walls."
+  },
+  "9f283b51-0327-43d5-9ec0-44d867530f4e_Hallway-34943": {
+    "object_scores": [
+      {
+        "label": "dining table in center",
+        "score": 10,
+        "note": "Present in rendered image, same position and appearance."
+      },
+      {
+        "label": "wooden dining chair near left wall",
+        "score": 10,
+        "note": "Present in rendered image, same position and appearance."
+      },
+      {
+        "label": "wooden dining chair behind table left side",
+        "score": 10,
+        "note": "Present in rendered image, same position and appearance."
+      },
+      {
+        "label": "wooden dining chair in front of table center",
+        "score": 10,
+        "note": "Present in rendered image, same position and appearance."
+      },
+      {
+        "label": "wooden dining chair behind table right side",
+        "score": 10,
+        "note": "Present in rendered image, same position and appearance."
+      },
+      {
+        "label": "wooden dining chair near right wall",
+        "score": 10,
+        "note": "Present in rendered image, same position and appearance."
+      },
+      {
+        "label": "gray sideboard cabinet on left wall",
+        "score": 0,
+        "note": "Missing in rendered image; darkened area suggests it may be occluded or absent."
+      },
+      {
+        "label": "tall black cabinet on left side of back wall",
+        "score": 0,
+        "note": "Missing in rendered image; not visible in the darker scene."
+      },
+      {
+        "label": "tall black cabinet on right side of back wall",
+        "score": 10,
+        "note": "Present in rendered image, same position and appearance."
+      },
+      {
+        "label": "white cabinet with open shelves behind table",
+        "score": 10,
+        "note": "Present in rendered image, same position and appearance."
+      },
+      {
+        "label": "overhead rectangular light fixture",
+        "score": 0,
+        "note": "Missing in rendered image; scene is darker, suggesting light is off or not rendered."
+      },
+      {
+        "label": "[extra] tall black cabinet on right side of back wall",
+        "score": 0,
+        "note": "This object is present in both images; not extra. No extra objects detected."
+      }
+    ],
+    "score": 7,
+    "reasoning": "All target furniture objects are accounted for except the gray sideboard cabinet, the left tall black cabinet, and the overhead light fixture, which are missing in the rendered image. No extraneous furniture items are present in the rendered image. The rendered image is darker, which may obscure some objects, but based on visible content, the missing items are confirmed absent.",
+    "missing_info": "Top-down view or bounding boxes would help confirm exact object positions and counts, especially for partially occluded or darkened items."
+  },
+  "103cce55-24d5-4c71-9856-156962e30511_LivingDiningRoom-89516": {
+    "object_scores": [
+      {
+        "label": "wooden wall-mounted cabinet with open compartments",
+        "score": 10,
+        "note": "Present in both images; matches in position and structure."
+      },
+      {
+        "label": "long wooden bench or shelf below the wall-mounted cabinet",
+        "score": 10,
+        "note": "Present in both images; matches in position and structure."
+      },
+      {
+        "label": "small potted plant on the bench",
+        "score": 10,
+        "note": "Present in both images; matches in position and appearance."
+      },
+      {
+        "label": "dark sofa facing the window",
+        "score": 10,
+        "note": "Present in both images; matches in position and shape."
+      },
+      {
+        "label": "dark dresser with drawers and legs",
+        "score": 10,
+        "note": "Present in both images; matches in position and structure."
+      },
+      {
+        "label": "two framed pictures on top of the dresser",
+        "score": 10,
+        "note": "Present in both images; matches in position and appearance."
+      },
+      {
+        "label": "small glass display box on top of the dresser",
+        "score": 10,
+        "note": "Present in both images; matches in position and appearance."
+      },
+      {
+        "label": "tall black plant in the corner near the window",
+        "score": 10,
+        "note": "Present in both images; matches in position and appearance."
+      },
+      {
+        "label": "blue cushion or ottoman on the sofa",
+        "score": 10,
+        "note": "Present in both images; matches in position and appearance."
+      },
+      {
+        "label": "vertical black shelving unit or partition near the back wall",
+        "score": 10,
+        "note": "Present in both images; matches in position and structure."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture items visible in the target image are present and correctly positioned in the rendered image. There are no extra furniture items in the rendered image. The scene is a perfect match in terms of object count and placement.",
+    "missing_info": "Top-down view or bounding boxes would help confirm if any furniture is occluded or partially visible, especially near the back wall or behind the sofa."
+  },
+  "ab6d1b3b-31ba-4191-bc17-d03e504484a8_LivingDiningRoom-209062": {
+    "object_scores": [
+      {
+        "label": "black sofa with throw pillows",
+        "score": 10,
+        "note": "Present in both images, matching in position and appearance."
+      },
+      {
+        "label": "light wood open shelving unit",
+        "score": 10,
+        "note": "Present in both images, matching in position and appearance."
+      },
+      {
+        "label": "black coffee table with turned legs",
+        "score": 10,
+        "note": "Present in both images, matching in position and appearance."
+      },
+      {
+        "label": "orange mid-century modern armchair",
+        "score": 10,
+        "note": "Present in both images, matching in position and appearance."
+      },
+      {
+        "label": "two white curved armchairs (partially visible)",
+        "score": 0,
+        "note": "One white chair is visible in the rendered image, but the second is partially cut off. In target, two are visible. Scored as 0 due to mismatch in count."
+      },
+      {
+        "label": "two wooden bar stools near window",
+        "score": 10,
+        "note": "Present in both images, matching in position and appearance."
+      },
+      {
+        "label": "black sideboard with patterned front",
+        "score": 10,
+        "note": "Present in both images, matching in position and appearance."
+      },
+      {
+        "label": "black pendant light fixture",
+        "score": 10,
+        "note": "Present in both images, matching in position and appearance."
+      },
+      {
+        "label": "[extra] white curved armchair (partially visible, right side)",
+        "score": 0,
+        "note": "Only one white chair is visible in rendered image, but two are in target. This extra entry reflects the missing second chair in rendered scene."
+      }
+    ],
+    "score": 8,
+    "reasoning": "All furniture items in the target image are correctly matched in the rendered image except for the two white curved armchairs \u2014 only one is clearly visible in the rendered image, leading to a mismatch. The rendered image does not contain any truly extraneous furniture items beyond this partial omission. The score reflects the missing second white chair.",
+    "missing_info": "Top-down view or bounding boxes would help confirm exact object count, especially for partially occluded items like the white chairs and the sofa's full extent."
+  },
+  "9f283b51-0327-43d5-9ec0-44d867530f4e_Library-35224": {
+    "object_scores": [
+      {
+        "label": "dining table in center",
+        "score": 10,
+        "note": "Dining table is present in rendered image, matching the target."
+      },
+      {
+        "label": "dining chair left of table",
+        "score": 10,
+        "note": "Chair is present in rendered image, matching the target."
+      },
+      {
+        "label": "dining chair center front of table",
+        "score": 10,
+        "note": "Chair is present in rendered image, matching the target."
+      },
+      {
+        "label": "dining chair right of table",
+        "score": 10,
+        "note": "Chair is present in rendered image, matching the target."
+      },
+      {
+        "label": "dining chair behind table (partially visible)",
+        "score": 10,
+        "note": "Chair is present in rendered image, matching the target."
+      },
+      {
+        "label": "black bookshelf against back wall",
+        "score": 10,
+        "note": "Bookshelf is present in rendered image, matching the target."
+      },
+      {
+        "label": "white cube-shaped side table on left",
+        "score": 10,
+        "note": "Side table is present in rendered image, matching the target."
+      },
+      {
+        "label": "black low cabinet on right wall",
+        "score": 10,
+        "note": "Low cabinet is present in rendered image, matching the target."
+      },
+      {
+        "label": "beige bench in foreground",
+        "score": 10,
+        "note": "Bench is present in rendered image, matching the target."
+      },
+      {
+        "label": "black chandelier above table",
+        "score": 10,
+        "note": "Chandelier is present in rendered image, matching the target."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture objects visible in the target image are present and correctly placed in the rendered image. There are no missing or extra furniture items. The scene matches perfectly.",
+    "missing_info": "Top-down view or bounding boxes would help confirm exact object positions and counts, especially for items that may be partially occluded or visually ambiguous."
+  },
+  "1ad74b11-777a-4610-a249-7c5e044a0f01_MasterBedroom-14403": {
+    "object_scores": [
+      {
+        "label": "armchair with brown cushion near coat rack",
+        "score": 10,
+        "note": "Present in both images."
+      },
+      {
+        "label": "small round side table next to armchair",
+        "score": 10,
+        "note": "Present in both images."
+      },
+      {
+        "label": "coat rack with organic, branch-like design",
+        "score": 10,
+        "note": "Present in both images."
+      },
+      {
+        "label": "built-in concrete shelf recessed into the wall",
+        "score": 10,
+        "note": "Present in both images."
+      },
+      {
+        "label": "green desk with mirror and decorative items",
+        "score": 10,
+        "note": "Present in both images."
+      },
+      {
+        "label": "wooden nightstand next to desk",
+        "score": 10,
+        "note": "Present in both images."
+      },
+      {
+        "label": "round ottoman or stool near desk",
+        "score": 10,
+        "note": "Present in both images."
+      },
+      {
+        "label": "platform bed with white headboard",
+        "score": 10,
+        "note": "Present in both images."
+      },
+      {
+        "label": "tufted bench at foot of bed",
+        "score": 0,
+        "note": "Missing in rendered image."
+      },
+      {
+        "label": "[extra] wooden surface in foreground (possibly desk or table)",
+        "score": 0,
+        "note": "Appears in rendered image but not in target; likely a rendering artifact or misplaced object."
+      }
+    ],
+    "score": 8,
+    "reasoning": "All furniture items except the tufted bench at the foot of the bed are present in both images. The bench is missing in the rendered image. Additionally, a wooden surface in the foreground is present in the rendered image but not in the target, suggesting an extra or misplaced object. The overall scene is mostly accurate but lacks one key furniture item and includes one extraneous object.",
+    "missing_info": "Top-down view or bounding boxes would help confirm the presence or absence of objects, especially for partially occluded or small items like the ottoman or side table."
+  },
+  "aa9d393b-30df-456f-96dc-dad7bb8554c9_LivingRoom-38326": {
+    "object_scores": [
+      {
+        "label": "dining table with dark legs and light top",
+        "score": 0,
+        "note": "Missing in rendered image; only one chair remains."
+      },
+      {
+        "label": "dining chair near left wall",
+        "score": 0,
+        "note": "Missing in rendered image; only one chair remains."
+      },
+      {
+        "label": "dining chair near front of table",
+        "score": 0,
+        "note": "Missing in rendered image; only one chair remains."
+      },
+      {
+        "label": "dining chair near right side of table",
+        "score": 0,
+        "note": "Missing in rendered image; only one chair remains."
+      },
+      {
+        "label": "dining chair near back of table",
+        "score": 0,
+        "note": "Missing in rendered image; only one chair remains."
+      },
+      {
+        "label": "beige sofa with black and beige pillows",
+        "score": 0,
+        "note": "Missing in rendered image; no sofa present."
+      },
+      {
+        "label": "small round white coffee table with black vases",
+        "score": 0,
+        "note": "Missing in rendered image; no coffee tables present."
+      },
+      {
+        "label": "small round white coffee table with books and mug",
+        "score": 0,
+        "note": "Missing in rendered image; no coffee tables present."
+      },
+      {
+        "label": "teal cabinet on left wall",
+        "score": 10,
+        "note": "Present in both images; correctly matched."
+      },
+      {
+        "label": "[extra] single dining chair in center of room",
+        "score": 0,
+        "note": "Present in rendered image but not in target; extraneous object."
+      }
+    ],
+    "score": 1,
+    "reasoning": "All furniture from the target image except the teal cabinet is missing in the rendered image. The rendered image contains one extra dining chair not present in the target. The cabinet is correctly present and matched.",
+    "missing_info": "Top-down view or bounding boxes would help confirm exact object positions and counts, especially for partially occluded or small furniture."
+  },
+  "f36889f8-d94b-4ab9-9da1-46e06a27ff90_LivingRoom-12836": {
+    "object_scores": [
+      {
+        "label": "white sofa with black pillows against wooden wall",
+        "score": 0,
+        "note": "Missing in rendered image; sofa is absent."
+      },
+      {
+        "label": "dark wooden coffee table with angular design",
+        "score": 0,
+        "note": "Missing in rendered image; table is absent."
+      },
+      {
+        "label": "light blue armchair with metal frame near concrete wall",
+        "score": 10,
+        "note": "Present in both images; correctly matched."
+      },
+      {
+        "label": "second light blue armchair with metal frame near concrete wall",
+        "score": 10,
+        "note": "Present in both images; correctly matched."
+      },
+      {
+        "label": "black shelving unit against right wall",
+        "score": 10,
+        "note": "Present in both images; correctly matched."
+      },
+      {
+        "label": "cowhide-upholstered chair in foreground",
+        "score": 10,
+        "note": "Present in both images; correctly matched."
+      },
+      {
+        "label": "[extra] potted green plant in white pot near black shelving unit",
+        "score": 0,
+        "note": "Present in rendered image but not in target; extraneous object."
+      },
+      {
+        "label": "[extra] black silhouette plant on black rug near left wall",
+        "score": 0,
+        "note": "Present in rendered image but not in target; extraneous object."
+      }
+    ],
+    "score": 5,
+    "reasoning": "The sofa and coffee table are missing from the rendered image. The two light blue armchairs, black shelving unit, and cowhide chair are correctly present. Two plants (one green, one black silhouette) appear in the rendered image but not in the target, making them extraneous. Total of 8 objects scored: 4 correct, 2 missing, 2 extra.",
+    "missing_info": "Top-down view or bounding boxes would help confirm exact positions and presence of furniture, especially for partially occluded or edge-aligned items."
+  },
+  "473fb8fd-a6d4-4fc1-bd5d-1afd61a9617e_LivingRoom-9915": {
+    "object_scores": [
+      {
+        "label": "beige sofa with black and beige pillows",
+        "score": 0,
+        "note": "Missing in rendered image; only empty space remains."
+      },
+      {
+        "label": "round white coffee table with dark legs",
+        "score": 0,
+        "note": "Missing in rendered image; no table is present."
+      },
+      {
+        "label": "small round white side table with dark legs",
+        "score": 0,
+        "note": "Missing in rendered image; no side table is present."
+      },
+      {
+        "label": "wooden dining table with light wood top and legs",
+        "score": 0,
+        "note": "Missing in rendered image; only empty space remains."
+      },
+      {
+        "label": "metal-framed dining chair with wooden seat (left of table)",
+        "score": 0,
+        "note": "Missing in rendered image; only one chair is partially visible, but not in correct position or count."
+      },
+      {
+        "label": "metal-framed dining chair with wooden seat (middle of table)",
+        "score": 0,
+        "note": "Missing in rendered image; no corresponding chair is present."
+      },
+      {
+        "label": "metal-framed dining chair with wooden seat (right of table)",
+        "score": 0,
+        "note": "Missing in rendered image; only one chair is partially visible, but not matching the full set."
+      },
+      {
+        "label": "wooden bookshelf with open shelves and books",
+        "score": 0,
+        "note": "Missing in rendered image; no bookshelf is present."
+      },
+      {
+        "label": "tall wooden shelving unit on left wall",
+        "score": 0,
+        "note": "Missing in rendered image; no shelving unit is visible."
+      },
+      {
+        "label": "floor lamp with white shade next to sofa",
+        "score": 0,
+        "note": "Missing in rendered image; no lamp is present."
+      },
+      {
+        "label": "[extra] metal-framed chair with wooden seat (bottom right corner)",
+        "score": 0,
+        "note": "Present in rendered image but not in target; extraneous object."
+      }
+    ],
+    "score": 0,
+    "reasoning": "All furniture objects from the target image are missing in the rendered scene, including the sofa, coffee tables, dining set, bookshelves, and lamp. Only one chair appears in the rendered image, which is not part of the intended set and is therefore flagged as extra. No objects are correctly matched.",
+    "missing_info": "Top-down view or bounding boxes would help confirm exact object positions and counts, especially for partially visible or occluded furniture."
+  },
+  "d650faee-f134-46fd-b8f7-38712998f3b5_LivingRoom-2922": {
+    "object_scores": [
+      {
+        "label": "teal media console with dark wood top",
+        "score": 0,
+        "note": "Present in target but missing in rendered scene."
+      },
+      {
+        "label": "dark wooden sofa with gray cushions",
+        "score": 0,
+        "note": "Present in target but missing in rendered scene."
+      },
+      {
+        "label": "black coffee table with marble top",
+        "score": 0,
+        "note": "Present in target but missing in rendered scene."
+      },
+      {
+        "label": "pink tufted armchair",
+        "score": 0,
+        "note": "Present in target but missing in rendered scene."
+      },
+      {
+        "label": "[extra] none",
+        "score": 0,
+        "note": "No extra furniture objects found in rendered image."
+      }
+    ],
+    "score": 0,
+    "reasoning": "All furniture items from the target image (media console, sofa, coffee table, armchair) are missing in the rendered scene. There are no extraneous objects in the rendered image. The rendered scene is completely empty of furniture.",
+    "missing_info": "Top-down view or bounding boxes would help confirm exact object positions and counts, especially for partially occluded items like the sofa and coffee table."
+  },
+  "6ae193c4-4fe1-42e8-b2dd-38ded31b7f12_LivingDiningRoom-48379": {
+    "object_scores": [
+      {
+        "label": "ornate brown sofa with pillows",
+        "score": 10,
+        "note": "Present in rendered image, matching target."
+      },
+      {
+        "label": "rectangular coffee table with ornate legs",
+        "score": 10,
+        "note": "Present in rendered image, matching target."
+      },
+      {
+        "label": "black armchair near window",
+        "score": 10,
+        "note": "Present in rendered image, matching target."
+      },
+      {
+        "label": "small dark wooden side table near sofa",
+        "score": 10,
+        "note": "Present in rendered image, matching target."
+      },
+      {
+        "label": "dark wooden end table on left edge",
+        "score": 10,
+        "note": "Present in rendered image, matching target."
+      },
+      {
+        "label": "green sculptural plant stand",
+        "score": 10,
+        "note": "Present in rendered image, matching target."
+      },
+      {
+        "label": "dark cabinet or console on right wall",
+        "score": 10,
+        "note": "Present in rendered image, matching target."
+      },
+      {
+        "label": "chandelier hanging from ceiling",
+        "score": 10,
+        "note": "Present in rendered image, matching target."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture objects from the target image are present in the rendered image with matching positions and appearances. No objects are missing or extra. The scene is identical.",
+    "missing_info": "Top-down or orthographic view would help confirm object count and layout, especially for partially occluded or edge-aligned furniture."
+  },
+  "a0b8b195-676d-47bd-afce-3e135b8fde83_LivingDiningRoom-22853": {
+    "object_scores": [
+      {
+        "label": "white dresser with six drawers",
+        "score": 10,
+        "note": "Present in both images, matching in position and appearance."
+      },
+      {
+        "label": "tall white cabinet with two doors",
+        "score": 10,
+        "note": "Present in both images, matching in position and appearance."
+      },
+      {
+        "label": "black dining table with thick legs",
+        "score": 10,
+        "note": "Present in both images, matching in position and appearance."
+      },
+      {
+        "label": "dining chair near window, left side",
+        "score": 10,
+        "note": "Present in both images, matching in position and appearance."
+      },
+      {
+        "label": "dining chair near window, right side",
+        "score": 10,
+        "note": "Present in both images, matching in position and appearance."
+      },
+      {
+        "label": "dining chair behind table, left side",
+        "score": 10,
+        "note": "Present in both images, matching in position and appearance."
+      },
+      {
+        "label": "dining chair behind table, right side",
+        "score": 10,
+        "note": "Present in both images, matching in position and appearance."
+      },
+      {
+        "label": "black sofa with tufted back",
+        "score": 10,
+        "note": "Present in both images, matching in position and appearance."
+      },
+      {
+        "label": "black armchair in foreground",
+        "score": 10,
+        "note": "Present in both images, matching in position and appearance."
+      },
+      {
+        "label": "small white coffee table with wooden edge",
+        "score": 10,
+        "note": "Present in both images, matching in position and appearance."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture items visible in the target image are correctly present and positioned in the rendered image. There are no missing or extra furniture items. The scene is an exact match.",
+    "missing_info": "Top-down or orthographic view would help confirm exact object count and positioning, especially for partially occluded furniture like chairs or items behind the sofa."
+  },
+  "8174e94b-cb97-4d24-bd3a-81a095192bbe_LivingDiningRoom-33640": {
+    "object_scores": [
+      {
+        "label": "teal TV stand with plant",
+        "score": 0,
+        "note": "Missing in rendered image; the plant and stand are absent."
+      },
+      {
+        "label": "wood and white cabinet behind TV stand",
+        "score": 0,
+        "note": "Missing in rendered image; replaced by a different cabinet on the right wall."
+      },
+      {
+        "label": "gray patterned sofa with dark pillows",
+        "score": 0,
+        "note": "Missing in rendered image; sofa is not present."
+      },
+      {
+        "label": "woven rattan chair with brown cushion",
+        "score": 10,
+        "note": "Present in both images; correctly matched."
+      },
+      {
+        "label": "white round coffee table with wooden legs",
+        "score": 10,
+        "note": "Present in both images; correctly matched."
+      },
+      {
+        "label": "small white side table with books and headphones",
+        "score": 10,
+        "note": "Present in both images; correctly matched."
+      },
+      {
+        "label": "round beige ottoman",
+        "score": 10,
+        "note": "Present in both images; correctly matched."
+      },
+      {
+        "label": "[extra] small wood and white cabinet on right wall",
+        "score": 0,
+        "note": "Present in rendered image but not in target; extraneous object."
+      }
+    ],
+    "score": 5,
+    "reasoning": "The rendered scene is missing the teal TV stand with plant, the cabinet behind it, and the sofa. It includes a correct set of central furniture (chair, coffee table, side table, ottoman) but adds an extra cabinet on the right wall that was not in the target. The extra object and missing objects significantly affect the score.",
+    "missing_info": "Top-down view or bounding boxes would help confirm exact positions and presence of furniture, especially for partially occluded or small items like the cabinet and plant stand."
+  },
+  "a17c6eb5-a044-400a-b0b6-3e757cccbb15_LivingDiningRoom-15943": {
+    "object_scores": [
+      {
+        "label": "dining table in center",
+        "score": 0,
+        "note": "Dining table is missing in rendered image."
+      },
+      {
+        "label": "dining chair near window (left side, front)",
+        "score": 10,
+        "note": "Chair is present in rendered image."
+      },
+      {
+        "label": "dining chair near window (left side, back)",
+        "score": 10,
+        "note": "Chair is present in rendered image."
+      },
+      {
+        "label": "dining chair near window (right side, front)",
+        "score": 10,
+        "note": "Chair is present in rendered image."
+      },
+      {
+        "label": "dining chair near window (right side, back)",
+        "score": 10,
+        "note": "Chair is present in rendered image."
+      },
+      {
+        "label": "dining chair near window (right side, middle)",
+        "score": 10,
+        "note": "Chair is present in rendered image."
+      },
+      {
+        "label": "dining chair near window (left side, middle)",
+        "score": 10,
+        "note": "Chair is present in rendered image."
+      },
+      {
+        "label": "gray ottoman near sofa (left)",
+        "score": 10,
+        "note": "Ottoman is present in rendered image."
+      },
+      {
+        "label": "gray ottoman near sofa (right)",
+        "score": 10,
+        "note": "Ottoman is present in rendered image."
+      },
+      {
+        "label": "gray armchair in foreground",
+        "score": 10,
+        "note": "Armchair is present in rendered image."
+      },
+      {
+        "label": "gray sofa with wooden base",
+        "score": 10,
+        "note": "Sofa is present in rendered image."
+      },
+      {
+        "label": "floor lamp with patterned shade",
+        "score": 10,
+        "note": "Lamp is present in rendered image."
+      },
+      {
+        "label": "orange cabinet against back wall",
+        "score": 0,
+        "note": "Orange cabinet is missing in rendered image."
+      },
+      {
+        "label": "dark gray bench near blue cabinet",
+        "score": 0,
+        "note": "Bench is missing in rendered image."
+      },
+      {
+        "label": "blue cabinet on left wall",
+        "score": 10,
+        "note": "Cabinet is present in rendered image."
+      },
+      {
+        "label": "potted plant near blue cabinet",
+        "score": 10,
+        "note": "Plant is present in rendered image."
+      },
+      {
+        "label": "potted plant near orange cabinet",
+        "score": 10,
+        "note": "Plant is present in rendered image."
+      },
+      {
+        "label": "[extra] round coffee table in center",
+        "score": 0,
+        "note": "Extra round coffee table appears in rendered image with no counterpart in target."
+      }
+    ],
+    "score": 8,
+    "reasoning": "The rendered image is missing the dining table, orange cabinet, and dark gray bench from the target. It includes an extra round coffee table not present in the target. All other furniture items (chairs, ottomans, sofa, lamp, cabinets, plants) are correctly present.",
+    "missing_info": "Top-down view or bounding boxes would help confirm exact object positions and counts, especially for partially occluded or similar-looking furniture."
+  },
+  "5e6d0804-54a9-4d4a-b4ed-1b4f22aa1d01_LivingRoom-16933": {
+    "object_scores": [
+      {
+        "label": "white armchair with rolled cushion on left",
+        "score": 10,
+        "note": "Present in rendered image."
+      },
+      {
+        "label": "black cabinet with open shelves on left",
+        "score": 10,
+        "note": "Present in rendered image."
+      },
+      {
+        "label": "long black bench next to cabinet",
+        "score": 10,
+        "note": "Present in rendered image."
+      },
+      {
+        "label": "white sofa with multiple pillows on right",
+        "score": 10,
+        "note": "Present in rendered image."
+      },
+      {
+        "label": "black rectangular coffee table in center",
+        "score": 10,
+        "note": "Present in rendered image."
+      },
+      {
+        "label": "two dark wooden benches in front of coffee table",
+        "score": 0,
+        "note": "Only one bench is visible in rendered image; the second is missing."
+      },
+      {
+        "label": "white modern armchair near back wall",
+        "score": 10,
+        "note": "Present in rendered image."
+      },
+      {
+        "label": "dark desk or table in background",
+        "score": 10,
+        "note": "Present in rendered image."
+      },
+      {
+        "label": "white side table with plant on right",
+        "score": 10,
+        "note": "Present in rendered image."
+      },
+      {
+        "label": "[extra] dark bench in center, front of coffee table",
+        "score": 0,
+        "note": "Only one bench is visible in rendered image, but two were expected; this may be a duplicate or miscount."
+      }
+    ],
+    "score": 9,
+    "reasoning": "Most furniture items are correctly matched between target and rendered images. The main discrepancy is the missing second bench in front of the coffee table in the rendered image. Additionally, an extra bench is flagged due to ambiguity in count \u2014 only one bench is clearly visible, while two were expected. This may indicate a rendering omission or misalignment.",
+    "missing_info": "Top-down view or bounding boxes would help confirm the exact count and positions of benches and other low-profile furniture, especially in the center of the room."
+  },
+  "109a8e42-f7d7-4893-8262-f2030072b760_LivingRoom-38165": {
+    "object_scores": [
+      {
+        "label": "black curved sofa on left",
+        "score": 10,
+        "note": "Present in both images, though rendered image is darker."
+      },
+      {
+        "label": "bed with white bedding near window",
+        "score": 10,
+        "note": "Present in both images, though rendered image is darker."
+      },
+      {
+        "label": "stacked coffee tables in center",
+        "score": 8,
+        "note": "Partially visible in rendered image; top table is visible, but lower table is obscured by shadow."
+      },
+      {
+        "label": "round side table with tripod legs",
+        "score": 10,
+        "note": "Present in both images."
+      },
+      {
+        "label": "wooden sideboard with drawers on right wall",
+        "score": 10,
+        "note": "Present in both images, though rendered image is darker."
+      },
+      {
+        "label": "[extra] black pendant lamp above bed",
+        "score": 0,
+        "note": "Visible in target image but absent in rendered image."
+      }
+    ],
+    "score": 9,
+    "reasoning": "All major furniture items (sofa, bed, side tables, sideboard) are present in the rendered image, though lighting makes some harder to discern. The pendant lamp is missing from the rendered scene. No extraneous furniture items are present.",
+    "missing_info": "Top-down view or bounding boxes would help confirm the presence/absence of objects in shadowed areas, especially the coffee table stack and the sideboard."
+  }
+}

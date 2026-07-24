@@ -1,0 +1,1142 @@
+{
+  "0f661df2-0f41-47a4-830c-7444f4a33a03_LivingDiningRoom-12554": {
+    "object_scores": [
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "The table size and proportions match perfectly with the target."
+      },
+      {
+        "label": "dining chairs",
+        "score": 10,
+        "note": "The dining chairs are scaled correctly relative to the table."
+      },
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The sofa dimensions and placement appear consistent with the target."
+      },
+      {
+        "label": "armchair",
+        "score": 10,
+        "note": "The armchair size is appropriate for the living area seating."
+      },
+      {
+        "label": "coffee table",
+        "score": 10,
+        "note": "The round coffee table is correctly scaled for the seating arrangement."
+      },
+      {
+        "label": "media console",
+        "score": 10,
+        "note": "The TV stand/console size is accurate."
+      },
+      {
+        "label": "pendant light",
+        "score": 10,
+        "note": "The circular ceiling light fixture scale is identical to the target."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered image is visually identical to the target image, with all furniture objects maintaining consistent relative scales.",
+    "missing_info": "No missing information; the target and rendered images are identical."
+  },
+  "996d5631-517a-4906-b232-5e1148c97867_LivingDiningRoom-8344": {
+    "object_scores": [
+      {
+        "label": "sofa",
+        "score": 3,
+        "note": "The sofa in the rendered image is significantly smaller compared to the target image's sofa."
+      },
+      {
+        "label": "armchair left",
+        "score": 10,
+        "note": "The armchair size is consistent with the target."
+      },
+      {
+        "label": "armchair right",
+        "score": 10,
+        "note": "The armchair size is consistent with the target."
+      },
+      {
+        "label": "coffee table",
+        "score": 7,
+        "note": "The coffee table appears slightly smaller relative to the chairs compared to the target."
+      },
+      {
+        "label": "media console",
+        "score": 9,
+        "note": "The media console size appears reasonably consistent with the target."
+      },
+      {
+        "label": "tall black vase",
+        "score": 9,
+        "note": "The vase scale is consistent with the target."
+      }
+    ],
+    "score": 8,
+    "reasoning": "Most furniture pieces are accurately scaled, but the sofa in the second image is noticeably smaller than the sofa in the target image.",
+    "missing_info": "Top-down view or camera focal length settings to verify object dimensions."
+  },
+  "1f077e24-2eca-43ca-bc92-1b36eab99467_LivingDiningRoom-180855": {
+    "object_scores": [
+      {
+        "label": "white console desk",
+        "score": 5,
+        "note": "The desk is significantly larger and taller in the rendered image compared to the target image."
+      },
+      {
+        "label": "black sideboard",
+        "score": 8,
+        "note": "Size appears mostly consistent, though the perspective shift makes direct comparison difficult."
+      },
+      {
+        "label": "leaf coffee table",
+        "score": 9,
+        "note": "Scale seems accurate relative to the sofa and surrounding floor space."
+      },
+      {
+        "label": "dining chairs",
+        "score": 9,
+        "note": "Scale appears to be consistent with the dining area in the target."
+      },
+      {
+        "label": "sofa",
+        "score": 9,
+        "note": "The sofa scale remains consistent with the target proportions."
+      },
+      {
+        "label": "piano",
+        "score": 8,
+        "note": "The piano size appears relatively correct in relation to the dining area."
+      }
+    ],
+    "score": 8,
+    "reasoning": "Most furniture objects maintain their original scale well, but the central white console desk is notably larger/taller in the render than the target.",
+    "missing_info": "A top-down orthographic floor plan or consistent camera depth-of-field reference would help confirm the exact height and width of the white console desk relative to the floor tiles."
+  },
+  "2eeb434c-855e-4298-a8d5-29b1ca838608_MasterBedroom-5966": {
+    "object_scores": [
+      {
+        "label": "left chandelier",
+        "score": 9,
+        "note": "The size and scale appear identical to the target image."
+      },
+      {
+        "label": "right chandelier",
+        "score": 9,
+        "note": "The size and scale match the target image accurately."
+      },
+      {
+        "label": "bed",
+        "score": 10,
+        "note": "The bed frame and bedding size relative to the room layout match the target perfectly."
+      },
+      {
+        "label": "left nightstand",
+        "score": 10,
+        "note": "The dimensions and placement of the nightstand are correct."
+      },
+      {
+        "label": "right nightstand",
+        "score": 10,
+        "note": "The nightstand size and relative position are consistent with the target."
+      },
+      {
+        "label": "wardrobe",
+        "score": 10,
+        "note": "The wardrobe scale against the wall and room height is accurate."
+      },
+      {
+        "label": "desk",
+        "score": 10,
+        "note": "The desk tucked in the corner behind the bed is correctly scaled."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered image is a near-perfect match to the target in terms of furniture scale and placement.",
+    "missing_info": "No additional views are required as the perspective is already clear and consistent."
+  },
+  "6e7a0c41-15f3-4909-a20c-dab460b45ada_LivingDiningRoom-847": {
+    "object_scores": [
+      {
+        "label": "white tufted sofa",
+        "score": 10,
+        "note": "The sofa scale remains consistent with the target environment."
+      },
+      {
+        "label": "dining chair",
+        "score": 9,
+        "note": "The chair scale is accurate, maintaining correct proportion to the table."
+      },
+      {
+        "label": "side table lamp",
+        "score": 10,
+        "note": "The lamp scale relative to the sofa is correct."
+      },
+      {
+        "label": "coffee table",
+        "score": 10,
+        "note": "The coffee table scale matches the intended proportions."
+      },
+      {
+        "label": "credenza cabinet",
+        "score": 10,
+        "note": "The cabinet scale is consistent with the room dimensions."
+      },
+      {
+        "label": "dining table base",
+        "score": 7,
+        "note": "The table base looks slightly small compared to the first image's blocky base."
+      }
+    ],
+    "score": 9,
+    "reasoning": "Most furniture objects are consistent in scale. The dining table base shows minor variation compared to the target, but overall spatial relationships are preserved.",
+    "missing_info": "A top-down floor plan view would help confirm the precise relative dimensions of the dining area furniture."
+  },
+  "10e2d93c-2a82-49f2-a95c-7598d24901f2_LivingDiningRoom-8149": {
+    "object_scores": [
+      {
+        "label": "Front left dining chair",
+        "score": 3,
+        "note": "The front-left chair is significantly oversized compared to the target, creating a scale distortion."
+      },
+      {
+        "label": "Front right dining chair",
+        "score": 9,
+        "note": "The size of this chair is fairly consistent with the target proportions."
+      },
+      {
+        "label": "Back left dining chair",
+        "score": 7,
+        "note": "Slightly smaller than the corresponding chair in the target image."
+      },
+      {
+        "label": "Back right dining chair",
+        "score": 8,
+        "note": "Proportions appear accurate relative to the table."
+      },
+      {
+        "label": "Dining table",
+        "score": 6,
+        "note": "The table appears slightly undersized given the enlarged scale of the front-left chair."
+      },
+      {
+        "label": "Sofa",
+        "score": 9,
+        "note": "The sofa scale and positioning match well with the target."
+      },
+      {
+        "label": "Side table/TV unit",
+        "score": 9,
+        "note": "Maintains accurate relative scale within the scene."
+      }
+    ],
+    "score": 7,
+    "reasoning": "Most furniture objects are well-scaled, except for a major scaling error on the front-left chair, which is disproportionately large.",
+    "missing_info": "A top-down floor plan view or orthographic projections would help to precisely quantify the footprint and relative scaling of the dining furniture."
+  },
+  "e44c4ecc-0260-469d-a60d-b71cf1d34029_LivingRoom-15009": {
+    "object_scores": [
+      {
+        "label": "cabinet",
+        "score": 9,
+        "note": "Scale and proportions of the wooden cabinet are well-matched."
+      },
+      {
+        "label": "folding chair",
+        "score": 9,
+        "note": "Folding chair size relative to the table and other furniture is accurate."
+      },
+      {
+        "label": "dining chairs",
+        "score": 9,
+        "note": "The two dining chairs are correctly scaled against the dining table."
+      },
+      {
+        "label": "dining table",
+        "score": 9,
+        "note": "The dining table maintains appropriate size in the space."
+      },
+      {
+        "label": "floor lamp",
+        "score": 8,
+        "note": "The floor lamp is reasonably scaled."
+      },
+      {
+        "label": "armchair",
+        "score": 9,
+        "note": "The large grey armchair is correctly scaled for the lounge area."
+      },
+      {
+        "label": "sideboard",
+        "score": 9,
+        "note": "The sideboard's height and footprint are consistent with the target."
+      }
+    ],
+    "score": 9,
+    "reasoning": "The rendered scene demonstrates excellent scale consistency across all major furniture items compared to the target reference.",
+    "missing_info": "A top-down floor plan or orthographic view would help verify precise spatial alignment and clearance dimensions."
+  },
+  "f006ad67-40d2-4068-950c-2ce3805d3932_LivingDiningRoom-38341": {
+    "object_scores": [
+      {
+        "label": "spotted sofa",
+        "score": 10,
+        "note": "The scale and placement relative to the room are consistent with the target."
+      },
+      {
+        "label": "white conical table",
+        "score": 10,
+        "note": "The scale and proportions are accurately matched."
+      },
+      {
+        "label": "dark wood cabinet in back",
+        "score": 10,
+        "note": "The size relative to the wall and sofa is correct."
+      },
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "The scale is consistent with the perspective of the room."
+      },
+      {
+        "label": "dining chairs",
+        "score": 10,
+        "note": "The size of the chairs relative to the dining table is accurate."
+      },
+      {
+        "label": "white console unit",
+        "score": 10,
+        "note": "The length and height relative to the wall match the target perfectly."
+      },
+      {
+        "label": "ceiling chandelier",
+        "score": 10,
+        "note": "The scale of the fixture is consistent with the target image."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered scene is an exact match for the target scene in terms of object scale and relative proportion for all visible furniture items.",
+    "missing_info": "No additional views are required as the perspective is clear and all objects match the target."
+  },
+  "b34c215e-1449-4702-8080-e7173e8e8f67_LivingDiningRoom-14069": {
+    "object_scores": [
+      {
+        "label": "dining chair",
+        "score": 10,
+        "note": "The dining chairs appear identical in size and placement."
+      },
+      {
+        "label": "coffee table",
+        "score": 10,
+        "note": "The coffee table maintains consistent scale and proportions."
+      },
+      {
+        "label": "brown sofa",
+        "score": 10,
+        "note": "The brown sofa is accurately scaled in the background."
+      },
+      {
+        "label": "yellow sofa",
+        "score": 2,
+        "note": "The yellow sofa is missing/occluded in the second image."
+      },
+      {
+        "label": "side cabinet",
+        "score": 10,
+        "note": "The cabinet size remains consistent."
+      },
+      {
+        "label": "potted plant",
+        "score": 10,
+        "note": "The potted plant scale is consistent between renders."
+      }
+    ],
+    "score": 9,
+    "reasoning": "Most furniture objects are perfectly scaled between the two images, except for the missing/occluded yellow sofa in the second image.",
+    "missing_info": "Top-down view would provide better clarity on furniture depth and spatial layout."
+  },
+  "09d742d0-9e99-4e31-ac3d-ad1879cf691b_LivingDiningRoom-9326": {
+    "object_scores": [
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The sofa dimensions and placement remain consistent with the target image."
+      },
+      {
+        "label": "round coffee table",
+        "score": 10,
+        "note": "The scale of the coffee table is identical in both scenes."
+      },
+      {
+        "label": "dining chairs",
+        "score": 10,
+        "note": "The chairs maintain the same proportion relative to the dining table."
+      },
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "The table size matches the target image."
+      },
+      {
+        "label": "potted plant",
+        "score": 10,
+        "note": "The plant size is consistent with the original scene."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered scene is nearly identical to the target in terms of furniture scale and proportions.",
+    "missing_info": "Top-down view or dimension specifications would confirm if the absolute scales are correct."
+  },
+  "1ad74b11-777a-4610-a249-7c5e044a0f01_LivingDiningRoom-10290": {
+    "object_scores": [
+      {
+        "label": "sideboard cabinet",
+        "score": 10,
+        "note": "The cabinet maintains the same scale and positioning."
+      },
+      {
+        "label": "TV stand",
+        "score": 10,
+        "note": "The TV stand size and scale remain consistent."
+      },
+      {
+        "label": "dining table",
+        "score": 6,
+        "note": "The dining table is significantly taller and wider in the rendered image compared to the target."
+      },
+      {
+        "label": "dining chairs",
+        "score": 7,
+        "note": "The chairs seem appropriately sized to the table but their scale relative to the table has changed due to the table's increased size."
+      },
+      {
+        "label": "coffee table",
+        "score": 9,
+        "note": "The coffee table remains consistent in scale."
+      },
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The sofa scale and dimensions are maintained correctly."
+      },
+      {
+        "label": "side tables",
+        "score": 10,
+        "note": "The side tables are correctly scaled."
+      }
+    ],
+    "score": 9,
+    "reasoning": "Overall, the scene furniture scales are consistent, except for the dining table which is noticeably larger in the rendered version.",
+    "missing_info": "Top-down view would help verify exact footprint dimensions."
+  },
+  "7c2e62e7-ab51-4900-bfdc-1932415fb295_LivingDiningRoom-16509": {
+    "object_scores": [
+      {
+        "label": "sofa",
+        "score": 6,
+        "note": "The sofa is significantly smaller and more distant in the rendered image compared to the target."
+      },
+      {
+        "label": "armchair",
+        "score": 9,
+        "note": "The armchair scale is relatively consistent with the target image."
+      },
+      {
+        "label": "left ottoman",
+        "score": 7,
+        "note": "The ottoman appears slightly larger or more foregrounded than in the target, potentially due to the camera change."
+      },
+      {
+        "label": "right ottoman",
+        "score": 9,
+        "note": "The right ottoman scale seems well-matched."
+      },
+      {
+        "label": "coffee table",
+        "score": 9,
+        "note": "The coffee table scale remains consistent."
+      },
+      {
+        "label": "chandelier",
+        "score": 6,
+        "note": "The chandelier appears smaller and higher in the rendered image compared to the target."
+      },
+      {
+        "label": "cabinet unit",
+        "score": 10,
+        "note": "The cabinet unit maintains the same scale as the target."
+      }
+    ],
+    "score": 8,
+    "reasoning": "Most furniture objects are scaled correctly, though the sofa and chandelier seem smaller or more distant in the rendered output, likely due to a change in camera distance or field of view.",
+    "missing_info": "A floor plan or top-down view would provide definitive confirmation of object dimensions and distances from walls."
+  },
+  "7686a060-ab0d-4014-9e5c-75d75e0752e3_LivingDiningRoom-44815": {
+    "object_scores": [
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The sofa size is consistent across both images."
+      },
+      {
+        "label": "armchair",
+        "score": 10,
+        "note": "The armchair scale is consistent across both images."
+      },
+      {
+        "label": "side chair",
+        "score": 10,
+        "note": "The side chair scale is consistent across both images."
+      },
+      {
+        "label": "coffee table",
+        "score": 3,
+        "note": "The coffee table is significantly smaller in the second image compared to the first."
+      }
+    ],
+    "score": 8,
+    "reasoning": "The sofa, armchair, and side chair are consistent in size, but the coffee table is visibly smaller in the rendered image compared to the target image.",
+    "missing_info": "A top-down floor plan or bounding box annotations would help verify the exact intended dimensions of the furniture items."
+  },
+  "109c84cd-7194-4b1d-ac52-8d1862565c6c_Corridor-20684": {
+    "object_scores": [
+      {
+        "label": "tall left cabinet",
+        "score": 10,
+        "note": "The cabinet is proportional to the ceiling height and room depth as intended."
+      },
+      {
+        "label": "round dining table",
+        "score": 10,
+        "note": "The dining table has an appropriate scale relative to the chairs and the surrounding room area."
+      },
+      {
+        "label": "dining chairs",
+        "score": 9,
+        "note": "The chair sizes are consistent with a standard dining table height and scale."
+      },
+      {
+        "label": "front circular ottoman",
+        "score": 10,
+        "note": "The stool scale relative to the table and chairs seems correct for its purpose."
+      },
+      {
+        "label": "right tall locker cabinet",
+        "score": 10,
+        "note": "The height and width are well-proportioned to the wall and adjacent objects."
+      },
+      {
+        "label": "back sideboard unit",
+        "score": 9,
+        "note": "The sideboard fits well behind the table with reasonable height proportions."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The furniture arrangement displays a very consistent sense of scale, with all objects appearing to be sized correctly relative to each other and the architectural context.",
+    "missing_info": "A floor plan or top-down view would confirm the exact clearance and spatial footprint of the furniture items."
+  },
+  "2e422478-2de0-4d16-b398-657b07c1cac0_LivingDiningRoom-4293": {
+    "object_scores": [
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The sofa size and proportions match the target perfectly."
+      },
+      {
+        "label": "coffee table",
+        "score": 10,
+        "note": "The coffee table scale relative to the sofa is accurate."
+      },
+      {
+        "label": "media console",
+        "score": 10,
+        "note": "The black console size is consistent with the target."
+      },
+      {
+        "label": "cabinet near doorway",
+        "score": 10,
+        "note": "The light-colored cabinet matches the target scale."
+      },
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "The dining table proportions are correct."
+      },
+      {
+        "label": "dining chairs",
+        "score": 10,
+        "note": "The chairs match the size of the dining table."
+      },
+      {
+        "label": "storage unit in background",
+        "score": 10,
+        "note": "The background storage unit size is appropriate."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered scene appears to be identical to the target image in terms of object scale and proportions.",
+    "missing_info": "No additional views required as the images are identical."
+  },
+  "9f283b51-0327-43d5-9ec0-44d867530f4e_Hallway-34943": {
+    "object_scores": [
+      {
+        "label": "sideboard cabinet left",
+        "score": 10,
+        "note": "Scale matches the target perfectly."
+      },
+      {
+        "label": "tall cabinet left",
+        "score": 10,
+        "note": "Scale matches the target perfectly."
+      },
+      {
+        "label": "tall cabinet right",
+        "score": 5,
+        "note": "The cabinet is significantly taller and wider than in the target image."
+      },
+      {
+        "label": "sideboard unit background",
+        "score": 10,
+        "note": "Scale matches the target."
+      },
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "Scale matches the target."
+      },
+      {
+        "label": "dining chairs (standard size)",
+        "score": 10,
+        "note": "The four standard chairs match the target scale."
+      },
+      {
+        "label": "miniature chair center",
+        "score": 0,
+        "note": "This object is a miniature chair that does not exist in the target image."
+      }
+    ],
+    "score": 7,
+    "reasoning": "Most furniture items are scaled correctly, but the right-side cabinet is incorrectly scaled compared to the target, and there is an erroneous miniature chair added to the table center.",
+    "missing_info": "Top-down floor plan or side-on orthographic view would help confirm precise object heights and widths."
+  },
+  "103cce55-24d5-4c71-9856-156962e30511_LivingDiningRoom-89516": {
+    "object_scores": [
+      {
+        "label": "Wall-mounted storage unit",
+        "score": 10,
+        "note": "The scale and placement relative to the room are consistent across both images."
+      },
+      {
+        "label": "Dark wooden dresser",
+        "score": 8,
+        "note": "The dresser in the rendered image appears slightly taller and bulkier compared to the reference target."
+      },
+      {
+        "label": "Picture frames on dresser",
+        "score": 7,
+        "note": "The frames appear somewhat larger in scale relative to the dresser surface than in the target image."
+      },
+      {
+        "label": "Decorative object in case",
+        "score": 9,
+        "note": "The scale of the decorative object remains consistent with the target."
+      }
+    ],
+    "score": 9,
+    "reasoning": "The furniture objects maintain generally accurate proportions and scales, with the main dresser showing a slight discrepancy in perceived bulk.",
+    "missing_info": "A top-down floor plan or parallel orthographic projection would allow for precise measurement of furniture depth and height to verify scale more accurately."
+  },
+  "ab6d1b3b-31ba-4191-bc17-d03e504484a8_LivingDiningRoom-209062": {
+    "object_scores": [
+      {
+        "label": "bookshelf",
+        "score": 10,
+        "note": "The dimensions and placement relative to the room are identical."
+      },
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The scale and position of the sofa perfectly match the target image."
+      },
+      {
+        "label": "coffee table",
+        "score": 10,
+        "note": "The table size relative to the sofa and surrounding floor space is accurate."
+      },
+      {
+        "label": "accent chair",
+        "score": 10,
+        "note": "The size of the red chair relative to the sofa is correct."
+      },
+      {
+        "label": "bar stools",
+        "score": 10,
+        "note": "The stools appear proportional to the window opening."
+      },
+      {
+        "label": "sideboard",
+        "score": 10,
+        "note": "The sideboard length and height match the target precisely."
+      },
+      {
+        "label": "pendant light",
+        "score": 10,
+        "note": "The chandelier size is consistent with the target."
+      },
+      {
+        "label": "foreground chairs",
+        "score": 10,
+        "note": "The two foreground chairs maintain correct relative scale."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered image is a perfect match to the target image in terms of object scale and placement.",
+    "missing_info": "No additional views are needed as the images are identical."
+  },
+  "9f283b51-0327-43d5-9ec0-44d867530f4e_Library-35224": {
+    "object_scores": [
+      {
+        "label": "dining chairs",
+        "score": 10,
+        "note": "The dining chairs are identical in size and proportion to the target image."
+      },
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "The table scale matches perfectly with the chairs and the surrounding room."
+      },
+      {
+        "label": "bookcase",
+        "score": 10,
+        "note": "The height and width of the bookcase are consistent with the original design."
+      },
+      {
+        "label": "side table",
+        "score": 10,
+        "note": "The small side table on the left is accurately scaled."
+      },
+      {
+        "label": "bench",
+        "score": 10,
+        "note": "The central bench matches the relative scale of the furniture in the background."
+      },
+      {
+        "label": "media console",
+        "score": 10,
+        "note": "The media console on the right maintains the correct aspect ratio and size."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered image is a perfect match for the target image in terms of object scale and placement.",
+    "missing_info": "The rendered image is identical to the target image, so no additional views are needed."
+  },
+  "1ad74b11-777a-4610-a249-7c5e044a0f01_MasterBedroom-14403": {
+    "object_scores": [
+      {
+        "label": "armchair",
+        "score": 10,
+        "note": "The armchair size and scale relative to the room remain consistent between images."
+      },
+      {
+        "label": "side table",
+        "score": 10,
+        "note": "The side table maintains the same relative proportions."
+      },
+      {
+        "label": "vanity table",
+        "score": 10,
+        "note": "The vanity table size is unchanged."
+      },
+      {
+        "label": "stool",
+        "score": 10,
+        "note": "The stool size remains consistent."
+      },
+      {
+        "label": "nightstand",
+        "score": 10,
+        "note": "The nightstand size is proportional to the bed."
+      },
+      {
+        "label": "bed",
+        "score": 10,
+        "note": "The bed platform scale is preserved."
+      },
+      {
+        "label": "bench",
+        "score": 10,
+        "note": "The bench maintains its size relative to the bed."
+      },
+      {
+        "label": "tall sculpture",
+        "score": 10,
+        "note": "The tall decorative sculpture is identical in scale."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture objects in the rendered image maintain their exact size and scale as observed in the target image.",
+    "missing_info": "Top-down view or dimension specifications would be required to verify absolute scale accuracy beyond relative comparison."
+  },
+  "aa9d393b-30df-456f-96dc-dad7bb8554c9_LivingRoom-38326": {
+    "object_scores": [
+      {
+        "label": "dining chair left foreground",
+        "score": 8,
+        "note": "The chair in the rendered image is significantly oversized compared to the target reference."
+      },
+      {
+        "label": "dining chair right foreground",
+        "score": 3,
+        "note": "The chair in the rendered image is incorrectly scaled down, appearing like a miniature toy."
+      },
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "The table size and proportions are consistent with the target."
+      },
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The sofa size matches the target proportions."
+      },
+      {
+        "label": "teal cabinet",
+        "score": 10,
+        "note": "The teal cabinet matches the target size."
+      },
+      {
+        "label": "coffee tables",
+        "score": 10,
+        "note": "The nested coffee tables match the target size."
+      }
+    ],
+    "score": 9,
+    "reasoning": "Most furniture objects are perfectly scaled, however, two of the dining chairs in the foreground have incorrect relative scales, with one being too large and the other too small.",
+    "missing_info": "Top-down view or dimension specifications to definitively verify object heights and base footprints."
+  },
+  "f36889f8-d94b-4ab9-9da1-46e06a27ff90_LivingRoom-12836": {
+    "object_scores": [
+      {
+        "label": "sofa",
+        "score": 9,
+        "note": "The sofa is positioned and scaled correctly relative to the room."
+      },
+      {
+        "label": "blue armchairs",
+        "score": 9,
+        "note": "The pair of blue armchairs matches the scale of the target image accurately."
+      },
+      {
+        "label": "coffee table",
+        "score": 10,
+        "note": "The coffee table scale and placement are perfectly aligned with the target."
+      },
+      {
+        "label": "foreground cowhide chair",
+        "score": 10,
+        "note": "The foreground chair scale is consistent with the target image."
+      },
+      {
+        "label": "black cabinet",
+        "score": 10,
+        "note": "The black cabinet on the right side maintains accurate proportions."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered scene matches the target scene almost perfectly in terms of object scale and placement.",
+    "missing_info": "A top-down architectural layout would be beneficial to verify the exact dimensional accuracy of the furniture footprint."
+  },
+  "473fb8fd-a6d4-4fc1-bd5d-1afd61a9617e_LivingRoom-9915": {
+    "object_scores": [
+      {
+        "label": "sofa",
+        "score": 9,
+        "note": "The sofa is slightly smaller in the rendered image compared to the target, but proportional relative to the room."
+      },
+      {
+        "label": "nesting coffee tables",
+        "score": 9,
+        "note": "Size and scale appear very close to the target image."
+      },
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "The dining table is appropriately sized and matches the perspective of the target."
+      },
+      {
+        "label": "cabinet",
+        "score": 10,
+        "note": "The cabinet matches the size and placement of the target image accurately."
+      },
+      {
+        "label": "floor lamp",
+        "score": 10,
+        "note": "The floor lamp size is consistent with the target."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The furniture objects in the rendered image are highly consistent in relative scale and size compared to the target image.",
+    "missing_info": "A top-down layout view would allow for more precise verification of furniture dimensions and spacing."
+  },
+  "d650faee-f134-46fd-b8f7-38712998f3b5_LivingRoom-2922": {
+    "object_scores": [
+      {
+        "label": "TV console",
+        "score": 10,
+        "note": "The TV console appears identical in scale to the reference image."
+      },
+      {
+        "label": "Sofa",
+        "score": 10,
+        "note": "The sofa proportions and placement relative to the room remain consistent."
+      },
+      {
+        "label": "Coffee table",
+        "score": 10,
+        "note": "The coffee table matches the size seen in the target image perfectly."
+      },
+      {
+        "label": "Foreground chair",
+        "score": 10,
+        "note": "The foreground chair matches the target scale perfectly."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered image is essentially identical to the target image provided, maintaining consistent scale for all visible furniture items.",
+    "missing_info": "No additional views are needed as the images are identical."
+  },
+  "6ae193c4-4fe1-42e8-b2dd-38ded31b7f12_LivingDiningRoom-48379": {
+    "object_scores": [
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The sofa matches the target scale perfectly."
+      },
+      {
+        "label": "coffee table",
+        "score": 10,
+        "note": "The coffee table matches the target scale perfectly."
+      },
+      {
+        "label": "side table",
+        "score": 10,
+        "note": "The side table behind the sofa is consistent with the target."
+      },
+      {
+        "label": "armchair",
+        "score": 10,
+        "note": "The black armchair size is consistent with the target."
+      },
+      {
+        "label": "pedestal planter",
+        "score": 10,
+        "note": "The pedestal planter size is consistent with the target."
+      },
+      {
+        "label": "cabinet/sideboard",
+        "score": 10,
+        "note": "The sideboard on the right matches the target size."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered image is identical to the target image in terms of object scaling and proportions.",
+    "missing_info": "Top-down view or exact dimensions for each furniture piece would be required to verify absolute scale accuracy."
+  },
+  "a0b8b195-676d-47bd-afce-3e135b8fde83_LivingDiningRoom-22853": {
+    "object_scores": [
+      {
+        "label": "cabinet",
+        "score": 10,
+        "note": "The cabinet scale remains consistent between the two images."
+      },
+      {
+        "label": "white dresser",
+        "score": 10,
+        "note": "The dresser scale remains consistent between the two images."
+      },
+      {
+        "label": "dining chairs",
+        "score": 2,
+        "note": "The dining chairs are significantly underscaled compared to the target, appearing doll-sized."
+      },
+      {
+        "label": "dining table",
+        "score": 6,
+        "note": "The table scale appears slightly altered relative to the disproportionate chairs."
+      },
+      {
+        "label": "coffee table",
+        "score": 8,
+        "note": "The coffee table maintains roughly the same scale, though its positioning/perspective is slightly different."
+      }
+    ],
+    "score": 7,
+    "reasoning": "The room features furniture, but the dining chairs are incorrectly scaled, looking extremely small compared to the table and other scene elements, significantly detracting from the realism.",
+    "missing_info": "Top-down floor plan or side-view elevation to verify exact object dimensions and placement."
+  },
+  "8174e94b-cb97-4d24-bd3a-81a095192bbe_LivingDiningRoom-33640": {
+    "object_scores": [
+      {
+        "label": "teal media console",
+        "score": 10,
+        "note": "Scale appears identical between target and render."
+      },
+      {
+        "label": "wooden tall cabinet",
+        "score": 10,
+        "note": "Scale appears identical between target and render."
+      },
+      {
+        "label": "rattan chair",
+        "score": 10,
+        "note": "Scale appears identical between target and render."
+      },
+      {
+        "label": "round white coffee table",
+        "score": 10,
+        "note": "Scale appears identical between target and render."
+      },
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "Scale appears identical between target and render."
+      },
+      {
+        "label": "cylindrical stool",
+        "score": 10,
+        "note": "Scale appears identical between target and render."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered image is identical to the target image in terms of the scale and proportions of all furniture items.",
+    "missing_info": "No additional views are needed as the two images appear to be identical renderings."
+  },
+  "a17c6eb5-a044-400a-b0b6-3e757cccbb15_LivingDiningRoom-15943": {
+    "object_scores": [
+      {
+        "label": "blue tall cabinet",
+        "score": 10,
+        "note": "Scale matches the reference image exactly."
+      },
+      {
+        "label": "dining chairs",
+        "score": 10,
+        "note": "Scale and proportion relative to the dining table are correct."
+      },
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "Scale is consistent with the surrounding chairs and floor tiles."
+      },
+      {
+        "label": "grey low media console",
+        "score": 10,
+        "note": "Size and placement relative to the room layout match perfectly."
+      },
+      {
+        "label": "grey poufs",
+        "score": 10,
+        "note": "Scale of both poufs matches the target."
+      },
+      {
+        "label": "orange tall cabinet",
+        "score": 10,
+        "note": "Scale is identical to the target image."
+      },
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "Sofa dimensions and footprint are correct."
+      },
+      {
+        "label": "black armchair",
+        "score": 10,
+        "note": "The scale of the armchair relative to the sofa is correct."
+      },
+      {
+        "label": "floor lamp",
+        "score": 10,
+        "note": "The lamp's height and base footprint match the target."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered image is an exact match for the target image in terms of object scale and placement.",
+    "missing_info": "No additional views are needed as the scale appears consistent across all furniture items relative to the floor tiling pattern."
+  },
+  "5e6d0804-54a9-4d4a-b4ed-1b4f22aa1d01_LivingRoom-16933": {
+    "object_scores": [
+      {
+        "label": "front-left armchair",
+        "score": 10,
+        "note": "Scale and proportion are consistent with the target image."
+      },
+      {
+        "label": "media cabinet",
+        "score": 10,
+        "note": "The cabinet size and footprint match the target scene accurately."
+      },
+      {
+        "label": "central coffee table/bench pair",
+        "score": 10,
+        "note": "The height and width relative to the sofa remain consistent."
+      },
+      {
+        "label": "sofa",
+        "score": 9,
+        "note": "The sofa appears slightly larger in volume compared to the target, but remains acceptable."
+      },
+      {
+        "label": "accent armchair mid-room",
+        "score": 10,
+        "note": "The chair scale is accurate relative to the room depth."
+      },
+      {
+        "label": "side table",
+        "score": 8,
+        "note": "The side table is slightly smaller than the target, altering the balance with the plant."
+      },
+      {
+        "label": "dining set in distance",
+        "score": 10,
+        "note": "The scale of the distant dining objects remains consistent."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered scene demonstrates a high degree of fidelity in object scaling. The proportions of all major furniture pieces relative to each other and the architectural context align well with the target.",
+    "missing_info": "Top-down floor plan views or consistent 3D camera metadata would provide higher precision for object scale verification."
+  },
+  "109a8e42-f7d7-4893-8262-f2030072b760_LivingRoom-38165": {
+    "object_scores": [
+      {
+        "label": "black sofa in foreground",
+        "score": 10,
+        "note": "Scale and position match the target perfectly."
+      },
+      {
+        "label": "bed in background",
+        "score": 10,
+        "note": "The bed size and proportion relative to the window are accurate."
+      },
+      {
+        "label": "marble coffee table",
+        "score": 10,
+        "note": "Scale relative to the sofa and surrounding floor space is correct."
+      },
+      {
+        "label": "side table in foreground",
+        "score": 10,
+        "note": "Matches the scale and placement seen in the target image."
+      },
+      {
+        "label": "media console cabinet",
+        "score": 10,
+        "note": "Length and height relative to the wall match the target."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered image is identical in furniture scale and composition to the target image provided.",
+    "missing_info": "No additional views are needed as the objects are well-defined and consistently scaled across the two images."
+  }
+}

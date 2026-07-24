@@ -1,0 +1,1237 @@
+{
+  "0f661df2-0f41-47a4-830c-7444f4a33a03_LivingDiningRoom-12554": {
+    "object_scores": [
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "The table position and orientation are accurate."
+      },
+      {
+        "label": "dining chairs",
+        "score": 10,
+        "note": "The placement of the dining chairs is consistent with the target."
+      },
+      {
+        "label": "sofa",
+        "score": 8,
+        "note": "The sofa is positioned similarly but seems slightly shifted relative to the side table."
+      },
+      {
+        "label": "side table",
+        "score": 7,
+        "note": "The side table is present but slightly differently placed relative to the sofa compared to the target."
+      },
+      {
+        "label": "coffee table",
+        "score": 8,
+        "note": "The coffee table is close to the correct position, though alignment with the sofa is slightly different."
+      },
+      {
+        "label": "media console",
+        "score": 9,
+        "note": "The media console is well-positioned relative to the rest of the furniture."
+      },
+      {
+        "label": "accent chair",
+        "score": 0,
+        "note": "The accent chair from the target image is completely missing in the rendered scene."
+      }
+    ],
+    "score": 7,
+    "reasoning": "Most major furniture items are placed correctly, but the omission of the accent chair and minor positional shifts reduce the score.",
+    "missing_info": "A top-down floor plan view would be the most effective way to verify the exact spatial alignment of the furniture pieces."
+  },
+  "996d5631-517a-4906-b232-5e1148c97867_LivingDiningRoom-8344": {
+    "object_scores": [
+      {
+        "label": "sofa",
+        "score": 9,
+        "note": "The sofa is positioned correctly, but appears slightly closer to the viewer compared to the target."
+      },
+      {
+        "label": "left armchair",
+        "score": 9,
+        "note": "The armchair position matches well, though the depth alignment is very slightly different."
+      },
+      {
+        "label": "right armchair",
+        "score": 9,
+        "note": "The armchair position is consistent with the target scene."
+      },
+      {
+        "label": "coffee table",
+        "score": 0,
+        "note": "The coffee table is entirely missing from the rendered image."
+      },
+      {
+        "label": "tall plant",
+        "score": 5,
+        "note": "The plant is significantly smaller and appears collapsed compared to the lush plant in the target."
+      },
+      {
+        "label": "tv stand",
+        "score": 10,
+        "note": "The tv stand is in the correct position."
+      },
+      {
+        "label": "sculptural pedestal",
+        "score": 10,
+        "note": "The pedestal is in the correct position."
+      }
+    ],
+    "score": 7,
+    "reasoning": "Most furniture pieces are placed accurately, but the coffee table is missing, and the plant appears to be a different/collapsed version.",
+    "missing_info": "A top-down floor plan view would be helpful to confirm the precise coordinate placement of the furniture relative to the room walls."
+  },
+  "1f077e24-2eca-43ca-bc92-1b36eab99467_LivingDiningRoom-180855": {
+    "object_scores": [
+      {
+        "label": "black TV stand",
+        "score": 10,
+        "note": "Position is consistent with the target."
+      },
+      {
+        "label": "white console table",
+        "score": 9,
+        "note": "Position is identical, slight variations in perspective."
+      },
+      {
+        "label": "sofa",
+        "score": 5,
+        "note": "Sofa has been moved significantly forward and turned slightly."
+      },
+      {
+        "label": "coffee table",
+        "score": 3,
+        "note": "Coffee table is now placed in front of the sofa instead of in the center, and its shape/model has changed."
+      },
+      {
+        "label": "dining set",
+        "score": 9,
+        "note": "Dining table and chairs remain in their original positions."
+      },
+      {
+        "label": "upright piano",
+        "score": 10,
+        "note": "Piano remains in the original position."
+      },
+      {
+        "label": "piano bench",
+        "score": 3,
+        "note": "Piano bench has been moved from under the piano to a different spot."
+      }
+    ],
+    "score": 7,
+    "reasoning": "Most major furniture items remain in their original locations, but the sofa, coffee table, and piano bench have been shifted.",
+    "missing_info": "A top-down floor plan view would be the most helpful to confirm exact spatial offsets of the moved items."
+  },
+  "2eeb434c-855e-4298-a8d5-29b1ca838608_MasterBedroom-5966": {
+    "object_scores": [
+      {
+        "label": "bed",
+        "score": 10,
+        "note": "The bed is positioned identically in both scenes."
+      },
+      {
+        "label": "left bedside table",
+        "score": 10,
+        "note": "The bedside table is in the correct position relative to the bed."
+      },
+      {
+        "label": "right bedside table",
+        "score": 10,
+        "note": "The right bedside table is visible behind the bed and wardrobe in both scenes."
+      },
+      {
+        "label": "wardrobe",
+        "score": 10,
+        "note": "The wardrobe is in the exact same location."
+      },
+      {
+        "label": "left chandelier",
+        "score": 10,
+        "note": "The chandelier is in the correct position overhead."
+      },
+      {
+        "label": "right chandelier",
+        "score": 10,
+        "note": "The chandelier is in the correct position overhead."
+      }
+    ],
+    "score": 10,
+    "reasoning": "All furniture pieces are placed in the exact same position in the rendered scene compared to the target image.",
+    "missing_info": "Top-down view would confirm precise alignment, but the perspective matches perfectly."
+  },
+  "6e7a0c41-15f3-4909-a20c-dab460b45ada_LivingDiningRoom-847": {
+    "object_scores": [
+      {
+        "label": "white sofa",
+        "score": 8,
+        "note": "The sofa is positioned correctly, but the cushions differ and it has an extra side unit in the rendered image."
+      },
+      {
+        "label": "dining table",
+        "score": 9,
+        "note": "The table is correctly placed relative to the wall and room layout."
+      },
+      {
+        "label": "dining chair 1",
+        "score": 10,
+        "note": "The chair near the table is placed in the correct position."
+      },
+      {
+        "label": "dining chair 2",
+        "score": 0,
+        "note": "This chair is present in the rendered image but is not present in the target image."
+      },
+      {
+        "label": "coffee table",
+        "score": 9,
+        "note": "The coffee table is placed in the correct relative location in the room."
+      },
+      {
+        "label": "cabinet",
+        "score": 10,
+        "note": "The cabinet is placed in the correct position against the wall."
+      },
+      {
+        "label": "floor lamp",
+        "score": 10,
+        "note": "The lamp is positioned in the correct spot next to the sofa."
+      },
+      {
+        "label": "chandelier",
+        "score": 10,
+        "note": "The chandelier is centered correctly in the ceiling space."
+      }
+    ],
+    "score": 8,
+    "reasoning": "Most furniture objects are placed in the correct positions, with the exception of an extra chair added to the rendered scene and some minor differences in furniture detail.",
+    "missing_info": "A top-down floor plan view would be the most helpful additional view to assess the precise alignment and spacing of the furniture."
+  },
+  "10e2d93c-2a82-49f2-a95c-7598d24901f2_LivingDiningRoom-8149": {
+    "object_scores": [
+      {
+        "label": "dining table",
+        "score": 9,
+        "note": "Position is very similar to target, just slightly shifted due to different camera angle."
+      },
+      {
+        "label": "dining chairs",
+        "score": 9,
+        "note": "Configuration and placement relative to the table match the target."
+      },
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "Sofa placement is consistent with the target image."
+      },
+      {
+        "label": "black side table console",
+        "score": 9,
+        "note": "Matches the target position relative to the sofa."
+      },
+      {
+        "label": "cat mat",
+        "score": 9,
+        "note": "Position is consistent relative to the console table."
+      },
+      {
+        "label": "chandelier",
+        "score": 9,
+        "note": "Suspended correctly above the dining area."
+      },
+      {
+        "label": "pendant light",
+        "score": 9,
+        "note": "Correctly positioned in the living area zone."
+      }
+    ],
+    "score": 9,
+    "reasoning": "The rendered scene is highly accurate, with all major furniture pieces placed in locations consistent with the target reference, despite the slight variation in camera perspective.",
+    "missing_info": "A top-down view would be beneficial to precisely verify the alignment and spacing of the furniture."
+  },
+  "e44c4ecc-0260-469d-a60d-b71cf1d34029_LivingRoom-15009": {
+    "object_scores": [
+      {
+        "label": "armchair",
+        "score": 10,
+        "note": "The armchair is in the identical position."
+      },
+      {
+        "label": "floor lamp",
+        "score": 10,
+        "note": "The floor lamp is in the identical position."
+      },
+      {
+        "label": "cabinet",
+        "score": 10,
+        "note": "The cabinet is in the identical position."
+      },
+      {
+        "label": "wooden folding chair",
+        "score": 10,
+        "note": "The wooden chair is in the identical position."
+      },
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "The dining table is in the identical position."
+      },
+      {
+        "label": "dining chair",
+        "score": 9,
+        "note": "The chair is slightly rotated or shifted compared to the target."
+      },
+      {
+        "label": "sideboard",
+        "score": 5,
+        "note": "The sideboard is positioned further into the center of the room compared to the target."
+      }
+    ],
+    "score": 9,
+    "reasoning": "Most furniture items are placed correctly, except for the sideboard which has a different placement.",
+    "missing_info": "A top-down floor plan view would allow for precise measurement of distances between objects."
+  },
+  "f006ad67-40d2-4068-950c-2ce3805d3932_LivingDiningRoom-38341": {
+    "object_scores": [
+      {
+        "label": "spotted sofa",
+        "score": 9,
+        "note": "The sofa position is highly similar, with very minor variations in perspective and framing."
+      },
+      {
+        "label": "white circular coffee table",
+        "score": 10,
+        "note": "The table is positioned identically relative to the sofa."
+      },
+      {
+        "label": "dining table",
+        "score": 9,
+        "note": "The dining table is in the same location, though the camera angle slightly shifts its apparent distance."
+      },
+      {
+        "label": "dining chairs",
+        "score": 8,
+        "note": "The chairs match the general layout, although minor differences in their alignment exist compared to the target."
+      },
+      {
+        "label": "media console",
+        "score": 10,
+        "note": "The media console is placed in the exact same position along the right wall."
+      },
+      {
+        "label": "pendant light",
+        "score": 10,
+        "note": "The overhead lighting fixture is correctly positioned above the dining area."
+      }
+    ],
+    "score": 9,
+    "reasoning": "The rendered scene is nearly identical to the target scene, with all major furniture pieces accurately placed. Minor discrepancies are likely due to small camera angle differences rather than object displacement.",
+    "missing_info": "A top-down floor plan view would be necessary to confirm the precise millimeter-level accuracy of furniture placement."
+  },
+  "b34c215e-1449-4702-8080-e7173e8e8f67_LivingDiningRoom-14069": {
+    "object_scores": [
+      {
+        "label": "dining chairs",
+        "score": 10,
+        "note": "Positions match perfectly between images."
+      },
+      {
+        "label": "yellow sofa",
+        "score": 9,
+        "note": "Almost identical placement, slightly adjusted depth."
+      },
+      {
+        "label": "brown sofa",
+        "score": 9,
+        "note": "Very similar alignment to the background wall."
+      },
+      {
+        "label": "coffee table",
+        "score": 8,
+        "note": "Slightly shifted relative to the brown sofa."
+      },
+      {
+        "label": "dining chair (single)",
+        "score": 9,
+        "note": "Consistent placement near the coffee table."
+      },
+      {
+        "label": "cabinet",
+        "score": 10,
+        "note": "Position is identical."
+      },
+      {
+        "label": "potted plant",
+        "score": 10,
+        "note": "Position is identical."
+      }
+    ],
+    "score": 9,
+    "reasoning": "The rendered scene is highly accurate, with almost all objects placed correctly in their respective positions compared to the target.",
+    "missing_info": "Top-down floor plan view would allow for precise coordinate-based distance measurements."
+  },
+  "09d742d0-9e99-4e31-ac3d-ad1879cf691b_LivingDiningRoom-9326": {
+    "object_scores": [
+      {
+        "label": "black sofa",
+        "score": 10,
+        "note": "The black sectional sofa is identical in placement and orientation."
+      },
+      {
+        "label": "round coffee table",
+        "score": 9,
+        "note": "The table is positioned nearly identical to the target, with only a negligible variance."
+      },
+      {
+        "label": "dining chairs",
+        "score": 10,
+        "note": "Both grey dining chairs are perfectly aligned with the target positions."
+      },
+      {
+        "label": "bar counter",
+        "score": 10,
+        "note": "The structure and placement of the bar counter are perfectly maintained."
+      },
+      {
+        "label": "potted plant",
+        "score": 10,
+        "note": "The plant is placed exactly in the corner near the sofa."
+      },
+      {
+        "label": "side chair near entrance",
+        "score": 10,
+        "note": "The chair near the wall is in the correct position."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered scene is an extremely accurate representation of the target with virtually no deviations in furniture placement.",
+    "missing_info": "Top-down floor plan view would confirm precise alignment with the checkerboard tile pattern."
+  },
+  "1ad74b11-777a-4610-a249-7c5e044a0f01_LivingDiningRoom-10290": {
+    "object_scores": [
+      {
+        "label": "TV stand",
+        "score": 9,
+        "note": "The TV stand is slightly further left and rotated differently compared to the target."
+      },
+      {
+        "label": "side cabinet",
+        "score": 10,
+        "note": "The cabinet is in the same position."
+      },
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "Dining table is correctly placed."
+      },
+      {
+        "label": "dining chairs",
+        "score": 10,
+        "note": "All four dining chairs are in their correct positions."
+      },
+      {
+        "label": "coffee table",
+        "score": 9,
+        "note": "The coffee table is slightly shifted forward and toward the right."
+      },
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The sofa is correctly placed."
+      },
+      {
+        "label": "small stools near sofa",
+        "score": 9,
+        "note": "The nested tables near the sofa are in the correct position."
+      },
+      {
+        "label": "small stool near TV stand",
+        "score": 8,
+        "note": "The stool near the TV stand is shifted slightly further from the stand."
+      }
+    ],
+    "score": 9,
+    "reasoning": "Most furniture objects are in their correct positions, with only minor variations in alignment for the TV stand and coffee table.",
+    "missing_info": "A top-down floor plan view would be the most helpful additional perspective to confirm the exact distance between objects and verify precision."
+  },
+  "7c2e62e7-ab51-4900-bfdc-1932415fb295_LivingDiningRoom-16509": {
+    "object_scores": [
+      {
+        "label": "sofa",
+        "score": 6,
+        "note": "The sofa is positioned further back and towards the center compared to the target."
+      },
+      {
+        "label": "armchair",
+        "score": 5,
+        "note": "The armchair is significantly misaligned, shifted towards the right compared to its centered position in the target."
+      },
+      {
+        "label": "ottomans",
+        "score": 4,
+        "note": "The ottomans have shifted positions, with one appearing closer to the center and the other further away, disrupting the symmetrical arrangement."
+      },
+      {
+        "label": "coffee table",
+        "score": 0,
+        "note": "The coffee table is entirely missing from the rendered scene."
+      },
+      {
+        "label": "side cabinet",
+        "score": 10,
+        "note": "The side cabinet on the right wall remains in the correct position."
+      },
+      {
+        "label": "ceiling light",
+        "score": 10,
+        "note": "The light fixture remains correctly centered."
+      }
+    ],
+    "score": 6,
+    "reasoning": "While the larger furniture pieces like the cabinet and lighting are correctly placed, the seating arrangement is noticeably inconsistent, and the coffee table is missing.",
+    "missing_info": "A top-down layout view would clarify the precise deviations in the seating arrangement and confirm the missing coffee table."
+  },
+  "7686a060-ab0d-4014-9e5c-75d75e0752e3_LivingDiningRoom-44815": {
+    "object_scores": [
+      {
+        "label": "black sofa",
+        "score": 10,
+        "note": "The position of the black sofa is identical between target and rendered images."
+      },
+      {
+        "label": "wooden armchair",
+        "score": 10,
+        "note": "The position of the wooden armchair is identical between target and rendered images."
+      },
+      {
+        "label": "coffee table",
+        "score": 10,
+        "note": "The position of the coffee table is identical between target and rendered images."
+      },
+      {
+        "label": "small chair on the left",
+        "score": 10,
+        "note": "The position of the small chair on the left is identical between target and rendered images."
+      },
+      {
+        "label": "chair behind sofa",
+        "score": 10,
+        "note": "The position of the chair behind the sofa is identical between target and rendered images."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered image is a perfect match to the target image, with all furniture objects placed in the exact same positions.",
+    "missing_info": "No additional views are needed as the placement appears identical across all objects visible in this perspective."
+  },
+  "109c84cd-7194-4b1d-ac52-8d1862565c6c_Corridor-20684": {
+    "object_scores": [
+      {
+        "label": "large beige cabinet",
+        "score": 10,
+        "note": "Position is identical."
+      },
+      {
+        "label": "black tall cabinet",
+        "score": 10,
+        "note": "Position is identical."
+      },
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "Position is identical."
+      },
+      {
+        "label": "dining chairs",
+        "score": 10,
+        "note": "Arrangement matches perfectly."
+      },
+      {
+        "label": "black ottoman",
+        "score": 10,
+        "note": "Position is identical."
+      },
+      {
+        "label": "sideboard",
+        "score": 10,
+        "note": "Position matches behind the table."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered image is a perfect match for the target image; every object is aligned correctly.",
+    "missing_info": "No additional views are needed as the objects are clearly placed in the same locations."
+  },
+  "2e422478-2de0-4d16-b398-657b07c1cac0_LivingDiningRoom-4293": {
+    "object_scores": [
+      {
+        "label": "black console table",
+        "score": 10,
+        "note": "Perfectly matched position."
+      },
+      {
+        "label": "tall cabinet",
+        "score": 10,
+        "note": "Perfectly matched position."
+      },
+      {
+        "label": "coffee table",
+        "score": 10,
+        "note": "Perfectly matched position."
+      },
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "Perfectly matched position."
+      },
+      {
+        "label": "dining set",
+        "score": 10,
+        "note": "Perfectly matched position."
+      },
+      {
+        "label": "small shelf unit",
+        "score": 10,
+        "note": "Perfectly matched position."
+      },
+      {
+        "label": "wall-mounted lamp/fixture",
+        "score": 10,
+        "note": "Perfectly matched position."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered scene is identical to the target image with all furniture and fixtures placed in the exact same positions.",
+    "missing_info": "No additional views are needed as the objects are clearly matched from this perspective."
+  },
+  "9f283b51-0327-43d5-9ec0-44d867530f4e_Hallway-34943": {
+    "object_scores": [
+      {
+        "label": "side cabinet (left)",
+        "score": 10,
+        "note": "The cabinet is in the same position relative to the wall and room corner."
+      },
+      {
+        "label": "black tall cabinet (left)",
+        "score": 10,
+        "note": "Position is identical to the target scene."
+      },
+      {
+        "label": "black tall cabinet (right)",
+        "score": 10,
+        "note": "Position is identical to the target scene."
+      },
+      {
+        "label": "central dining table",
+        "score": 10,
+        "note": "The table is positioned correctly in the center of the room."
+      },
+      {
+        "label": "dining chair (front-left)",
+        "score": 10,
+        "note": "Position is correctly aligned with the table."
+      },
+      {
+        "label": "dining chair (front-center)",
+        "score": 10,
+        "note": "Position is correctly aligned with the table."
+      },
+      {
+        "label": "dining chair (front-right)",
+        "score": 10,
+        "note": "Position is correctly aligned with the table."
+      },
+      {
+        "label": "dining chair (back-left)",
+        "score": 10,
+        "note": "Position is correctly aligned with the table."
+      },
+      {
+        "label": "dining chair (back-center)",
+        "score": 10,
+        "note": "Position is correctly aligned with the table."
+      },
+      {
+        "label": "dining chair (back-right)",
+        "score": 10,
+        "note": "Position is correctly aligned with the table."
+      },
+      {
+        "label": "storage unit/sideboard (center)",
+        "score": 10,
+        "note": "The unit is correctly placed against the back wall."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered scene is nearly identical to the target scene, with all furniture objects accurately placed in their correct positions.",
+    "missing_info": "Top-down view would confirm precise distances between the furniture items, but the current view is sufficient to assess layout."
+  },
+  "103cce55-24d5-4c71-9856-156962e30511_LivingDiningRoom-89516": {
+    "object_scores": [
+      {
+        "label": "Wall-mounted storage unit",
+        "score": 10,
+        "note": "Positioning and scale are identical."
+      },
+      {
+        "label": "Low media cabinet",
+        "score": 10,
+        "note": "Positioning and scale are identical."
+      },
+      {
+        "label": "Potted plant",
+        "score": 10,
+        "note": "Positioning is identical."
+      },
+      {
+        "label": "Sofa",
+        "score": 10,
+        "note": "Positioning is identical."
+      },
+      {
+        "label": "Dresser cabinet behind sofa",
+        "score": 10,
+        "note": "Positioning is identical."
+      },
+      {
+        "label": "Decorative frames on dresser",
+        "score": 9,
+        "note": "Slight variation in arrangement compared to the target."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered scene matches the target scene perfectly in terms of object placement and arrangement.",
+    "missing_info": "No additional views are required as the perspective is clear."
+  },
+  "ab6d1b3b-31ba-4191-bc17-d03e504484a8_LivingDiningRoom-209062": {
+    "object_scores": [
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "Position and orientation are consistent with the target."
+      },
+      {
+        "label": "bookshelf",
+        "score": 0,
+        "note": "The bookshelf present in the target image is completely missing in the rendered scene."
+      },
+      {
+        "label": "coffee table",
+        "score": 9,
+        "note": "Placement is very close to the target, though slightly shifted."
+      },
+      {
+        "label": "bar stools",
+        "score": 9,
+        "note": "Positions are consistent, though slightly adjusted compared to the target."
+      },
+      {
+        "label": "accent chair",
+        "score": 10,
+        "note": "Position is identical to the target."
+      },
+      {
+        "label": "dining chairs",
+        "score": 10,
+        "note": "Foreground chairs are in the correct relative positions."
+      },
+      {
+        "label": "sideboard",
+        "score": 8,
+        "note": "The sideboard is present, but it has been replaced with a different model and items on top, affecting the visual match."
+      }
+    ],
+    "score": 8,
+    "reasoning": "Most furniture objects are in their correct locations, though one major piece of furniture (the bookshelf) is completely missing from the rendered image.",
+    "missing_info": "A top-down view would be helpful for more precise placement validation."
+  },
+  "9f283b51-0327-43d5-9ec0-44d867530f4e_Library-35224": {
+    "object_scores": [
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "The dining table is placed in the exact same position."
+      },
+      {
+        "label": "dining chairs",
+        "score": 10,
+        "note": "The arrangement of the three dining chairs is identical."
+      },
+      {
+        "label": "black display shelf",
+        "score": 10,
+        "note": "The shelf is perfectly aligned with the table."
+      },
+      {
+        "label": "bench in foreground",
+        "score": 10,
+        "note": "The bench position is unchanged."
+      },
+      {
+        "label": "left nightstand",
+        "score": 10,
+        "note": "The left nightstand matches the reference."
+      },
+      {
+        "label": "right media console",
+        "score": 10,
+        "note": "The right media console is in the same location."
+      },
+      {
+        "label": "ceiling lamp",
+        "score": 10,
+        "note": "The ceiling lamp is in the identical position."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered image is identical to the target image in every aspect of furniture placement.",
+    "missing_info": "No additional views are needed as the images are identical."
+  },
+  "1ad74b11-777a-4610-a249-7c5e044a0f01_MasterBedroom-14403": {
+    "object_scores": [
+      {
+        "label": "armchair",
+        "score": 9,
+        "note": "Position is nearly identical, very slightly adjusted."
+      },
+      {
+        "label": "side table",
+        "score": 10,
+        "note": "Position matches perfectly."
+      },
+      {
+        "label": "bench",
+        "score": 9,
+        "note": "Position is consistent with target."
+      },
+      {
+        "label": "vanity table",
+        "score": 8,
+        "note": "The desk is mounted higher and missing its top mirror/accessories."
+      },
+      {
+        "label": "stool",
+        "score": 9,
+        "note": "Position is accurate."
+      },
+      {
+        "label": "tall wooden sculpture",
+        "score": 0,
+        "note": "The tall decorative structure on the left is missing entirely."
+      },
+      {
+        "label": "bedside cabinet",
+        "score": 0,
+        "note": "The nightstand next to the bed is missing."
+      }
+    ],
+    "score": 6,
+    "reasoning": "Major furniture items like the armchair, table, and bench are positioned correctly, but the tall sculpture on the left and the nightstand are missing, and the vanity is simplified/altered.",
+    "missing_info": "Top-down view would help confirm the exact floor coordinates for the furniture layout compared to the target."
+  },
+  "aa9d393b-30df-456f-96dc-dad7bb8554c9_LivingRoom-38326": {
+    "object_scores": [
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "The table is correctly positioned in the center background."
+      },
+      {
+        "label": "dining chair (front left)",
+        "score": 8,
+        "note": "Position is slightly shifted compared to the target image."
+      },
+      {
+        "label": "dining chair (front right)",
+        "score": 10,
+        "note": "Placed in the same location as the target."
+      },
+      {
+        "label": "sofa",
+        "score": 9,
+        "note": "Very close to original position, just minor alignment differences."
+      },
+      {
+        "label": "coffee table",
+        "score": 7,
+        "note": "The table set is missing one piece and positioned differently."
+      },
+      {
+        "label": "green cabinet",
+        "score": 10,
+        "note": "Cabinet is in the correct foreground left corner."
+      }
+    ],
+    "score": 9,
+    "reasoning": "Most furniture items are placed accurately according to the target scene, though minor shifts in chairs and changes to the coffee table set are noted.",
+    "missing_info": "A top-down floor plan view would allow for precise coordinate verification of furniture placement."
+  },
+  "f36889f8-d94b-4ab9-9da1-46e06a27ff90_LivingRoom-12836": {
+    "object_scores": [
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The sofa is positioned in the same location."
+      },
+      {
+        "label": "coffee table",
+        "score": 10,
+        "note": "The coffee table is positioned in the same location."
+      },
+      {
+        "label": "accent chair (cowhide)",
+        "score": 10,
+        "note": "The cowhide chair is positioned in the same location."
+      },
+      {
+        "label": "blue leather lounge chair",
+        "score": 2,
+        "note": "The chair is missing or largely occluded in the rendered image."
+      },
+      {
+        "label": "potted plant on the right",
+        "score": 0,
+        "note": "The plant is missing in the rendered image."
+      },
+      {
+        "label": "tall cabinet on the right",
+        "score": 10,
+        "note": "The cabinet is positioned in the same location."
+      }
+    ],
+    "score": 7,
+    "reasoning": "Most major furniture items are correctly placed, but the second chair and the plant on the right are missing from the rendered scene.",
+    "missing_info": "A floor plan or top-down layout would confirm precise spatial coordinates for the furniture placement."
+  },
+  "473fb8fd-a6d4-4fc1-bd5d-1afd61a9617e_LivingRoom-9915": {
+    "object_scores": [
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The sofa position remains consistent across both images."
+      },
+      {
+        "label": "coffee table",
+        "score": 10,
+        "note": "The coffee table set is in the same position."
+      },
+      {
+        "label": "floor lamp",
+        "score": 10,
+        "note": "The floor lamp is correctly placed."
+      },
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "The dining table position is identical."
+      },
+      {
+        "label": "dining chairs",
+        "score": 10,
+        "note": "The dining chairs are arranged consistently."
+      },
+      {
+        "label": "storage cabinet",
+        "score": 0,
+        "note": "The cabinet is missing from the rendered image."
+      }
+    ],
+    "score": 7,
+    "reasoning": "Most furniture items are placed correctly, however, the storage cabinet is entirely absent from the second image.",
+    "missing_info": "Top-down view would confirm exact alignment, though the primary issue is the missing cabinet."
+  },
+  "d650faee-f134-46fd-b8f7-38712998f3b5_LivingRoom-2922": {
+    "object_scores": [
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The sofa position and orientation appear identical in both images."
+      },
+      {
+        "label": "coffee table",
+        "score": 10,
+        "note": "The coffee table is aligned perfectly with the sofa."
+      },
+      {
+        "label": "TV stand cabinet",
+        "score": 10,
+        "note": "The TV stand position relative to the room layout is consistent."
+      },
+      {
+        "label": "pink chair",
+        "score": 0,
+        "note": "The pink chair is present in the target image but missing entirely from the rendered image."
+      }
+    ],
+    "score": 8,
+    "reasoning": "Most furniture objects are placed correctly, but a prominent pink chair in the foreground of the target image is missing in the rendered scene.",
+    "missing_info": "A top-down floor plan or bounding box coordinates for each object would provide more precise spatial verification."
+  },
+  "6ae193c4-4fe1-42e8-b2dd-38ded31b7f12_LivingDiningRoom-48379": {
+    "object_scores": [
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The sofa is positioned identically in both images."
+      },
+      {
+        "label": "coffee table",
+        "score": 10,
+        "note": "The coffee table is positioned identically in both images."
+      },
+      {
+        "label": "black armchair",
+        "score": 10,
+        "note": "The armchair is positioned identically in both images."
+      },
+      {
+        "label": "pedestal plant stand",
+        "score": 10,
+        "note": "The plant stand is positioned identically in both images."
+      },
+      {
+        "label": "side table left",
+        "score": 10,
+        "note": "The side table on the far left is positioned identically in both images."
+      },
+      {
+        "label": "side table behind sofa",
+        "score": 10,
+        "note": "The side table behind the sofa is positioned identically in both images."
+      },
+      {
+        "label": "console table right",
+        "score": 10,
+        "note": "The console table on the right is positioned identically in both images."
+      },
+      {
+        "label": "chandelier",
+        "score": 10,
+        "note": "The chandelier is centered identically in both images."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered image is identical to the target image with all furniture objects in their exact corresponding positions.",
+    "missing_info": "No additional views are needed as the images are pixel-perfect matches."
+  },
+  "a0b8b195-676d-47bd-afce-3e135b8fde83_LivingDiningRoom-22853": {
+    "object_scores": [
+      {
+        "label": "tall corner cabinet",
+        "score": 3,
+        "note": "The cabinet has moved from a side position in the foreground to directly in front of the dining table in the rendered scene."
+      },
+      {
+        "label": "dining table",
+        "score": 9,
+        "note": "The dining table is in a consistent position relative to the window and chairs."
+      },
+      {
+        "label": "white dining chairs",
+        "score": 9,
+        "note": "The chairs remain positioned around the table, though slightly adjusted due to the cabinet movement."
+      },
+      {
+        "label": "black sofa",
+        "score": 10,
+        "note": "The sofa position is consistent between images."
+      },
+      {
+        "label": "black armchair",
+        "score": 10,
+        "note": "The armchair position is consistent between images."
+      },
+      {
+        "label": "coffee table",
+        "score": 9,
+        "note": "The coffee table remains in the foreground area."
+      },
+      {
+        "label": "white chest of drawers",
+        "score": 0,
+        "note": "The chest of drawers is entirely missing from the rendered image."
+      }
+    ],
+    "score": 7,
+    "reasoning": "Most furniture objects maintained their positions, but the tall cabinet was incorrectly relocated and the chest of drawers was removed.",
+    "missing_info": "A top-down floor plan view would be helpful to determine the exact intended coordinates of each furniture piece."
+  },
+  "8174e94b-cb97-4d24-bd3a-81a095192bbe_LivingDiningRoom-33640": {
+    "object_scores": [
+      {
+        "label": "cabinet",
+        "score": 10,
+        "note": "The cabinet is in the same position."
+      },
+      {
+        "label": "tv unit",
+        "score": 10,
+        "note": "The tv unit is in the same position."
+      },
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The sofa is in the same position."
+      },
+      {
+        "label": "coffee tables",
+        "score": 10,
+        "note": "The coffee tables are in the same position."
+      },
+      {
+        "label": "wicker chair",
+        "score": 10,
+        "note": "The wicker chair is in the same position."
+      },
+      {
+        "label": "side stool",
+        "score": 10,
+        "note": "The side stool is in the same position."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered image is identical to the target image.",
+    "missing_info": "No missing information, the images match perfectly."
+  },
+  "a17c6eb5-a044-400a-b0b6-3e757cccbb15_LivingDiningRoom-15943": {
+    "object_scores": [
+      {
+        "label": "blue tall cabinet",
+        "score": 10,
+        "note": "Placed correctly in the left corner."
+      },
+      {
+        "label": "long grey cabinet",
+        "score": 10,
+        "note": "Position is consistent with the target."
+      },
+      {
+        "label": "dining table",
+        "score": 10,
+        "note": "Correct central positioning."
+      },
+      {
+        "label": "yellow dining chairs",
+        "score": 7,
+        "note": "Some chairs are missing compared to the original image."
+      },
+      {
+        "label": "orange storage unit",
+        "score": 10,
+        "note": "Correct placement against the wall."
+      },
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "Aligned correctly with the right wall."
+      },
+      {
+        "label": "grey poufs",
+        "score": 5,
+        "note": "Only one pouf is present instead of two."
+      },
+      {
+        "label": "black armchair",
+        "score": 10,
+        "note": "Correct foreground placement."
+      },
+      {
+        "label": "black round table",
+        "score": 0,
+        "note": "This item is not present in the target scene."
+      },
+      {
+        "label": "floor lamp",
+        "score": 10,
+        "note": "Correct placement next to the sofa."
+      },
+      {
+        "label": "potted plant",
+        "score": 10,
+        "note": "Correct placement on the left."
+      }
+    ],
+    "score": 8,
+    "reasoning": "The layout is generally very accurate, with most major furniture pieces in their correct relative positions. However, there are discrepancies regarding the number of poufs, chairs, and the addition of a small table not seen in the target.",
+    "missing_info": "Top-down view would provide better clarity on precise coordinate alignment of the furniture."
+  },
+  "5e6d0804-54a9-4d4a-b4ed-1b4f22aa1d01_LivingRoom-16933": {
+    "object_scores": [
+      {
+        "label": "left-hand side armchair",
+        "score": 0,
+        "note": "The armchair in the foreground on the left is missing in the rendered scene."
+      },
+      {
+        "label": "media cabinet",
+        "score": 10,
+        "note": "Position is consistent with the target scene."
+      },
+      {
+        "label": "central coffee table",
+        "score": 10,
+        "note": "Position is consistent with the target scene."
+      },
+      {
+        "label": "foreground benches",
+        "score": 10,
+        "note": "Position is consistent with the target scene."
+      },
+      {
+        "label": "white accent chair",
+        "score": 9,
+        "note": "Slightly shifted position compared to the target."
+      },
+      {
+        "label": "sofa",
+        "score": 8,
+        "note": "Positioned further back towards the rear wall than in the target."
+      },
+      {
+        "label": "side table near sofa",
+        "score": 6,
+        "note": "Position is significantly different and placed between the sofa and the wall/cabinet."
+      },
+      {
+        "label": "plant",
+        "score": 10,
+        "note": "Position is consistent with the target scene."
+      }
+    ],
+    "score": 8,
+    "reasoning": "Most furniture pieces are placed correctly, but the foreground armchair is missing, and the sofa and its adjacent side table have been repositioned relative to the target scene.",
+    "missing_info": "A top-down layout view (floor plan) would clarify the exact placement coordinates of the sofa and side table."
+  },
+  "109a8e42-f7d7-4893-8262-f2030072b760_LivingRoom-38165": {
+    "object_scores": [
+      {
+        "label": "bed",
+        "score": 10,
+        "note": "The bed is in the same position relative to the room layout."
+      },
+      {
+        "label": "sofa",
+        "score": 10,
+        "note": "The black sofa occupies the same position in the scene."
+      },
+      {
+        "label": "coffee table",
+        "score": 10,
+        "note": "The coffee table is identical in placement."
+      },
+      {
+        "label": "side table",
+        "score": 10,
+        "note": "The small round side table is in the same position."
+      },
+      {
+        "label": "media console",
+        "score": 10,
+        "note": "The media console is correctly aligned against the right wall."
+      }
+    ],
+    "score": 10,
+    "reasoning": "The rendered image matches the target scene perfectly in terms of object placement and orientation.",
+    "missing_info": "No additional views are required as the scene is perfectly replicated."
+  }
+}
