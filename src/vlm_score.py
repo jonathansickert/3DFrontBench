@@ -66,18 +66,26 @@ def _image_to_data_url(image: Image.Image) -> str:
 
 class VLMScoreAgent:
     def __init__(self, api_key: str | None = None, base_url: str | None = None, model_choice: str = "gemini"):
+        if model_choice == "qwen8":
+            api_key = api_key or os.getenv("OPENROUTER_API_KEY")
+            base_url = base_url or os.getenv("OPENROUTER_BASE_URL")
+            model = os.getenv("OPENROUTER_QWEN8")
+        if model_choice == "gemma4":
+            api_key = api_key or os.getenv("OPENROUTER_API_KEY")
+            base_url = base_url or os.getenv("OPENROUTER_BASE_URL")
+            model = os.getenv("OPENROUTER_GEMMA4")
         if model_choice == "gemini":
             api_key = api_key or os.getenv("GEMINI_API_KEY")
             base_url = base_url or os.getenv("GEMINI_BASE_URL")
             model = os.getenv("GEMINI_MODEL")
-        if model_choice == "qwen":
+        if model_choice == "qwen32":
             api_key = api_key or os.getenv("OPENROUTER_API_KEY")
             base_url = base_url or os.getenv("OPENROUTER_BASE_URL")
-            model = os.getenv("OPENROUTER_QWEN")
-        if model_choice == "glm":
+            model = os.getenv("OPENROUTER_QWEN32")
+        if model_choice == "opus":
             api_key = api_key or os.getenv("OPENROUTER_API_KEY")
             base_url = base_url or os.getenv("OPENROUTER_BASE_URL")
-            model = os.getenv("OPENROUTER_GLM")
+            model = os.getenv("OPENROUTER_OPUS")
 
         self.model = model
 
