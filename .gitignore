@@ -222,10 +222,12 @@ __marimo__/
 dataset*
 dataset_huggingface
 ./hyperism/
-indoor
+indoor*
 3D-FRONT/
 3D-FRONT-SCENES/
+3DRSBench
 .DS_Store
 runs*
 perturbation_dataset_*
+output*
 
