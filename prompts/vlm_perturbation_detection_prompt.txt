@@ -1,0 +1,23 @@
+[Input]
+Your are given two images:
+(a) a reference image of a scene with numbered objects, and
+(b) a rendered image of the same scene in which some of the numbered objects have been perturbed.
+
+[Task]
+Your task is to identify the perturbed objects and to classify the applied perturbation.
+For every numbered object, assign a class of the following list:
+- "count" : the object has been removed compared to the reference image.
+- "scale" : the object has been scaled compared to the reference image.
+- "rotation" : the object has been rotated compared to the reference image.
+- "translation" : the object appears in a different place compared to the reference image.
+- "none" : no perturbation was applied to the object.
+
+To help you identify the correct objects, a legend for the numbered objects is given:
+{legend}
+
+[Output]
+JSON formatted list with fields for every numbered objects:
+- "object_number" : number of the object.
+- "object_label" : level of the objects as given in the legend.
+- "perturbation_type" : type of the perturbation applied to the object. Must be one of ["count", "scale", "rotation", "translation", "none"].
+- "reasoning" : one line justification for the chosen perturbation type.
