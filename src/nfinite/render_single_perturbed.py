@@ -40,7 +40,7 @@ if __name__ == "__main__":
         required=True,
         help=(
             "Perturbations for this scene as a JSON-formatted string, e.g. "
-            '\'{"SOCKET": ["rotation", ["x"], 52]}\''
+            '\'{"SOCKET": {"perturbation_type": "rotation", "args": [["x"], 52]}}\''
         ),
     )
 

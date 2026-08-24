@@ -146,50 +146,125 @@ def _is_visible(scene, camera, meshes: list) -> bool:
     return False
 
 
+def _free_space(scene, meshes: list, direction: Vector) -> float:
+    # Ray-cast from every mesh's world-space bounding-box corner along
+    # `direction` to find how far the object can actually travel before its
+    # own geometry would reach a wall or another piece of furniture -- the
+    # tightest corner distance found is what genuinely bounds the move.
+    # Bounding boxes are convex, so casting from the corners (rather than
+    # sampling the faces) already catches the first thing in the way.
+    depsgraph = bpy.context.evaluated_depsgraph_get()
+    target_names = {mesh_obj.name for mesh_obj in meshes}
+
+    free_space = math.inf
+    for mesh_obj in meshes:
+        for corner in mesh_obj.bound_box:
+            point = mesh_obj.matrix_world @ Vector(corner)
+            hit, location, _, _, hit_obj, _ = scene.ray_cast(
+                depsgraph, point + direction * 1e-3, direction
+            )
+            if hit and hit_obj.name not in target_names:
+                free_space = min(free_space, (location - point).length)
+    return free_space
+
+
+def _bounded_displacement(scene, meshes: list, axis: str, desired_distance: float) -> Vector:
+    # Cap the requested move at the room that's actually there, minus a
+    # small clearance margin, so a perturbation can never clip the object
+    # into a wall or another object -- discovered by ray-casting instead of
+    # trusting the sampled distance blindly.
+    sign = 1.0 if desired_distance >= 0 else -1.0
+    direction = _AXES[axis] * sign
+    margin = 0.02
+    free_space = _free_space(scene, meshes, direction)
+    distance = min(abs(desired_distance), max(free_space - margin, 0.0))
+    return direction * distance
+
+
+def _largest_visible_displacement(
+    scene, camera, obj, meshes: list, original_matrix_world: Matrix, bound: Vector, iterations: int = 8
+) -> Vector:
+    # Binary search the fraction between staying put (t=0 -- always visible,
+    # since every object entering a perturbation is visible to begin with)
+    # and the full free-space-bounded move (t=1) for the largest step that
+    # keeps the object visible. This assumes visibility only degrades as the
+    # object moves further along `bound`, which holds for the vast majority
+    # of placements; it isn't a rigorous guarantee against a wall or another
+    # object briefly reappearing in view partway through the move.
+    obj.matrix_world = Matrix.Translation(bound) @ original_matrix_world
+    if _is_visible(scene, camera, meshes):
+        return bound
+
+    lo, hi = 0.0, 1.0
+    best = 0.0
+    for _ in range(iterations):
+        mid = (lo + hi) / 2.0
+        obj.matrix_world = Matrix.Translation(bound * mid) @ original_matrix_world
+        if _is_visible(scene, camera, meshes):
+            best = mid
+            lo = mid
+        else:
+            hi = mid
+    return bound * best
+
+
 def _place_object(scene, camera, obj, axis: str, factor: float):
-    # Move the object by `factor` times its own extent along that axis, e.g.
-    # factor=0.67 on "x" shifts it in +x by 0.67x its own x-extent.
-    # Translation doesn't change the extent, so it's safe to recompute bounds
-    # fresh for each axis/factor pair even after an earlier move was applied.
+    # Move the object by up to `factor` times its own extent along that
+    # axis, e.g. factor=0.67 on "x" shifts it in +x by up to 0.67x its own
+    # x-extent -- but bounded by the free space ray-cast finds in that
+    # direction (so the move stays physically plausible) and then trimmed
+    # further, if needed, to the largest step that keeps the object visible
+    # from the camera. Both the sampled direction and its opposite are tried
+    # and whichever ends up with the larger visible displacement wins, so
+    # the object always ends the perturbation still visible.
+    # Translation doesn't change the extent, so it's safe to recompute
+    # bounds fresh for each axis/factor pair even after an earlier move was
+    # applied.
     meshes = _mesh_descendants(obj)
     min_v, max_v = _bounds_min_max(meshes)
     extent = (max_v - min_v)[_AXIS_INDEX[axis]]
-    displacement = _AXES[axis] * (factor * extent * 0.5)
+    desired_distance = factor * extent * 0.5
 
     original_matrix_world = obj.matrix_world.copy()
-    obj.matrix_world = Matrix.Translation(displacement) @ original_matrix_world
-    if _is_visible(scene, camera, meshes):
-        return
 
-    # That direction pushed the object out of view (out of frame or behind
-    # something) -- fall back to the opposite direction along the same axis.
-    obj.matrix_world = Matrix.Translation(-displacement) @ original_matrix_world
+    best_displacement = Vector((0.0, 0.0, 0.0))
+    for signed_distance in (desired_distance, -desired_distance):
+        obj.matrix_world = original_matrix_world
+        bound = _bounded_displacement(scene, meshes, axis, signed_distance)
+        displacement = _largest_visible_displacement(scene, camera, obj, meshes, original_matrix_world, bound)
+        if displacement.length > best_displacement.length:
+            best_displacement = displacement
+
+    obj.matrix_world = Matrix.Translation(best_displacement) @ original_matrix_world
 
 
 def _apply_perturbations(scene, root, perturbations: dict):
     categories = list(root.children)
 
     for label, spec in perturbations.items():
-        kind = spec[0]
+        kind = spec["perturbation_type"]
+        if kind == "none":
+            continue
+
+        args = spec["args"] or []
         matches = _find_matches(label, categories)
         if kind == "count":
             for obj in matches:
                 for mesh_obj in _mesh_descendants(obj):
                     mesh_obj.hide_render = True
         elif kind == "rotation":
-            _, axes, degrees = spec
+            axes, degrees = args
             axis = axes[0]
             for obj in matches:
                 _rotate_object(obj, axis, degrees)
         elif kind == "scale":
-            _, factor = spec
+            (factor,) = args
             for obj in matches:
                 _scale_object(obj, factor)
         elif kind == "placement":
-            axis_factor_pairs = spec[1:]
             for obj in matches:
-                for i in range(0, len(axis_factor_pairs), 2):
-                    axis, factor = axis_factor_pairs[i], axis_factor_pairs[i + 1]
+                for i in range(0, len(args), 2):
+                    axis, factor = args[i], args[i + 1]
                     _place_object(scene, scene.camera, obj, axis, factor)
         else:
             raise ValueError(f"Unsupported perturbation type {kind!r} for {label!r}")
