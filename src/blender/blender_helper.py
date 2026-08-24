@@ -1,5 +1,65 @@
+import colorsys
+
 import bpy
 import mathutils
+
+MATERIAL_MODES = ("full_pbr", "texture_flat_lighting", "no_texture_flat_lighting")
+
+
+def _replace_link(links, to_socket, from_socket):
+    for existing in list(to_socket.links):
+        links.remove(existing)
+    links.new(from_socket, to_socket)
+
+
+def _flat_color_for_index(index: int, total: int) -> tuple[float, float, float, float]:
+    """A flat color distinguishable from its neighbors, spaced evenly around the hue wheel."""
+    hue = (index / total) % 1.0
+    r, g, b = colorsys.hsv_to_rgb(hue, 0.55, 0.9)
+    return (r, g, b, 1.0)
+
+
+def apply_material_mode(mode: str):
+    """Rewire every material's shader output to match a rendering-quality mode.
+
+    - "full_pbr": leave materials untouched (Principled BSDF, textures, full Cycles lighting).
+    - "texture_flat_lighting": keep each material's texture/base color but emit it directly
+      via an Emission shader, bypassing Cycles lighting, shadows, and global illumination.
+    - "no_texture_flat_lighting": same as above, but each material emits a flat color of its
+      own (evenly spaced around the hue wheel) instead of its texture/base color, so objects
+      stay distinguishable from each other without carrying any texture or real-color detail.
+    """
+    if mode == "full_pbr":
+        return
+    if mode not in MATERIAL_MODES:
+        raise ValueError(f"Unknown material_mode: {mode!r}, expected one of {MATERIAL_MODES}")
+
+    materials = bpy.data.materials
+
+    for index, mat in enumerate(materials):
+        if mat.node_tree is None:
+            continue
+        nodes = mat.node_tree.nodes
+        links = mat.node_tree.links
+
+        bsdf = next((n for n in nodes if n.type == "BSDF_PRINCIPLED"), None)
+        output = next((n for n in nodes if n.type == "OUTPUT_MATERIAL"), None)
+        if bsdf is None or output is None:
+            continue
+
+        emission = nodes.new(type="ShaderNodeEmission")
+
+        if mode == "no_texture_flat_lighting":
+            emission.inputs["Color"].default_value = _flat_color_for_index(index, len(materials))
+        else:
+            base_color_input = bsdf.inputs["Base Color"]
+            source_link = next((l for l in base_color_input.links), None)
+            if source_link is not None:
+                links.new(source_link.from_socket, emission.inputs["Color"])
+            else:
+                emission.inputs["Color"].default_value = base_color_input.default_value
+
+        _replace_link(links, output.inputs["Surface"], emission.outputs["Emission"])
 
 
 def clear_scene():
