@@ -10,7 +10,7 @@ from scipy import ndimage
 
 BLENDER_PATH = os.getenv("BLENDER_PATH")
 RENDER_SCRIPT = Path(__file__).parent / "render_nfinite_labeled.py"
-OBJECTS_JSON = Path(__file__).parent / "objects.json"
+OBJECTS_JSON =  Path("/home/jonathansickert/git/3DFrontBench/assets/objects.json")
 
 assert RENDER_SCRIPT.exists(), RENDER_SCRIPT
 
