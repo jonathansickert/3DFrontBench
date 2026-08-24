@@ -384,7 +384,7 @@
     },
     {
       "Scene": "NFINITE-DATASET360-DRESSING-LS-MEA_8705-UN",
-      "Object": "PLANT",
+      "Object": "PLANT_01",
       "Perturbation": ["count", "placement", "scale"],
       "Rotation": ["z"],
       "Rotation Limit": 180,

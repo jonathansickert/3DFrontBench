@@ -9,15 +9,15 @@ from PIL import Image, ImageDraw, ImageFont
 from scipy import ndimage
 
 BLENDER_PATH = os.getenv("BLENDER_PATH")
-RENDER_SCRIPT = Path(__file__).parent / "render_nfinite.py"
+RENDER_SCRIPT = Path(__file__).parent / "render_nfinite_labeled.py"
 OBJECTS_JSON = Path(__file__).parent / "objects.json"
 
 assert RENDER_SCRIPT.exists(), RENDER_SCRIPT
 
 FONT_PATH = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
-# render_nfinite.py prints label data as a single line prefixed with this
-# marker so it can be pulled out of Blender's stdout without ever touching
-# disk -- the rendered PNG is the only thing this pipeline persists.
+# render_nfinite_labeled.py prints label data as a single line prefixed with
+# this marker so it can be pulled out of Blender's stdout without ever
+# touching disk -- the rendered PNG is the only thing this pipeline persists.
 LABELS_MARKER = "NFINITE_LABELS_JSON:"
 
 
@@ -87,7 +87,7 @@ def draw_object_labels(image: Image.Image, index_map: np.ndarray, entries: list[
     return labeled
 
 
-def render_single(blend_path: str, out_path: str, labels: bool = False, perturbations: str | Path | None = None):
+def render_labeled(blend_path: str, out_path: str, labels: bool = False):
     cmd = [
         BLENDER_PATH,
         "--background",
@@ -100,8 +100,6 @@ def render_single(blend_path: str, out_path: str, labels: bool = False, perturba
 
     if labels:
         cmd += ["--labels", str(OBJECTS_JSON)]
-    if perturbations is not None:
-        cmd += ["--perturbations", str(perturbations)]
 
     env = os.environ.copy()
     env["LD_LIBRARY_PATH"] = "/usr/lib/wsl/lib:" + env.get("LD_LIBRARY_PATH", "")
@@ -122,6 +120,8 @@ def render_single(blend_path: str, out_path: str, labels: bool = False, perturba
         labeled = draw_object_labels(image, index_map, payload["entries"])
         labeled.save(out_path)
 
+        
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -132,13 +132,7 @@ if __name__ == "__main__":
         action="store_true",
         help="Overlay a numbered digit over each object listed in objects.json",
     )
-    parser.add_argument(
-        "--perturbations",
-        type=Path,
-        default=None,
-        help="Path to a perturbations.json; if given, its perturbations for this scene are applied automatically",
-    )
 
     args = parser.parse_args()
 
-    render_single(args.blend_path, args.out_path, labels=args.labels, perturbations=args.perturbations)
+    render_labeled(args.blend_path, args.out_path, labels=args.labels)
