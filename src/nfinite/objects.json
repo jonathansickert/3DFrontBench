@@ -1,0 +1,534 @@
+{
+  "NFINITE-DATASET360-BATHROOM-LS-MEA_8289-UN": [
+    {
+      "Scene": "NFINITE-DATASET360-BATHROOM-LS-MEA_8289-UN",
+      "Object": "BASKET",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-BATHROOM-LS-MEA_8289-UN",
+      "Object": "BATH_FURNITURE",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-BATHROOM-LS-MEA_8289-UN",
+      "Object": "FLOATING_SHELF",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-BATHROOM-LS-MEA_8289-UN",
+      "Object": "SLIPPERS",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-BATHROOM-LS-MEA_8289-UN",
+      "Object": "WASHSTAND",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    }
+  ],
+  "NFINITE-DATASET360-BATHROOM-LS-MEA_8616-UN": [
+    {
+      "Scene": "NFINITE-DATASET360-BATHROOM-LS-MEA_8616-UN",
+      "Object": "PLANT",
+      "Perturbation": ["count", "placement", "scale"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-BATHROOM-LS-MEA_8616-UN",
+      "Object": "BATH_SET",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-BATHROOM-LS-MEA_8616-UN",
+      "Object": "COSMETIC_SET",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-BATHROOM-LS-MEA_8616-UN",
+      "Object": "WALL_VANITY_UNIT",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-BATHROOM-LS-MEA_8616-UN",
+      "Object": "SOCKET",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["x"],
+      "Rotation Limit": 90,
+      "Placement": ["y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-BATHROOM-LS-MEA_8616-UN",
+      "Object": "WALL_MIRROR",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["y"],
+      "Rotation Limit": 90,
+      "Placement": ["x", "z"]
+    }
+  ],
+  "NFINITE-DATASET360-BATHROOM-LS-MEA_9061-UN": [
+    {
+      "Scene": "NFINITE-DATASET360-BATHROOM-LS-MEA_9061-UN",
+      "Object": "BATHTUB",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-BATHROOM-LS-MEA_9061-UN",
+      "Object": "TOILET",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-BATHROOM-LS-MEA_9061-UN",
+      "Object": "PENDANT",
+      "Perturbation": ["count", "placement", "scale"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-BATHROOM-LS-MEA_9061-UN",
+      "Object": "VANITY",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-BATHROOM-LS-MEA_9061-UN",
+      "Object": "COAT",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-BATHROOM-LS-MEA_9061-UN",
+      "Object": "POTTED_PLANT",
+      "Perturbation": ["count", "placement", "scale"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-BATHROOM-LS-MEA_9061-UN",
+      "Object": "MIRROR_01",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["y"],
+      "Rotation Limit": 90,
+      "Placement": ["x", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-BATHROOM-LS-MEA_9061-UN",
+      "Object": "MIRROR_02",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["y"],
+      "Rotation Limit": 90,
+      "Placement": ["x", "z"]
+    }
+  ],
+  "NFINITE-DATASET360-BEDROOM-LS-MEA_188-UN": [
+    {
+      "Scene": "NFINITE-DATASET360-BEDROOM-LS-MEA_188-UN",
+      "Object": "BED",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-BEDROOM-LS-MEA_188-UN",
+      "Object": "COFEE_TABLE",
+      "Perturbation": ["count", "placement", "scale"],
+      "Rotation": ["z"],
+      "Rotation Limit": 45,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-BEDROOM-LS-MEA_188-UN",
+      "Object": "FLOOR_LAMP",
+      "Perturbation": ["count", "placement", "scale"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-BEDROOM-LS-MEA_188-UN",
+      "Object": "CURTAIN",
+      "Perturbation": ["count", "placement", "scale"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-BEDROOM-LS-MEA_188-UN",
+      "Object": "ARMCHAIR",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    }
+  ],
+  "NFINITE-DATASET360-BEDROOM-LS-MEA_636-UN": [
+    {
+      "Scene": "NFINITE-DATASET360-BEDROOM-LS-MEA_636-UN",
+      "Object": "BED",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-BEDROOM-LS-MEA_636-UN",
+      "Object": "WARDROBE",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-BEDROOM-LS-MEA_636-UN",
+      "Object": "SIDE_TABLE_01",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-BEDROOM-LS-MEA_636-UN",
+      "Object": "SIDE_TABLE_02",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-BEDROOM-LS-MEA_636-UN",
+      "Object": "PICTURE",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["y"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-BEDROOM-LS-MEA_636-UN",
+      "Object": "CARPET",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 45,
+      "Placement": ["x", "y"]
+    }
+  ],
+  "NFINITE-DATASET360-DININGROOM-LS-MEA_830-UN": [
+    {
+      "Scene": "NFINITE-DATASET360-DININGROOM-LS-MEA_830-UN",
+      "Object": "CHAIR_05",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-DININGROOM-LS-MEA_830-UN",
+      "Object": "CHAIR_06",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-DININGROOM-LS-MEA_830-UN",
+      "Object": "CHAIR_01",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-DININGROOM-LS-MEA_830-UN",
+      "Object": "CHAIR_04",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-DININGROOM-LS-MEA_830-UN",
+      "Object": "CHAIR_03",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-DININGROOM-LS-MEA_830-UN",
+      "Object": "CHAIR_02",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-DININGROOM-LS-MEA_830-UN",
+      "Object": "PLANT",
+      "Perturbation": ["count", "placement", "scale"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-DININGROOM-LS-MEA_830-UN",
+      "Object": "DINING_TABLE",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-DININGROOM-LS-MEA_830-UN",
+      "Object": "FLOATING-SHELF",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    }
+  ],
+  "NFINITE-DATASET360-DININGROOM-LS-MEA_2895-UN": [
+    {
+      "Scene": "NFINITE-DATASET360-DININGROOM-LS-MEA_2895-UN",
+      "Object": "WALL_CLOCK",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["y"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-DININGROOM-LS-MEA_2895-UN",
+      "Object": "CHAIR_01",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-DININGROOM-LS-MEA_2895-UN",
+      "Object": "CHAIR_02",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-DININGROOM-LS-MEA_2895-UN",
+      "Object": "SET",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-DININGROOM-LS-MEA_2895-UN",
+      "Object": "VASE",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    }
+  ],
+  "NFINITE-DATASET360-DRESSING-LS-MEA_8705-UN": [
+    {
+      "Scene": "NFINITE-DATASET360-DRESSING-LS-MEA_8705-UN",
+      "Object": "SET",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-DRESSING-LS-MEA_8705-UN",
+      "Object": "ARMCHAIR_FCONT1",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-DRESSING-LS-MEA_8705-UN",
+      "Object": "PLANT",
+      "Perturbation": ["count", "placement", "scale"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-DRESSING-LS-MEA_8705-UN",
+      "Object": "BOOKS",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-DRESSING-LS-MEA_8705-UN",
+      "Object": "STATUE",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-DRESSING-LS-MEA_8705-UN",
+      "Object": "FLOOR_LAMP",
+      "Perturbation": ["count", "placement", "scale"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    }
+  ],
+  "NFINITE-DATASET360-KITCHEN-LS-MEA_2214-UN": [
+    {
+      "Scene": "NFINITE-DATASET360-KITCHEN-LS-MEA_2214-UN",
+      "Object": "BAR_STOOL_01",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-KITCHEN-LS-MEA_2214-UN",
+      "Object": "BAR_STOOL_02",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-KITCHEN-LS-MEA_2214-UN",
+      "Object": "BAR_STOOL_03",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-KITCHEN-LS-MEA_2214-UN",
+      "Object": "VASE_01",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-KITCHEN-LS-MEA_2214-UN",
+      "Object": "VASE_02",
+      "Perturbation": ["count", "placement", "scale"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-KITCHEN-LS-MEA_2214-UN",
+      "Object": "PLATE",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-KITCHEN-LS-MEA_2214-UN",
+      "Object": "PLANT",
+      "Perturbation": ["count", "placement", "scale"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    }
+  ],
+  "NFINITE-DATASET360-OFFICE-LS-MEA_9204-UN": [
+    {
+      "Scene": "NFINITE-DATASET360-OFFICE-LS-MEA_9204-UN",
+      "Object": "POUF",
+      "Perturbation": ["count", "placement", "scale"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-OFFICE-LS-MEA_9204-UN",
+      "Object": "PENDANT_LAMP",
+      "Perturbation": ["count", "placement", "scale"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-OFFICE-LS-MEA_9204-UN",
+      "Object": "BOOK_CASE",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-OFFICE-LS-MEA_9204-UN",
+      "Object": "CONFERENCE_EASEL",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-OFFICE-LS-MEA_9204-UN",
+      "Object": "NOTEBOOK",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-OFFICE-LS-MEA_9204-UN",
+      "Object": "OFFICE_CHAIR",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    },
+    {
+      "Scene": "NFINITE-DATASET360-OFFICE-LS-MEA_9204-UN",
+      "Object": "WALL_SHELF",
+      "Perturbation": ["count", "placement", "scale", "rotation"],
+      "Rotation": ["z"],
+      "Rotation Limit": 180,
+      "Placement": ["x", "y", "z"]
+    }
+  ]
+}

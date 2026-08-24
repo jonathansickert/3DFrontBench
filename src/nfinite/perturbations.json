@@ -1,0 +1,103 @@
+{
+  "NFINITE-DATASET360-BATHROOM-LS-MEA_8289-UN": {},
+  "NFINITE-DATASET360-BATHROOM-LS-MEA_8616-UN": {},
+  "NFINITE-DATASET360-BATHROOM-LS-MEA_9061-UN": {
+    "MIRROR_02": [
+      "count"
+    ],
+    "PENDANT": [
+      "placement",
+      "x",
+      -0.8
+    ]
+  },
+  "NFINITE-DATASET360-BEDROOM-LS-MEA_188-UN": {
+    "ARMCHAIR": [
+      "placement",
+      "z",
+      -1.25,
+      "y",
+      -1.25
+    ],
+    "BED": [
+      "count"
+    ],
+    "COFEE_TABLE": [
+      "scale",
+      0.8
+    ]
+  },
+  "NFINITE-DATASET360-BEDROOM-LS-MEA_636-UN": {
+    "CARPET": [
+      "scale",
+      0.8
+    ],
+    "SIDE_TABLE_01": [
+      "rotation",
+      [
+        "z"
+      ],
+      106
+    ]
+  },
+  "NFINITE-DATASET360-DININGROOM-LS-MEA_830-UN": {
+    "CHAIR_05": [
+      "scale",
+      1.25
+    ],
+    "CHAIR_06": [
+      "count"
+    ],
+    "CHAIR_04": [
+      "rotation",
+      [
+        "z"
+      ],
+      143
+    ]
+  },
+  "NFINITE-DATASET360-DININGROOM-LS-MEA_2895-UN": {
+    "CHAIR_02": [
+      "rotation",
+      [
+        "z"
+      ],
+      168
+    ],
+    "WALL_CLOCK": [
+      "placement",
+      "x",
+      -0.67,
+      "z",
+      1.25
+    ]
+  },
+  "NFINITE-DATASET360-DRESSING-LS-MEA_8705-UN": {
+    "PLANT": [
+      "count"
+    ],
+    "SET": [
+      "placement",
+      "x",
+      -0.67
+    ]
+  },
+  "NFINITE-DATASET360-KITCHEN-LS-MEA_2214-UN": {
+    "VASE_01": [
+      "rotation",
+      [
+        "z"
+      ],
+      -146
+    ]
+  },
+  "NFINITE-DATASET360-OFFICE-LS-MEA_9204-UN": {
+    "POUF": [
+      "scale",
+      0.67
+    ],
+    "PENDANT_LAMP": [
+      "count"
+    ]
+  }
+}
