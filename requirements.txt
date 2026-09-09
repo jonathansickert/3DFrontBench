@@ -15,4 +15,6 @@ bpy==4.2.0
 torch
 lpips
 scikit-image
+scikit-learn
 openai
+optuna

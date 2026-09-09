@@ -1,9 +1,29 @@
 import json
 import math
 import sys
+from pathlib import Path
 
 import bpy
 from mathutils import Matrix, Vector
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from src.nfinite.configure_rendering import (
+    MATERIAL_MODES,
+    RENDER_PASSES,
+    RESOLUTION_PRESETS,
+    VIEW_TRANSFORMS,
+    apply_camera_position,
+    configure_rendering,
+)
+
+
+def _parse_bool(flag: str, value: str) -> bool:
+    lowered = value.lower()
+    if lowered in ("1", "true", "yes", "on"):
+        return True
+    if lowered in ("0", "false", "no", "off"):
+        return False
+    raise SystemExit(f"{flag} expects a boolean (true/false), got {value!r}")
 
 
 def _parse_args():
@@ -11,7 +31,12 @@ def _parse_args():
     if "--" not in argv:
         raise SystemExit(
             "Usage: blender --background --python render_nfinite_perturbed.py -- "
-            "<input_blend> <output_png> [--perturbations <perturbations_json>]"
+            "<input_blend> <output_png> [--perturbations <perturbations_json>] "
+            "[--material-mode <mode>] [--sun-elevation <degrees>] [--sun-azimuth <degrees>] "
+            "[--shadow-softness <degrees>] [--gi-bounces <n>] [--exposure <stops>] "
+            "[--view-transform <mode>] [--resolution <preset>] [--samples <n>] "
+            "[--denoising <true|false>] [--render-pass <pass>] "
+            "[--camera-position <index> --camera-positions-json <path>]"
         )
     args = argv[argv.index("--") + 1 :]
     if len(args) < 2:
@@ -21,16 +46,89 @@ def _parse_args():
     rest = args[2:]
 
     perturbations_json = None
+    material_mode = "full_pbr"
+    sun_elevation = None
+    sun_azimuth = None
+    shadow_softness = None
+    gi_bounces = None
+    exposure = None
+    view_transform = None
+    resolution = None
+    samples = 32
+    denoising = None
+    render_pass = None
+    camera_position_index = None
+    camera_positions_json_path = None
     i = 0
     while i < len(rest):
         flag = rest[i]
         if flag == "--perturbations" and i + 1 < len(rest):
             perturbations_json = rest[i + 1]
+        elif flag == "--camera-position" and i + 1 < len(rest):
+            camera_position_index = int(rest[i + 1])
+        elif flag == "--camera-positions-json" and i + 1 < len(rest):
+            camera_positions_json_path = rest[i + 1]
+        elif flag == "--material-mode" and i + 1 < len(rest):
+            material_mode = rest[i + 1]
+            if material_mode not in MATERIAL_MODES:
+                raise SystemExit(
+                    f"Unknown material_mode: {material_mode!r}, expected one of {MATERIAL_MODES}"
+                )
+        elif flag == "--sun-elevation" and i + 1 < len(rest):
+            sun_elevation = float(rest[i + 1])
+        elif flag == "--sun-azimuth" and i + 1 < len(rest):
+            sun_azimuth = float(rest[i + 1])
+        elif flag == "--shadow-softness" and i + 1 < len(rest):
+            shadow_softness = float(rest[i + 1])
+        elif flag == "--gi-bounces" and i + 1 < len(rest):
+            gi_bounces = int(rest[i + 1])
+        elif flag == "--exposure" and i + 1 < len(rest):
+            exposure = float(rest[i + 1])
+        elif flag == "--view-transform" and i + 1 < len(rest):
+            view_transform = rest[i + 1]
+            if view_transform not in VIEW_TRANSFORMS:
+                raise SystemExit(
+                    f"Unknown view_transform: {view_transform!r}, expected one of {VIEW_TRANSFORMS}"
+                )
+        elif flag == "--resolution" and i + 1 < len(rest):
+            resolution = rest[i + 1]
+            if resolution not in RESOLUTION_PRESETS:
+                raise SystemExit(
+                    f"Unknown resolution preset: {resolution!r}, expected one of {RESOLUTION_PRESETS}"
+                )
+        elif flag == "--samples" and i + 1 < len(rest):
+            samples = int(rest[i + 1])
+        elif flag == "--denoising" and i + 1 < len(rest):
+            denoising = _parse_bool(flag, rest[i + 1])
+        elif flag == "--render-pass" and i + 1 < len(rest):
+            render_pass = rest[i + 1]
+            if render_pass not in RENDER_PASSES:
+                raise SystemExit(f"Unknown render_pass: {render_pass!r}, expected one of {RENDER_PASSES}")
         else:
             raise SystemExit(f"Unexpected argument: {flag}")
         i += 2
 
-    return input_path, output_path, perturbations_json
+    if camera_position_index is not None and camera_positions_json_path is None:
+        raise SystemExit("--camera-position requires --camera-positions-json")
+
+    return (
+        input_path,
+        output_path,
+        perturbations_json,
+        material_mode,
+        sun_elevation,
+        sun_azimuth,
+        shadow_softness,
+        gi_bounces,
+        exposure,
+        view_transform,
+        resolution,
+        samples,
+        denoising,
+        render_pass,
+        camera_position_index,
+        camera_positions_json_path,
+    )
 
 
 def _find_root(scene):
@@ -71,7 +169,6 @@ def _mesh_descendants(obj):
     return meshes
 
 
-_AXES = {"x": Vector((1, 0, 0)), "y": Vector((0, 1, 0)), "z": Vector((0, 0, 1))}
 _AXIS_INDEX = {"x": 0, "y": 1, "z": 2}
 
 
@@ -91,154 +188,72 @@ def _bounds_center(meshes: list) -> Vector:
     return (min_v + max_v) / 2.0
 
 
+def _local_axis(obj, axis: str) -> Vector:
+    # objects.json's "x"/"y"/"z" name axes *local to this object* -- e.g. a
+    # wall-mounted mirror only allows rotating "y" and sliding "x"/"z"
+    # because those are the directions that make sense relative to the wall
+    # it's mounted on, not because the scene's global axes happen to run
+    # along that wall. Rotating or sliding it along the matching *global*
+    # axis instead only coincidentally matches local axes for objects whose
+    # own orientation happens to be axis-aligned, and silently produces the
+    # wrong motion for anything mounted at an angle. matrix_world's 3x3 part
+    # maps the object's own basis vectors into world space, so column
+    # _AXIS_INDEX[axis] is exactly that local axis, expressed in world space.
+    column = _AXIS_INDEX[axis]
+    return obj.matrix_world.to_3x3().col[column].normalized()
+
+
+def _extent_along(meshes: list, direction: Vector) -> float:
+    # Span of the mesh's world-space bounding-box corners projected onto an
+    # arbitrary direction. _bounds_min_max's axis-aligned box only gives the
+    # right answer for the three global axes -- an object's own local axis
+    # (see _local_axis) generally isn't one of them once it's rotated, so
+    # the extent along it has to be measured by projection instead.
+    direction = direction.normalized()
+    projections = [
+        (mesh_obj.matrix_world @ Vector(corner)).dot(direction)
+        for mesh_obj in meshes
+        for corner in mesh_obj.bound_box
+    ]
+    return max(projections) - min(projections)
+
+
 def _rotate_object(obj, axis: str, degrees: float):
     # Rotate the whole object in place around the axis through its own
     # center of gravity (approximated as its mesh bounding-box center), not
     # around the object's origin -- furniture origins usually sit at floor
     # level, which would make it swing on that point instead of spinning.
     pivot = _bounds_center(_mesh_descendants(obj))
-    rotation = Matrix.Rotation(math.radians(degrees), 4, _AXES[axis])
+    rotation = Matrix.Rotation(math.radians(degrees), 4, _local_axis(obj, axis))
     obj.matrix_world = Matrix.Translation(pivot) @ rotation @ Matrix.Translation(-pivot) @ obj.matrix_world
 
 
 def _scale_object(obj, factor: float):
-    # Same reasoning as _rotate_object: scale about the object's own bounding-
-    # box center so it grows/shrinks in place instead of drifting away from
-    # (or into) the floor when the origin isn't at the geometric center.
-    pivot = _bounds_center(_mesh_descendants(obj))
+    # Scale about the horizontal (x/y) center but anchor the pivot to the
+    # floor contact point (min z), not the bbox center -- pivoting at the
+    # center made shrinking objects lift off the floor (and growing ones sink
+    # into it), since half of the size change moved the bottom face too.
+    min_v, max_v = _bounds_min_max(_mesh_descendants(obj))
+    pivot = Vector(((min_v.x + max_v.x) / 2.0, (min_v.y + max_v.y) / 2.0, min_v.z))
     scale = Matrix.Diagonal((factor, factor, factor)).to_4x4()
     obj.matrix_world = Matrix.Translation(pivot) @ scale @ Matrix.Translation(-pivot) @ obj.matrix_world
 
 
-def _is_visible(scene, camera, meshes: list) -> bool:
-    # A plain camera-frustum check isn't enough: a point can be angularly
-    # inside the frustum while still being behind a wall or another object,
-    # or the object could be pushed absurdly far away and still project
-    # inside [0,1]. So each bounding-box corner is frustum-tested and then
-    # ray-cast toward the camera through Blender's BVH (cheap -- no
-    # rendering) to confirm nothing solid actually blocks the line of sight.
-    from bpy_extras.object_utils import world_to_camera_view
-
-    depsgraph = bpy.context.evaluated_depsgraph_get()
-    cam_origin = camera.matrix_world.translation
-    target_names = {mesh_obj.name for mesh_obj in meshes}
-
-    for mesh_obj in meshes:
-        for corner in mesh_obj.bound_box:
-            point = mesh_obj.matrix_world @ Vector(corner)
-
-            co_norm = world_to_camera_view(scene, camera, point)
-            if not (0.0 <= co_norm.x <= 1.0 and 0.0 <= co_norm.y <= 1.0 and co_norm.z > 0.0):
-                continue
-
-            to_camera = cam_origin - point
-            distance = to_camera.length
-            if distance < 1e-6:
-                return True
-            direction = to_camera / distance
-            # Nudge the ray origin off the surface so it doesn't immediately
-            # self-intersect the face it just came from.
-            hit, _, _, _, hit_obj, _ = scene.ray_cast(
-                depsgraph, point + direction * 1e-3, direction, distance=distance
-            )
-            if not hit or hit_obj.name in target_names:
-                return True
-    return False
-
-
-def _free_space(scene, meshes: list, direction: Vector) -> float:
-    # Ray-cast from every mesh's world-space bounding-box corner along
-    # `direction` to find how far the object can actually travel before its
-    # own geometry would reach a wall or another piece of furniture -- the
-    # tightest corner distance found is what genuinely bounds the move.
-    # Bounding boxes are convex, so casting from the corners (rather than
-    # sampling the faces) already catches the first thing in the way.
-    depsgraph = bpy.context.evaluated_depsgraph_get()
-    target_names = {mesh_obj.name for mesh_obj in meshes}
-
-    free_space = math.inf
-    for mesh_obj in meshes:
-        for corner in mesh_obj.bound_box:
-            point = mesh_obj.matrix_world @ Vector(corner)
-            hit, location, _, _, hit_obj, _ = scene.ray_cast(
-                depsgraph, point + direction * 1e-3, direction
-            )
-            if hit and hit_obj.name not in target_names:
-                free_space = min(free_space, (location - point).length)
-    return free_space
-
-
-def _bounded_displacement(scene, meshes: list, axis: str, desired_distance: float) -> Vector:
-    # Cap the requested move at the room that's actually there, minus a
-    # small clearance margin, so a perturbation can never clip the object
-    # into a wall or another object -- discovered by ray-casting instead of
-    # trusting the sampled distance blindly.
-    sign = 1.0 if desired_distance >= 0 else -1.0
-    direction = _AXES[axis] * sign
-    margin = 0.02
-    free_space = _free_space(scene, meshes, direction)
-    distance = min(abs(desired_distance), max(free_space - margin, 0.0))
-    return direction * distance
-
-
-def _largest_visible_displacement(
-    scene, camera, obj, meshes: list, original_matrix_world: Matrix, bound: Vector, iterations: int = 8
-) -> Vector:
-    # Binary search the fraction between staying put (t=0 -- always visible,
-    # since every object entering a perturbation is visible to begin with)
-    # and the full free-space-bounded move (t=1) for the largest step that
-    # keeps the object visible. This assumes visibility only degrades as the
-    # object moves further along `bound`, which holds for the vast majority
-    # of placements; it isn't a rigorous guarantee against a wall or another
-    # object briefly reappearing in view partway through the move.
-    obj.matrix_world = Matrix.Translation(bound) @ original_matrix_world
-    if _is_visible(scene, camera, meshes):
-        return bound
-
-    lo, hi = 0.0, 1.0
-    best = 0.0
-    for _ in range(iterations):
-        mid = (lo + hi) / 2.0
-        obj.matrix_world = Matrix.Translation(bound * mid) @ original_matrix_world
-        if _is_visible(scene, camera, meshes):
-            best = mid
-            lo = mid
-        else:
-            hi = mid
-    return bound * best
-
-
-def _place_object(scene, camera, obj, axis: str, factor: float):
-    # Move the object by up to `factor` times its own extent along that
-    # axis, e.g. factor=0.67 on "x" shifts it in +x by up to 0.67x its own
-    # x-extent -- but bounded by the free space ray-cast finds in that
-    # direction (so the move stays physically plausible) and then trimmed
-    # further, if needed, to the largest step that keeps the object visible
-    # from the camera. Both the sampled direction and its opposite are tried
-    # and whichever ends up with the larger visible displacement wins, so
-    # the object always ends the perturbation still visible.
-    # Translation doesn't change the extent, so it's safe to recompute
-    # bounds fresh for each axis/factor pair even after an earlier move was
-    # applied.
+def _place_object(obj, axis: str, signed_factor: float):
+    # Direction is not discovered here: objects.json's "+x"/"-y"/etc. already
+    # name the one direction per axis a human verified keeps the object
+    # visible for this scene's camera (an unsigned axis means both directions
+    # were checked and are fine) -- see sample_placement in
+    # create_perturbation_dataset.py. So this just applies the move directly,
+    # with no raycasting or other runtime check.
     meshes = _mesh_descendants(obj)
-    min_v, max_v = _bounds_min_max(meshes)
-    extent = (max_v - min_v)[_AXIS_INDEX[axis]]
-    desired_distance = factor * extent * 0.5
-
-    original_matrix_world = obj.matrix_world.copy()
-
-    best_displacement = Vector((0.0, 0.0, 0.0))
-    for signed_distance in (desired_distance, -desired_distance):
-        obj.matrix_world = original_matrix_world
-        bound = _bounded_displacement(scene, meshes, axis, signed_distance)
-        displacement = _largest_visible_displacement(scene, camera, obj, meshes, original_matrix_world, bound)
-        if displacement.length > best_displacement.length:
-            best_displacement = displacement
-
-    obj.matrix_world = Matrix.Translation(best_displacement) @ original_matrix_world
+    axis_vector = _local_axis(obj, axis)
+    extent = _extent_along(meshes, axis_vector)
+    displacement = axis_vector * (signed_factor * extent * 0.5)
+    obj.matrix_world = Matrix.Translation(displacement) @ obj.matrix_world
 
 
-def _apply_perturbations(scene, root, perturbations: dict):
+def _apply_perturbations(root, perturbations: dict):
     categories = list(root.children)
 
     for label, spec in perturbations.items():
@@ -262,15 +277,31 @@ def _apply_perturbations(scene, root, perturbations: dict):
             for obj in matches:
                 _scale_object(obj, factor)
         elif kind == "placement":
+            axis, signed_factor = args
             for obj in matches:
-                for i in range(0, len(args), 2):
-                    axis, factor = args[i], args[i + 1]
-                    _place_object(scene, scene.camera, obj, axis, factor)
+                _place_object(obj, axis, signed_factor)
         else:
             raise ValueError(f"Unsupported perturbation type {kind!r} for {label!r}")
 
 
-input_path, output_path, perturbations_json = _parse_args()
+(
+    input_path,
+    output_path,
+    perturbations_json,
+    material_mode,
+    sun_elevation,
+    sun_azimuth,
+    shadow_softness,
+    gi_bounces,
+    exposure,
+    view_transform,
+    resolution,
+    samples,
+    denoising,
+    render_pass,
+    camera_position_index,
+    camera_positions_json_path,
+) = _parse_args()
 
 bpy.ops.wm.open_mainfile(filepath=input_path)
 
@@ -284,19 +315,31 @@ if scene.camera is None:
         )
     scene.camera = cameras[0]
 
-if perturbations_json is not None:
+root = None
+if perturbations_json is not None or camera_position_index is not None:
     root = _find_root(scene)
+
+if camera_position_index is not None:
+    apply_camera_position(scene, camera_positions_json_path, root.name, camera_position_index)
+
+if perturbations_json is not None:
     perturbations = json.loads(perturbations_json)
-    _apply_perturbations(scene, root, perturbations)
+    _apply_perturbations(root, perturbations)
 
 scene.render.filepath = output_path
-cycles_prefs = bpy.context.preferences.addons["cycles"].preferences
-cycles_prefs.compute_device_type = "CUDA"
-cycles_prefs.get_devices()
-for device in cycles_prefs.devices:
-    device.use = device.type == "CUDA"
-
-scene.cycles.device = "GPU"
-scene.cycles.samples = 32
+configure_rendering(
+    scene,
+    material_mode,
+    sun_elevation_degrees=sun_elevation,
+    sun_azimuth_degrees=sun_azimuth,
+    shadow_softness_degrees=shadow_softness,
+    gi_bounces=gi_bounces,
+    exposure_stops=exposure,
+    view_transform=view_transform,
+    resolution=resolution,
+    render_pass=render_pass,
+    denoising=denoising,
+    samples=samples,
+)
 scene.render.image_settings.file_format = "PNG"
 bpy.ops.render.render(write_still=True)

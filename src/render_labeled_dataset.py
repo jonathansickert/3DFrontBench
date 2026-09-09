@@ -2,10 +2,10 @@ import json
 from pathlib import Path
 import argparse
 
-from src.nfinite.render_single_labeled import OBJECTS_JSON, render_labeled
+from src.nfinite.render_single_labeled import OBJECTS_JSON, RENDER_PASSES, render_labeled
 
 
-def render_dataset(dataset_dir: Path, output_dir: Path):
+def render_dataset(dataset_dir: Path, output_dir: Path, render_pass: str | None = None):
     output_dir.mkdir(parents=True, exist_ok=True)
 
     with open(OBJECTS_JSON) as f:
@@ -16,7 +16,7 @@ def render_dataset(dataset_dir: Path, output_dir: Path):
         print(f"Rendering scene {blend_path.stem} ...")
 
         out_path = output_dir / f"{blend_path.stem}.png"
-        render_labeled(blend_path, out_path, labels=True)
+        render_labeled(blend_path, out_path, labels=True, render_pass=render_pass)
 
         scene = blend_path.stem
         scene_labels = [entry["Object"] for entry in objects_by_scene[scene]]
@@ -30,10 +30,16 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("dataset_dir", type=Path, help="Source scene directory")
     parser.add_argument("output_dir", type=Path)
+    parser.add_argument(
+        "--render-pass",
+        choices=RENDER_PASSES,
+        default=None,
+        help="Lighting-independent render pass/visualization mode (default: beauty)",
+    )
 
     args = parser.parse_args()
 
-    render_dataset(args.dataset_dir, args.output_dir)
+    render_dataset(args.dataset_dir, args.output_dir, render_pass=args.render_pass)
 
 
 if __name__ == "__main__":

@@ -5,7 +5,7 @@ from typing import Literal
 
 import openai
 from PIL import Image
-from pydantic import BaseModel, ValidationError
+from pydantic import BaseModel, Field, ValidationError
 import time
 from src.util import resize_image
 
@@ -13,8 +13,9 @@ from src.util import resize_image
 class ObjectPerturbationPrediction(BaseModel):
     object_number: int
     object_label: str
-    perturbation_type: Literal["count", "scale", "rotation", "translation", "none"]
-    reasoning: str
+    evidence: str
+    perturbation_type: Literal["removed", "scale", "rotation", "translation", "none"]
+    confidence: float = Field(ge=0.0, le=1.0)
 
 class VLMPerturbationDetectionResult(BaseModel):
     predictions: list[ObjectPerturbationPrediction]
@@ -38,21 +39,33 @@ class VLMScoreAgent:
             base_url = base_url or os.getenv("OPENROUTER_BASE_URL")
             model = os.getenv("OPENROUTER_QWEN8_THINKING")
         elif model_choice == "gemma4":
-            api_key = api_key or os.getenv("OPENROUTER_API_KEY")
-            base_url = base_url or os.getenv("OPENROUTER_BASE_URL")
-            model = os.getenv("OPENROUTER_GEMMA4")
-        elif model_choice == "gemini":
-            api_key = api_key or os.getenv("GEMINI_API_KEY")
-            base_url = base_url or os.getenv("GEMINI_BASE_URL")
-            model = os.getenv("GEMINI_MODEL")
+            api_key = api_key or os.getenv("GOOGLE_API_KEY")
+            base_url = base_url or os.getenv("GOOGLE_BASE_URL")
+            model = "gemma-4-31b-it"
+        elif model_choice == "gemini31":
+            api_key = api_key or os.getenv("GOOGLE_API_KEY")
+            base_url = base_url or os.getenv("GOOGLE_BASE_URL")
+            model = "gemini-3.1-flash-lite"
+        elif model_choice == "gemini35":
+            api_key = api_key or os.getenv("GOOGLE_API_KEY")
+            base_url = base_url or os.getenv("GOOGLE_BASE_URL")
+            model = "gemini-3.5-flash-lite"
         elif model_choice == "qwen32_instruct":
             api_key = api_key or os.getenv("OPENROUTER_API_KEY")
             base_url = base_url or os.getenv("OPENROUTER_BASE_URL")
             model = os.getenv("OPENROUTER_QWEN32")
+        elif model_choice == "qwen235_instruct":
+            api_key = api_key or os.getenv("OPENROUTER_API_KEY")
+            base_url = base_url or os.getenv("OPENROUTER_BASE_URL")
+            model = "qwen/qwen3-vl-235b-a22b-instruct"
         elif model_choice == "opus":
             api_key = api_key or os.getenv("OPENROUTER_API_KEY")
             base_url = base_url or os.getenv("OPENROUTER_BASE_URL")
             model = os.getenv("OPENROUTER_OPUS")
+        elif model_choice == "gpt51":
+            api_key = api_key or os.getenv("OPENROUTER_API_KEY")
+            base_url = base_url or os.getenv("OPENROUTER_BASE_URL")
+            model = "openai/gpt-5.1"
         else:
             raise ValueError("Unknown Model: ", model_choice)
 
@@ -142,7 +155,11 @@ class VLMScoreAgent:
 
 
 def compute_vlm_perturbation_detection(
-    target_path: str, render_path: str, legend: list[dict[str, int]], model_choice: str
+    target_path: str,
+    render_path: str,
+    legend: list[dict[str, int]],
+    model_choice: str,
+    max_side: int | None = 1280,
 ) -> dict:
     vlm_agent = VLMScoreAgent(model_choice=model_choice)
 
@@ -152,8 +169,14 @@ def compute_vlm_perturbation_detection(
     legend_lines = "\n".join(f"{digit}: {label}" for entry in legend for label, digit in entry.items())
     prompt = prompt_template.format(legend=legend_lines)
 
-    target_img = resize_image(Image.open(target_path), max_side=1280)
-    render_img = resize_image(Image.open(render_path), max_side=1280)
+    target_img = Image.open(target_path)
+    render_img = Image.open(render_path)
+    # None skips this entirely -- e.g. optimize_rendering.py needs the resolution it rendered at
+    # to actually reach the VLM, since resize_image only ever downsizes and this default would
+    # otherwise collapse anything above 1280px back down before it's ever scored.
+    if max_side is not None:
+        target_img = resize_image(target_img, max_side=max_side)
+        render_img = resize_image(render_img, max_side=max_side)
 
     result = vlm_agent.generate_score(
         target_image=target_img,
